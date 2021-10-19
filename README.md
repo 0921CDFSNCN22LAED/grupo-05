@@ -7,6 +7,7 @@
 - Tomas Perez: Tengo 18 años, me gustan los videojuegos como hobby, pero me quiero dedicar a eso en un futuro. En materia de programación, esta es mi primera vez programando y es bastante divertido.
 - Federico Re: Tengo 31 años. Estudie Profesorado en Educación Física y soy vegano. Siempre me interesó la programación y este año tomé la decisión de entrar en el curso y dar un cambio en mi vida. Como hobby me gusta ir a la cancha, juntarme con amigos, y jugar algún videojuego.
 - Francisco Bisso: Tengo 27 años y soy estudiante de abogacía en la UBA. Si bien mis intereses siempre han estado orientados hacia las humanidades, al tener en frente la oportunidad concreta de adentrarme en este mundo desconocido que es la programación, fue un desafío que no pude dejar pasar. Ya veremos a que puerto nos llevan estas aguas misteriosas.
+- Enzo Baitelo: Tengo 19 años. Estudio administración de empresas. Me gusta leer y ver peliculas. Me interesa la programación porque pienso que el futuro de los negocios se encuentra en ella y para poder incorporarme a ese mundo decidi hacer este curso para meterme en este mundo.
 
 3. - Nueve Copas: Fue el inicializador del proyecto que queriamos realizar. Presenta un catalogo de vinos y paquetes mensuales para degustar para cada tipo de cliente.
    - Bodegas Bianchi: La página trabaja con sus distintos tipos de bodegas, vende por cajas para mayorista y minorista. Como nuestro e-commerce tendrá vinos de diferentes bodegas nos pareció un buen ejemplo para sacar algunas ideas y potenciarlas.
