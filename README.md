@@ -16,4 +16,4 @@
    a pesar de esta funcionalidad interesante, podemos destacar un punto negativo que es la prolijidad de la pagina, ya que esta muestra muchas cosas en pantalla pero que no es ningún tipo de información para el comprador.
    • Almacen Otamendi: Proporciono la idea de agregar un curso del vino ABC para aquellos que quieran aprender mas sobre la calidad de los vinos.
 
-4.
+4. Se creo la carpeta wireframes. Queda toda adjunto ahi.
