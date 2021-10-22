@@ -18,3 +18,7 @@
    - Almacen Otamendi: Proporciono la idea de agregar un curso del vino ABC para aquellos que quieran aprender mas sobre la calidad de los vinos.
 
 4. Se creo la carpeta wireframes. Queda toda adjunto ahi.
+
+Sprint 2
+
+https://trello.com/b/IlFMtWwd/ecommerce
