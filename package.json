@@ -1,0 +1,23 @@
+{
+  "name": "grupo-05",
+  "version": "1.0.0",
+  "description": "2.  • El proyecto estara enfocado en la oferta de vinos de distintas bodegas proporcionando nuevas experiencias de sabor a nuestros clientes. Nuestro publico seran aquellos clientes no experimentados y experimentados, facilitando y proveyendo los mejores vinos para cada perfil.     • Nuestros integrantes:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0921CDFSNCN22LAED/grupo-05.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0921CDFSNCN22LAED/grupo-05/issues"
+  },
+  "homepage": "https://github.com/0921CDFSNCN22LAED/grupo-05#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
