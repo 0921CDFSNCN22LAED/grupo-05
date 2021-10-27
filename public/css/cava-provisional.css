@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+main{
+    width: 90%;
+    margin: 0 5%;
+}
+
+.barra-nav{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.barra-nav i {
+    width: 12%;
+    padding: 10px 0;
+    font-size: 24px;
+    text-align: center;
+}
+
+
+.barra-nav img{
+    width: 52%;
+}
+
+.vinos-cava{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.vinos-cava article{
+    padding: 0 10px 10px 10px;
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border-bottom: solid 1px black;
+}
+
+.contenedor h4 , p{
+    width: 100%;
+    padding: 0;
+}
+
+.contenedor h3{
+    width: 76%;
+}
+
+.contenedor div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 24%;
+    justify-content: space-around;
+}
+
+.contenedor div i{
+    width: 50%;
+    font-size: 20px;
+    text-align: center;
+}
+
+@media(min-width : 700px){
+    .vinos-cava{
+        flex-direction: row;
+    }
+    .vinos-cava article{
+        width : 50%;
+    }
+}
+@media(min-width : 1200px){
+    .vinos-cava article{
+        width : 25%
+    }
+}

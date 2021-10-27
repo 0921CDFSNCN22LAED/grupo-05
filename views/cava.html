@@ -5,68 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cava</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        *{
-            box-sizing: border-box;
-        }
-        .icon{
-            font-size: 1.5rem;
-            width: 15%;
-            border: black solid 1px;
-            text-align: center;
-        }
-        .logo{
-            font-size: 1.5rem;
-            width: 20%;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/cava-provisional.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
     <header>
         <nav>
-            <section>
-                <i class="fas fa-bars icon"></i>
-                <i class="fas fa-search icon"></i>
+            <section class="barra-nav">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-search"></i>
                 <img src="" alt="" class="logo">
-                <i class="fas fa-user icon"></i>
-                <i class="fas fa-wine-glass-alt icon"></i>
+                <i class="fas fa-user"></i>
+                <i class="fas fa-wine-glass-alt"></i>
             </section>
         </nav>
     </header>
     <main>
-        <section>
-            <h2>Productos en la Cava</h2>
+        <h2>Vinos en la Cava</h2>
+        <section class="vinos-cava">
             <article>
-                <img src="" alt="">
-                <h3>Vino 1</h3>
-                <h4>Malbec 2012</h4>
-                <p>$3000</p>
-                <i class="far fa-star"></i>
-                <i class="fas fa-times"></i>
+                <div class="contenedor">
+                    <img src="images/vino1.jpeg" alt="vino1" width="100%">
+                    <h3>Vino 1</h3>
+                    <div>
+                        <i class="far fa-star"></i>
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <h4>Malbec 2012</h4>
+                    <p>$3000</p>
+                    <p>Cantidad: </p>
+                </div>
             </article>
             <article>
-                <img src="" alt="">
-                <h3>Vino 2</h3>
-                <h4>Suavignon 2018</h4>
-                <p>$1500</p>
-                <i class="far fa-star"></i>
-                <i class="fas fa-times"></i>
+                <div class="contenedor">
+                    <img src="images/vino2.jpeg" alt="vino2" width="100%">
+                    <h3>Vino 2</h3>
+                    <div>
+                        <i class="far fa-star"></i>
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <h4>Suavignon 2018</h4>
+                    <p>$1500</p>
+                    <p>Cantidad: </p>
+                </div>
             </article>
             <article>
-                <img src="" alt="">
-                <h3>Vino 3</h3>
-                <h4>Cabernet 2017</h4>
-                <p>$2000</p>
-                <i class="far fa-star"></i>
-                <i class="fas fa-times"></i>
+                <div class="contenedor">
+                    <img src="images/vino3.jpeg" alt="vino3" width="100%">
+                    <h3>Vino 3</h3>
+                    <div>
+                        <i class="far fa-star"></i>
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <h4>Cabernet 2017</h4>
+                    <p>$2000</p>
+                    <p>Cantidad: </p>
+                </div>
             </article>
         </section>
         <section>
             <h3>La Cuenta</h3>
             <p>Valor a pagar: $6500</p>
-            <p>Comprar</p>
+            <p>Pagar</p>
         </section>
     </main>
     <footer>
