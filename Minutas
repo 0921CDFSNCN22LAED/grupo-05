@@ -36,3 +36,34 @@ el punteo de todas las reuniones por si hay alguna duda o algún ausente.
 * PÁGINA DE REGISTRO : Ariel.
 
 * PÁGINA DE LOGIN : Fran.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Reunión 29/10 - 10 am. Participantes: todos.
+
+Nos pusimos de acuerdo en lo siguiente:
+
+Partir de la base con los siguientes estilos en todas las páginas:
+
+* {box-sizing: border-box;
+margin: 0
+padding: 0
+font-family: Roboto (a menos que encontremos alguna otra que nos guste más)
+normalize};
+
+-Además debería haber un header y footer en todas las páginas.
+
+-Cada página html, tendrá su hoja de estilo.
+
+-Por ahora sólo hacemos el modo mobile.
+
+- Enzo uso fotos de vinos de COTO, que estaban buenas como para tener en cuenta.
+
+- Tomas pensó en no descargar las imagenes que usamos para la página, sino hacer la ruta desde la página original. Acordamos que lo haría el así en su 
+página de producto y los demás lo haríamos descargando la imagen, al ir finalizando el sprint 2 comparamos como se ve y el código para ver como lo
+llevaremos a cabo.
+
+- Compartimos varias imágenes para tomar como un posible logo, elegimos entre hoy y mañana sobre cuál o cuales de las imágenes se trabaja para conseguir nuestro logo.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
