@@ -75,7 +75,7 @@
 /*ACA TERMINA EL HEADER*/
 
 
-/*ESTO ES EL CARRISEL*/
+/*ESTO ES EL CARRUSEL*/
 
 #slider-conteiner{
   font-family: sans-serif;
@@ -83,7 +83,6 @@
   background-color: #aa0d3f;
   max-width: 700px;
   max-height: 400px;
-  width: 100%;
   padding: 30px;
 }
 
@@ -102,6 +101,7 @@
 
 #slider-conteiner > ul.slider h3{
   position: absolute;
+  text-align: center;
   padding: 10px;
   left: 50%;
   top: 300px;
@@ -169,3 +169,14 @@
 
 /*ACA TERMINA EL CARRUSEL*/
 
+/* COMIENZAN LOS BOTONES */
+
+.main-button{
+  max-width: 30%;
+  padding: 15px;
+  margin: 10px;
+border: 2px solid #201f1d;
+border-radius: 5px;
+}
+
+/* TERMINAN LOS BOTONES */
