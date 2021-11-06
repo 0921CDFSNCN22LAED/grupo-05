@@ -14,28 +14,34 @@ main{
     flex-direction: row;
     background-color: #201f1d;
     justify-content: space-between;
-    padding: 0 5px;
 }
 
-.barra-nav img{
-    width: 35%;
-}
-
-#botones-nav{
-    width: 50%;
+#contenedor-botones-nav{
+    width: 43%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    align-items: center;
 }
 
-#botones-nav i {
+#contenedor-botones-nav a {
     width: 33%;
-    padding: 60px 0 0 0;
     font-size: 30px;
     text-align: center;
     color: white;
 }
 
+#nav-pantalla-mayor{
+    display: none;
+}
+
+#contenedor-logo {
+    width: 35%;
+}
+
+#contenedor-logo img{
+    width: 100%;
+}
 
 .vinos-cava{
     display: flex;
@@ -77,7 +83,7 @@ main{
     text-align: center;
 }
 
-@media(min-width : 700px){
+@media(min-width : 767px){
     .vinos-cava{
         flex-direction: row;
     }
@@ -85,8 +91,23 @@ main{
         width : 50%;
     }
 }
-@media(min-width : 1200px){
+@media(min-width : 1100px){
     .vinos-cava article{
         width : 25%
+    }
+}
+
+@media(min-width : 767px){
+    #contenedor-logo{
+        width: 20%;
+    }
+    #contenedor-botones-nav{
+        width: 30%;
+    }
+    #contenedor-botones-nav a{
+        font-size: 30px;
+        padding: 0;
+        height: 20%;
+        margin: 40px 0;
     }
 }

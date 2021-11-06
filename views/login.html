@@ -39,11 +39,21 @@
   <body>
     <header></header>
 
-    <main>
-      <form action="/" method="POST">
+    <main class="main-container">
+      <form action="/" method="POST" class="form-flex">
         <section>
-          <div>Google</div>
-          <div>Facebook</div>
+          <div>
+            <button type="submit" class="button-google">
+              <i class="fab fa-google"></i>
+              Ingresa con Google
+            </button>
+          </div>
+          <div>
+            <button type="submit" class="button-facebook">
+              <i class="fab fa-facebook-square"></i>
+              Ingresa con Facebook
+            </button>
+          </div>
         </section>
 
         <section>
@@ -66,7 +76,15 @@
             />
           </div>
 
-          <div>Recuérdame</div>
+          <div>
+            <input
+              type="checkbox"
+              name="recuerdame"
+              id="recuerdame"
+              value="recuerdame"
+            />
+            <label for="recuerdame">Recuérdame</label>
+          </div>
 
           <div>
             <a href="">¿Olvidaste tu contraseña?</a>
@@ -76,14 +94,16 @@
             <button type="submit">INGRESAR</button>
           </div>
         </section>
-      </form>
 
-      <div>
-        <p>
-          Al ingresar, aceptas los términos y condiciones y la política de
-          privacidad.
-        </p>
-      </div>
+        <section>
+          <div>
+            <p>
+              Al ingresar, aceptas los términos y condiciones y la política de
+              privacidad.
+            </p>
+          </div>
+        </section>
+      </form>
     </main>
 
     <footer></footer>
