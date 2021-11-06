@@ -12,19 +12,30 @@ main{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    background-color: #201f1d;
+    justify-content: space-between;
+    padding: 0 5px;
 }
-
-.barra-nav i {
-    width: 12%;
-    padding: 10px 0;
-    font-size: 24px;
-    text-align: center;
-}
-
 
 .barra-nav img{
-    width: 52%;
+    width: 35%;
 }
+
+#botones-nav{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#botones-nav i {
+    width: 33%;
+    padding: 60px 0 0 0;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
 
 .vinos-cava{
     display: flex;
