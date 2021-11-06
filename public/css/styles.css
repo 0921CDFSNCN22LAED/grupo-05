@@ -3,6 +3,10 @@
     font-family: 'Roboto';
 }
 
+body{
+    background-color: #d1cdcc;
+}
+
 main{
     width: 90%;
     margin: 0 5%;

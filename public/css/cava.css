@@ -1,28 +1,32 @@
 
+main h2{
+    padding: 10px;
+}
+
 .vinos-cava{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
 }
 
-.vinos-cava article{
-    padding: 0 10px 10px 10px;
-}
-
 .contenedor{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    border-bottom: solid 1px black;
+    background-color: white;
+    margin: 0 10px 10px 10px;
+
 }
 
 .contenedor h4 , p{
     width: 100%;
     padding: 0;
+    margin-left: 5px;
 }
 
 .contenedor h3{
     width: 76%;
+    padding-left: 5px;
 }
 
 .contenedor div{
@@ -37,6 +41,33 @@
     width: 50%;
     font-size: 20px;
     text-align: center;
+}
+
+#la-cuenta{
+    background-color: white;
+    margin: 10px;
+}
+
+#la-cuenta h3 {
+    margin-top: 0;
+    padding-top: 3px;
+}
+
+#la-cuenta h3 ,p{
+    margin-left: 5px;
+}
+
+main h2{
+    margin: 0;
+}
+
+#boton-pagar{
+    color: white;
+    background-color: #aa0d3f;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    margin: 0 0 10px 3px;
 }
 
 @media(min-width : 767px){
