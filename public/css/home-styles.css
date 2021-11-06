@@ -172,26 +172,46 @@
 /* COMIENZAN LOS BOTONES */
 
 .main-button{
-  font-weight: bolder;
+font-weight: bolder;
 width: 100px;
 height: 50px;
-padding: 10px;
-margin: 8px;
-border: 2px solid #201f1d;
+border: 3px solid #201f1d;
 border-radius: 5px;
 text-align:center;
+padding: 5px;
+
 }
 
 .order-button{
   display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  text-align: center;
+  justify-content: space-around;
+  padding: 0 10px;
+  margin: 40px 0;
+  
+
 }
 /* TERMINAN LOS BOTONES */
 
 /* ARRANCA EL MAIN*/
+.main-conteiner {
+display: flex;
+justify-content: space-around;
 
+}
 
+.div-parrafo{
+  display: flex;
+  flex-direction: column;
+}
 
+.img-perfect {
+  max-width: 60%;
+  max-height: 200px;
+}
+
+.font-experience{
+  font-weight: bold;
+  color: #aa0d3f;
+  text-align: center;
+}
 /* TERMINA EL MAIN*/
