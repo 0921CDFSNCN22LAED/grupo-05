@@ -1,0 +1,73 @@
+#contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+#contenedor img{
+    width: 100%;
+}
+
+#contenedor-detalle-vino{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.contenedor-detalle-info{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 10px 0;
+}
+
+.contenedor-detalle-info h3{
+    color: #aa0d3f;
+    margin: 0 0 0 8px;
+    font-size: 20px;
+}
+
+.contenedor-detalle-info p{
+    text-align: justify;
+    margin: 0 8px;
+    font-size: 20px;
+}
+
+#contenedor-detalle-botones{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.boton-detalle{
+    color: white;
+    background-color: #aa0d3f;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    margin: 10px 6px;
+}
+
+@media (min-width : 767px){
+    #contenedor{
+        flex-direction: row;
+    }
+    #contenedor img{
+        width: 50%;
+    }
+    #contenedor-detalle-vino{
+        width: 50%;
+    }
+    .contenedor-detalle-info{
+        margin: 20px 0;
+    }
+    .contenedor-detalle-info p{
+        margin: 0px 20px 0 8px;
+    }
+    #contenedor-detalle-botones{
+        align-self: flex-start;
+    }
+}

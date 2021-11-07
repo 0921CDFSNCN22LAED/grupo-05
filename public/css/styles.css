@@ -88,10 +88,12 @@ TODO DEL HEADER
 #contenedor-slogan{
     display: none;
     color: white;
+    align-self: center;
 }
 
 #contenedor-slogan p{
     text-align: center;
+    width: 100%;
 }
 
 

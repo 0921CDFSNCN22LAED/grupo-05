@@ -20,3 +20,7 @@ app.get("/cava", (req, res) => {
 app.get("/login", (req, res) => {
   res.sendFile(path.join(__dirname, "views/login.html"));
 });
+
+app.get("/detalle-producto", (req, res) => {
+  res.sendFile(path.join(__dirname, "views/detalleProducto.html"));
+});
