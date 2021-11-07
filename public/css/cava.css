@@ -9,13 +9,18 @@ main h2{
     flex-direction: column;
 }
 
+
 .contenedor{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     background-color: white;
     margin: 10px;
+    border-radius: 8px;
+}
 
+.contenedor img{
+    padding: 10px;
 }
 
 .contenedor h4 {
@@ -52,6 +57,7 @@ main h2{
 #total-pagar{
     background-color: white;
     margin: 10px;
+    border-radius: 8px;
 }
 
 #total-pagar h3 {
@@ -90,3 +96,9 @@ main h2{
         width : 25%
     }
 }
+
+
+/*
+
+
+Hacer cantidad un input de numero
