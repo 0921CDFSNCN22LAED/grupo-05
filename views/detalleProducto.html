@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cava</title>
+    <title>Detalles de Producto</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="/css/cava.css">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/detalle-producto.css">
 </head>
 <body>
     <header>
@@ -43,55 +43,36 @@
         </section>
     </header>
     <main>
-        <h2>Vinos en la Cava</h2>
-        <section class="vinos-cava">
-            <article class="articulo-vino">
-                <div class="contenedor">
-                    <img src="images/vino1.jpeg" alt="vino1" width="100%">
-                    <h3>Vino 1</h3>
-                    <div>
-                        <i class="far fa-star"></i>
-                        <i class="fas fa-times"></i>
-                    </div>
-                    <h4>Malbec 2012</h4>
+        <h2>Vino 1</h2>
+        <section id="contenedor">
+            <img src="images/vino1.jpeg" alt="vino1">
+            <div id="contenedor-detalle-vino">
+                <div class="contenedor-detalle-info">
+                    <h3>Año:</h3>
+                    <p>1999</p>
+                </div>
+                <div class="contenedor-detalle-info">
+                    <h3>Variedad:</h3>
+                    <p>Malbec</p>
+                </div>
+                <div class="contenedor-detalle-info">
+                    <h3>Tipo:</h3>
+                    <p>Tinto</p>
+                </div>
+                <div class="contenedor-detalle-info">
+                    <h3>Descripción:</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem aliquid nisi vitae ad commodi repellat enim quidem! Ut exercitationem sed quidem! Dignissimos mollitia excepturi adipisci voluptas minus. Accusamus, alias eius.</p>
+                </div>
+                <div class="contenedor-detalle-info">
+                    <h3>Precio:</h3>
                     <p>$3000</p>
-                    <p>Cantidad: </p>
                 </div>
-            </article>
-            <article>
-                <div class="contenedor">
-                    <img src="images/vino2.jpeg" alt="vino2" width="100%">
-                    <h3>Vino 2</h3>
-                    <div>
-                        <i class="far fa-star"></i>
-                        <i class="fas fa-times"></i>
-                    </div>
-                    <h4>Suavignon 2018</h4>
-                    <p>$1500</p>
-                    <p>Cantidad: </p>
+                <div id="contenedor-detalle-botones">
+                    <button type="submit" class="boton-detalle">Comprar</button>
+                    <button type="submit" class="boton-detalle">Agregar al carrito</button>
                 </div>
-            </article>
-            <article>
-                <div class="contenedor">
-                    <img src="images/vino3.jpeg" alt="vino3" width="100%">
-                    <h3>Vino 3</h3>
-                    <div>
-                        <i class="far fa-star"></i>
-                        <i class="fas fa-times"></i>
-                    </div>
-                    <h4>Cabernet 2017</h4>
-                    <p>$2000</p>
-                    <p>Cantidad: </p>
-                </div>
-            </article>
-        </section>
-        <section id="total-pagar">
-            <h3>Resumen</h3>
-            <p>Valor a pagar: $6500</p>
-            <button type="submit" id="boton-pagar">Pagar</button>
+            </div>
         </section>
     </main>
-    <footer>
-    </footer>
 </body>
 </html>

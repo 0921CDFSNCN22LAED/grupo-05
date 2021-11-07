@@ -9,16 +9,27 @@ main h2{
     flex-direction: column;
 }
 
+
 .contenedor{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     background-color: white;
-    margin: 0 10px 10px 10px;
-
+    margin: 10px;
+    border-radius: 8px;
 }
 
-.contenedor h4 , p{
+.contenedor img{
+    padding: 10px;
+}
+
+.contenedor h4 {
+    width: 100%;
+    padding: 0;
+    margin-left: 5px;
+}
+
+.contenedor p {
     width: 100%;
     padding: 0;
     margin-left: 5px;
@@ -43,17 +54,19 @@ main h2{
     text-align: center;
 }
 
-#la-cuenta{
+#total-pagar{
     background-color: white;
     margin: 10px;
+    border-radius: 8px;
 }
 
-#la-cuenta h3 {
+#total-pagar h3 {
     margin-top: 0;
     padding-top: 3px;
+    margin-left: 5px;
 }
 
-#la-cuenta h3 ,p{
+#total-pagar p{
     margin-left: 5px;
 }
 
@@ -83,3 +96,9 @@ main h2{
         width : 25%
     }
 }
+
+
+/*
+
+
+Hacer cantidad un input de numero

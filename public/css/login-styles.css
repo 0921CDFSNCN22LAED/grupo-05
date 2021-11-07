@@ -148,6 +148,9 @@ HEADER
     width: 60%;
     font-size: 20px;
   }
+  #contenedor-slogan p{
+    width: 100%;
+  }
 }
 
 @media (min-width: 1100px) {
