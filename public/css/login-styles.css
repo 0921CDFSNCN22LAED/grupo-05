@@ -148,7 +148,7 @@ HEADER
     width: 60%;
     font-size: 20px;
   }
-  #contenedor-slogan p{
+  #contenedor-slogan p {
     width: 100%;
   }
 }
@@ -293,10 +293,6 @@ MAIN
   .login-text-inputs {
     width: 60%;
     margin: 10px 20%;
-  }
-
-  .divisor-line {
-    width: 45%;
   }
 
   .login-legal-consequences {
