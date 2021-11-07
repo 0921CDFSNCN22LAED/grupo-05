@@ -1,0 +1,101 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #201f1d;
+}
+.register{
+    width:45%;
+    margin: 15px 350px;
+    border-style: groove;
+    background: rgb(241, 236, 236);
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+}
+.fecha{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    padding: 10px;
+
+}
+h1{
+    align-items: center;
+    text-align: center;
+    padding-bottom: 30px;
+    color: #aa0d3f;
+}
+h3{
+    color: #aa0d3f;
+    margin-left: 350px;
+}
+h4{
+    padding-bottom: 16px;
+    padding-top: 16px;
+}
+div{
+    width: 100%;
+    padding: 10px;
+    
+}
+input[type="text"], input[type="password"], input[type="date"], input[type="email"], input[type="confirmacion"]{
+    padding: 5px;
+
+}
+.boton{
+    width: 20%;
+    color: white;
+    font-size: 15px;
+    background: #1a2537;
+    margin: 20px;
+    padding:5px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.boton:hover{
+    background: cadetblue;
+}
+.link{
+    text-decoration: none;
+    color: blue;
+}
+.link:hover{
+    color: cadetblue;
+}
+/*Footer*/
+
+.contenedor{
+    background-color:#d1cdcc;
+    font-size: 14px;
+
+
+}
+.presentacion{
+    display: flex;
+    justify-content:flex-start;
+    position: absolute;
+
+}
+.presentacion .corazon{
+    color: #aa0d3f;
+}
+.presentacion .cafe{
+    color: #201f1d;
+}
+.copy{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.redes{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.lista .fab{
+    color: rgb(87, 85, 85);
+}
