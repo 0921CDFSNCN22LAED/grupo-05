@@ -37,48 +37,87 @@
     <!-- link login-styles.css -->
   </head>
   <body>
-    <header></header>
+    <header>
+      <section class="barra-nav">
+        <a href="/" id="contenedor-logo"
+          ><img src="images/logo.png" alt="Logo" class="logo"
+        /></a>
+        <div id="contenedor-nav">
+          <nav id="contenedor-botones-nav">
+            <a href=""><i class="fas fa-wine-glass-alt"></i></a>
+            <a href=""><i class="fas fa-user"></i></a>
+            <a href=""><i class="fas fa-bars"></i></a>
+          </nav>
+          <div id="contenedor-input-slogan">
+            <div id="contenedor-slogan">
+              <p>El mejor lugar para comprar vinos</p>
+            </div>
+            <div id="input">
+              <input type="text" placeholder="Buscar.." />
+              <button><i class="fas fa-search"></i></button>
+            </div>
+          </div>
+          <nav id="nav-pantalla-mayor">
+            <a href="">Vinos</a>
+            <a href="">Login</a>
+            <a href="">Registro</a>
+            <a href="">Cava</a>
+            <a href="">Cuenta</a>
+          </nav>
+        </div>
+      </section>
+    </header>
 
-    <main class="main-container">
-      <form action="/" method="POST" class="form-flex">
+    <main class="login-main-container">
+      <form action="/" method="POST" class="login-form-container">
         <section>
-          <div>
+          <div class="login-div-boxes">
             <button type="submit" class="button-google">
-              <i class="fab fa-google"></i>
-              Ingresa con Google
+              <i class="fab fa-google google-icon"></i>
+              <span>Ingresa con Google</span>
             </button>
           </div>
-          <div>
+          <div class="login-div-boxes">
             <button type="submit" class="button-facebook">
-              <i class="fab fa-facebook-square"></i>
-              Ingresa con Facebook
+              <i class="fab fa-facebook-f fb-icon"></i>
+              <span>Ingresa con Facebook</span>
             </button>
           </div>
         </section>
 
+        <div class="divisor-line"></div>
+
         <section>
-          <div>
+          <div class="login-div-boxes">
             <label for="email"></label>
             <input
               type="text"
               name="email"
               id="email"
-              class="text-inputs"
+              class="login-text-inputs"
               placeholder=" Correo electrónico"
             />
+            <span class="login-invalid-text-input"
+              >Correo electrónico no válido</span
+            >
           </div>
-          <div>
+          <div class="login-div-boxes">
             <label for="contraseña"></label>
             <input
               type="password"
               name="contraseña"
               id="contraseña"
-              class="text-inputs"
+              class="login-text-inputs"
               placeholder=" Contraseña"
             />
+            <span class="login-invalid-text-input">Contraseña no válida</span>
           </div>
 
-          <div>
+          <div class="login-div-boxes">
+            <button type="submit" class="login-button-enter">INGRESAR</button>
+          </div>
+
+          <div class="login-div-boxes login-center-text">
             <input
               type="checkbox"
               name="recuerdame"
@@ -88,18 +127,20 @@
             <label for="recuerdame">Recuérdame</label>
           </div>
 
-          <div>
-            <a href="">¿Olvidaste tu contraseña?</a>
+          <div class="login-div-boxes login-center-text">
+            <a href="" class="login-div-anchor">¿Olvidaste tu contraseña?</a>
           </div>
 
-          <div>
-            <button type="submit">INGRESAR</button>
+          <div class="login-div-boxes login-center-text">
+            <a href="" class="login-div-anchor">¿No eres socio? Suscríbete</a>
           </div>
         </section>
 
+        <div class="divisor-line"></div>
+
         <section>
-          <div>
-            <p>
+          <div class="login-div-boxes">
+            <p class="login-center-text login-legal-consequences">
               Al ingresar, aceptas los términos y condiciones y la política de
               privacidad.
             </p>
