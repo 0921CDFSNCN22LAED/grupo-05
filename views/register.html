@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="register.css">
+    <script src="https://kit.fontawesome.com/304a7d5191.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <h1>Crear Cuenta</h1>
+    <h3>Por favor, ingrese los siguientes datos</h3>
+    <div class="register">
+        <form action="formulario" method="post"></form>
+        <h4>Informacion Personal</h4>
+        <div class="div">
+            <label for="name"></label>
+            <input type="text" name="nombre y apellido" placeholder="Nombre Completo">
+        </div>
+        <div class="div">
+            <label for="email"></label>
+            <input type="email" name="correo" placeholder="E-mail">
+        </div>
+        <div class="div">
+            <label  class="fecha" for="fechaDeNacimiento">Fecha de Nacimiento</label>
+            <input type="date">
+        </div>
+        <div class="div">
+            <label for="DNI"></label>
+            <input type="text" name="DNI" placeholder=" DNI">
+        </div>
+        <h4>Informacion de Inicio de Sesion</h4>
+        <div class="div">
+            <label for="Contrasena"></label>
+            <input type="password" name="correo" placeholder="Contraseña">
+        </div>
+        <div class="div">
+            <label for="Confirmar correo"></label>
+            <input type="confirmacion" class="required" placeholder="Confirmar Contraseña">
+        </div>
+        <div class="enviar">
+            <input type="submit" value="Enviar" class="boton">
+        </div>
+        <p>¿Ya tenes una cuenta?<a class="link" href="login.html"> Iniciar Sesion </a>
+        </p>
+    </div>
+</body>
+<footer>
+    <div class="contenedor">
+        <div class="foot">
+        <h5></h5>
+        <div class="presentacion">
+            <p> Hecho con <a class="corazon" href="#"><i class="fas fa-heart"></i></a> y <a class="cafe" href=""><i class="fas fa-coffee"></i></a> en Mendoza y Buenos Aires, Argentina.</p>
+        </div>
+        <div class="copy">
+            <p>&copy; 2021 Digital Wine. Todos los derechos reservados.</p>
+        </div>
+        <div class="redes">
+            <ul class="lista">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </ul>
+        </div>
+    </div>  
+</footer>
+</html>
