@@ -172,9 +172,15 @@ MAIN
 
 */
 
+.login-bg-color-wine {
+  background-color: #aa0d3f;
+}
+
 .login-main-container {
   display: flex;
-  background-color: #aa0d3f;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
 }
 
 .login-form-container {
@@ -187,6 +193,12 @@ MAIN
   flex-direction: column;
 }
 
+.login-div-boxes {
+  width: 100%;
+  margin: 10px auto;
+  padding: 8px;
+}
+
 .button-google {
   width: 90%;
   margin: 10px 5%;
@@ -195,12 +207,10 @@ MAIN
   border-radius: 8px;
   background-color: #4285f4;
   color: #fff;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .google-icon {
-  width: 20%;
+  margin-right: 2%;
 }
 
 .button-facebook {
@@ -211,12 +221,10 @@ MAIN
   border-radius: 8px;
   background-color: #4267b2;
   color: #fff;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .fb-icon {
-  width: 20%;
+  margin-right: 2%;
 }
 
 .login-text-inputs {
@@ -234,12 +242,6 @@ MAIN
   padding: 8px;
   color: red;
   font-style: italic;
-}
-
-.login-div-boxes {
-  width: 100%;
-  margin: 10px auto;
-  padding: 5px;
 }
 
 .login-div-anchor {
@@ -261,12 +263,6 @@ MAIN
   margin: 0 20%;
 }
 
-.divisor-line {
-  border-top: 0.5px solid #666;
-  width: 75%;
-  margin: 0 auto;
-}
-
 .login-legal-consequences {
   width: 75%;
   margin: 0 auto;
@@ -277,10 +273,30 @@ MAIN
 */
 
 @media (min-width: 767px) {
-  .login-main-container {
-    max-width: 800px;
+  main {
+    max-width: 767px;
   }
-}
 
-@media (min-width: 1100px) {
+  .button-google {
+    width: 60%;
+    margin: 10px 20%;
+  }
+
+  .button-facebook {
+    width: 60%;
+    margin: 10px 20%;
+  }
+
+  .login-text-inputs {
+    width: 60%;
+    margin: 10px 20%;
+  }
+
+  .divisor-line {
+    width: 45%;
+  }
+
+  .login-legal-consequences {
+    width: 60%;
+  }
 }
