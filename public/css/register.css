@@ -1,0 +1,182 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #201f1d;
+    background-image: url(/marca-de-vino-esencia-wines.jpg);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+}
+
+.register{
+    width: 40%;
+    border-style: groove;
+    background: rgb(241, 236, 236);
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 5% 30%;
+    box-sizing: border-box;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+
+.fecha{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    padding: 10px;
+}
+
+h1{
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #aa0d3f;
+    color: #201f1d;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h3{
+    align-items: center;
+    text-align: center;
+    color: #aa0d3f;
+    margin: 20px;
+}
+
+h4{
+    padding-bottom: 16px;
+    padding-top: 16px;
+}
+
+div{
+    width: 100%;
+    padding: 10px;
+    
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="email"], input[type="confirmacion"]{
+    padding: 5px;
+}
+
+.boton{
+    width: 50%;
+    color: white;
+    font-size: 15px;
+    background-color: #aa0d3f;
+    margin: 20px;
+    padding:5px 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.boton:hover{
+    background: rgb(116, 63, 63);
+}
+
+.link{
+    text-decoration: none;
+    color: blue;
+}
+
+.link:hover{
+    color: #aa0d3f;
+}
+
+
+/*Footer*/
+footer{
+    width:100%;
+}
+
+.contenedor{
+    background-color:#d1cdcc;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between
+}
+
+.foot{
+    display: flex;
+    flex-direction:row;
+}
+
+.presentacion{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.presentacion .corazon{
+    color: #aa0d3f;
+}
+
+.presentacion .cafe{
+    color: #201f1d;
+}
+
+.copy{
+    display: flex;
+    justify-content:flex-end;
+}
+
+.redes{
+    display: flex;
+    justify-content: flex-end
+}
+
+.lista .fab{
+    color: rgb(87, 85, 85);
+}
+
+@media screen and (max-width:767px){
+    .formulario-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .register{
+        display: flex;
+        flex-direction: column;
+        flex-grow: -1;
+        position: relative;
+    }
+    
+    .required{
+        width: 80%;
+    }
+    .in{
+        width: 80%;
+    }
+    h3{
+        width: 80%;
+    }
+    .presentacion{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+@media(min-width:1100px){
+    .formulario-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .register{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
