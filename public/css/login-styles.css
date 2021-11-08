@@ -212,6 +212,11 @@ MAIN
   color: #fff;
 }
 
+.button-google a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .google-icon {
   margin-right: 2%;
 }
@@ -223,6 +228,10 @@ MAIN
   border: none;
   border-radius: 8px;
   background-color: #4267b2;
+}
+
+.button-facebook a {
+  text-decoration: none;
   color: #fff;
 }
 
