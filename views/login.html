@@ -35,8 +35,11 @@
 
     <link rel="stylesheet" href="/css/login-styles.css" />
     <!-- link login-styles.css -->
+
+    <link rel="stylesheet" href="/css/header-footer.css" />
+    <!-- link header-footer.css -->
   </head>
-  <body class="login-bg-color-wine">
+  <body class="login-body">
     <header>
       <section class="barra-nav">
         <a href="/" id="contenedor-logo"
@@ -59,9 +62,9 @@
           </div>
           <nav id="nav-pantalla-mayor">
             <a href="">Vinos</a>
-            <a href="">Login</a>
-            <a href="">Registro</a>
-            <a href="">Cava</a>
+            <a href="/login">Login</a>
+            <a href="/register">Registro</a>
+            <a href="/cava">Cava</a>
             <a href="">Cuenta</a>
           </nav>
         </div>
@@ -116,7 +119,9 @@
           </div>
 
           <div class="login-div-boxes">
-            <button type="submit" class="login-button-enter">INGRESAR</button>
+            <button type="submit" class="login-button-enter">
+              <a href="/">INGRESAR</a>
+            </button>
           </div>
 
           <div class="login-div-boxes login-center-text">
@@ -134,7 +139,9 @@
           </div>
 
           <div class="login-div-boxes login-center-text">
-            <a href="" class="login-div-anchor">¿No eres socio? Suscríbete</a>
+            <a href="/register" class="login-div-anchor"
+              >¿No eres socio? Suscríbete</a
+            >
           </div>
         </section>
 
