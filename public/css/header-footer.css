@@ -1,16 +1,18 @@
 /*COMIENZA EL FOOTER*/
 
+
 .contenedor{
     background-color:#d1cdcc;
     font-size: 14px;
-    
+    color: black;
+    padding: 20px 0 0 0;
   }
   
   .presentacion{
     display: flex;
     justify-content:flex-start;
     position: absolute;
-  
+    margin-left: 5px;
   }
   .presentacion .corazon{
     color: #aa0d3f;
@@ -21,7 +23,7 @@
   .copy{
     display: flex;
     justify-content: flex-end;
-    
+    margin-right: 5px;
   }
   .redes{
     display: flex;
@@ -30,6 +32,8 @@
   
   .lista .fab{
     color: rgb(87, 85, 85);
+    font-size: 20px;
+    margin: 5px;
   }
   
   /*TERMINA EL FOOTER*/
