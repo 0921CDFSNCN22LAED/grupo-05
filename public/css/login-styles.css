@@ -179,6 +179,10 @@ MAIN
   background-color: #aa0d3f;
 }
 
+.hide-icon-login {
+  display: none;
+}
+
 .login-main-container {
   display: flex;
   flex-direction: column;
