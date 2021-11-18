@@ -2,23 +2,23 @@ const path = require ("path");
 
 const controladorHome = {
     index: ("/", (req, res) => {
-        res.sendFile(path.join(__dirname, "../views/index.ejs"));
+        res.render ("index");
     }),
 
     cava: ("/cava", (req, res) => {
-        res.sendFile(path.join(__dirname, "../views/cava.ejs"));
+        res.render ("cava");
       }),
 
     registro: ("/register", (req, res) => {
-        res.sendFile(path.join(__dirname, "../views/register.ejs"));
+        res.render ("register");
       }),
 
     login: ("/login", (req, res) => {
-        res.sendFile(path.join(__dirname, "../views/login.ejs"));
+        res.render ("login");
       }),
 
     detalleProducto: ("/detalle-producto", (req, res) => {
-        res.sendFile(path.join(__dirname, "../views/detalleProducto.ejs"));
+        res.render ("detalleProducto");
       }),
 
       
