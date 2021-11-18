@@ -35,8 +35,11 @@
 
     <link rel="stylesheet" href="/css/login-styles.css" />
     <!-- link login-styles.css -->
+
+    <link rel="stylesheet" href="/css/header-footer.css" />
+    <!-- link header-footer.css -->
   </head>
-  <body class="login-bg-color-wine">
+  <body class="login-body">
     <header>
       <section class="barra-nav">
         <a href="/" id="contenedor-logo"
@@ -44,8 +47,8 @@
         /></a>
         <div id="contenedor-nav">
           <nav id="contenedor-botones-nav">
+            <a href=""><i class="fas fa-user hide-icon-login"></i></a>
             <a href=""><i class="fas fa-wine-glass-alt"></i></a>
-            <a href=""><i class="fas fa-user"></i></a>
             <a href=""><i class="fas fa-bars"></i></a>
           </nav>
           <div id="contenedor-input-slogan">
@@ -59,9 +62,9 @@
           </div>
           <nav id="nav-pantalla-mayor">
             <a href="">Vinos</a>
-            <a href="">Login</a>
-            <a href="">Registro</a>
-            <a href="">Cava</a>
+            <a href="/login">Login</a>
+            <a href="/register">Registro</a>
+            <a href="/cava">Cava</a>
             <a href="">Cuenta</a>
           </nav>
         </div>
@@ -73,14 +76,18 @@
         <section>
           <div class="login-div-boxes">
             <button type="submit" class="button-google">
-              <i class="fab fa-google google-icon"></i>
-              <span>Ingresa con Google</span>
+              <a href="">
+                <i class="fab fa-google google-icon"></i>
+                <span>Ingresa con Google</span>
+              </a>
             </button>
           </div>
           <div class="login-div-boxes">
             <button type="submit" class="button-facebook">
-              <i class="fab fa-facebook-f fb-icon"></i>
-              <span>Ingresa con Facebook</span>
+              <a href="">
+                <i class="fab fa-facebook-f fb-icon"></i>
+                <span>Ingresa con Facebook</span>
+              </a>
             </button>
           </div>
         </section>
@@ -112,7 +119,9 @@
           </div>
 
           <div class="login-div-boxes">
-            <button type="submit" class="login-button-enter">INGRESAR</button>
+            <button type="submit" class="login-button-enter">
+              <a href="/">INGRESAR</a>
+            </button>
           </div>
 
           <div class="login-div-boxes login-center-text">
@@ -130,7 +139,9 @@
           </div>
 
           <div class="login-div-boxes login-center-text">
-            <a href="" class="login-div-anchor">¿No eres socio? Suscríbete</a>
+            <a href="/register" class="login-div-anchor"
+              >¿No eres socio? Suscríbete</a
+            >
           </div>
         </section>
 
