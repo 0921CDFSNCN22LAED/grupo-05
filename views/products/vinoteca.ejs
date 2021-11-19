@@ -11,97 +11,21 @@
     <main>
       <h2>Todos nuestros vinos</h2>
       <section class="vinos-cava">
-        <article class="articulo-vino">
-          <div class="contenedor-cava">
-            <img src="images/vino1.jpeg" alt="vino1" width="100%" />
-            <h3>Vino 1</h3>
-            <div>
-              <i class="far fa-star"></i>
-              <i class="fas fa-times"></i>
+        <% for (let vino of vinos) {%> 
+          <article class="articulo-vino">
+            <div class="contenedor-cava">
+              <img src=<%= vino.imagen %>  alt="" width="100%">
+              <h3><%= vino.nombre %> </h3>
+              <div>
+                <i class="far fa-star"></i>
+              </div>
+              <h4><%= vino.descripcion %> </h4>
+              <p><% vino.precio %> </p>
             </div>
-            <h4>Malbec 2012</h4>
-            <p>$3000</p>
-            <p>Cantidad:</p>
-          </div>
-        </article>
-        <article>
-          <div class="contenedor-cava">
-            <img src="images/vino2.jpeg" alt="vino2" width="100%" />
-            <h3>Vino 2</h3>
-            <div>
-              <i class="far fa-star"></i>
-              <i class="fas fa-times"></i>
-            </div>
-            <h4>Suavignon 2018</h4>
-            <p>$1500</p>
-            <p>Cantidad:</p>
-          </div>
-        </article>
-        <article>
-          <div class="contenedor-cava">
-            <img src="images/vino3.jpeg" alt="vino3" width="100%" />
-            <h3>Vino 3</h3>
-            <div>
-              <i class="far fa-star"></i>
-              <i class="fas fa-times"></i>
-            </div>
-            <h4>Cabernet 2017</h4>
-            <p>$2000</p>
-            <p>Cantidad:</p>
-          </div>
-        </article>
-        <article class="articulo-vino">
-          <div class="contenedor-cava">
-            <img src="images/vino1.jpeg" alt="vino1" width="100%" />
-            <h3>Vino 1</h3>
-            <div>
-              <i class="far fa-star"></i>
-              <i class="fas fa-times"></i>
-            </div>
-            <h4>Malbec 2012</h4>
-            <p>$3000</p>
-            <p>Cantidad:</p>
-          </div>
-        </article>
-        <article class="articulo-vino">
-          <div class="contenedor-cava">
-            <img src="images/vino1.jpeg" alt="vino1" width="100%" />
-            <h3>Vino 1</h3>
-            <div>
-              <i class="far fa-star"></i>
-              <i class="fas fa-times"></i>
-            </div>
-            <h4>Malbec 2012</h4>
-            <p>$3000</p>
-            <p>Cantidad:</p>
-          </div>
-        </article>
-        <article class="articulo-vino">
-          <div class="contenedor-cava">
-            <img src="images/vino1.jpeg" alt="vino1" width="100%" />
-            <h3>Vino 1</h3>
-            <div>
-              <i class="far fa-star"></i>
-              <i class="fas fa-times"></i>
-            </div>
-            <h4>Malbec 2012</h4>
-            <p>$3000</p>
-            <p>Cantidad:</p>
-          </div>
-        </article>
-        <article class="articulo-vino">
-          <div class="contenedor-cava">
-            <img src="images/vino1.jpeg" alt="vino1" width="100%" />
-            <h3>Vino 1</h3>
-            <div>
-              <i class="far fa-star"></i>
-              <i class="fas fa-times"></i>
-            </div>
-            <h4>Malbec 2012</h4>
-            <p>$3000</p>
-            <p>Cantidad:</p>
-          </div>
-        </article>
+          </article>
+          <% } %> 
+        <!-- -->
+        
       </section>
     </main>
     <footer><%- include ("../partials/footer") %></footer>

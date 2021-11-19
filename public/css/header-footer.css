@@ -190,6 +190,7 @@ footer {
     border-radius: 5px 0 0 5px;
     height: 30px;
     border: none;
+    padding-left: 10px;
   }
   #input button {
     width: 8%;
