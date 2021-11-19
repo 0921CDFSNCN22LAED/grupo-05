@@ -1,27 +1,26 @@
-const path = require ("path");
+const path = require("path");
 
 const controladorHome = {
-    index: ("/", (req, res) => {
-        res.render ("index");
-    }),
+  index: (req, res) => {
+    res.render("users/index");
+  },
 
-    cava: ("/cava", (req, res) => {
-        res.render ("cava");
-      }),
+  cava: (req, res) => {
+    res.render("users/cava");
+  },
 
-    registro: ("/register", (req, res) => {
-        res.render ("register");
-      }),
+  registro: (req, res) => {
+    res.render("users/register");
+  },
 
-    login: ("/login", (req, res) => {
-        res.render ("login");
-      }),
+  login: (req, res) => {
+    res.render("users/login");
+  },
 
-    detalleProducto: ("/detalle-producto", (req, res) => {
-        res.render ("detalleProducto");
-      }),
+  detalleProducto: (req, res) => {
+    res.render("products/detalleProducto");
+  },
 
-      
-      
-    }
-    module.exports = controladorHome;
+
+}
+module.exports = controladorHome;
