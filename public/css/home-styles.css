@@ -162,6 +162,7 @@ li {
   padding: 1.5%;
   background-color: #39b54a;
   color: #ffff;
+  display: flex;
 }
 /* TERMINA EL MAIN*/
 
