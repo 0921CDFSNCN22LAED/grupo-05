@@ -1,5 +1,7 @@
 const path = require("path");
 
+/*por que le ponemos HOME si desp agragamos registro, login, etc?*/
+
 const controladorHome = {
   index: (req, res) => {
     res.render("users/index");

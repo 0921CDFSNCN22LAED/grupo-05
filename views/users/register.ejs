@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registro</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,114 +12,92 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/register.css" />
     <link rel="stylesheet" href="/css/header-footer.css" />
-    <script src="https://kit.fontawesome.com/304a7d5191.js" crossorigin="anonymous"></script>
-    
-</head>
-<header>
-    <section class="barra-nav">
-        <a href="/" id="contenedor-logo"><img src="images/logo.png" alt="Logo" class="logo"></a>
-        <div id="contenedor-nav">
-            <nav id="contenedor-botones-nav">
-                <a href=""><i class="fas fa-wine-glass-alt"></i></a>
-                <a href=""><i class="fas fa-user"></i></a>
-                <a href=""><i class="fas fa-bars"></i></a>
-            </nav>
-            <div id="contenedor-input-slogan">
-                <div id="contenedor-slogan">
-                    <p>El mejor lugar para comprar vinos</p>
-                </div>
-                <div id="input">
-                    <input type="text" placeholder="Buscar..">
-                    <button><i class="fas fa-search"></i></button>
-                </div>
-            </div>
-            <nav id="nav-pantalla-mayor">
-                <a href="">Vinos</a>
-                <a href="/login">Login</a>
-                <a href="/registro">Registro</a>
-                <a href="/cava">Cava</a>
-                <a href="">Mi Cuenta</a>
-            </nav>
-        </div>
-    </section>
-</header>
-<body>
+    <script
+      src="https://kit.fontawesome.com/304a7d5191.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <header><%- include ("../partials/header") %></header>
+
+  <body>
     <div class="formulario-container">
-        <form action="formulario" method="post"></form>
-        <div class="register">
-            <div class="container-button-gofa">
-                <div class="container-register">
-                  <button type="submit" class="button-google">
-                    <a href="">
-                      <i class="fab fa-google google-icon"></i>
-                      <span>Ingresa con Google</span>
-                    </a>
-                  </button>
-                </div>
-                <div class="container-register">
-                  <button type="submit" class="button-facebook">
-                    <a href="">
-                      <i class="fab fa-facebook-f fb-icon"></i>
-                      <span>Ingresa con Facebook</span>
-                    </a>
-                  </button>
-                </div>
-            </div>
+      <form action="formulario" method="post"></form>
+      <div class="register">
+        <div class="container-button-gofa">
+          <div class="container-register">
+            <button type="submit" class="button-google">
+              <a href="">
+                <i class="fab fa-google google-icon"></i>
+                <span>Ingresa con Google</span>
+              </a>
+            </button>
+          </div>
+          <div class="container-register">
+            <button type="submit" class="button-facebook">
+              <a href="">
+                <i class="fab fa-facebook-f fb-icon"></i>
+                <span>Ingresa con Facebook</span>
+              </a>
+            </button>
+          </div>
+        </div>
         <h4>Informacion Personal</h4>
         <div class="container-register">
-            <label for="name"></label>
-            <input class="in" type="text" name="nombre y apellido" placeholder="Nombre Completo">
+          <label for="name"></label>
+          <input
+            class="in"
+            type="text"
+            name="nombre y apellido"
+            placeholder="Nombre Completo"
+          />
         </div>
         <div class="container-register">
-            <label for="email"></label>
-            <input class="in" type="email" name="correo" placeholder="E-mail">
+          <label for="email"></label>
+          <input class="in" type="email" name="correo" placeholder="E-mail" />
         </div>
         <div class="container-register">
-            <label  class="fecha" for="fechaDeNacimiento">Fecha de Nacimiento</label>
-            <input  class="in" type="date">
+          <label class="fecha" for="fechaDeNacimiento"
+            >Fecha de Nacimiento</label
+          >
+          <input class="in" type="date" />
         </div>
         <div class="container-register">
-            <label for="DNI"></label>
-            <input  class="in" type="text" name="DNI" placeholder=" DNI">
+          <label for="DNI"></label>
+          <input class="in" type="text" name="DNI" placeholder=" DNI" />
         </div>
         <h4>Informacion de Inicio de Sesion</h4>
         <div class="container-register">
-            <label for="Contrasena"></label>
-            <input class="in" type="password" name="correo" placeholder="Contraseña">
+          <label for="Contrasena"></label>
+          <input
+            class="in"
+            type="password"
+            name="correo"
+            placeholder="Contraseña"
+          />
         </div>
         <div class="container-register">
-            <label for="Confirmar correo"></label>
-            <input class="in" type="confirmacion" class="required" placeholder="Confirmar Contraseña">
+          <label for="Confirmar correo"></label>
+          <input
+            class="in"
+            type="confirmacion"
+            class="required"
+            placeholder="Confirmar Contraseña"
+          />
         </div>
         <div class="enviar">
-            <button type="submit" class="boton">
-                <a href="/">INGRESAR</a>
-              </button>
+          <button type="submit" class="boton">
+            <a href="/">INGRESAR</a>
+          </button>
         </div>
-        <p>¿Ya tenes una cuenta?<a class="link" href="login.html"> Iniciar Sesion </a>
+        <p>
+          ¿Ya tenes una cuenta?<a class="link" href="login.html">
+            Iniciar Sesion
+          </a>
         </p>
-        </div>
+      </div>
     </div>
-    <footer>
-        <div class="contenedor">
-            <div class="foot">
-                <div class="presentacion">
-                    <p> Hecho con <a class="corazon" href="#"><i class="fas fa-heart"></i></a> y <a class="cafe" href=""><i class="fas fa-coffee"></i></a> en Mendoza y Buenos Aires, Argentina.</p>
-                </div>
-                <div class="copy">
-                    <p>&copy; 2021 Digital Wine. Todos los derechos reservados.</p>
-                </div>
-                <div class="redes">
-                    <ul class="lista">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </ul>
-                </div>
-            </div>
-        </div>  
-    </footer>
-</body>
+    <footer><%- include ("../partials/footer") %></footer>
+  </body>
 </html>
