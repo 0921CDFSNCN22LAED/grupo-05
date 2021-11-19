@@ -2,29 +2,29 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: Roboto;
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background-color: #201f1d;
-    background-image: url(/css/marca-de-vino-esencia-wines.jpg);
+    font-size: 1rem;
+    background-color: #aa0d3f;
+    /*background-image: url(/css/marca-de-vino-esencia-wines.jpg);
     background-size: 100vw 100vh;
     background-attachment: fixed;
     background-repeat: no-repeat;
-
+    */
 }
 
 .register{
-    width: 40%;
-    border-style: groove;
-    background: rgb(241, 236, 236);
-    border-radius: 10px;
+    width: 75%;
+    border: none;
+    background: #ebebeb;
+    border-radius: 8px;
     display:flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 5% 30%;
-    box-sizing: border-box;
+    margin: 15% auto;
 }
 
 .formulario{
@@ -61,29 +61,34 @@ h4{
     padding-top: 16px;
 }
 
-div{
+.container-register{
     width: 100%;
-    padding: 10px;
-    
 }
 
-input[type="text"], input[type="password"], input[type="date"], input[type="email"], input[type="confirmacion"]{
-    padding: 5px;
+.enviar{
+    width: 100%;
+    margin: 10px 0;
 }
 
 .boton{
-    width: 50%;
-    color: white;
-    font-size: 15px;
-    background-color: #aa0d3f;
-    margin: 20px;
-    padding:5px 5px;
+    width: 60%;
+    margin: 10px auto;
+    padding: 8px;
+    border: none;
     border-radius: 8px;
-    cursor: pointer;
+    background-color: #aa0d3f;
+    margin: 0 20%;
 }
 
-.boton:hover{
-    background: rgb(116, 63, 63);
+
+.boton a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+.formulario-container p{
+    margin: 5px;
+
 }
 
 .link{
@@ -95,6 +100,70 @@ input[type="text"], input[type="password"], input[type="date"], input[type="emai
     color: #aa0d3f;
 }
 
+.in{
+    width: 100%;
+    margin: 10px 5%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px; 
+}
+
+.register-invalid-text-input{
+    display: none;
+    width: 90%;
+    margin: 10px 5%;
+    padding: 8px;
+    color: red;
+    font-style: italic;
+}
+
+.container-button-gofa{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+.button-google {
+    width: 80%;
+    margin: 10px 5%;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4285f4;
+    color: #fff;
+  }
+
+
+
+  .button-google a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .google-icon {
+    margin-right: 2%;
+  }
+  
+  .button-facebook {
+    width: 80%;
+    margin: 10px 5%;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4267b2;
+  }
+  
+  .button-facebook a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .fb-icon {
+    margin-right: 2%;
+  }
 
 /*Footer*/
 footer{
@@ -105,7 +174,7 @@ footer{
     background-color:#d1cdcc;
     font-size: 14px;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 .foot{
@@ -116,7 +185,15 @@ footer{
 .presentacion{
     display: flex;
     justify-content: flex-start;
+    width: 33%;
+    margin: 20px 10px;
 }
+
+.presentacion p{
+    text-align: center;
+}
+
+.copy p{text-align: center;}
 
 .presentacion .corazon{
     color: #aa0d3f;
@@ -129,18 +206,24 @@ footer{
 .copy{
     display: flex;
     justify-content:flex-end;
+    width: 33%;
+    margin: 20px 10px;
 }
 
 .redes{
     display: flex;
-    justify-content: flex-end
+    justify-content: flex-end;
+    width: 33%;
+    margin: 20px 10px;
 }
 
 .lista .fab{
     color: rgb(87, 85, 85);
+    font-size: 20px;
+    margin: 0 10px;
 }
 
-@media screen and (max-width:767px){
+@media (min-width:0px){
     .formulario-container{
         display: flex;
         flex-direction: column;
@@ -169,14 +252,23 @@ footer{
     }
 }
 
-@media(min-width:1100px){
-    .formulario-container{
-        display: flex;
-        flex-direction: column;
-    }
-    .register{
-        display: flex;
-        flex-direction: column;
+@media(min-width:760px){
+    .button-google {
+        width: 60%;
+        margin: 10px 20%;
+      }
+    
+    .button-facebook {
+        width: 60%;
+        margin: 10px 20%;
+      }
+    .in{
+        width: 60%;
+        margin: 10px 20%;
+    }.register{
+        width: 55%;
+       margin: 30px 22.5%;
     }
 
 }
+

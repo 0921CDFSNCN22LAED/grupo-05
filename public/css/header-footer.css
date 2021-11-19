@@ -1,41 +1,60 @@
 /*COMIENZA EL FOOTER*/
-
+footer{
+  width:100%;
+}
 
 .contenedor{
-    background-color:#d1cdcc;
-    font-size: 14px;
-    color: black;
-    padding: 20px 0 0 0;
-  }
-  
-  .presentacion{
-    display: flex;
-    justify-content:flex-start;
-    position: absolute;
-    margin-left: 5px;
-  }
-  .presentacion .corazon{
-    color: #aa0d3f;
-  }
-  .presentacion .cafe{
-    color: #201f1d;
-  }
-  .copy{
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 5px;
-  }
-  .redes{
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .lista .fab{
-    color: rgb(87, 85, 85);
-    font-size: 20px;
-    margin: 5px;
-  }
-  
+  background-color:#d1cdcc;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.foot{
+  display: flex;
+  flex-direction:row;
+}
+
+.presentacion{
+  display: flex;
+  justify-content: flex-start;
+  width: 33%;
+  margin: 20px 10px;
+}
+
+.presentacion p{
+  text-align: center;
+}
+
+.copy p{text-align: center;}
+
+.presentacion .corazon{
+  color: #aa0d3f;
+}
+
+.presentacion .cafe{
+  color: #201f1d;
+}
+
+.copy{
+  display: flex;
+  justify-content:flex-end;
+  width: 33%;
+  margin: 20px 10px;
+}
+
+.redes{
+  display: flex;
+  justify-content: flex-end;
+  width: 33%;
+  margin: 20px 10px;
+}
+
+.lista .fab{
+  color: rgb(87, 85, 85);
+  font-size: 20px;
+  margin: 0 10px;
+}
   /*TERMINA EL FOOTER*/
 
 
