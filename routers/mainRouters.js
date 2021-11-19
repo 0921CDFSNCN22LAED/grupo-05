@@ -14,5 +14,8 @@ router.get("/registro", mainController.registro);
 
 router.get("/login", mainController.login);
 
+router.get("/vinoteca", mainController.vinoteca);
+
+
 
 module.exports = router;

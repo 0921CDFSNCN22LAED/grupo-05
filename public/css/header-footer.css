@@ -1,220 +1,221 @@
 /*COMIENZA EL FOOTER*/
-footer{
-  width:100%;
+footer {
+  width: 100%;
 }
 
-.contenedor{
-  background-color:#d1cdcc;
+.contenedor {
+  background-color: #d1cdcc;
   font-size: 14px;
   display: flex;
   justify-content: space-between;
 }
 
-.foot{
+.foot {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
 }
 
-.presentacion{
+.presentacion {
   display: flex;
   justify-content: flex-start;
   width: 33%;
   margin: 20px 10px;
 }
 
-.presentacion p{
+.presentacion p {
   text-align: center;
 }
 
-.copy p{text-align: center;}
+.copy p {
+  text-align: center;
+}
 
-.presentacion .corazon{
+.presentacion .corazon {
   color: #aa0d3f;
 }
 
-.presentacion .cafe{
+.presentacion .cafe {
   color: #201f1d;
 }
 
-.copy{
-  display: flex;
-  justify-content:flex-end;
-  width: 33%;
-  margin: 20px 10px;
-}
-
-.redes{
+.copy {
   display: flex;
   justify-content: flex-end;
   width: 33%;
   margin: 20px 10px;
 }
 
-.lista .fab{
+.redes {
+  display: flex;
+  justify-content: flex-end;
+  width: 33%;
+  margin: 20px 10px;
+}
+
+.lista .fab {
   color: rgb(87, 85, 85);
   font-size: 20px;
   margin: 0 10px;
 }
-  /*TERMINA EL FOOTER*/
+/*TERMINA EL FOOTER*/
 
+/*  COMIENZA EL HEADER  */
 
-  /*  COMIENZA EL HEADER  */
+.barra-nav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: #201f1d;
+  justify-content: space-between;
+}
 
-  
+#contenedor-nav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+}
 
-.barra-nav{
+#contenedor-botones-nav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+#contenedor-botones-nav a {
+  width: 33%;
+  font-size: 30px;
+  text-align: center;
+  color: #aa0d3f;
+}
+
+#nav-pantalla-mayor {
+  display: none;
+}
+
+#nav-pantalla-mayor a {
+  color: #aa0d3f;
+  text-decoration: none;
+  font-size: 20px;
+  text-align: center;
+  border-left: solid white 1px;
+}
+
+#contenedor-logo {
+  width: 35%;
+}
+
+#contenedor-logo img {
+  width: 100%;
+}
+
+#contenedor-input-slogan {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+#input {
+  display: none;
+}
+
+#contenedor-slogan {
+  display: none;
+  color: white;
+}
+
+#contenedor-slogan p {
+  text-align: center;
+  width: 100%;
+}
+
+/*TERMINA EL HEADER*/
+
+@media (min-width: 767px) {
+  #contenedor-nav {
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    background-color: #201f1d;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
   }
-  
-  #contenedor-nav{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 60%;
-  }
-  
-  #contenedor-botones-nav{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-  }
-  
-  #contenedor-botones-nav a {
-    width: 33%;
-    font-size: 30px;
-    text-align: center;
-    color: #aa0d3f;
-  }
-  
-  #nav-pantalla-mayor{
-    display: none;
-  }
-  
-  #nav-pantalla-mayor a{
-    color: #aa0d3f;
-    text-decoration: none;
-    font-size: 20px;
-    text-align: center;
-    border-left: solid white 1px;
-  }
-  
   #contenedor-logo {
-    width: 35%;
+    width: 20%;
   }
-  
-  #contenedor-logo img{
+  #contenedor-botones-nav {
+    display: none;
+    width: 30%;
+  }
+  #contenedor-botones-nav a {
+    font-size: 30px;
+    padding: 0;
+    height: 20%;
+    margin: 40px 0;
+    width: 50%;
+  }
+
+  #contenedor-botones-nav a i {
+    font-size: 3.5rem;
+  }
+
+  #nav-pantalla-mayor {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
     width: 100%;
   }
-  
-  #contenedor-input-slogan{
+  #nav-pantalla-mayor a {
+    width: 20%;
+  }
+  #contenedor-logo {
+    display: inline-block;
+  }
+  #contenedor-input-slogan {
+    width: 100%;
+  }
+  #input {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
   }
-  
-  #input{
-    display: none;
+  #input input {
+    width: 72%;
+    border-radius: 5px 0 0 5px;
+    height: 30px;
+    border: none;
   }
-  
-  #contenedor-slogan{
-    display: none;
-    color: white;
+  #input button {
+    width: 8%;
+    border-radius: 0 5px 5px 0;
+    height: 30px;
+    border: none;
   }
-  
-  #contenedor-slogan p{
-    text-align: center;
-    width: 100%;
-  }
-
-  /*TERMINA EL HEADER*/ 
-
- 
-@media(min-width : 767px){
-  #contenedor-nav{
-      width: 80%;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      align-items: flex-end;
-      justify-content: space-around;
-  }
-  #contenedor-logo{
-      width: 20%;
-  }
-  #contenedor-botones-nav{
-      display: none;
-      width: 30%;
-  }
-  #contenedor-botones-nav a{
-      font-size: 30px;
-      padding: 0;
-      height: 20%;
-      margin: 40px 0;
-      width: 50%;
-  }
-  #nav-pantalla-mayor{
-      display: flex;
-      flex-wrap: nowrap;
-      flex-direction: row;
-      width: 100%;
-  }
-  #nav-pantalla-mayor a{
-      width: 20%;
-  }
-  #contenedor-logo{
-      display: inline-block;
-  }
-  #contenedor-input-slogan{
-      width: 100%;
-  }
-  #input{
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      width: 40%;
-      justify-content: center;
-      align-items: center;
-  }
-  #input input{
-      width: 72%;
-      border-radius: 5px 0 0 5px;
-      height: 30px;
-      border: none;
-  }
-  #input button{
-      width: 8%;
-      border-radius: 0 5px 5px 0;
-      height: 30px;
-      border: none;
-  }
-  #contenedor-slogan{
-      display: flex;
-      width: 60%;
-      font-size: 20px;
+  #contenedor-slogan {
+    display: flex;
+    width: 60%;
+    font-size: 20px;
   }
 }
 
-@media(min-width : 1100px){
-  #contenedor-logo{
-      width: 12%;
+@media (min-width: 1100px) {
+  #contenedor-logo {
+    width: 12%;
   }
-  #contenedor-slogan{
-      font-size: 25px;
+  #contenedor-slogan {
+    font-size: 25px;
   }
-  #contenedor-nav{
-      width: 88%;
+  #contenedor-nav {
+    width: 88%;
   }
-  #contenedor-botones-nav{
-      display: none;
-      width: 20%;
+  #contenedor-botones-nav {
+    display: none;
+    width: 20%;
   }
 }
-
-

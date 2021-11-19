@@ -1,6 +1,43 @@
 const path = require("path");
 
-/*por que le ponemos HOME si desp agragamos registro, login, etc?*/
+const vinos = [
+  {
+    id: 1,
+    nombre: "Vino 1",
+    descripcion: "Un vino muy bueno",
+    precio: "$1000",
+    imagen: "/images/vino1.jpeg",
+  },
+  {
+    id: 2,
+    nombre: "Vino 1",
+    descripcion: "Un vino muy bueno",
+    precio: "$1000",
+    imagen: "/images/vino1.jpeg",
+  },
+  {
+    id: 3,
+    nombre: "Vino 1",
+    descripcion: "Un vino muy bueno",
+    precio: "$1000",
+    imagen: "/images/vino1.jpeg",
+  },
+  {
+    id: 4,
+    nombre: "Vino 1",
+    descripcion: "Un vino muy bueno",
+    precio: "$1000",
+    imagen: "/images/vino1.jpeg",
+  },
+  {
+    id: 5,
+    nombre: "Vino 1",
+    descripcion: "Un vino muy bueno",
+    precio: "$1000",
+    imagen: "/images/vino1.jpeg",
+  }
+];
+
 
 const controladorHome = {
   index: (req, res) => {
@@ -23,6 +60,9 @@ const controladorHome = {
     res.render("products/detalleProducto");
   },
 
+  vinoteca: (req, res) => {
+    res.render("products/vinoteca", { vinos: vinos });
+  },
 
 }
 module.exports = controladorHome;
