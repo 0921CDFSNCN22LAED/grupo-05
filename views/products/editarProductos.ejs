@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ("../partials/head") %>
+    <title>Agregar productos</title>
+    <link rel="stylesheet" href="/css/agregarProducto.css" />
+  </head>
+  <body class="login-body">
+    <header><%- include ("../partials/header") %></header>
+    <main class="login-main-container">
+      <form class="login-form-container">
+        <div class="login-div-boxes">
+          <label for="nombreProducto"></label>
+          <input
+            class="login-text-inputs"
+            type="text"
+            name="nombreProducto"
+            id="nombreProducto"
+            placeholder="Nombre del producto"
+          />
+        </div>
+        <div class="login-div-boxes">
+          <label for="descripcionProducto"></label>
+          <input
+            class="login-text-inputs"
+            type="text"
+            name="descripcionProducto"
+            id="descripcionProducto"
+            placeholder="Descripcion del producto"
+          />
+        </div>
+        <div class="login-div-boxes">
+          <label for="precioProducto"></label>
+          <input
+            class="login-text-inputs"
+            type="number"
+            name="precioProducto"
+            id="precioProducto"
+            placeholder="Precio del producto"
+          />
+        </div>
+        <div class="login-div-boxes">
+          <label for="imagenProducto">Imagen del producto: </label>
+          <input
+            class="login-text-inputs"
+            type="file"
+            accept="image/jpg"
+            name="imagenProducto"
+            id="imagenProducto"
+          />
+        </div>
+        <div class="login-div-boxes">
+          <label for="categoria">Categorias: </label>
+          <select name="categoria">
+            <option value="explorador">Explorador</option>
+            <option value="degustador">Degustador</option>
+            <option value="granCatador">Gran catador</option>
+          </select>
+        </div>
+        <div>
+          <button
+            class="login-button-enter"
+            type="submit"
+            value="Agregar producto"
+          >
+            Agregar producto
+          </button>
+        </div>
+      </form>
+    </main>
+    <footer><%- include ("../partials/footer") %></footer>
+  </body>
+</html>

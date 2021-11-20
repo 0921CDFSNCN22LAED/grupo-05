@@ -68,5 +68,8 @@ const controladorHome = {
     res.render("products/agregarProductos")
   },
 
+  editarProductos: (req, res) => {
+    res.render("products/editarProductos")
+  },
 }
 module.exports = controladorHome;
