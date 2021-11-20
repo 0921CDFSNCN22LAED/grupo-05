@@ -153,17 +153,6 @@ li {
   line-height: 20px;
 }
 
-.button-add-product {
-  position: fixed;
-  right: 5%;
-  bottom: 5%;
-  border: none;
-  border-radius: 50%;
-  padding: 1.5%;
-  background-color: #39b54a;
-  color: #ffff;
-  display: flex;
-}
 /* TERMINA EL MAIN*/
 
 /* ESTILOS TABLET*/
@@ -187,10 +176,6 @@ li {
 
   .font-experience-name {
     font-size: 30px;
-  }
-
-  .button-add-product {
-    padding: 1%;
   }
 }
 
