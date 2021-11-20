@@ -103,6 +103,19 @@ main h2{
     padding: 0 4px;
 }
 
+/*Botones Vinoteca*/
+
+
+  .button-add-product {
+    right: 2.5%;
+    bottom: 2.5%;
+  }
+
+  .button-add-product i {
+    font-size: 25px;
+  }
+
+
 @media(min-width : 767px){
     .vinos-cava{
         flex-direction: row;

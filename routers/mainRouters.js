@@ -16,6 +16,7 @@ router.get("/login", mainController.login);
 
 router.get("/vinoteca", mainController.vinoteca);
 
+router.get("/agregarProductos", mainController.agregarProductos);
 
 
 module.exports = router;

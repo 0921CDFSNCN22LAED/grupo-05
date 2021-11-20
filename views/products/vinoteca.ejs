@@ -11,7 +11,7 @@
     <main>
       <h2>Todos nuestros vinos</h2>
       <section class="vinos-cava">
-        <% for (let vino of vinos) {%> 
+        <!--<% for (let vino of vinos) {%> 
           <article class="articulo-vino">
             <div class="contenedor-cava">
               <img src=<%= vino.imagen %>  alt="" width="100%">
@@ -24,9 +24,13 @@
             </div>
           </article>
           <% } %> 
-        <!-- -->
-        
+          -->
       </section>
+      <form>
+        <button type="button" class="button-add-product">
+          <i class="fas fa-plus"></i>
+        </button>
+      </form>
     </main>
     <footer><%- include ("../partials/footer") %></footer>
   </body>

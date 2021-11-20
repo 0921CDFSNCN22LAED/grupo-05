@@ -216,11 +216,6 @@ li {
     display: flex;
   }
 
-  .button-add-product {
-    right: 2.5%;
-    bottom: 2.5%;
-  }
-
   .main-button:hover {
     background-color: #aa0d3f;
   }

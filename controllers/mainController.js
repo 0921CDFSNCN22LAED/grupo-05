@@ -64,5 +64,9 @@ const controladorHome = {
     res.render("products/vinoteca", { vinos: vinos });
   },
 
+  agregarProductos: (req, res) => {
+    res.render("products/agregarProductos")
+  },
+
 }
 module.exports = controladorHome;
