@@ -105,7 +105,7 @@ MAIN
   text-align: center;
 }
 
-.agregarProducto-button-enter {
+.agregarProducto-button {
   width: 60%;
   margin: 10px auto;
   padding: 8px;
@@ -113,10 +113,6 @@ MAIN
   border-radius: 8px;
   background-color: #aa0d3f;
   margin: 0 20%;
-}
-
-.agregarProducto-button-enter a {
-  text-decoration: none;
   color: #fff;
 }
 
