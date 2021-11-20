@@ -69,7 +69,19 @@ const controladorHome = {
   },
 
   editarProductos: (req, res) => {
-    res.render("products/editarProductos")
+    const id = req.params.id;
+    const vino = vinos.find((vino) => {
+      return id == vino.id;
+    });
+    if (vino) {
+      res.render("products/editarProductos" , {
+        vino: vino,
+        pageTitle: vino.nombre,
+      });
+    } else {
+      res.send("No contamos con ese vino")
+    };
+    
   },
 }
 module.exports = controladorHome;

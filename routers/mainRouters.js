@@ -20,4 +20,6 @@ router.get("/agregarProductos", mainController.agregarProductos);
 
 router.get("/editarProductos", mainController.editarProductos);
 
+router.get("/editarProductos/:id", mainController.editarProductos);
+
 module.exports = router;
