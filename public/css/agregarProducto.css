@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+
+.login-body {
+  font-size: 1rem;
+  background-color: #aa0d3f;
+}
+
+/*
+
+MAIN
+
+*/
+
+.hide-icon-login {
+  display: none;
+}
+
+.login-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.login-form-container {
+  background-color: #ebebeb;
+  width: 75%;
+  margin: 15% auto;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-div-boxes {
+  width: 100%;
+  margin: 10px auto;
+  padding: 8px;
+}
+
+.button-google {
+  width: 90%;
+  margin: 10px 5%;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4285f4;
+  color: #fff;
+}
+
+.button-google a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.google-icon {
+  margin-right: 2%;
+}
+
+.button-facebook {
+  width: 90%;
+  margin: 10px 5%;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4267b2;
+}
+
+.button-facebook a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.fb-icon {
+  margin-right: 2%;
+}
+
+.login-text-inputs {
+  width: 90%;
+  margin: 10px 5%;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+}
+
+.login-invalid-text-input {
+  display: none;
+  width: 90%;
+  margin: 10px 5%;
+  padding: 8px;
+  color: red;
+  font-style: italic;
+}
+
+.login-div-anchor {
+  text-decoration: none;
+}
+
+.login-center-text {
+  text-align: center;
+}
+
+.login-button-enter {
+  width: 60%;
+  margin: 10px auto;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background-color: #aa0d3f;
+  margin: 0 20%;
+}
+
+.login-button-enter a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.login-legal-consequences {
+  width: 75%;
+  margin: 0 auto;
+}
+
+/* 
+    QUERIES
+*/
+
+@media (min-width: 767px) {
+  main {
+    max-width: 767px;
+  }
+
+  .button-google {
+    width: 60%;
+    margin: 10px 20%;
+  }
+
+  .button-facebook {
+    width: 60%;
+    margin: 10px 20%;
+  }
+
+  .login-text-inputs {
+    width: 60%;
+    margin: 10px 20%;
+  }
+
+  .login-legal-consequences {
+    width: 60%;
+  }
+}
