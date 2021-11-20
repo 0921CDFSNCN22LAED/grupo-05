@@ -5,51 +5,60 @@
     <title><%= pageTitle  %> </title>
     <link rel="stylesheet" href="/css/agregarProducto.css" />
   </head>
-  <body class="login-body">
+  <body class="agregarProducto-body">
     <header><%- include ("../partials/header") %></header>
-    <main class="login-main-container">
-      <form class="login-form-container">
-        <div class="login-div-boxes">
+    <main class="agregarProducto-main-container">
+      <form class="agregarProducto-form-container">
+        <div class="agregarProducto-div-boxes">
           <label for="nombreProducto"></label>
+          <% if (vino) {%> 
           <input
-            class="login-text-inputs"
+            class="agregarProducto-text-inputs"
             type="text"
             name="nombreProducto"
             id="nombreProducto"
-            placeholder="Nombre del producto"
+            placeholder= "<%= vino.nombre %> "
+            autocomplete= <%= vino.nombre %> 
           />
+          <% } %> 
         </div>
-        <div class="login-div-boxes">
+        <div class="agregarProducto-div-boxes">
           <label for="descripcionProducto"></label>
+          <% if (vino) {%> 
           <input
-            class="login-text-inputs"
+            class="agregarProducto-text-inputs"
             type="text"
             name="descripcionProducto"
             id="descripcionProducto"
-            placeholder="Descripcion del producto"
+            placeholder= "<%= vino.descripcion %> "
+            autocomplete= <%= vino.descripcion %> 
           />
+          <% } %> 
         </div>
-        <div class="login-div-boxes">
+        <div class="agregarProducto-div-boxes">
           <label for="precioProducto"></label>
+          <% if (vino) {%> 
           <input
-            class="login-text-inputs"
+            class="agregarProducto-text-inputs"
             type="number"
             name="precioProducto"
             id="precioProducto"
-            placeholder="Precio del producto"
+            placeholder= "<%= vino.precio  %>"
+            autocomplete= <%= vino.precio  %> 
           />
+          <% } %> 
         </div>
-        <div class="login-div-boxes">
+        <div class="agregarProducto-div-boxes">
           <label for="imagenProducto">Imagen del producto: </label>
           <input
-            class="login-text-inputs"
+            class="agregarProducto-text-inputs"
             type="file"
             accept="image/jpg"
             name="imagenProducto"
             id="imagenProducto"
           />
         </div>
-        <div class="login-div-boxes">
+        <div class="agregarProducto-div-boxes">
           <label for="categoria">Categorias: </label>
           <select name="categoria">
             <option value="explorador">Explorador</option>
@@ -59,7 +68,7 @@
         </div>
         <div>
           <button
-            class="login-button-enter"
+            class="agregarProducto-button"
             type="submit"
             value="Agregar producto"
           >

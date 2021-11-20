@@ -61,7 +61,8 @@ const controladorHome = {
   },
 
   vinoteca: (req, res) => {
-    res.render("products/vinoteca", { vinos: vinos });
+    res.render("products/vinoteca", { vinos: vinos ,
+    link: "/editarProductos/" + vinos.id});
   },
 
   agregarProductos: (req, res) => {
@@ -79,9 +80,7 @@ const controladorHome = {
         pageTitle: vino.nombre,
       });
     } else {
-      res.render("products/editarProductos", {
-        pageTitle: "Editar Productos"
-      })
+      res.send("No seleccionaste ningun vino. Intenta /editarProductos/2")
     };
     
   },
