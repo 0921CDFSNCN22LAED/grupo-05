@@ -126,6 +126,7 @@ footer {
 #contenedor-slogan {
   display: none;
   color: white;
+  font-style: italic;
 }
 
 #contenedor-slogan p {
