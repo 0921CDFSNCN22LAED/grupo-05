@@ -79,7 +79,9 @@ const controladorHome = {
         pageTitle: vino.nombre,
       });
     } else {
-      res.send("No contamos con ese vino")
+      res.render("products/editarProductos", {
+        pageTitle: "Editar Productos"
+      })
     };
     
   },
