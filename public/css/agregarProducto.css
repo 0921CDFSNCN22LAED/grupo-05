@@ -5,7 +5,7 @@
   font-family: Roboto;
 }
 
-.login-body {
+.agregarProducto-body {
   font-size: 1rem;
   background-color: #aa0d3f;
 }
@@ -16,18 +16,18 @@ MAIN
 
 */
 
-.hide-icon-login {
+.hide-icon-agregarProducto {
   display: none;
 }
 
-.login-main-container {
+.agregarProducto-main-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   margin: 0 auto;
 }
 
-.login-form-container {
+.agregarProducto-form-container {
   background-color: #ebebeb;
   width: 75%;
   margin: 15% auto;
@@ -37,7 +37,7 @@ MAIN
   flex-direction: column;
 }
 
-.login-div-boxes {
+.agregarProducto-div-boxes {
   width: 100%;
   margin: 10px auto;
   padding: 8px;
@@ -80,7 +80,7 @@ MAIN
   margin-right: 2%;
 }
 
-.login-text-inputs {
+.agregarProducto-text-inputs {
   width: 90%;
   margin: 10px 5%;
   padding: 8px;
@@ -88,7 +88,7 @@ MAIN
   border-radius: 5px;
 }
 
-.login-invalid-text-input {
+.agregarProducto-invalid-text-input {
   display: none;
   width: 90%;
   margin: 10px 5%;
@@ -97,15 +97,15 @@ MAIN
   font-style: italic;
 }
 
-.login-div-anchor {
+.agregarProducto-div-anchor {
   text-decoration: none;
 }
 
-.login-center-text {
+.agregarProducto-center-text {
   text-align: center;
 }
 
-.login-button-enter {
+.agregarProducto-button-enter {
   width: 60%;
   margin: 10px auto;
   padding: 8px;
@@ -115,12 +115,12 @@ MAIN
   margin: 0 20%;
 }
 
-.login-button-enter a {
+.agregarProducto-button-enter a {
   text-decoration: none;
   color: #fff;
 }
 
-.login-legal-consequences {
+.agregarProducto-legal-consequences {
   width: 75%;
   margin: 0 auto;
 }
@@ -144,12 +144,12 @@ MAIN
     margin: 10px 20%;
   }
 
-  .login-text-inputs {
+  .agregarProducto-text-inputs {
     width: 60%;
     margin: 10px 20%;
   }
 
-  .login-legal-consequences {
+  .agregarProducto-legal-consequences {
     width: 60%;
   }
 }
