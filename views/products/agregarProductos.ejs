@@ -39,7 +39,15 @@
             placeholder="$"
           />
         </div>
-        <div class="agregarProducto-div-boxes">
+        <div class="agregarProducto-div-box-cat">
+          <label for="categoria">Categorias: </label>
+          <select name="categoria">
+            <option value="explorador">Explorador</option>
+            <option value="degustador">Degustador</option>
+            <option value="granCatador">Gran catador</option>
+          </select>
+        </div>
+        <div class="agregarProducto-div-box-img">
           <label for="imagenProducto">Imagen del producto: </label>
           <input
             class="agregarProducto-text-inputs"
@@ -49,21 +57,14 @@
             id="imagenProducto"
           />
         </div>
-        <div class="agregarProducto-div-boxes">
-          <label for="categoria">Categorias: </label>
-          <select name="categoria">
-            <option value="explorador">Explorador</option>
-            <option value="degustador">Degustador</option>
-            <option value="granCatador">Gran catador</option>
-          </select>
-        </div>
+
         <div class="agregarProducto-div-boxes">
           <button
             class="agregarProducto-button"
             type="submit"
             value="Agregar producto"
           >
-            Agregar producto
+            Agregar
           </button>
         </div>
       </form>
