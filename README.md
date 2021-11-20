@@ -22,3 +22,11 @@
 Sprint 2
 
 https://trello.com/b/IlFMtWwd/ecommerce
+
+Sprint 3 
+
+  - Continuando el proyecto luego de la devolucion del sprint 2, estamos avanzando con una nueva modalidad de trabajar todos al mismo tiempo para evitar contratiempos y mejorar la funcionalidad general del codigo.
+  - Al ser cada vez un poco mas dificil, tratamos de enfocarnos en la eficiencia del codigo frente a los problemas. Al estar juntos, cada problema que se presenta lo solucionamos relativamente mas rapido que estando solos en horarios distintos.
+  - Continuamos aprendiendo de la logica y el codigo del otro para progresar en nuestro conocimiento.
+  - Tratamos de no perder tanto tiempo en cosas superficiales que realmente podemos hacer de forma individual y nos enfocamos meramente en la complejidad de las tareas a realizar.
+ 
