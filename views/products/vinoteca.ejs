@@ -11,17 +11,14 @@
     <main>
       <h2>Todos nuestros vinos</h2>
       <section class="vinos-cava">
-        <% for (let vino of vinos) {%> 
-          <script>
-            const link = "/editarProductos/" + vino.id;
-          </script>
+        <% for (let vino of vinos) { let link = "/editarProductos/" + vino.id%> 
           <article class="articulo-vino">
             <div class="contenedor-cava">
               <img src=<%= vino.imagen %>  alt="" width="100%">
               <h3><%= vino.nombre %> </h3>
               <div>
                 <i class="far fa-star"></i>
-                <a href= "editarProductos/" <%= vino.id  %>  ><i class="far fa-edit"></i></a>
+                <a href= <%= link  %> ><i class="far fa-edit"></i></a>
               </div>
               <h4><%= vino.descripcion %> </h4>
               <p><% vino.precio %> </p>
