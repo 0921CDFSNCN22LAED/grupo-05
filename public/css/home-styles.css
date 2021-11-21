@@ -1,7 +1,3 @@
-/*ACA EMPIEZA EL HEADER*/
-
-/*ACA TERMINA EL HEADER*/
-
 /*ESTO ES EL CARRUSEL*/
 
 #slider-conteiner {
@@ -94,8 +90,6 @@ li {
   border-radius: 100%;
 }
 
-/*ACA TERMINA EL CARRUSEL*/
-
 /* COMIENZAN LOS BOTONES */
 
 .main-button {
@@ -115,11 +109,8 @@ li {
   margin: 40px 0;
   background-color: #201f1d;
 }
-/* TERMINAN LOS BOTONES */
 
-/* ARRANCA EL MAIN
-
-*/
+/* ARRANCA EL MAIN  */
 
 .div-parrafo {
   display: flex;
@@ -140,6 +131,7 @@ li {
   margin-top: 15px;
   text-decoration: none;
   color: #faebd7;
+  text-shadow: 1px 1px 10px;
 }
 
 .font-experience {
@@ -152,8 +144,6 @@ li {
   letter-spacing: 0.02;
   line-height: 20px;
 }
-
-/* TERMINA EL MAIN*/
 
 /* ESTILOS TABLET*/
 
@@ -182,23 +172,29 @@ li {
 /* COMIENZA DESKTOP */
 
 @media (min-width: 1100px) {
-  .img-perfect {
-    width: 60%;
-  }
-
   .font-experience-name {
     font-size: 25px;
     margin-top: 125px;
-    margin-left: 42%;
   }
 
   .font-experience {
     font-size: 15px;
-    margin-left: 42%;
   }
 
-  .section-img {
+  .container-box {
     display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .container-box img {
+    width: 40%;
+    align-items: center;
+  }
+
+  .div-parrafo {
+    display: flex;
+    margin-left: 5%;
   }
 
   .main-button:hover {
