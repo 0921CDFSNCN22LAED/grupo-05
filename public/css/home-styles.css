@@ -233,4 +233,29 @@ li {
   .main-button:hover {
     background-color: #aa0d3f;
   }
+
+  .button-left {
+    margin-left: 240px;
+  }
+
+  .button-right {
+    margin-right: 240px;
+  }
+
+  .contenedor-letra-carrito {
+    text-align: right;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+
+  .letra-carrito {
+    font-size: 18px;
+    color: #aa0d3f;
+    text-align: center;
+    margin-right: 20px;
+    font-weight: bold;
+    border: 1px solid #aa0d3f;
+    max-width: 170px;
+    text-decoration: none;
+  }
 }
