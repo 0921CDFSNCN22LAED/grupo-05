@@ -112,9 +112,15 @@ li {
 
 /* ARRANCA EL MAIN  */
 
+.container-box {
+  margin: 0px;
+  line-height: 0.6;
+}
+
 .div-parrafo {
   display: flex;
   flex-direction: column;
+  background-color: white;
 }
 
 .img-perfect {
@@ -125,34 +131,54 @@ li {
 .font-experience-name {
   border-bottom: 1px solid #d1cdcc;
   padding-bottom: 5px;
+  margin-bottom: 12px;
   font-size: 20px;
   font-weight: 400;
   text-align: center;
   margin-top: 15px;
   text-decoration: none;
-  color: #faebd7;
+  color: black;
   text-shadow: 1px 1px 10px #aa0d3f;
 }
 
 .font-experience {
-  margin-bottom: 15px;
+  margin-bottom: 0px;
   font-weight: bold;
   font-size: 12px;
-  margin: auto;
-  color: #d1cdcc;
-  text-align: center;
-  letter-spacing: 0.02;
-  line-height: 20px;
+  margin-left: 10px;
+  margin-top: 5px;
+  color: black;
   font-style: italic;
+}
+
+.detalle {
+  margin-bottom: 8px;
 }
 
 .price {
+  color: #aa0d3f;
   font-style: italic;
-  margin-bottom: 60px;
+}
+
+.contenedor-letra-carrito {
+  text-align: right;
+  margin-bottom: 20px;
+  margin-right: 5px;
+}
+
+.letra-carrito {
+  font-size: 12px;
+  border: 1px solid #aa0d3f;
+  margin-left: 70%;
+  margin-bottom: 4px;
+  color: #aa0d3f;
+  background-color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .circulos {
-  font-size: 10px;
+  font-size: 6px;
   margin-right: 5px;
   color: #201f1d;
 }
@@ -179,6 +205,18 @@ li {
   .font-experience-name {
     font-size: 30px;
   }
+
+  .letra-carrito {
+    font-size: 20px;
+  }
+
+  .contenedor-letra-carrito {
+    margin-right: 15px;
+  }
+
+  .container-box {
+    padding: 30px;
+  }
 }
 
 /* COMIENZA DESKTOP */
@@ -203,7 +241,6 @@ li {
   }
 
   .price {
-    color: #aa0d3f;
     margin-bottom: 10px;
   }
 
@@ -215,6 +252,7 @@ li {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    line-height: 1.15;
   }
 
   .container-box img {
@@ -244,9 +282,9 @@ li {
   }
 
   .contenedor-letra-carrito {
-    text-align: right;
     margin-top: 100px;
     margin-bottom: 30px;
+    margin-left: 55%;
   }
 
   .letra-carrito {
@@ -260,10 +298,15 @@ li {
     text-decoration: none;
     border-radius: 10px;
     padding: 10px;
+    margin-left: 0px;
   }
 
   .letra-carrito:hover {
     color: white;
     background-color: #aa0d3f;
+  }
+
+  .circulos {
+    font-size: 10px;
   }
 }
