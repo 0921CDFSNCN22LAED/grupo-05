@@ -1,125 +1,159 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <%- include ("../partials/head") %>
-  <title>Digital wines</title>
-  <link rel="stylesheet" href="/css/home-theme.css" />
-  <link rel="stylesheet" href="/css/home-styles.css" />
-</head>
-<body>
-  <header><%- include ("../partials/header") %></header>
+    <title>Digital wines</title>
+    <link rel="stylesheet" href="/css/home-theme.css" />
+    <link rel="stylesheet" href="/css/home-styles.css" />
+  </head>
+  <body>
+    <header><%- include ("../partials/header") %></header>
+    <main>
+      <!--ACA COMIENZA EL CARRUSEL-->
 
-<!--ACA COMIENZA EL CARRUSEL-->   
+      <div id="slider-conteiner">
+        <ul class="slider">
+          <li id="slide1">
+            <h3>¿Te gustaría formar parte de la experiencia Digital wines?</h3>
+            <img src="/images/viñedos.jpg" />
+          </li>
+          <li id="slide2">
+            <img src="/images/rutini2.jpg" />
+          </li>
+          <li id="slide3">
+            <img src="/images/chad1.jpg" />
+          </li>
+          <li id="slide4">
+            <img src="/images/opuswine.jpg" />
+          </li>
+        </ul>
 
-    <div id="slider-conteiner">
-  
-      <ul class="slider">
-        <li id="slide1">
-          <h3>¿Te gustaría formar parte de la experiencia Digital wines?</h3>
-          <img src="/images/viñedos.jpg"/>
-        </li>
-        <li id="slide2">
-          <img src="/images/rutini2.jpg"/>
-        </li>
-        <li id="slide3">
-          <img src="/images/chad1.jpg">
-        </li>
-        <li id="slide4">
-          <img src="/images/opuswine.jpg">
-        </li>
-      </ul>
-      
-      <ul class="menu">
-        <li>
-          <a href="#slide1">1</a>
-        </li>
-        <li>
-          <a href="#slide2">2</a>
-        </li>
-         <li>
-          <a href="#slide3">3</a>
-        </li>
-        <li>
-          <a href="#slide4">4</a>
-        </li>
-      </ul>
-    </div>
+        <ul class="menu">
+          <li>
+            <a href="#slide1">1</a>
+          </li>
+          <li>
+            <a href="#slide2">2</a>
+          </li>
+          <li>
+            <a href="#slide3">3</a>
+          </li>
+          <li>
+            <a href="#slide4">4</a>
+          </li>
+        </ul>
+      </div>
 
-  <!--ACA TERMINA EL CARRUSEL-->
+      <!--ACA TERMINA EL CARRUSEL-->
 
+      <!--ACA ESTAN LOS BOTONES-->
 
-  <!--ACA ESTAN LOS BOTONES-->
+      <section>
+        <form class="order-button">
+          <button type="button" class="main-button button-left">
+            Explorador
+          </button>
 
-<section>
-  <form class="order-button">
-    <button type="button" class="main-button">Explorador</button>
+          <button type="button" class="main-button">Degustador</button>
 
-    <button type="button" class="main-button">Degustador</button>
+          <button type="button" class="main-button button-right">
+            Gran catador
+          </button>
+        </form>
+      </section>
 
-    <button type="button" class="main-button">Gran catador</button>
+      <!--ACA TERMINAN LOS BOTONES-->
 
-  </form>
-</section>
+      <!--ACA COMIENZA EL MAIN-->
 
-<!--ACA TERMINAN LOS BOTONES-->
+      <section class="container-box">
+        <img src="/images/rutini-box.png" class="img-perfect" />
 
+        <div class="div-parrafo">
+          <a href="" class="font-experience-name">- Rutini box - Experience </a>
 
-<!--ACA COMIENZA EL MAIN-->
-  <main>
-    <section class="section-img">
-<img src="/images/rutini-box.png" class="img-perfect">
+          <p class="font-experience price">Oferta exclusiva: $20.400</p>
+          <p class="font-experience detalle">
+            Este cajón de madera contiene tres botellas:
+          </p>
 
-<div class="div-parrafo">
-  <a href= "" class="font-experience-name">- Rutini box -  Experience </a>
+          <p class="font-experience">
+            <i class="fas fa-circle circulos"></i>Single vineyard malbec de
+            Guatallary
+          </p>
 
-  <p class="font-experience">Oferta exclusiva: $20.400</p>
-  <p class="font-experience">Este cajón de madera contiene tres botellas:</p>
+          <p class="font-experience">
+            <i class="fas fa-circle circulos"></i>Dominio gran malbec
+          </p>
 
-  <p class="font-experience">SINGLE VINEYARD MALBEC DE GUALTALLARY  </p>
-  
-  <p class="font-experience">DOMINIO GRAN MALBEC  </p>
-  
-  <p class="font-experience">APARTADO GRAN MALBEC  </p>
-    </section>
+          <p class="font-experience">
+            <i class="fas fa-circle circulos"></i>Apartado gran malbec
+          </p>
+          <p class="contenedor-letra-carrito">
+            <a href="/cava" class="letra-carrito">Agregar a Mi cava</a>
+          </p>
+        </div>
+      </section>
 
-    <section class="section-img">
-      <img src="/images/luigi-box2.png" class="img-perfect">
-      
-      <div class="div-parrafo">
-        <a href= "" class="font-experience-name">- Luigi box -  Experience </a>
-      
-        <p class="font-experience">Oferta exclusiva: $12.000</p>
-        <p class="font-experience">Este estuche de madera contiene tres botellas:</p>
-      
-        <p class="font-experience">LUIGI BOSCA - TORRONTES</p>
-        
-        <p class="font-experience">DE SANGRE - MALBEC D.O.C.  </p>
-        
-        <p class="font-experience">LA LINDA - ROSE MALBEC  </p>
-          </section>
+      <section class="container-box">
+        <img src="/images/luigi-box2.png" class="img-perfect" />
 
-          <section class="section-img">
-            <img src="/images/box-pinoquemado.jpg" class="img-perfect">
-            
-            <div class="div-parrafo">
-              <a href= "" class="font-experience-name">- Pino box -     Experience </a>
-            
-              <p class="font-experience">Oferta exclusiva: $16.500</p>
-              <p class="font-experience">Este estuche de madera contiene tres botellas:</p>
-            
-              <p class="font-experience">PINO QUEMADO - VOIGNER</p>
-              
-              <p class="font-experience">PINO QUEMADO - SATISFACCION </p>
-              
-              <p class="font-experience">PINO QUEMADO - SUOVIGN  </p>
-                </section>
+        <div class="div-parrafo">
+          <a href="" class="font-experience-name">- Luigi box - Experience </a>
 
-            
-  </main>
-  <!--ACA TERMINA EL MAIN-->
-  <footer>
-  <%- include ("../partials/footer") %> 
+          <p class="font-experience price">Oferta exclusiva: $12.000</p>
+          <p class="font-experience detalle">
+            Este estuche de madera contiene tres botellas:
+          </p>
+
+          <p class="font-experience">
+            <i class="fas fa-circle circulos"></i>Luigi bosca - Torrontes
+          </p>
+
+          <p class="font-experience">
+            <i class="fas fa-circle circulos"></i>De sangre - Malbec D.O.C.
+          </p>
+
+          <p class="font-experience">
+            <i class="fas fa-circle circulos"></i>La linda - Rose malbec
+          </p>
+          <p class="contenedor-letra-carrito">
+            <a href="/cava" class="letra-carrito">Agregar a Mi cava</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="container-box">
+        <img src="/images/box-pinoquemado.jpg" class="img-perfect" />
+
+        <div class="div-parrafo">
+          <a href="" class="font-experience-name">- Pino box - Experience </a>
+
+          <p class="font-experience price"><i>Oferta exclusiva: $16.500</i></p>
+          <p class="font-experience detalle">
+            Este estuche de madera contiene tres botellas:
+          </p>
+
+          <p class="font-experience">
+            <i class="fas fa-circle circulos"></i>Pino quemado - Voigner
+          </p>
+
+          <p class="font-experience">
+            <i class="fas fa-circle circulos"></i>Pino quemado - Satisfaccion
+          </p>
+
+          <p class="font-experience">
+            <i class="fas fa-circle circulos"></i>Pino quemado - Suovign
+          </p>
+          <p class="contenedor-letra-carrito">
+            <a href="/cava" class="letra-carrito">Agregar a Mi cava</a>
+          </p>
+        </div>
+      </section>
+    </main>
+    <!--ACA TERMINA EL MAIN-->
+    <footer style="margin-top: 1.5%">
+      <%- include ("../partials/footer") %>
     </footer>
   </body>
 </html>
