@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "name": "Dasyprocta leporina",
+    "bodega": "Audréanne",
+    "description": "Stable burst fracture of T11-T12 vertebra",
+    "price": 7548,
+    "category": "gran-catador"
+  },
+  {
+    "id": 2,
+    "name": "Vulpes cinereoargenteus",
+    "bodega": "Marylène",
+    "description": "Athscl type of bypass graft(s) of the extremities w gangrene",
+    "price": 6183,
+    "category": "gran-catador"
+  },
+  {
+    "id": 3,
+    "name": "Petaurus breviceps",
+    "bodega": "Félicie",
+    "description": "Fracture of unsp phalanx of unsp finger, init for opn fx",
+    "price": 1028,
+    "category": "gran-catador"
+  },
+  {
+    "id": 4,
+    "name": "Plegadis falcinellus",
+    "bodega": "Médiamass",
+    "description": "Displacement of femoral arterial graft (bypass)",
+    "price": 1054,
+    "category": "gran-catador"
+  },
+  {
+    "id": 5,
+    "name": "Paradoxurus hermaphroditus",
+    "bodega": "Stéphanie",
+    "description": "Toxic effect of sulfur dioxide, intentional self-harm, init",
+    "price": 5239,
+    "category": "gran-catador"
+  },
+  {
+    "id": 6,
+    "name": "Alligator mississippiensis",
+    "bodega": "Gaïa",
+    "description": "Unsp fracture of right femur, subs for clos fx w delay heal",
+    "price": 2910,
+    "category": "degustador"
+  },
+  {
+    "id": 7,
+    "name": "Dendrocitta vagabunda",
+    "bodega": "Adélaïde",
+    "description": "War operations involving oth explosions and fragments, milt",
+    "price": 9785,
+    "category": "explorador"
+  },
+  {
+    "id": 8,
+    "name": "Prionace glauca",
+    "bodega": "Anaël",
+    "description": "Unsp injury at C5 level of cervical spinal cord, sequela",
+    "price": 6811,
+    "category": "degustador"
+  },
+  {
+    "id": 9,
+    "name": "Oxybelis fulgidus",
+    "bodega": "Ruò",
+    "description": "Non-bullous impetigo",
+    "price": 4403,
+    "category": "degustador"
+  },
+  {
+    "id": 10,
+    "name": "Boa caninus",
+    "bodega": "Lucrèce",
+    "description": "Superficial foreign body of right eyelid and periocular area",
+    "price": 6928,
+    "category": "explorador"
+  },
+  {
+    "id": 11,
+    "name": "Sarkidornis melanotos",
+    "bodega": "Marylène",
+    "description": "Sedatv/hyp/anxiolytc use, unsp w psychotic disorder",
+    "price": 5795,
+    "category": "gran-catador"
+  },
+  {
+    "id": 12,
+    "name": "Speotyte cuniculata",
+    "bodega": "Simplifiés",
+    "description": "Strain of muscle, fascia and tendon of left hip, sequela",
+    "price": 6079,
+    "category": "degustador"
+  },
+  {
+    "id": 13,
+    "name": "Panthera pardus",
+    "bodega": "Cléa",
+    "description": "Oth maternal infec/parastc diseases comp the puerperium",
+    "price": 9303,
+    "category": "gran-catador"
+  },
+  {
+    "id": 14,
+    "name": "Pedetes capensis",
+    "bodega": "Illustrée",
+    "description": "Corrosion of first degree of right upper arm",
+    "price": 9946,
+    "category": "explorador"
+  },
+  {
+    "id": 15,
+    "name": "Tamiasciurus hudsonicus",
+    "bodega": "Zhì",
+    "description": "Drug abuse counseling and surveillance of drug abuser",
+    "price": 820,
+    "category": "explorador"
+  },
+  {
+    "id": 16,
+    "name": "Tragelaphus angasi",
+    "bodega": "Maëline",
+    "description": "Spontaneous rupture of extensor tendons, lower leg",
+    "price": 1501,
+    "category": "explorador"
+  },
+  {
+    "id": 17,
+    "name": "Cereopsis novaehollandiae",
+    "bodega": "Jú",
+    "description": "Other specified injury of left renal artery",
+    "price": 3192,
+    "category": "explorador"
+  },
+  {
+    "id": 18,
+    "name": "Eremophila alpestris",
+    "bodega": "Naéva",
+    "description": "Accidental malfunction of hunting rifle",
+    "price": 9308,
+    "category": "degustador"
+  },
+  {
+    "id": 19,
+    "name": "Streptopelia senegalensis",
+    "bodega": "Judicaël",
+    "description": "Rheumatoid bursitis, unspecified shoulder",
+    "price": 859,
+    "category": "gran-catador"
+  },
+  {
+    "id": 20,
+    "name": "Spheniscus magellanicus",
+    "bodega": "Lén",
+    "description": "Poisoning by histamine H2-receptor blockers, accidental",
+    "price": 7060,
+    "category": "explorador"
+  },
+  {
+    "id": 21,
+    "name": "Lophoaetus occipitalis",
+    "bodega": "Angélique",
+    "description": "Occ of rail trn/veh inj due to object fall onto train, sqla",
+    "price": 1065,
+    "category": "degustador"
+  },
+  {
+    "id": 22,
+    "name": "Tamiasciurus hudsonicus",
+    "bodega": "Maïlys",
+    "description": "Fracture of mandible of oth site, init for clos fx",
+    "price": 9378,
+    "category": "degustador"
+  },
+  {
+    "id": 23,
+    "name": "Macaca nemestrina",
+    "bodega": "Léonore",
+    "description": "Cannabis dependence",
+    "price": 5123,
+    "category": "gran-catador"
+  },
+  {
+    "id": 24,
+    "name": "Graspus graspus",
+    "bodega": "Clémentine",
+    "description": "Cont preg aft elctv fetl rdct of 1 fts or more,unsp tri,fts5",
+    "price": 2587,
+    "category": "explorador"
+  },
+  {
+    "id": 25,
+    "name": "Tiliqua scincoides",
+    "bodega": "Thérèse",
+    "description": "Dental caries",
+    "price": 1829,
+    "category": "gran-catador"
+  },
+  {
+    "id": 26,
+    "name": "unavailable",
+    "bodega": "Lauréna",
+    "description": "Other parachutist accident, sequela",
+    "price": 4867,
+    "category": "gran-catador"
+  },
+  {
+    "id": 27,
+    "name": "Gazella granti",
+    "bodega": "Åsa",
+    "description": "Laceration with foreign body of right hand",
+    "price": 6406,
+    "category": "gran-catador"
+  },
+  {
+    "id": 28,
+    "name": "Phalacrocorax carbo",
+    "bodega": "Ophélie",
+    "description": "Disp fx of base of nk of l femr, 7thN",
+    "price": 5943,
+    "category": "explorador"
+  },
+  {
+    "id": 29,
+    "name": "Deroptyus accipitrinus",
+    "bodega": "Mégane",
+    "description": "Drowning and submersion due to oth accident to fishing boat",
+    "price": 2002,
+    "category": "explorador"
+  },
+  {
+    "id": 30,
+    "name": "Meleagris gallopavo",
+    "bodega": "André",
+    "description": "Oth osteopor w current path fracture, unsp ank/ft, init",
+    "price": 4108,
+    "category": "degustador"
+  },
+  {
+    "id": 31,
+    "name": "Hyaena hyaena",
+    "bodega": "Judicaël",
+    "description": "Other dislocation of left radial head, subsequent encounter",
+    "price": 3376,
+    "category": "degustador"
+  },
+  {
+    "id": 32,
+    "name": "Spermophilus tridecemlineatus",
+    "bodega": "Måns",
+    "description": "Granuloma inguinale",
+    "price": 9029,
+    "category": "explorador"
+  },
+  {
+    "id": 33,
+    "name": "Bos taurus",
+    "bodega": "Lucrèce",
+    "description": "Corrosion w resulting rupture and dest of unsp eyeball, subs",
+    "price": 1302,
+    "category": "degustador"
+  },
+  {
+    "id": 34,
+    "name": "Phoenicopterus ruber",
+    "bodega": "Marie-hélène",
+    "description": "Abrasion of other finger, initial encounter",
+    "price": 2203,
+    "category": "gran-catador"
+  },
+  {
+    "id": 35,
+    "name": "Papio cynocephalus",
+    "bodega": "Esbjörn",
+    "description": "Disp fx of navicular of left foot, subs for fx w malunion",
+    "price": 4975,
+    "category": "explorador"
+  },
+  {
+    "id": 36,
+    "name": "unavailable",
+    "bodega": "Eloïse",
+    "description": "Nondisplaced spiral fracture of shaft of unspecified femur",
+    "price": 1901,
+    "category": "gran-catador"
+  },
+  {
+    "id": 37,
+    "name": "Leprocaulinus vipera",
+    "bodega": "Judicaël",
+    "description": "Insect bite (nonvenomous) of unspecified forearm, sequela",
+    "price": 9804,
+    "category": "degustador"
+  },
+  {
+    "id": 38,
+    "name": "Zalophus californicus",
+    "bodega": "Thérèse",
+    "description": "Oth injury to person on ground due to air transport accident",
+    "price": 3935,
+    "category": "gran-catador"
+  },
+  {
+    "id": 39,
+    "name": "Pseudoleistes virescens",
+    "bodega": "Léane",
+    "description": "Displacement of insulin pump, sequela",
+    "price": 3846,
+    "category": "gran-catador"
+  },
+  {
+    "id": 40,
+    "name": "Canis lupus baileyi",
+    "bodega": "Östen",
+    "description": "Sarcoid pyelonephritis",
+    "price": 5258,
+    "category": "degustador"
+  },
+  {
+    "id": 41,
+    "name": "Vanellus chilensis",
+    "bodega": "Eloïse",
+    "description": "Contusion of left foot, subsequent encounter",
+    "price": 1173,
+    "category": "degustador"
+  },
+  {
+    "id": 42,
+    "name": "Acrobates pygmaeus",
+    "bodega": "Léone",
+    "description": "Laceration w/o foreign body of unsp toe(s) w damage to nail",
+    "price": 1972,
+    "category": "explorador"
+  },
+  {
+    "id": 43,
+    "name": "Gekko gecko",
+    "bodega": "Sòng",
+    "description": "Sltr-haris Type II physeal fx upper end of unsp fibula",
+    "price": 7718,
+    "category": "degustador"
+  },
+  {
+    "id": 44,
+    "name": "Aonyx capensis",
+    "bodega": "Eléonore",
+    "description": "Salter-Harris Type IV physeal fracture of l calcaneus, 7thK",
+    "price": 4231,
+    "category": "explorador"
+  },
+  {
+    "id": 45,
+    "name": "Bettongia penicillata",
+    "bodega": "Liè",
+    "description": "Displ transverse fx unsp patella, 7thJ",
+    "price": 3700,
+    "category": "explorador"
+  },
+  {
+    "id": 46,
+    "name": "Trachyphonus vaillantii",
+    "bodega": "Gaétane",
+    "description": "Hydatidiform mole, unspecified",
+    "price": 5756,
+    "category": "explorador"
+  },
+  {
+    "id": 47,
+    "name": "Choloepus hoffmani",
+    "bodega": "Ruì",
+    "description": "Nondisp fx of pisiform, r wrist, subs for fx w routn heal",
+    "price": 2753,
+    "category": "explorador"
+  },
+  {
+    "id": 48,
+    "name": "Ictonyx striatus",
+    "bodega": "Gaëlle",
+    "description": "Noise effects on right inner ear",
+    "price": 1375,
+    "category": "gran-catador"
+  },
+  {
+    "id": 49,
+    "name": "Chamaelo sp.",
+    "bodega": "Maïté",
+    "description": "Idiopathic chronic gout, unspecified shoulder, with tophus",
+    "price": 9126,
+    "category": "degustador"
+  },
+  {
+    "id": 50,
+    "name": "Vulpes cinereoargenteus",
+    "bodega": "Amélie",
+    "description": "Dislocation of T9/T10 thoracic vertebra, initial encounter",
+    "price": 9019,
+    "category": "degustador"
+  }
+]
