@@ -9,59 +9,62 @@
     <header><%- include ("../partials/header") %></header>
 
     <main class="login-main-container">
+      <img src="/images/bg-login-mobile.jpeg" class="login-mobile-bg-img" />
+      <img src="/images/baco-ariadna.jpg" class="login-desktop-bg-img" />
+
       <form action="/" method="POST" class="login-form-container">
         <section>
-          <div class="login-div-boxes">
+          <div class="login-div-google">
             <button type="submit" class="button-google">
               <a href="">
                 <i class="fab fa-google google-icon"></i>
-                <span>Ingresa con Google</span>
+                <span>Google</span>
               </a>
             </button>
           </div>
-          <div class="login-div-boxes">
+          <div class="login-div-fb">
             <button type="submit" class="button-facebook">
               <a href="">
                 <i class="fab fa-facebook-f fb-icon"></i>
-                <span>Ingresa con Facebook</span>
+                <span>Facebook</span>
               </a>
             </button>
           </div>
         </section>
 
         <section>
-          <div class="login-div-boxes">
+          <div class="login-div-email">
             <label for="email"></label>
             <input
               type="text"
               name="email"
               id="email"
-              class="login-text-inputs"
               placeholder=" Correo electrónico"
+              class="login-imput-email"
             />
             <span class="login-invalid-text-input"
               >Correo electrónico no válido</span
             >
           </div>
-          <div class="login-div-boxes">
+          <div class="login-div-password">
             <label for="contraseña"></label>
             <input
               type="password"
               name="contraseña"
               id="contraseña"
-              class="login-text-inputs"
               placeholder=" Contraseña"
+              class="login-imput-password"
             />
             <span class="login-invalid-text-input">Contraseña no válida</span>
           </div>
 
-          <div class="login-div-boxes">
+          <div class="login-div-enter">
             <button type="submit" class="login-button-enter">
               <a href="/">INGRESAR</a>
             </button>
           </div>
 
-          <div class="login-div-boxes login-center-text">
+          <div class="login-div-remember-me">
             <input
               type="checkbox"
               name="recuerdame"
@@ -71,20 +74,18 @@
             <label for="recuerdame">Recuérdame</label>
           </div>
 
-          <div class="login-div-boxes login-center-text">
-            <a href="" class="login-div-anchor">¿Olvidaste tu contraseña?</a>
+          <div class="login-div-forgot-password">
+            <a href="">¿Olvidaste tu contraseña?</a>
           </div>
 
-          <div class="login-div-boxes login-center-text">
-            <a href="/register" class="login-div-anchor"
-              >¿No eres socio? Suscríbete</a
-            >
+          <div class="login-div-subscribe">
+            <a href="/register">¿No eres socio? Suscríbete</a>
           </div>
         </section>
 
         <section>
-          <div class="login-div-boxes">
-            <p class="login-center-text login-legal-consequences">
+          <div class="login-div-legal-consequences">
+            <p>
               Al ingresar, aceptas los términos y condiciones y la política de
               privacidad.
             </p>

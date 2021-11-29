@@ -7,7 +7,10 @@
 
 .login-body {
   font-size: 1rem;
-  background-color: #aa0d3f;
+}
+
+.hide-icon-login {
+  display: none;
 }
 
 /*
@@ -16,41 +19,49 @@ MAIN
 
 */
 
-.hide-icon-login {
+.login-main-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-mobile-bg-img {
+  position: absolute;
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+}
+
+.login-desktop-bg-img {
   display: none;
 }
 
-.login-main-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin: 0 auto;
-}
-
 .login-form-container {
-  background-color: #ebebeb;
-  width: 75%;
-  margin: 15% auto;
+  margin: 10% 15%;
   border: none;
   border-radius: 8px;
+  background-color: #ebebeb;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 5% 10%;
 }
 
-.login-div-boxes {
+section {
   width: 100%;
-  margin: 10px auto;
-  padding: 8px;
+}
+
+.login-div-google {
+  margin-bottom: 10%;
 }
 
 .button-google {
-  width: 90%;
-  margin: 10px 5%;
+  background-color: #4285f4;
+  width: 100%;
   padding: 8px;
   border: none;
   border-radius: 8px;
-  background-color: #4285f4;
-  color: #fff;
 }
 
 .button-google a {
@@ -62,13 +73,16 @@ MAIN
   margin-right: 2%;
 }
 
+.login-div-fb {
+  margin-bottom: 10%;
+}
+
 .button-facebook {
-  width: 90%;
-  margin: 10px 5%;
+  background-color: #4267f2;
+  width: 100%;
   padding: 8px;
   border: none;
   border-radius: 8px;
-  background-color: #4267b2;
 }
 
 .button-facebook a {
@@ -80,39 +94,46 @@ MAIN
   margin-right: 2%;
 }
 
-.login-text-inputs {
-  width: 90%;
-  margin: 10px 5%;
+.login-div-email {
+  margin-bottom: 10%;
+}
+
+.login-imput-email {
+  width: 100%;
   padding: 8px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 .login-invalid-text-input {
-  display: none;
-  width: 90%;
-  margin: 10px 5%;
-  padding: 8px;
   color: red;
   font-style: italic;
+  padding: 8px;
+  display: none;
 }
 
-.login-div-anchor {
-  text-decoration: none;
+.login-div-password {
+  margin-bottom: 10%;
 }
 
-.login-center-text {
+.login-imput-password {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+}
+
+.login-div-enter {
+  margin-bottom: 10%;
   text-align: center;
 }
 
 .login-button-enter {
-  width: 60%;
-  margin: 10px auto;
+  width: 80%;
   padding: 8px;
   border: none;
   border-radius: 8px;
   background-color: #aa0d3f;
-  margin: 0 20%;
 }
 
 .login-button-enter a {
@@ -120,9 +141,31 @@ MAIN
   color: #fff;
 }
 
-.login-legal-consequences {
-  width: 75%;
-  margin: 0 auto;
+.login-div-remember-me {
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+.login-div-forgot-password {
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+.login-div-forgot-password a {
+  text-decoration: none;
+}
+
+.login-div-subscribe {
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+.login-div-subscribe a {
+  text-decoration: none;
+}
+
+.login-div-legal-consequences {
+  text-align: center;
 }
 
 /* 
@@ -130,26 +173,49 @@ MAIN
 */
 
 @media (min-width: 767px) {
-  main {
-    max-width: 767px;
+  .login-form-container {
+    width: 50%;
+    padding: 5%;
+  }
+}
+
+@media (min-width: 1100px) {
+  .login-main-container {
+    flex-direction: row-reverse;
   }
 
-  .button-google {
-    width: 60%;
-    margin: 10px 20%;
+  .login-mobile-bg-img {
+    display: none;
   }
 
-  .button-facebook {
-    width: 60%;
-    margin: 10px 20%;
+  .login-desktop-bg-img {
+    display: block;
+    position: absolute;
+    z-index: -100;
+    width: 100%;
+    height: 100%;
   }
 
-  .login-text-inputs {
-    width: 60%;
-    margin: 10px 20%;
+  .login-form-container {
+    width: 25%;
+    margin: 10% 5% 10% 0;
+    padding: 2%;
+    background-color: transparent;
   }
 
-  .login-legal-consequences {
-    width: 60%;
+  .login-div-remember-me {
+    color: #fff;
+  }
+
+  .login-div-forgot-password a {
+    color: #fff;
+  }
+
+  .login-div-subscribe a {
+    color: #fff;
+  }
+
+  .login-div-legal-consequences {
+    color: #fff;
   }
 }
