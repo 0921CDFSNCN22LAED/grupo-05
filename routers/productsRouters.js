@@ -6,7 +6,7 @@ const productsController = require("../controllers/productsController.js");
 
 router.get("/cava", productsController.cava);
 
-router.get("/detalleProducto", productsController.detalleProducto);
+router.get("/:id", productsController.detalleProducto);
 
 router.get("/vinoteca", productsController.vinoteca);
 
