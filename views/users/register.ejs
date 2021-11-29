@@ -6,85 +6,121 @@
     <title>Registro</title>
     <link rel="stylesheet" href="/css/register.css" />
   </head>
-  <header><%- include ("../partials/header") %></header>
 
   <body>
-    <div class="formulario-container">
-      <form action="formulario" method="post"></form>
-      <div class="register">
-        <div class="container-button-gofa">
-          <div class="container-register">
+    <header><%- include ("../partials/header") %></header>
+    <main class="register-main-container">
+      <img src="/images/bg-login-mobile.jpeg" class="register-mobile-bg-img" />
+      <img src="/images/venus-birth.jpeg" class="register-desktop-bg-img" />
+
+      <form action="/" method="POST" class="register-form-container">
+        <section>
+          <h4>Regístrate con:</h4>
+          <div class="register-div-google">
             <button type="submit" class="button-google">
               <a href="">
                 <i class="fab fa-google google-icon"></i>
-                <span>Ingresa con Google</span>
+                <span>Google</span>
               </a>
             </button>
           </div>
-          <div class="container-register">
+          <div class="register-div-fb">
             <button type="submit" class="button-facebook">
               <a href="">
                 <i class="fab fa-facebook-f fb-icon"></i>
-                <span>Ingresa con Facebook</span>
+                <span>Facebook</span>
               </a>
             </button>
           </div>
-        </div>
-        <h4>Informacion Personal</h4>
-        <div class="container-register">
-          <label for="name"></label>
-          <input
-            class="in"
-            type="text"
-            name="nombre y apellido"
-            placeholder="Nombre Completo"
-          />
-        </div>
-        <div class="container-register">
-          <label for="email"></label>
-          <input class="in" type="email" name="correo" placeholder="E-mail" />
-        </div>
-        <div class="container-register">
-          <label class="fecha" for="fechaDeNacimiento"
-            >Fecha de Nacimiento</label
-          >
-          <input class="in" type="date" />
-        </div>
-        <div class="container-register">
-          <label for="DNI"></label>
-          <input class="in" type="text" name="DNI" placeholder=" DNI" />
-        </div>
-        <h4>Informacion de Inicio de Sesion</h4>
-        <div class="container-register">
-          <label for="Contrasena"></label>
-          <input
-            class="in"
-            type="password"
-            name="correo"
-            placeholder="Contraseña"
-          />
-        </div>
-        <div class="container-register">
-          <label for="Confirmar correo"></label>
-          <input
-            class="in"
-            type="confirmacion"
-            class="required"
-            placeholder="Confirmar Contraseña"
-          />
-        </div>
-        <div class="enviar">
-          <button type="submit" class="boton">
-            <a href="/">INGRESAR</a>
-          </button>
-        </div>
-        <p>
-          ¿Ya tenes una cuenta?<a class="link" href="login.html">
-            Iniciar Sesion
-          </a>
-        </p>
-      </div>
-    </div>
+        </section>
+
+        <section>
+          <h4>Información Personal:</h4>
+          <div class="register-div-name">
+            <label for="name"></label>
+            <input
+              class="register-imput-name"
+              type="text"
+              name="nombre y apellido"
+              placeholder=" Nombre y Apellido"
+            />
+          </div>
+          <div class="register-div-email">
+            <label for="email"></label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder=" Correo Electrónico"
+              class="register-imput-email"
+            />
+            <span class="register-invalid-text-input"
+              >Correo electrónico no válido</span
+            >
+          </div>
+          <div class="register-div-date">
+            <label for="fechaDeNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaDeNacimiento" />
+          </div>
+          <div class="register-div-dni">
+            <label for="DNI"></label>
+            <input
+              class="register-imput-dni"
+              type="text"
+              name="DNI"
+              id="DNI"
+              placeholder=" DNI"
+            />
+          </div>
+        </section>
+
+        <section>
+          <h4>Informacion de Inicio de Sesion:</h4>
+          <div class="register-div-password">
+            <label for="contraseña"></label>
+            <input
+              type="password"
+              name="contraseña"
+              id="contraseña"
+              placeholder=" Contraseña"
+              class="register-imput-password"
+            />
+            <span class="register-invalid-text-input"
+              >Contraseña no válida</span
+            >
+          </div>
+          <div class="register-div-password">
+            <label for="confirmar contraseña"></label>
+            <input
+              type="password"
+              name="contraseña"
+              id="confirmar contraseña"
+              placeholder=" Confirmar Contraseña"
+              class="register-imput-password"
+            />
+            <span class="register-invalid-text-input"
+              >Contraseña no válida</span
+            >
+          </div>
+        </section>
+
+        <section>
+          <div class="register-div-enter">
+            <button type="submit" class="register-button-enter">
+              <a href="/">INGRESAR</a>
+            </button>
+          </div>
+
+          <div class="register-div-to-login">
+            <p>
+              ¿Ya tienes una cuenta?
+              <a class="link" href="/login">Iniciar Sesion</a>
+            </p>
+          </div>
+        </section>
+      </form>
+    </main>
+
     <footer><%- include ("../partials/footer") %></footer>
   </body>
 </html>

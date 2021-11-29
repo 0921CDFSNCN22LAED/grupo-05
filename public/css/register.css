@@ -1,274 +1,227 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: Roboto;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
 }
 
-body{
-    font-size: 1rem;
-    background-color: #aa0d3f;
-    /*background-image: url(/css/marca-de-vino-esencia-wines.jpg);
-    background-size: 100vw 100vh;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    */
+.register-body {
+  font-size: 1rem;
 }
 
-.register{
-    width: 75%;
-    border: none;
-    background: #ebebeb;
-    border-radius: 8px;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 15% auto;
+/*
+
+MAIN
+
+*/
+
+.register-main-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.formulario{
-    display: flex;
-    flex-direction: column;
-    width:100%;
+.register-mobile-bg-img {
+  position: absolute;
+  z-index: -100;
+  width: 100%;
+  height: 100%;
 }
 
-.fecha{
-    display: flex;
-    flex-direction: column;
-    font-size: 15px;
-    padding: 10px;
+.register-desktop-bg-img {
+  display: none;
 }
 
-h1{
-    align-items: center;
-    text-align: center;
-    margin-bottom: 30px;
-    color: #aa0d3f;
-    color: #201f1d;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+.register-form-container {
+  margin: 10% 15%;
+  border: none;
+  border-radius: 8px;
+  background-color: #ebebeb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5% 10%;
 }
 
-h3{
-    align-items: center;
-    text-align: center;
-    color: #aa0d3f;
-    margin: 20px;
+section {
+  width: 100%;
 }
 
-h4{
-    padding-bottom: 16px;
-    padding-top: 16px;
+.register-div-google {
+  margin-bottom: 10%;
 }
-
-.container-register{
-    width: 100%;
-}
-
-.enviar{
-    width: 100%;
-    margin: 10px 0;
-}
-
-.boton{
-    width: 60%;
-    margin: 10px auto;
-    padding: 8px;
-    border: none;
-    border-radius: 8px;
-    background-color: #aa0d3f;
-    margin: 0 20%;
-}
-
-
-.boton a {
-    text-decoration: none;
-    color: #fff;
-  }
-
-.formulario-container p{
-    margin: 5px;
-
-}
-
-.link{
-    text-decoration: none;
-    color: blue;
-}
-
-.link:hover{
-    color: #aa0d3f;
-}
-
-.in{
-    width: 100%;
-    margin: 10px 5%;
-    padding: 8px;
-    border: none;
-    border-radius: 5px; 
-}
-
-.register-invalid-text-input{
-    display: none;
-    width: 90%;
-    margin: 10px 5%;
-    padding: 8px;
-    color: red;
-    font-style: italic;
-}
-
-.container-button-gofa{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-top: 10px;
-}
-
 
 .button-google {
-    width: 80%;
-    margin: 10px 5%;
-    padding: 8px;
-    border: none;
-    border-radius: 8px;
-    background-color: #4285f4;
-    color: #fff;
+  background-color: #4285f4;
+  width: 100%;
+  padding: 4%;
+  border: none;
+  border-radius: 8px;
+}
+
+.button-google a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.google-icon {
+  margin-right: 2%;
+}
+
+.register-div-fb {
+  margin-bottom: 10%;
+}
+
+.button-facebook {
+  background-color: #4267f2;
+  width: 100%;
+  padding: 4%;
+  border: none;
+  border-radius: 8px;
+}
+
+.button-facebook a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.fb-icon {
+  margin-right: 2%;
+}
+
+h4 {
+  margin: 0 0 5% 0;
+  text-align: center;
+}
+
+.register-div-name {
+  margin-bottom: 10%;
+}
+
+.register-imput-name {
+  width: 100%;
+  padding: 4%;
+  border: none;
+  border-radius: 8px;
+}
+
+.register-div-email {
+  margin-bottom: 5%;
+}
+
+.register-imput-email {
+  width: 100%;
+  padding: 4%;
+  border: none;
+  border-radius: 8px;
+}
+
+.register-invalid-text-input {
+  color: red;
+  font-style: italic;
+  padding: 4%;
+  display: none;
+}
+
+.register-div-date {
+  margin-bottom: 10%;
+}
+
+.register-div-date label {
+  margin-left: 2%;
+}
+
+.register-div-date input {
+  width: 100%;
+  margin-top: 2%;
+  padding: 3%;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.register-div-dni {
+  margin-bottom: 10%;
+}
+
+.register-imput-dni {
+  width: 100%;
+  padding: 4%;
+  border: none;
+  border-radius: 8px;
+}
+
+.register-div-password {
+  margin-bottom: 10%;
+}
+
+.register-imput-password {
+  width: 100%;
+  padding: 4%;
+  border: none;
+  border-radius: 8px;
+}
+
+.register-div-enter {
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+.register-button-enter {
+  width: 85%;
+  padding: 4%;
+  border: none;
+  border-radius: 8px;
+  background-color: #aa0d3f;
+}
+
+.register-button-enter a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.register-div-to-login {
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+.register-div-to-login a {
+  text-decoration: none;
+  color: blue;
+}
+
+/* 
+    QUERIES
+*/
+
+@media (min-width: 767px) {
+  .register-form-container {
+    width: 50%;
+    padding: 5%;
+  }
+}
+
+@media (min-width: 1100px) {
+  .register-main-container {
+    flex-direction: row-reverse;
   }
 
-
-
-  .button-google a {
-    text-decoration: none;
-    color: #fff;
-  }
-  
-  .google-icon {
-    margin-right: 2%;
-  }
-  
-  .button-facebook {
-    width: 80%;
-    margin: 10px 5%;
-    padding: 8px;
-    border: none;
-    border-radius: 8px;
-    background-color: #4267b2;
-  }
-  
-  .button-facebook a {
-    text-decoration: none;
-    color: #fff;
-  }
-  
-  .fb-icon {
-    margin-right: 2%;
+  .register-mobile-bg-img {
+    display: none;
   }
 
-/*Footer*/
-footer{
-    width:100%;
+  .register-desktop-bg-img {
+    display: block;
+    position: absolute;
+    z-index: -100;
+    width: 100%;
+    height: 100%;
+  }
+
+  .register-form-container {
+    width: 30%;
+    margin: 10% 5% 10% 0;
+    padding: 2%;
+  }
 }
-
-.contenedor{
-    background-color:#d1cdcc;
-    font-size: 14px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.foot{
-    display: flex;
-    flex-direction:row;
-}
-
-.presentacion{
-    display: flex;
-    justify-content: flex-start;
-    width: 33%;
-    margin: 20px 10px;
-}
-
-.presentacion p{
-    text-align: center;
-}
-
-.copy p{text-align: center;}
-
-.presentacion .corazon{
-    color: #aa0d3f;
-}
-
-.presentacion .cafe{
-    color: #201f1d;
-}
-
-.copy{
-    display: flex;
-    justify-content:flex-end;
-    width: 33%;
-    margin: 20px 10px;
-}
-
-.redes{
-    display: flex;
-    justify-content: flex-end;
-    width: 33%;
-    margin: 20px 10px;
-}
-
-.lista .fab{
-    color: rgb(87, 85, 85);
-    font-size: 20px;
-    margin: 0 10px;
-}
-
-@media (min-width:0px){
-    .formulario-container{
-        display: flex;
-        flex-direction: column;
-    }
-    .register{
-        display: flex;
-        flex-direction: column;
-        flex-grow: -1;
-        position: relative;
-    }
-    
-    .required{
-        width: 80%;
-    }
-    .in{
-        width: 80%;
-    }
-    h3{
-        width: 80%;
-    }
-    .presentacion{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-}
-
-@media(min-width:760px){
-    .button-google {
-        width: 60%;
-        margin: 10px 20%;
-      }
-    
-    .button-facebook {
-        width: 60%;
-        margin: 10px 20%;
-      }
-    .in{
-        width: 60%;
-        margin: 10px 20%;
-    }.register{
-        width: 55%;
-       margin: 30px 22.5%;
-    }
-
-}
-

@@ -59,7 +59,7 @@ section {
 .button-google {
   background-color: #4285f4;
   width: 100%;
-  padding: 8px;
+  padding: 4%;
   border: none;
   border-radius: 8px;
 }
@@ -80,7 +80,7 @@ section {
 .button-facebook {
   background-color: #4267f2;
   width: 100%;
-  padding: 8px;
+  padding: 4%;
   border: none;
   border-radius: 8px;
 }
@@ -100,7 +100,7 @@ section {
 
 .login-imput-email {
   width: 100%;
-  padding: 8px;
+  padding: 4%;
   border: none;
   border-radius: 8px;
 }
@@ -108,7 +108,7 @@ section {
 .login-invalid-text-input {
   color: red;
   font-style: italic;
-  padding: 8px;
+  padding: 4%;
   display: none;
 }
 
@@ -118,7 +118,7 @@ section {
 
 .login-imput-password {
   width: 100%;
-  padding: 8px;
+  padding: 4%;
   border: none;
   border-radius: 8px;
 }
@@ -130,7 +130,7 @@ section {
 
 .login-button-enter {
   width: 80%;
-  padding: 8px;
+  padding: 4%;
   border: none;
   border-radius: 8px;
   background-color: #aa0d3f;
