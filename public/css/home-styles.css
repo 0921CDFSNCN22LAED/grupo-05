@@ -90,6 +90,10 @@ li {
   border-radius: 100%;
 }
 
+.max-height-img-carousel {
+  height: 350px;
+}
+
 /* COMIENZAN LOS BOTONES */
 
 .main-button {
