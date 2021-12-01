@@ -53,7 +53,13 @@ const productsController = {
         res.render("users/cava");
     },
     detalleProducto: (req, res) => {
-        res.render("products/detalleProducto");
+        const id = req.params.id;
+        const vino = vinos.find((vino) => {
+            return id == vino.id;
+        });
+        console.log(id)
+        console.log(vino)
+        res.render("products/detalleProducto", { vino: vino });
     },
 
     vinoteca: (req, res) => {
@@ -80,7 +86,8 @@ const productsController = {
         } else {
             res.send("No seleccionaste ningun vino. Intenta /editarProductos/2")
         };
-    },
+
+    }
 }
 
 module.exports = productsController

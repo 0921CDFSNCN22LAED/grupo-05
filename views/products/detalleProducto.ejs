@@ -8,7 +8,7 @@
   <body>
     <header><%- include ("../partials/header") %></header>
     <main>
-      <h2>Vino 1</h2>
+      <h2><%=vino.nombre%></h2>
       <section id="contenedor-detalle">
         <img src="/images/vino1.jpeg" alt="vino1" />
         <div id="contenedor-detalle-vino">
@@ -26,16 +26,11 @@
           </div>
           <div class="contenedor-detalle-info">
             <h3>Descripción:</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              aliquid nisi vitae ad commodi repellat enim quidem! Ut
-              exercitationem sed quidem! Dignissimos mollitia excepturi adipisci
-              voluptas minus. Accusamus, alias eius.
-            </p>
+            <p><%=vino.descripcion%></p>
           </div>
           <div class="contenedor-detalle-info">
             <h3>Precio:</h3>
-            <p>$3000</p>
+            <p><%=vino.precio%></p>
           </div>
           <div id="contenedor-detalle-botones">
             <button type="submit" class="boton-detalle">Comprar</button>
