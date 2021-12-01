@@ -3,7 +3,13 @@
   <head>
     <%- include ("../partials/head") %>
 
-    <title>Registro</title>
+    <title>REGISTER</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="/css/register.css" />
   </head>
 
@@ -17,7 +23,10 @@
         <section>
           <h4>Regístrate con:</h4>
           <div class="register-div-google">
-            <button type="submit" class="button-google box-shadow">
+            <button
+              type="submit"
+              class="button-google box-shadow btn-secondary"
+            >
               <a href="">
                 <i class="fab fa-google google-icon"></i>
                 <span>Google</span>
@@ -25,7 +34,10 @@
             </button>
           </div>
           <div class="register-div-fb">
-            <button type="submit" class="button-facebook box-shadow">
+            <button
+              type="submit"
+              class="button-facebook box-shadow btn-secondary"
+            >
               <a href="">
                 <i class="fab fa-facebook-f fb-icon"></i>
                 <span>Facebook</span>
@@ -37,35 +49,41 @@
         <section>
           <h4>Información Personal:</h4>
           <div class="register-div-name">
-            <label for="name"></label>
+            <label for="name" class="form-label"></label>
             <input
-              class="register-imput-name box-shadow"
+              class="register-imput-name box-shadow form-control"
               type="text"
               name="nombre y apellido"
               placeholder=" Nombre y Apellido"
             />
           </div>
           <div class="register-div-email">
-            <label for="email"></label>
+            <label for="email" class="form-label"></label>
             <input
-              type="text"
+              type="email"
               name="email"
               id="email"
               placeholder=" Correo Electrónico"
-              class="register-imput-email box-shadow"
+              class="register-imput-email box-shadow form-control"
             />
             <span class="register-invalid-text-input"
               >Correo electrónico no válido</span
             >
           </div>
           <div class="register-div-date">
-            <label for="fechaDeNacimiento">Fecha de Nacimiento:</label>
-            <input type="date" id="fechaDeNacimiento" class="box-shadow" />
+            <label for="fechaDeNacimiento" class="form-label"
+              >Fecha de Nacimiento:</label
+            >
+            <input
+              type="date"
+              id="fechaDeNacimiento"
+              class="box-shadow form-control"
+            />
           </div>
           <div class="register-div-dni">
-            <label for="DNI"></label>
+            <label for="DNI" class="form-label"></label>
             <input
-              class="register-imput-dni box-shadow"
+              class="register-imput-dni box-shadow form-control"
               type="number"
               name="DNI"
               id="DNI"
@@ -77,26 +95,26 @@
         <section>
           <h4>Informacion de Inicio de Sesion:</h4>
           <div class="register-div-password">
-            <label for="contraseña"></label>
+            <label for="contraseña" class="form-label"></label>
             <input
               type="password"
               name="contraseña"
               id="contraseña"
               placeholder=" Contraseña"
-              class="register-imput-password box-shadow"
+              class="register-imput-password box-shadow form-control"
             />
             <span class="register-invalid-text-input"
               >Contraseña no válida</span
             >
           </div>
           <div class="register-div-password">
-            <label for="confirmar contraseña"></label>
+            <label for="confirmar contraseña" class="form-label"></label>
             <input
               type="password"
               name="contraseña"
               id="confirmar contraseña"
               placeholder=" Confirmar Contraseña"
-              class="register-imput-password box-shadow"
+              class="register-imput-password box-shadow form-control"
             />
             <span class="register-invalid-text-input"
               >Contraseña no válida</span
@@ -106,7 +124,10 @@
 
         <section>
           <div class="register-div-enter">
-            <button type="submit" class="register-button-enter box-shadow">
+            <button
+              type="submit"
+              class="register-button-enter box-shadow btn-secondary"
+            >
               <a href="/">INGRESAR</a>
             </button>
           </div>
@@ -122,5 +143,15 @@
     </main>
 
     <footer><%- include ("../partials/footer") %></footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
