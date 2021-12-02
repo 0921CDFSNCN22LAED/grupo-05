@@ -3,10 +3,9 @@ const router = express.Router();
 const path = require("path");
 const productsController = require("../controllers/productsController.js");
 
-
 router.get("/cava", productsController.cava);
 
-router.get("/:id/", productsController.detalleProducto);
+router.get("/detalleProducto/:id/", productsController.detalleProducto);
 
 router.get("/vinoteca", productsController.vinoteca);
 
