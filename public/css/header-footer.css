@@ -86,27 +86,89 @@ footer {
   width: 100%;
 }
 
-#contenedor-botones-nav a {
-  width: 33%;
+#contenedor-botones-nav a, #contenedor-botones-nav div{
+  width: 33.3333333%;
   font-size: 30px;
-  text-align: center;
+  align-items: center;
   color: #aa0d3f;
+  
+}
+
+#contenedor-botones-nav a{
+  display: flex;
+  justify-content: center;
 }
 
 #nav-pantalla-mayor {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: fixed;
+  background-color: #201f1d;
+  border: black 1px solid;
+  inset: 0 0 0 30%;
+  padding: 10rem 2rem;
+  z-index: 1000;
 }
 
 #nav-pantalla-mayor a {
   color: #aa0d3f;
   text-decoration: none;
-  font-size: 20px;
+  width: 100%;
   text-align: center;
-  border-left: solid white 1px;
+  margin: 20px 0;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
+
+
+#nav-pantalla-mayor div {
+  color: #aa0d3f;
+  text-decoration: none;
+  font-size: 1.5rem;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.container-button_burguer-nav{
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 45px;
+}
+
+.button_burguer-nav{
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  color: #aa0d3f;
+}
+
+.button_burguer-nav button{
+  font-size: 1.5rem;
+}
+
+
+
+.header_visible {
+  transform: translateY(0%);
+  transition: transform 350ms ease-in;
+}
+
+.header_not-visible {
+  transform: translateY(-100%);
+  transition: transform 350ms ease-in;
+}
+
 
 #contenedor-logo {
   width: 35%;
+  z-index: 3000;
 }
 
 #contenedor-logo img {
@@ -117,6 +179,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  z-index: 3000;
 }
 
 #input {
@@ -141,43 +204,49 @@ footer {
     width: 80%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    align-items: flex-end;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-around;
   }
   #contenedor-logo {
     width: 20%;
   }
+  #nav-pantalla-mayor {
+    inset: 0 20% 0 0;
+    width: 100%;
+    flex-direction: row;
+    height: 100px;
+    position: absolute;
+  }
+  #nav-pantalla-mayor a{
+    width: 20%;
+    position: relative;
+    bottom: 0;
+  }
   #contenedor-botones-nav {
-    display: none;
-    width: 30%;
+    display: flex;
+    width: 10%;
   }
   #contenedor-botones-nav a {
+    display: none;
     font-size: 30px;
     padding: 0;
     height: 20%;
     margin: 40px 0;
-    width: 50%;
+    width: 0%;
+  }
+  .container-button_burguer-nav{
+    width: 0;
   }
 
   #contenedor-botones-nav a i {
     font-size: 3.5rem;
   }
-
-  #nav-pantalla-mayor {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    width: 100%;
-  }
-  #nav-pantalla-mayor a {
-    width: 20%;
-  }
   #contenedor-logo {
     display: inline-block;
   }
   #contenedor-input-slogan {
-    width: 100%;
+    width: 90%;
   }
   #input {
     display: flex;
@@ -188,14 +257,14 @@ footer {
     align-items: center;
   }
   #input input {
-    width: 72%;
+    width: 80%;
     border-radius: 5px 0 0 5px;
     height: 30px;
     border: none;
     padding-left: 10px;
   }
   #input button {
-    width: 8%;
+    width: 10%;
     border-radius: 0 5px 5px 0;
     height: 30px;
     border: none;
@@ -216,9 +285,5 @@ footer {
   }
   #contenedor-nav {
     width: 88%;
-  }
-  #contenedor-botones-nav {
-    display: none;
-    width: 20%;
   }
 }

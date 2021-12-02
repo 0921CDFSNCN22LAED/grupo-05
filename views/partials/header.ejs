@@ -3,11 +3,6 @@
     ><img src="/images/logo.png" alt="Logo" class="logo"
   /></a>
   <div id="contenedor-nav">
-    <nav id="contenedor-botones-nav">
-      <a href="/login"><i class="fas fa-user hide-icon-login"></i></a>
-      <a href="/cava"><i class="fas fa-wine-glass-alt"></i></a>
-      <a href=""><i class="fas fa-bars"></i></a>
-    </nav>
     <div id="contenedor-input-slogan">
       <div id="contenedor-slogan">
         <p>...Porque ninguna gran historia empezó con una ensalada</p>
@@ -17,7 +12,14 @@
         <button><i class="fas fa-search"></i></button>
       </div>
     </div>
-    <nav id="nav-pantalla-mayor">
+    <nav id="contenedor-botones-nav">
+      <a href="/login"><i class="fas fa-user hide-icon-login"></i></a>
+      <a href="/cava"><i class="fas fa-wine-glass-alt"></i></a>
+      <div class="container-button_burguer-nav">
+        <button class="button_burguer-nav header_not-visible"><i class="fas fa-bars"></i></button>
+      </div>
+    </nav>
+    <nav id="nav-pantalla-mayor" class=" header_not-visible">
       <a href="/vinoteca">Vinoteca</a>
       <a href="/login">Login</a>
       <a href="/registro">Registro</a>
