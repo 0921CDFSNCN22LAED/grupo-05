@@ -93,6 +93,7 @@ main h2{
     margin: 0;
 }
 
+
 #boton-pagar{
     color: white;
     background-color: #aa0d3f;
@@ -108,6 +109,7 @@ main h2{
 
 .button-add-product {
   position: fixed;
+  text-decoration: none;
   right: 5%;
   bottom: 5%;
   border: none;

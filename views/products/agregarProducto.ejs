@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <%- include ("../partials/head") %>
-    <title><%= pageTitle  %> </title>
+    <title>Agregar productos</title>
     <link rel="stylesheet" href="/css/agregarProducto.css" />
   </head>
   <body class="agregarProducto-body">
@@ -10,60 +10,57 @@
     <main class="agregarProducto-main-container">
       <form class="agregarProducto-form-container" method="POST">
         <div class="agregarProducto-div-boxes">
-          <label for="nombreProducto">Nombre</label>
-          <% if (vino) {%> 
+          <label for="nombreProducto">Nombre:</label>
           <input
             class="agregarProducto-text-inputs"
             type="text"
-            name="nombreProducto"
-            id="nombreProducto"
-            value= "<%= vino.nombre %>"
+            name="nombre"
+            id="nombre"
+            placeholder="Ej: Toro"
           />
-          <% } %> 
         </div>
         <div class="agregarProducto-div-boxes">
-          <label for="descripcionProducto">Descripcion</label>
-          <% if (vino) {%> 
+          <label for="descripcionProducto">Bodega:</label>
           <input
             class="agregarProducto-text-inputs"
             type="text"
-            name="descripcionProducto"
-            id="descripcionProducto"
-            value= "<%= vino.descripcion %>"
-            autocomplete= <%= vino.descripcion %> 
+            name="bodega"
+            id="bodega"
+            placeholder="Ej: Malbec"
           />
-          <% } %> 
         </div>
         <div class="agregarProducto-div-boxes">
           <label for="precioProducto">Precio:</label>
-          <% if (vino) {%> 
           <input
             class="agregarProducto-text-inputs"
             type="number"
-            name="precioProducto"
-            id="precioProducto"
-            value= "<%= vino.precio %>"
-            autocomplete= <%= vino.precio  %> 
+            name="precio"
+            id="precio"
+            placeholder="Ej: $1000"
           />
-          <% } %> 
         </div>
         <div class="agregarProducto-div-boxes">
+          <label for="precioProducto">Descripcion:</label>
+          <textarea class="agregarProducto-text-area" name="descripcion" id="descripcion" cols="30" rows="10"></textarea>
+        </div>
+        <div class="agregarProducto-div-box-img">
           <label for="imagenProducto">Imagen del producto: </label>
           <input
             class="agregarProducto-text-inputs"
             type="file"
             accept="image/jpg"
-            name="imagenProducto"
-            id="imagenProducto"
+            name="imagen"
+            id="imagen"
           />
         </div>
-        <div>
+
+        <div class="agregarProducto-div-boxes">
           <button
             class="agregarProducto-button"
             type="submit"
             value="Agregar producto"
           >
-            Agregar producto
+            Agregar
           </button>
         </div>
       </form>

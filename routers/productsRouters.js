@@ -5,16 +5,21 @@ const productsController = require("../controllers/productsController.js");
 
 router.get("/cava", productsController.cava);
 
-router.get("/detalleProducto/:id/", productsController.detalleProducto);
+router.get("/detalle/:id/", productsController.detalleProducto);
 
 router.get("/vinoteca", productsController.vinoteca);
 
-router.get("/agregarProductos", productsController.agregarProductos);
+router.get("/agregar", productsController.agregarProducto);
+
 
 router.post("/", productsController.store);
 
 router.get("/editarProductos/:id", productsController.editarProductos);
 
-router.delete("/vinoteca", productsController.deleteProduct);
+router.get("/editar/:id", productsController.editarProducto);
+router.put("/editar/:id", productsController.actualizarProducto);
+
+
+router.delete("/vinoteca", productsController.eliminarProducto);
 
 module.exports = router;
