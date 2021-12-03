@@ -8,9 +8,7 @@ const productsController = {
   },
   detalleProducto: (req, res) => {
     const id = req.params.id;
-    const vino = vinos.find((vino) => {
-      return id == vino.id;
-    });
+    const vino = productsService.findOne(id);
     res.render("products/detalleProducto", { vino: vino });
   },
 
@@ -27,9 +25,7 @@ const productsController = {
 
   editarProductos: (req, res) => {
     const id = req.params.id;
-    const vino = vinos.find((vino) => {
-      return id == vino.id;
-    });
+    const vino = productsService.findOne(id);
     if (vino) {
       res.render("products/editarProductos", {
         vino: vino,
@@ -42,9 +38,7 @@ const productsController = {
 
   deleteProduct: (req, res) => {
     const id = req.params.id;
-    const vino = vinos.find((vino) => {
-      return id == vino.id;
-    });
+    const vino = productsService.findOne(id);
     res.redirect("products/vinoteca");
   },
 };
