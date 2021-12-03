@@ -22,15 +22,14 @@
           <% } %> 
         </div>
         <div class="agregarProducto-div-boxes">
-          <label for="descripcionProducto">Descripcion</label>
+          <label for="descripcionProducto">Bodega:</label>
           <% if (vino) {%> 
           <input
             class="agregarProducto-text-inputs"
             type="text"
             name="descripcionProducto"
             id="descripcionProducto"
-            value= "<%= vino.descripcion %>"
-            autocomplete= <%= vino.descripcion %> 
+            value= "<%= vino.bodega %>"
           />
           <% } %> 
         </div>
@@ -43,18 +42,24 @@
             name="precioProducto"
             id="precioProducto"
             value= "<%= vino.precio %>"
-            autocomplete= <%= vino.precio  %> 
           />
           <% } %> 
         </div>
         <div class="agregarProducto-div-boxes">
-          <label for="imagenProducto">Imagen del producto: </label>
+          <label for="precioProducto">Descripcion:</label>
+          <% if (vino) {%> 
+          <textarea class="agregarProducto-text-area" name="descripcion" id="" cols="30" rows="10"><%= vino.descripcion %></textarea>
+          <% } %> 
+        </div>
+        <div class="agregarProducto-div-boxes">
+          <label for="imagenProducto">Imagen del producto: </label> 
           <input
             class="agregarProducto-text-inputs"
             type="file"
             accept="image/jpg"
             name="imagenProducto"
             id="imagenProducto"
+            value="<%= vino.imagen %>"
           />
         </div>
         <div>
@@ -63,7 +68,7 @@
             type="submit"
             value="Agregar producto"
           >
-            Agregar producto
+            Editar Producto
           </button>
         </div>
       </form>
