@@ -100,3 +100,14 @@ En este nuevo sprint realizamos una retro muy acotada por haber trabajado todos 
 Al mismo tiempo, algunos decidieron avanzar en cambiar la estética de la página y comenzar a aplicar algunos cambios que no están necesariamente en el sprint para mejorar la página.
 
 ---
+
+
+Viernes 3/11 - participantes: Ariel, Francisco, Enzo
+Intentamos solucionar problemas que tiene Ariel con git. Discutimos la funcionalidad del services y hablamos de como hacer la ruta para delete. Creamos carpeta para productos en imagenes y cambiamos rutas de json.
+
+Falta hacer
+
+- Crear carpeta source (arreglar rutas)
+- Termina metodos http
+- Corregir json (categorias)
+- Modificar conceptualmente el index
