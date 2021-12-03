@@ -14,7 +14,7 @@
         <% for (let vino of vinos) { let link = "/editarProductos/" + vino.id%>
         <article class="articulo-vino">
           <div class="contenedor-cava">
-            <img src="<%= vino.imagen %>" alt="" width="100%" />
+            <a href="/products/detalle/<%= vino.id %>"><img src="<%= vino.imagen %>" alt="" width="100%" /></a>
             <h3><%= vino.nombre %></h3>
             <div>
               <i class="far fa-star"></i>
@@ -23,7 +23,7 @@
                 <button type="submit">DELETE</button>
               </form>
             </div>
-            <h4><%= vino.descripcion %></h4>
+            <h4><%= vino.bodega %></h4>
             <p><% vino.precio %></p>
           </div>
         </article>

@@ -1,7 +1,5 @@
 productsService = require("../services/productsServices");
 
-vinos = productsService.getAll();
-
 const productsController = {
   cava: (req, res) => {
     res.render("users/cava");
@@ -13,6 +11,7 @@ const productsController = {
   },
 
   vinoteca: (req, res) => {
+    vinos = productsService.getAll();
     res.render("products/vinoteca", {
       vinos: vinos,
       link: "/editarProductos/" + vinos.id,
