@@ -1,5 +1,8 @@
 productsService = require("../services/productsServices");
 
+vinos = productsService.getAll();
+
+
 const productsController = {
   cava: (req, res) => {
     res.render("users/cava");
@@ -11,7 +14,6 @@ const productsController = {
   },
 
   vinoteca: (req, res) => {
-    vinos = productsService.getAll();
     res.render("products/vinoteca", {
       vinos: vinos,
       link: "/editarProductos/" + vinos.id,
@@ -33,6 +35,29 @@ const productsController = {
     } else {
       res.send("No seleccionaste ningun vino. Intenta /editarProductos/2");
     }
+  },
+  actualizarProducto: (req, res) => {
+    const id = req.params.id;
+    const index = vinos.findIndex((vino)=>{
+			return vino.id == id;
+		})
+
+    const updatedProduct = {
+      id: vinos[index].id,
+      ...req.body
+    }
+
+    vinos[index] = updatedProduct;
+
+    console.log(updatedProduct);
+    console.log(req.body);
+
+    productsService.saveProducts()
+
+    console.log();
+
+    
+    res.redirect('/products/detalle/' + updatedProduct.id)
   },
 
   eliminarProducto: (req, res) => {

@@ -8,15 +8,15 @@
   <body class="agregarProducto-body">
     <header><%- include ("../partials/header") %></header>
     <main class="agregarProducto-main-container">
-      <form class="agregarProducto-form-container" method="POST">
+      <form class="agregarProducto-form-container" action="/products/editar/<%= vino.id %>?_method=PUT" method="post">
         <div class="agregarProducto-div-boxes">
-          <label for="nombreProducto">Nombre</label>
+          <label for="nombre">Nombre</label>
           <% if (vino) {%> 
           <input
             class="agregarProducto-text-inputs"
             type="text"
-            name="nombreProducto"
-            id="nombreProducto"
+            name="nombre"
+            id="nombre"
             value= "<%= vino.nombre %>"
           />
           <% } %> 
@@ -27,8 +27,8 @@
           <input
             class="agregarProducto-text-inputs"
             type="text"
-            name="descripcionProducto"
-            id="descripcionProducto"
+            name="bodega"
+            id="bodega"
             value= "<%= vino.bodega %>"
           />
           <% } %> 
@@ -39,8 +39,8 @@
           <input
             class="agregarProducto-text-inputs"
             type="number"
-            name="precioProducto"
-            id="precioProducto"
+            name="precio"
+            id="precio"
             value= "<%= vino.precio %>"
           />
           <% } %> 
@@ -48,7 +48,7 @@
         <div class="agregarProducto-div-boxes">
           <label for="precioProducto">Descripcion:</label>
           <% if (vino) {%> 
-          <textarea class="agregarProducto-text-area" name="descripcion" id="" cols="30" rows="10"><%= vino.descripcion %></textarea>
+          <textarea class="agregarProducto-text-area" name="descripcion" id="descripcion" cols="30" rows="10"><%= vino.descripcion %></textarea>
           <% } %> 
         </div>
         <div class="agregarProducto-div-boxes">
@@ -57,8 +57,8 @@
             class="agregarProducto-text-inputs"
             type="file"
             accept="image/jpg"
-            name="imagenProducto"
-            id="imagenProducto"
+            name="imagen"
+            id="imagen"
             value="<%= vino.imagen %>"
           />
         </div>
