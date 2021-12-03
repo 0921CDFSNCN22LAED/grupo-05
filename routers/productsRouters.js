@@ -5,14 +5,14 @@ const productsController = require("../controllers/productsController.js");
 
 router.get("/cava", productsController.cava);
 
-router.get("/detalleProducto/:id/", productsController.detalleProducto);
+router.get("/detalle/:id/", productsController.detalleProducto);
 
 router.get("/vinoteca", productsController.vinoteca);
 
-router.get("/agregarProductos", productsController.agregarProductos);
+router.get("/agregar", productsController.agregarProducto);
 
-router.get("/editarProductos/:id", productsController.editarProductos);
+router.get("/editar/:id", productsController.editarProducto);
 
-router.delete("/vinoteca", productsController.deleteProduct);
+router.delete("/vinoteca", productsController.eliminarProducto);
 
 module.exports = router;

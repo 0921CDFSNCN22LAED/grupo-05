@@ -21,17 +21,17 @@ const productsController = {
     });
   },
 
-  agregarProductos: (req, res) => {
-    res.render("products/agregarProductos");
+  agregarProducto: (req, res) => {
+    res.render("products/agregarProducto");
   },
 
-  editarProductos: (req, res) => {
+  editarProducto: (req, res) => {
     const id = req.params.id;
     const vino = vinos.find((vino) => {
       return id == vino.id;
     });
     if (vino) {
-      res.render("products/editarProductos", {
+      res.render("products/editarProducto", {
         vino: vino,
         pageTitle: vino.nombre,
       });
@@ -40,7 +40,7 @@ const productsController = {
     }
   },
 
-  deleteProduct: (req, res) => {
+  eliminarProducto: (req, res) => {
     const id = req.params.id;
     const vino = vinos.find((vino) => {
       return id == vino.id;
