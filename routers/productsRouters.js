@@ -13,6 +13,6 @@ router.get("/agregarProductos", productsController.agregarProductos);
 
 router.get("/editarProductos/:id", productsController.editarProductos);
 
-router.get("/vinoteca/deleteProduct/:id", productsController.deleteProduct);
+router.delete("/vinoteca", productsController.deleteProduct);
 
 module.exports = router;

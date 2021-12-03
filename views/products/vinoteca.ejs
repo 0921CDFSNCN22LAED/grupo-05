@@ -19,10 +19,7 @@
             <div>
               <i class="far fa-star"></i>
               <a href="<%= link  %>"><i class="far fa-edit"></i></a>
-              <form
-                method="POST"
-                action="/products/vinoteca/deleteProduct/<%= vino.id %>?_method=DELETE"
-              >
+              <form method="POST" action="/products/vinoteca?_method=DELETE">
                 <button type="submit">DELETE</button>
               </form>
             </div>
