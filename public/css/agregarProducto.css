@@ -41,6 +41,12 @@ MAIN
   width: 100%;
   margin: 10px auto;
   padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.agregarProducto-div-boxes label{
+  margin: 5px 5%;
 }
 
 .agregarProducto-div-box-cat {
@@ -54,7 +60,10 @@ MAIN
   width: 100%;
   margin: 10px auto;
   padding: 8px;
-  text-align: center;
+}
+
+.agregarProducto-div-box-img label{
+  margin: 5px 5%;
 }
 
 .agregarProducto-div-box-img input {
@@ -80,12 +89,11 @@ MAIN
 
 .agregarProducto-button {
   width: 60%;
-  margin: 10px auto;
   padding: 8px;
   border: none;
   border-radius: 8px;
   background-color: #4285f4;
-  margin: 0 20%;
+  margin: 0 20% 10px 20%;
   color: #fff;
 }
 
@@ -99,6 +107,12 @@ MAIN
   }
   .agregarProducto-text-inputs {
     width: 60%;
-    margin: 10px 20%;
+    margin: 5px 20%;
+  }
+  .agregarProducto-div-boxes label{
+    margin: 0px 20%;
+  }
+  .agregarProducto-div-box-img label{
+    margin: 0px 20%;
   }
 }

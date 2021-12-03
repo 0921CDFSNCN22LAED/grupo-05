@@ -10,40 +10,39 @@
     <main class="agregarProducto-main-container">
       <form class="agregarProducto-form-container" method="POST">
         <div class="agregarProducto-div-boxes">
-          <label for="nombreProducto"></label>
+          <label for="nombreProducto">Nombre</label>
           <% if (vino) {%> 
           <input
             class="agregarProducto-text-inputs"
             type="text"
             name="nombreProducto"
             id="nombreProducto"
-            placeholder= "<%= vino.nombre %> "
-            autocomplete= <%= vino.nombre %> 
+            value= "<%= vino.nombre %>"
           />
           <% } %> 
         </div>
         <div class="agregarProducto-div-boxes">
-          <label for="descripcionProducto"></label>
+          <label for="descripcionProducto">Descripcion</label>
           <% if (vino) {%> 
           <input
             class="agregarProducto-text-inputs"
             type="text"
             name="descripcionProducto"
             id="descripcionProducto"
-            placeholder= "<%= vino.descripcion %> "
+            value= "<%= vino.descripcion %>"
             autocomplete= <%= vino.descripcion %> 
           />
           <% } %> 
         </div>
         <div class="agregarProducto-div-boxes">
-          <label for="precioProducto"></label>
+          <label for="precioProducto">Precio:</label>
           <% if (vino) {%> 
           <input
             class="agregarProducto-text-inputs"
             type="number"
             name="precioProducto"
             id="precioProducto"
-            placeholder= "<%= vino.precio  %>"
+            value= "<%= vino.precio %>"
             autocomplete= <%= vino.precio  %> 
           />
           <% } %> 
@@ -57,14 +56,6 @@
             name="imagenProducto"
             id="imagenProducto"
           />
-        </div>
-        <div class="agregarProducto-div-boxes">
-          <label for="categoria">Categorias: </label>
-          <select name="categoria">
-            <option value="explorador">Explorador</option>
-            <option value="degustador">Degustador</option>
-            <option value="granCatador">Gran catador</option>
-          </select>
         </div>
         <div>
           <button

@@ -11,8 +11,6 @@ router.get("/vinoteca", productsController.vinoteca);
 
 router.get("/agregarProductos", productsController.agregarProductos);
 
-router.get("/editarProductos", productsController.editarProductos);
-
 router.get("/editarProductos/:id", productsController.editarProductos);
 
 module.exports = router;

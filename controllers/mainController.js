@@ -60,6 +60,9 @@ const controladorHome = {
   login: (req, res) => {
     res.render("users/login");
   },
+  cuenta: (req, res) => {
+    res.render('users/cuenta')
+  }
 
 }
 
