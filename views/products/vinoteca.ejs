@@ -19,6 +19,12 @@
             <div>
               <i class="far fa-star"></i>
               <a href="<%= link  %>"><i class="far fa-edit"></i></a>
+              <form
+                method="POST"
+                action="/products/vinoteca/deleteProduct/<%= vino.id %>?_method=DELETE"
+              >
+                <button type="submit">DELETE</button>
+              </form>
             </div>
             <h4><%= vino.descripcion %></h4>
             <p><% vino.precio %></p>
@@ -27,7 +33,7 @@
         <% } %>
       </section>
       <form>
-        <button type="button" class="button-add-product">
+        <button type="submit" class="button-add-product">
           <a href="/products/agregarProductos">
             <i class="fas fa-plus"></i>
           </a>
