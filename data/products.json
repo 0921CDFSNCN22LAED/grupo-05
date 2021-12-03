@@ -1,402 +1,452 @@
 [
   {
     "id": 1,
-    "name": "Dasyprocta leporina",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Dasyprocta leporina",
     "bodega": "Audréanne",
-    "description": "Stable burst fracture of T11-T12 vertebra",
-    "price": 7548,
-    "category": "gran-catador"
+    "descripcion": "Stable burst fracture of T11-T12 vertebra",
+    "precio": 7548,
+    "categoria": "gran-catador"
   },
   {
     "id": 2,
-    "name": "Vulpes cinereoargenteus",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Vulpes cinereoargenteus",
     "bodega": "Marylène",
-    "description": "Athscl type of bypass graft(s) of the extremities w gangrene",
-    "price": 6183,
-    "category": "gran-catador"
+    "descripcion": "Athscl type of bypass graft(s) of the extremities w gangrene",
+    "precio": 6183,
+    "categoria": "gran-catador"
   },
   {
     "id": 3,
-    "name": "Petaurus breviceps",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Petaurus breviceps",
     "bodega": "Félicie",
-    "description": "Fracture of unsp phalanx of unsp finger, init for opn fx",
-    "price": 1028,
-    "category": "gran-catador"
+    "descripcion": "Fracture of unsp phalanx of unsp finger, init for opn fx",
+    "precio": 1028,
+    "categoria": "gran-catador"
   },
   {
     "id": 4,
-    "name": "Plegadis falcinellus",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Plegadis falcinellus",
     "bodega": "Médiamass",
-    "description": "Displacement of femoral arterial graft (bypass)",
-    "price": 1054,
-    "category": "gran-catador"
+    "descripcion": "Displacement of femoral arterial graft (bypass)",
+    "precio": 1054,
+    "categoria": "gran-catador"
   },
   {
     "id": 5,
-    "name": "Paradoxurus hermaphroditus",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Paradoxurus hermaphroditus",
     "bodega": "Stéphanie",
-    "description": "Toxic effect of sulfur dioxide, intentional self-harm, init",
-    "price": 5239,
-    "category": "gran-catador"
+    "descripcion": "Toxic effect of sulfur dioxide, intentional self-harm, init",
+    "precio": 5239,
+    "categoria": "gran-catador"
   },
   {
     "id": 6,
-    "name": "Alligator mississippiensis",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Alligator mississippiensis",
     "bodega": "Gaïa",
-    "description": "Unsp fracture of right femur, subs for clos fx w delay heal",
-    "price": 2910,
-    "category": "degustador"
+    "descripcion": "Unsp fracture of right femur, subs for clos fx w delay heal",
+    "precio": 2910,
+    "categoria": "degustador"
   },
   {
     "id": 7,
-    "name": "Dendrocitta vagabunda",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Dendrocitta vagabunda",
     "bodega": "Adélaïde",
-    "description": "War operations involving oth explosions and fragments, milt",
-    "price": 9785,
-    "category": "explorador"
+    "descripcion": "War operations involving oth explosions and fragments, milt",
+    "precio": 9785,
+    "categoria": "explorador"
   },
   {
     "id": 8,
-    "name": "Prionace glauca",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Prionace glauca",
     "bodega": "Anaël",
-    "description": "Unsp injury at C5 level of cervical spinal cord, sequela",
-    "price": 6811,
-    "category": "degustador"
+    "descripcion": "Unsp injury at C5 level of cervical spinal cord, sequela",
+    "precio": 6811,
+    "categoria": "degustador"
   },
   {
     "id": 9,
-    "name": "Oxybelis fulgidus",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Oxybelis fulgidus",
     "bodega": "Ruò",
-    "description": "Non-bullous impetigo",
-    "price": 4403,
-    "category": "degustador"
+    "descripcion": "Non-bullous impetigo",
+    "precio": 4403,
+    "categoria": "degustador"
   },
   {
     "id": 10,
-    "name": "Boa caninus",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Boa caninus",
     "bodega": "Lucrèce",
-    "description": "Superficial foreign body of right eyelid and periocular area",
-    "price": 6928,
-    "category": "explorador"
+    "descripcion": "Superficial foreign body of right eyelid and periocular area",
+    "precio": 6928,
+    "categoria": "explorador"
   },
   {
     "id": 11,
-    "name": "Sarkidornis melanotos",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Sarkidornis melanotos",
     "bodega": "Marylène",
-    "description": "Sedatv/hyp/anxiolytc use, unsp w psychotic disorder",
-    "price": 5795,
-    "category": "gran-catador"
+    "descripcion": "Sedatv/hyp/anxiolytc use, unsp w psychotic disorder",
+    "precio": 5795,
+    "categoria": "gran-catador"
   },
   {
     "id": 12,
-    "name": "Speotyte cuniculata",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Speotyte cuniculata",
     "bodega": "Simplifiés",
-    "description": "Strain of muscle, fascia and tendon of left hip, sequela",
-    "price": 6079,
-    "category": "degustador"
+    "descripcion": "Strain of muscle, fascia and tendon of left hip, sequela",
+    "precio": 6079,
+    "categoria": "degustador"
   },
   {
     "id": 13,
-    "name": "Panthera pardus",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Panthera pardus",
     "bodega": "Cléa",
-    "description": "Oth maternal infec/parastc diseases comp the puerperium",
-    "price": 9303,
-    "category": "gran-catador"
+    "descripcion": "Oth maternal infec/parastc diseases comp the puerperium",
+    "precio": 9303,
+    "categoria": "gran-catador"
   },
   {
     "id": 14,
-    "name": "Pedetes capensis",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Pedetes capensis",
     "bodega": "Illustrée",
-    "description": "Corrosion of first degree of right upper arm",
-    "price": 9946,
-    "category": "explorador"
+    "descripcion": "Corrosion of first degree of right upper arm",
+    "precio": 9946,
+    "categoria": "explorador"
   },
   {
     "id": 15,
-    "name": "Tamiasciurus hudsonicus",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Tamiasciurus hudsonicus",
     "bodega": "Zhì",
-    "description": "Drug abuse counseling and surveillance of drug abuser",
-    "price": 820,
-    "category": "explorador"
+    "descripcion": "Drug abuse counseling and surveillance of drug abuser",
+    "precio": 820,
+    "categoria": "explorador"
   },
   {
     "id": 16,
-    "name": "Tragelaphus angasi",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Tragelaphus angasi",
     "bodega": "Maëline",
-    "description": "Spontaneous rupture of extensor tendons, lower leg",
-    "price": 1501,
-    "category": "explorador"
+    "descripcion": "Spontaneous rupture of extensor tendons, lower leg",
+    "precio": 1501,
+    "categoria": "explorador"
   },
   {
     "id": 17,
-    "name": "Cereopsis novaehollandiae",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Cereopsis novaehollandiae",
     "bodega": "Jú",
-    "description": "Other specified injury of left renal artery",
-    "price": 3192,
-    "category": "explorador"
+    "descripcion": "Other specified injury of left renal artery",
+    "precio": 3192,
+    "categoria": "explorador"
   },
   {
     "id": 18,
-    "name": "Eremophila alpestris",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Eremophila alpestris",
     "bodega": "Naéva",
-    "description": "Accidental malfunction of hunting rifle",
-    "price": 9308,
-    "category": "degustador"
+    "descripcion": "Accidental malfunction of hunting rifle",
+    "precio": 9308,
+    "categoria": "degustador"
   },
   {
     "id": 19,
-    "name": "Streptopelia senegalensis",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Streptopelia senegalensis",
     "bodega": "Judicaël",
-    "description": "Rheumatoid bursitis, unspecified shoulder",
-    "price": 859,
-    "category": "gran-catador"
+    "descripcion": "Rheumatoid bursitis, unspecified shoulder",
+    "precio": 859,
+    "categoria": "gran-catador"
   },
   {
     "id": 20,
-    "name": "Spheniscus magellanicus",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Spheniscus magellanicus",
     "bodega": "Lén",
-    "description": "Poisoning by histamine H2-receptor blockers, accidental",
-    "price": 7060,
-    "category": "explorador"
+    "descripcion": "Poisoning by histamine H2-receptor blockers, accidental",
+    "precio": 7060,
+    "categoria": "explorador"
   },
   {
     "id": 21,
-    "name": "Lophoaetus occipitalis",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Lophoaetus occipitalis",
     "bodega": "Angélique",
-    "description": "Occ of rail trn/veh inj due to object fall onto train, sqla",
-    "price": 1065,
-    "category": "degustador"
+    "descripcion": "Occ of rail trn/veh inj due to object fall onto train, sqla",
+    "precio": 1065,
+    "categoria": "degustador"
   },
   {
     "id": 22,
-    "name": "Tamiasciurus hudsonicus",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Tamiasciurus hudsonicus",
     "bodega": "Maïlys",
-    "description": "Fracture of mandible of oth site, init for clos fx",
-    "price": 9378,
-    "category": "degustador"
+    "descripcion": "Fracture of mandible of oth site, init for clos fx",
+    "precio": 9378,
+    "categoria": "degustador"
   },
   {
     "id": 23,
-    "name": "Macaca nemestrina",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Macaca nemestrina",
     "bodega": "Léonore",
-    "description": "Cannabis dependence",
-    "price": 5123,
-    "category": "gran-catador"
+    "descripcion": "Cannabis dependence",
+    "precio": 5123,
+    "categoria": "gran-catador"
   },
   {
     "id": 24,
-    "name": "Graspus graspus",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Graspus graspus",
     "bodega": "Clémentine",
-    "description": "Cont preg aft elctv fetl rdct of 1 fts or more,unsp tri,fts5",
-    "price": 2587,
-    "category": "explorador"
+    "descripcion": "Cont preg aft elctv fetl rdct of 1 fts or more,unsp tri,fts5",
+    "precio": 2587,
+    "categoria": "explorador"
   },
   {
     "id": 25,
-    "name": "Tiliqua scincoides",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Tiliqua scincoides",
     "bodega": "Thérèse",
-    "description": "Dental caries",
-    "price": 1829,
-    "category": "gran-catador"
+    "descripcion": "Dental caries",
+    "precio": 1829,
+    "categoria": "gran-catador"
   },
   {
     "id": 26,
-    "name": "unavailable",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "unavailable",
     "bodega": "Lauréna",
-    "description": "Other parachutist accident, sequela",
-    "price": 4867,
-    "category": "gran-catador"
+    "descripcion": "Other parachutist accident, sequela",
+    "precio": 4867,
+    "categoria": "gran-catador"
   },
   {
     "id": 27,
-    "name": "Gazella granti",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Gazella granti",
     "bodega": "Åsa",
-    "description": "Laceration with foreign body of right hand",
-    "price": 6406,
-    "category": "gran-catador"
+    "descripcion": "Laceration with foreign body of right hand",
+    "precio": 6406,
+    "categoria": "gran-catador"
   },
   {
     "id": 28,
-    "name": "Phalacrocorax carbo",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Phalacrocorax carbo",
     "bodega": "Ophélie",
-    "description": "Disp fx of base of nk of l femr, 7thN",
-    "price": 5943,
-    "category": "explorador"
+    "descripcion": "Disp fx of base of nk of l femr, 7thN",
+    "precio": 5943,
+    "categoria": "explorador"
   },
   {
     "id": 29,
-    "name": "Deroptyus accipitrinus",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Deroptyus accipitrinus",
     "bodega": "Mégane",
-    "description": "Drowning and submersion due to oth accident to fishing boat",
-    "price": 2002,
-    "category": "explorador"
+    "descripcion": "Drowning and submersion due to oth accident to fishing boat",
+    "precio": 2002,
+    "categoria": "explorador"
   },
   {
     "id": 30,
-    "name": "Meleagris gallopavo",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Meleagris gallopavo",
     "bodega": "André",
-    "description": "Oth osteopor w current path fracture, unsp ank/ft, init",
-    "price": 4108,
-    "category": "degustador"
+    "descripcion": "Oth osteopor w current path fracture, unsp ank/ft, init",
+    "precio": 4108,
+    "categoria": "degustador"
   },
   {
     "id": 31,
-    "name": "Hyaena hyaena",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Hyaena hyaena",
     "bodega": "Judicaël",
-    "description": "Other dislocation of left radial head, subsequent encounter",
-    "price": 3376,
-    "category": "degustador"
+    "descripcion": "Other dislocation of left radial head, subsequent encounter",
+    "precio": 3376,
+    "categoria": "degustador"
   },
   {
     "id": 32,
-    "name": "Spermophilus tridecemlineatus",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Spermophilus tridecemlineatus",
     "bodega": "Måns",
-    "description": "Granuloma inguinale",
-    "price": 9029,
-    "category": "explorador"
+    "descripcion": "Granuloma inguinale",
+    "precio": 9029,
+    "categoria": "explorador"
   },
   {
     "id": 33,
-    "name": "Bos taurus",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Bos taurus",
     "bodega": "Lucrèce",
-    "description": "Corrosion w resulting rupture and dest of unsp eyeball, subs",
-    "price": 1302,
-    "category": "degustador"
+    "descripcion": "Corrosion w resulting rupture and dest of unsp eyeball, subs",
+    "precio": 1302,
+    "categoria": "degustador"
   },
   {
     "id": 34,
-    "name": "Phoenicopterus ruber",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Phoenicopterus ruber",
     "bodega": "Marie-hélène",
-    "description": "Abrasion of other finger, initial encounter",
-    "price": 2203,
-    "category": "gran-catador"
+    "descripcion": "Abrasion of other finger, initial encounter",
+    "precio": 2203,
+    "categoria": "gran-catador"
   },
   {
     "id": 35,
-    "name": "Papio cynocephalus",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Papio cynocephalus",
     "bodega": "Esbjörn",
-    "description": "Disp fx of navicular of left foot, subs for fx w malunion",
-    "price": 4975,
-    "category": "explorador"
+    "descripcion": "Disp fx of navicular of left foot, subs for fx w malunion",
+    "precio": 4975,
+    "categoria": "explorador"
   },
   {
     "id": 36,
-    "name": "unavailable",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "unavailable",
     "bodega": "Eloïse",
-    "description": "Nondisplaced spiral fracture of shaft of unspecified femur",
-    "price": 1901,
-    "category": "gran-catador"
+    "descripcion": "Nondisplaced spiral fracture of shaft of unspecified femur",
+    "precio": 1901,
+    "categoria": "gran-catador"
   },
   {
     "id": 37,
-    "name": "Leprocaulinus vipera",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Leprocaulinus vipera",
     "bodega": "Judicaël",
-    "description": "Insect bite (nonvenomous) of unspecified forearm, sequela",
-    "price": 9804,
-    "category": "degustador"
+    "descripcion": "Insect bite (nonvenomous) of unspecified forearm, sequela",
+    "precio": 9804,
+    "categoria": "degustador"
   },
   {
     "id": 38,
-    "name": "Zalophus californicus",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Zalophus californicus",
     "bodega": "Thérèse",
-    "description": "Oth injury to person on ground due to air transport accident",
-    "price": 3935,
-    "category": "gran-catador"
+    "descripcion": "Oth injury to person on ground due to air transport accident",
+    "precio": 3935,
+    "categoria": "gran-catador"
   },
   {
     "id": 39,
-    "name": "Pseudoleistes virescens",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Pseudoleistes virescens",
     "bodega": "Léane",
-    "description": "Displacement of insulin pump, sequela",
-    "price": 3846,
-    "category": "gran-catador"
+    "descripcion": "Displacement of insulin pump, sequela",
+    "precio": 3846,
+    "categoria": "gran-catador"
   },
   {
     "id": 40,
-    "name": "Canis lupus baileyi",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Canis lupus baileyi",
     "bodega": "Östen",
-    "description": "Sarcoid pyelonephritis",
-    "price": 5258,
-    "category": "degustador"
+    "descripcion": "Sarcoid pyelonephritis",
+    "precio": 5258,
+    "categoria": "degustador"
   },
   {
     "id": 41,
-    "name": "Vanellus chilensis",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Vanellus chilensis",
     "bodega": "Eloïse",
-    "description": "Contusion of left foot, subsequent encounter",
-    "price": 1173,
-    "category": "degustador"
+    "descripcion": "Contusion of left foot, subsequent encounter",
+    "precio": 1173,
+    "categoria": "degustador"
   },
   {
     "id": 42,
-    "name": "Acrobates pygmaeus",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Acrobates pygmaeus",
     "bodega": "Léone",
-    "description": "Laceration w/o foreign body of unsp toe(s) w damage to nail",
-    "price": 1972,
-    "category": "explorador"
+    "descripcion": "Laceration w/o foreign body of unsp toe(s) w damage to nail",
+    "precio": 1972,
+    "categoria": "explorador"
   },
   {
     "id": 43,
-    "name": "Gekko gecko",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Gekko gecko",
     "bodega": "Sòng",
-    "description": "Sltr-haris Type II physeal fx upper end of unsp fibula",
-    "price": 7718,
-    "category": "degustador"
+    "descripcion": "Sltr-haris Type II physeal fx upper end of unsp fibula",
+    "precio": 7718,
+    "categoria": "degustador"
   },
   {
     "id": 44,
-    "name": "Aonyx capensis",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Aonyx capensis",
     "bodega": "Eléonore",
-    "description": "Salter-Harris Type IV physeal fracture of l calcaneus, 7thK",
-    "price": 4231,
-    "category": "explorador"
+    "descripcion": "Salter-Harris Type IV physeal fracture of l calcaneus, 7thK",
+    "precio": 4231,
+    "categoria": "explorador"
   },
   {
     "id": 45,
-    "name": "Bettongia penicillata",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Bettongia penicillata",
     "bodega": "Liè",
-    "description": "Displ transverse fx unsp patella, 7thJ",
-    "price": 3700,
-    "category": "explorador"
+    "descripcion": "Displ transverse fx unsp patella, 7thJ",
+    "precio": 3700,
+    "categoria": "explorador"
   },
   {
     "id": 46,
-    "name": "Trachyphonus vaillantii",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Trachyphonus vaillantii",
     "bodega": "Gaétane",
-    "description": "Hydatidiform mole, unspecified",
-    "price": 5756,
-    "category": "explorador"
+    "descripcion": "Hydatidiform mole, unspecified",
+    "precio": 5756,
+    "categoria": "explorador"
   },
   {
     "id": 47,
-    "name": "Choloepus hoffmani",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Choloepus hoffmani",
     "bodega": "Ruì",
-    "description": "Nondisp fx of pisiform, r wrist, subs for fx w routn heal",
-    "price": 2753,
-    "category": "explorador"
+    "descripcion": "Nondisp fx of pisiform, r wrist, subs for fx w routn heal",
+    "precio": 2753,
+    "categoria": "explorador"
   },
   {
     "id": 48,
-    "name": "Ictonyx striatus",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Ictonyx striatus",
     "bodega": "Gaëlle",
-    "description": "Noise effects on right inner ear",
-    "price": 1375,
-    "category": "gran-catador"
+    "descripcion": "Noise effects on right inner ear",
+    "precio": 1375,
+    "categoria": "gran-catador"
   },
   {
     "id": 49,
-    "name": "Chamaelo sp.",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Chamaelo sp.",
     "bodega": "Maïté",
-    "description": "Idiopathic chronic gout, unspecified shoulder, with tophus",
-    "price": 9126,
-    "category": "degustador"
+    "descripcion": "Idiopathic chronic gout, unspecified shoulder, with tophus",
+    "precio": 9126,
+    "categoria": "degustador"
   },
   {
     "id": 50,
-    "name": "Vulpes cinereoargenteus",
+    "imagen": "/images/vino1.jpeg",
+    "nombre": "Vulpes cinereoargenteus",
     "bodega": "Amélie",
-    "description": "Dislocation of T9/T10 thoracic vertebra, initial encounter",
-    "price": 9019,
-    "category": "degustador"
+    "descripcion": "Dislocation of T9/T10 thoracic vertebra, initial encounter",
+    "precio": 9019,
+    "categoria": "degustador"
   }
 ]
