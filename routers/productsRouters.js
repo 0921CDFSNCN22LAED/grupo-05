@@ -11,6 +11,8 @@ router.get("/vinoteca", productsController.vinoteca);
 
 router.get("/agregarProductos", productsController.agregarProductos);
 
+router.post("/", productsController.store);
+
 router.get("/editarProductos/:id", productsController.editarProductos);
 
 router.delete("/vinoteca", productsController.deleteProduct);

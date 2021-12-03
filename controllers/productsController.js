@@ -22,6 +22,10 @@ const productsController = {
   agregarProductos: (req, res) => {
     res.render("products/agregarProductos");
   },
+  store: (req, res) => {
+    productsService.createOne (req.body);
+    res.redirect("/products");
+  },
 
   editarProductos: (req, res) => {
     const id = req.params.id;
