@@ -11,14 +11,10 @@ router.get("/vinoteca", productsController.vinoteca);
 
 router.get("/agregar", productsController.agregarProducto);
 
-
 router.post("/", productsController.store);
-
-router.get("/editarProductos/:id", productsController.editarProductos);
 
 router.get("/editar/:id", productsController.editarProducto);
 router.put("/editar/:id", productsController.actualizarProducto);
-
 
 router.delete("/vinoteca", productsController.eliminarProducto);
 
