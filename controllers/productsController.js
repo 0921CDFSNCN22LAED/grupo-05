@@ -48,18 +48,15 @@ const productsController = {
 
     const updatedProduct = {
       id: vinos[index].id,
+      imagen: '/images/img-products/'+req.file.filename, 
       ...req.body
     }
 
     vinos[index] = updatedProduct;
-
-    console.log(updatedProduct);
-    console.log(req.body);
+    
 
     productsService.saveProducts()
-
-    console.log();
-
+    
     
     res.redirect('/products/detalle/' + updatedProduct.id)
   },

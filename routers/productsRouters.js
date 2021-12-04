@@ -2,6 +2,20 @@ const express = require("express");
 const router = express.Router();
 const path = require("path");
 const productsController = require("../controllers/productsController.js");
+const multer = require('multer')
+
+const storage = multer.diskStorage({ 
+    destination: function (req, file, cb) { 
+       cb(null, path.join(__dirname, '../public/images/img-products')); 
+    }, 
+    filename: function (req, file, cb) { 
+       cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);  } 
+  })
+
+
+
+const uploadFile = multer({ storage });
+
 
 router.get("/cava", productsController.cava);
 
@@ -14,7 +28,7 @@ router.get("/agregar", productsController.agregarProducto);
 router.post("/", productsController.store);
 
 router.get("/editar/:id", productsController.editarProducto);
-router.put("/editar/:id", productsController.actualizarProducto);
+router.put("/editar/:id", uploadFile.single('imagen'),productsController.actualizarProducto);
 
 router.delete("/vinoteca", productsController.eliminarProducto);
 

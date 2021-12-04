@@ -8,7 +8,7 @@
   <body class="agregarProducto-body">
     <header><%- include ("../partials/header") %></header>
     <main class="agregarProducto-main-container">
-      <form class="agregarProducto-form-container" action="/products/editar/<%= vino.id %>?_method=PUT" method="post">
+      <form class="agregarProducto-form-container" action="/products/editar/<%= vino.id %>?_method=PUT" method="post" enctype="multipart/form-data">
         <div class="agregarProducto-div-boxes">
           <label for="nombre">Nombre</label>
           <% if (vino) {%> 
