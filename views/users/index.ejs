@@ -15,45 +15,10 @@
   </head>
   <body>
     <header><%- include ("../partials/header") %></header>
-    <main>
-      <!--ACA COMIENZA EL CARRUSEL-->
+    <main class="main">
+      <img src="/images/bg-login-mobile.jpeg" class="home-bg-img-mobile">
+      <!--Carousel-->
 
-      <div id="slider-conteiner">
-        <ul class="slider">
-          <li id="slide1">
-            <h3>¿Te gustaría formar parte de la experiencia Digital wines?</h3>
-            <img src="/images/viñedos.jpg" />
-          </li>
-          <li id="slide2">
-            <img src="/images/rutini2.jpg" />
-          </li>
-          <li id="slide3">
-            <img src="/images/chad1.jpg" />
-          </li>
-          <li id="slide4">
-            <img src="/images/opuswine.jpg" />
-          </li>
-        </ul>
-
-        <ul class="menu">
-          <li>
-            <a href="#slide1">1</a>
-          </li>
-          <li>
-            <a href="#slide2">2</a>
-          </li>
-          <li>
-            <a href="#slide3">3</a>
-          </li>
-          <li>
-            <a href="#slide4">4</a>
-          </li>
-        </ul>
-      </div>
-
-      <!--ACA TERMINA EL CARRUSEL-->
-
-      <!-- INICIO: Probando carousel de bootstrap -->
       <div id="carouselDelHome" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button
@@ -133,9 +98,9 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      <!-- FIN: Probando carousel de bootstrap -->
+      
 
-      <!--ACA ESTAN LOS BOTONES-->
+      <!--ACA ESTAN LOS BOTONES
 
       <section>
         <form class="order-button">
@@ -151,9 +116,9 @@
         </form>
       </section>
 
-      <!--ACA TERMINAN LOS BOTONES-->
+      ACA TERMINAN LOS BOTONES-->
 
-      <!--ACA COMIENZA EL MAIN-->
+      <!--ACA COMIENZA EL MAIN
 
       <section class="container-box">
         <img src="/images/rutini-box.png" class="img-perfect" />
@@ -240,7 +205,40 @@
         </div>
       </section>
     </main>
-    <!--ACA TERMINA EL MAIN-->
+    ACA TERMINA EL MAIN-->
+
+   <h2>Los más vendidos</h2>
+      <section class="vinos-cava">
+        <article class="articulo-vino">
+          <div class="contenedor-cava">
+            <img src="images/img-products/vino1.jpeg" alt="vino1" width="100%" />
+            <h3>Vino 1</h3>
+            <h4>Malbec 2012</h4>
+            <p>$3000</p>
+            <p>Cantidad:</p>
+          </div>
+        </article>
+        <article>
+          <div class="contenedor-cava">
+            <img src="images/img-products/vino2.jpeg" alt="vino2" width="100%" />
+            <h3>Vino 2</h3>
+            <h4>Suavignon 2018</h4>
+            <p>$1500</p>
+            <p>Cantidad:</p>
+          </div>
+        </article>
+        <article>
+          <div class="contenedor-cava">
+            <img src="images/img-products/vino3.jpeg" alt="vino3" width="100%" />
+            <h3>Vino 3</h3>
+            <h4>Cabernet 2017</h4>
+            <p>$2000</p>
+            <p>Cantidad:</p>
+          </div>
+        </article>
+      </section>
+      
+
     <footer style="margin-top: 1.5%">
       <%- include ("../partials/footer") %>
     </footer>

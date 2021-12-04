@@ -1,100 +1,43 @@
-/*ESTO ES EL CARRUSEL*/
+/*Carousel*/
 
-#slider-conteiner {
-  font-family: sans-serif;
-  margin: auto;
-  background-color: #aa0d3f;
-  max-width: 700px;
-  max-height: 400px;
-  padding: 30px;
+.slide img {
+  height: 15%;
+  width: 40%;
 }
 
-#slider-conteiner > ul,
-li {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+.vinos-cava {
+  display: flex;
+  flex-direction: row;
+  max-width: 80%;
 }
 
-#slider-conteiner > ul.slider {
+/* Secciones*/
+
+.main {
   position: relative;
-  max-width: 800px;
+}
+
+.home-bg-img-mobile {
+  position: absolute;
+  z-index: -100;
   width: 100%;
-  height: 300px;
+  height: 100%;
 }
 
-#slider-conteiner > ul.slider h3 {
-  position: absolute;
-  text-align: center;
-  padding: 10px;
-  left: 50%;
-  top: 300px;
-  color: white;
-  transform: translate(-50%, -50%);
+#articulo-vino {
+  background-color: white;
 }
 
-#slider-conteiner > ul.slider p {
-  position: absolute;
-  padding: 10px;
-  left: 50%;
-  top: 100px;
-  color: white;
-  transform: translate(-50%, -50%);
+.contenedor-cava {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: white;
+  margin: 10px;
+  border-radius: 8px;
 }
 
-#slider-conteiner > ul.slider li {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  opacity: 0;
-  width: inherit;
-  height: inherit;
-  transition: opacity 0.5s;
-  background: #fff;
-}
-
-#slider-conteiner > ul.slider li img {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-}
-
-#slider-conteiner > ul.slider li:first-child {
-  opacity: 1;
-}
-
-#slider-conteiner > ul.slider li:target {
-  opacity: 1;
-}
-
-#slider-conteiner > .menu {
-  text-align: center;
-  margin: 20px;
-  padding-top: 50px;
-}
-
-#slider-conteiner > .menu li {
-  display: inline-block;
-  text-align: center;
-}
-
-#slider-conteiner > .menu li a {
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  background-color: grey;
-  padding: 10px;
-  width: 20px;
-  height: 20px;
-  font-size: 20px;
-  border-radius: 100%;
-}
-
-.max-height-img-carousel {
-  height: 350px;
-}
-
-/* COMIENZAN LOS BOTONES */
+/* COMIENZAN LOS BOTONES 
 
 .main-button {
   font-weight: bolder;
@@ -114,7 +57,7 @@ li {
   background-color: #201f1d;
 }
 
-/* ARRANCA EL MAIN  */
+/* ARRANCA EL MAIN  
 
 .container-box {
   margin: 0px;
@@ -188,7 +131,7 @@ li {
 }
 
 /* ESTILOS TABLET*/
-
+/*
 @media (min-width: 767px) {
   #slider-conteiner > ul.slider h3 {
     font-size: 25px;
@@ -223,7 +166,7 @@ li {
   }
 }
 
-/* COMIENZA DESKTOP */
+ COMIENZA DESKTOP
 
 @media (min-width: 1100px) {
   .font-experience-name {
@@ -314,3 +257,4 @@ li {
     font-size: 10px;
   }
 }
+*/
