@@ -1,10 +1,133 @@
-*{
+* {
   box-sizing: border-box;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   margin: 0;
   padding: 0;
 }
 
+/*  COMIENZA EL HEADER  */
+
+header {
+  background-color: #201f1d;
+}
+
+.barra-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.contenedor_logo {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.contenedor_logo img {
+  max-width: 161px;
+  max-height: 188px;
+}
+
+.contenedor-links_chica {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+}
+
+.link_chica {
+  width: 33%;
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+}
+
+.link_chica i {
+  width: 100%;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+  text-decoration: none;
+}
+
+.contenedor_slogan {
+  display: none;
+}
+
+.contenedor_slogan p {
+  font-style: italic;
+}
+
+.contenedor_buscar {
+  display: none;
+}
+
+.contenedor_buscar input {
+  border-radius: 50px 0 0 50px;
+  border: none;
+  background-color: white;
+  padding-left: 5px;
+  padding: 2% 2% 2% 4%;
+}
+
+.contenedor_buscar input::placeholder {
+  font-style: italic;
+}
+
+.contenedor_buscar button {
+  border-radius: 0 50px 50px 0;
+  border: none;
+  background-color: white;
+  padding-right: 5px;
+  padding: 2% 4% 2% 2%;
+}
+
+.contenedor-links_grande {
+  display: none;
+}
+
+@media (min-width: 767px) {
+  .contenedor-links_chica {
+    display: none;
+  }
+  .contenedor_logo {
+    width: 20%;
+  }
+  .contenedor_slogan {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    width: 50%;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 60px;
+  }
+  .contenedor_buscar {
+    display: flex;
+    width: 30%;
+    height: 2rem;
+    justify-content: center;
+    margin-top: 60px;
+  }
+  .contenedor-links_grande {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .contenedor-links_grande a {
+    width: 20%;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #aa0d3f;
+  }
+}
+
+/*TERMINA EL HEADER*/
 
 /*COMIENZA EL FOOTER*/
 footer {
@@ -67,123 +190,3 @@ footer {
   margin: 0 10px;
 }
 /*TERMINA EL FOOTER*/
-
-/*  COMIENZA EL HEADER  */
-
-header{
-  background-color: #201f1d;
-}
-
-.barra-nav{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.contenedor_logo{
-  width: 30%;
-  display: flex;
-  justify-content: space-around;
-}
-
-.contenedor_logo img{
-  max-width: 161px;
-  max-height: 188px;
-}
-
-.contenedor-links_chica{
-  width: 70%;
-  display: flex;
-  flex-direction: row;
-}
-
-
-.link_chica{
-  width: 33%;
-  display: flex;
-  justify-content: space-around;
-  text-decoration: none;
-}
-
-
-.link_chica i{
-  width: 100%;
-  font-size: 2rem;
-  color: white;
-  text-align: center;
-  align-self: center;
-  justify-self: center;
-  text-decoration: none;
-}
-
-.contenedor_slogan{
-  display: none;
-}
-
-.contenedor_buscar{
-  display: none;
-}
-
-.contenedor_buscar input{
-  border-radius: 50px 0 0 50px;
-  border: none;
-  background-color: white;
-  padding-left: 5px;
-}
-
-.contenedor_buscar button{
-  border-radius: 0 50px 50px 0;
-  border: none;
-  background-color: white;
-  padding-right: 5px;
-}
-
-
-.contenedor-links_grande{
-  display: none;
-}
-
-
-@media(min-width: 767px){
-  .contenedor-links_chica{
-    display: none;
-  }
-  .contenedor_logo{
-    width: 20%;
-  }
-  .contenedor_slogan{
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-    width: 50%;
-    color: white;
-    font-size: 1.5rem;
-    text-align: center;
-    margin-top: 60px;
-  }
-  .contenedor_buscar{
-    display: flex;
-    width: 30%;
-    height: 2rem;
-    justify-content: center;
-    margin-top: 60px;
-  }
-  .contenedor-links_grande{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-  .contenedor-links_grande a{
-    width: 20%;
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: #aa0d3f;
-  }
-}
-
-
-/*TERMINA EL HEADER*/
-
