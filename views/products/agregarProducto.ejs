@@ -3,50 +3,55 @@
   <head>
     <%- include ("../partials/head") %>
     <title>Agregar productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/agregarProducto.css" />
   </head>
   <body class="agregarProducto-body">
     <header><%- include ("../partials/header") %></header>
     <main class="agregarProducto-main-container">
+      <img src="/images/mobile-bg-black-2.jpeg" class="mobile-bg-img">
+      <img src="/images/bg-detail-product.jpeg" class="desktop-bg-img">
+
       <form class="agregarProducto-form-container" method="POST">
-        <div class="agregarProducto-div-boxes">
-          <label for="nombreProducto">Nombre:</label>
+
+        <div class="">
+          <label for="nombreProducto" class="form-label">Nombre:</label>
           <input
-            class="agregarProducto-text-inputs"
+          class="box-shadow form-control"
             type="text"
             name="nombre"
             id="nombre"
-            placeholder="Ej: Toro"
+            placeholder=" Ej: Toro"
           />
         </div>
-        <div class="agregarProducto-div-boxes">
-          <label for="descripcionProducto">Bodega:</label>
+        <div class="">
+          <label for="descripcionProducto" class="form-label">Bodega:</label>
           <input
-            class="agregarProducto-text-inputs"
+          class="box-shadow form-control"
             type="text"
             name="bodega"
             id="bodega"
-            placeholder="Ej: Malbec"
+            placeholder=" Ej: Malbec"
           />
         </div>
-        <div class="agregarProducto-div-boxes">
-          <label for="precioProducto">Precio:</label>
+        <div class="">
+          <label for="precioProducto" class="form-label">Precio:</label>
           <input
-            class="agregarProducto-text-inputs"
+          class="box-shadow form-control"
             type="number"
             name="precio"
             id="precio"
-            placeholder="Ej: $1000"
+            placeholder=" Ej: $1000"
           />
         </div>
-        <div class="agregarProducto-div-boxes">
-          <label for="precioProducto">Descripcion:</label>
-          <textarea class="agregarProducto-text-area" name="descripcion" id="descripcion" cols="30" rows="10"></textarea>
+        <div>
+          <label for="precioProducto" class="form-label">Descripcion:</label>
+          <textarea class="agregarProducto-text-area box-shadow form-control" name="descripcion" id="descripcion" cols="30" rows="10"></textarea>
         </div>
-        <div class="agregarProducto-div-box-img">
-          <label for="imagenProducto">Imagen del producto: </label>
+        <div class="agregarProducto-div-img-product">
+          <label for="imagenProducto" class="form-label">Imagen del producto: </label>
           <input
-            class="agregarProducto-text-inputs"
+            class="agregarProducto-input-img-product"
             type="file"
             accept="image/jpg"
             name="imagen"
@@ -54,9 +59,9 @@
           />
         </div>
 
-        <div class="agregarProducto-div-boxes">
+        <div class="agregarProducto-div-button">
           <button
-            class="agregarProducto-button"
+            class="agregarProducto-button btn-secondary"
             type="submit"
             value="Agregar producto"
           >
@@ -64,7 +69,10 @@
           </button>
         </div>
       </form>
+      
     </main>
     <footer><%- include ("../partials/footer") %></footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
   </body>
 </html>
