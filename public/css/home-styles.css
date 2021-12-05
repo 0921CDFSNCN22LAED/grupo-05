@@ -1,4 +1,7 @@
 /*Carousel*/
+.imag {
+  height: 4000px;
+}
 
 .slide img {
   height: 15%;
@@ -25,14 +28,14 @@
 }
 
 #articulo-vino {
-  background-color: white;
+  background-color: none;
 }
 
 .contenedor-cava {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  background-color: white;
+  background-color: none;
   margin: 10px;
   border-radius: 8px;
 }
