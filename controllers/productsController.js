@@ -63,7 +63,19 @@ const productsController = {
   eliminarProducto: (req, res) => {
     const id = req.params.id;
     const vino = productsService.findOne(id);
-    res.redirect("products/vinoteca");
+    if (vino) {
+      res.render("products/eliminarProducto", {
+        vino: vino,
+        pageTitle: vino.nombre,
+      });
+    }
+  },
+
+  borrarProducto: (req, res) => {
+    const id = req.params.id;
+    productsService.deleteOne(id);
+
+    res.redirect("/products/vinoteca");
   },
 };
 

@@ -28,9 +28,9 @@
               <a href="/products/editar/<%= vino.id %>"
                 ><i class="far fa-edit"></i
               ></a>
-              <form method="POST" action="/products/vinoteca?_method=DELETE">
-                <button type="submit">DELETE</button>
-              </form>
+              <a href="/products/eliminar/<%= vino.id %>"
+                ><i class="fas fa-times"></i
+              ></a>
             </div>
             <h4><%= vino.bodega %></h4>
             <p><% vino.precio %></p>
