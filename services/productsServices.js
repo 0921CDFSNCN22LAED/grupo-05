@@ -20,6 +20,18 @@ function getAll() {
   return products;
 }
 
+function createOne(body) {
+    const product = {
+    id: Date.now(), 
+    ...body
+    };
+
+    products.push(product);
+
+    saveProducts();
+}
+
+
 function deleteOne(id) {
   const index = products.findIndex((prod) => prod.id == id);
 
@@ -32,5 +44,6 @@ module.exports = {
   getAll,
   findOne,
   saveProducts,
+  createOne,
   deleteOne,
 };

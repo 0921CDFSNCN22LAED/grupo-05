@@ -1,6 +1,6 @@
-productsService = require("../services/productsServices");
+const productsService = require("../services/productsServices");
 
-vinos = productsService.getAll();
+const vinos = productsService.getAll();
 
 const productsController = {
   cava: (req, res) => {
@@ -25,7 +25,7 @@ const productsController = {
   },
   store: (req, res) => {
     productsService.createOne(req.body);
-    res.redirect("/products");
+    res.redirect("/products/vinoteca");
   },
 
   editarProducto: (req, res) => {

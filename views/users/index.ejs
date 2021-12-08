@@ -17,6 +17,7 @@
     <header><%- include ("../partials/header") %></header>
     <main class="main">
       <img src="/images/bg-login-mobile.jpeg" class="home-bg-img-mobile">
+      
       <!--Carousel-->
 
       <div id="carouselDelHome" class="carousel slide" data-bs-ride="carousel">
@@ -238,6 +239,47 @@
         </article>
       </section>
       
+ <h2>Los recomendados por la casa</h2>
+ <% for (let vino of vinos) { %>
+      <% if (vino.categoria == "Recomendados por nosotros") { %>
+        <article class="articulo-vino">
+            <a href="/products/detalle/<%= vino.id.categoria %>"><img src="<%= vino.imagen %>" alt="" width="100%" /></a>
+            <h3><%= vino.nombre %></h3>
+            <div>
+              <a href="/products/editar/<%= vino.id %>"></a>
+            </div>
+            <h4><%= vino.bodega %></h4>
+            <p><% vino.precio %></p>
+        </article>
+        <% } }%>
+
+        <h2>Los más vendidos</h2>
+ <% for (let vino of vinos) { %>
+      <% if (vino.categoria == "Los mas vendidos") { %>
+        <article class="articulo-vino">
+            <a href="/products/detalle/<%= vino.id.categoria %>"><img src="<%= vino.imagen %>" alt="" width="100%" /></a>
+            <h3><%= vino.nombre %></h3>
+            <div>
+              <a href="/products/editar/<%= vino.id %>"></a>
+            </div>
+            <h4><%= vino.bodega %></h4>
+            <p><% vino.precio %></p>
+        </article>
+        <% } }%>
+
+             <h2>Relacion precio/calidad</h2>
+ <% for (let vino of vinos) { %>
+      <% if (vino.categoria == "Relacion precio/calidad") { %>
+        <article class="articulo-vino">
+            <a href="/products/detalle/<%= vino.id.categoria %>"><img src="<%= vino.imagen %>" alt="" width="100%" /></a>
+            <h3><%= vino.nombre %></h3>
+            <div>
+              <a href="/products/editar/<%= vino.id %>"></a>
+            </div>
+            <h4><%= vino.bodega %></h4>
+            <p><% vino.precio %></p>
+        </article>
+        <% } }%>
 
     <footer style="margin-top: 1.5%">
       <%- include ("../partials/footer") %>
