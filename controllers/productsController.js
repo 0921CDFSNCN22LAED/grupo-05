@@ -1,6 +1,6 @@
-productsService = require("../services/productsServices");
+const productsService = require("../services/productsServices");
 
-vinos = productsService.getAll();
+const vinos = productsService.getAll();
 
 const productsController = {
   cava: (req, res) => {

@@ -10,11 +10,19 @@
     },
     {
         "id": 2,
+<<<<<<< HEAD
         "imagen": "/images/img-products/vino2.jpeg",
         "nombre": "Elementos",
         "bodega": "Malbec",
         "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur dolore iusto magnam quaerat molestiae et, eaque maxime porro nam in! Sequi itaque mollitia eos voluptatibus vitae optio facilis repellat dolorum?",
         "precio": 250
+=======
+        "imagen": "/images/img-products/1638987498162_img_.jpeg",
+        "nombre": "Elementos",
+        "bodega": "Malbec",
+        "precio": "635",
+        "descripcion": "Es un vino alks dkaj nsdkjn aklkams kda mskd malmsd plamsa ;lmsd alsmdas dml a;md;a; smlal"
+>>>>>>> adc5e1f4219196a5ec9663f4ee9327c2d782b96e
     },
     {
         "id": 3,
