@@ -12,9 +12,9 @@
 3. - Nueve Copas: Fue el inicializador del proyecto que queriamos realizar. Presenta un catalogo de vinos y paquetes mensuales para degustar para cada tipo de cliente.
    - Bodegas Bianchi: La página trabaja con sus distintos tipos de bodegas, vende por cajas para mayorista y minorista. Como nuestro e-commerce tendrá vinos de diferentes bodegas nos pareció un buen ejemplo para sacar algunas ideas y potenciarlas.
    - Mercado Libre: Tomamos como referencia a Mercado Libre siendo un referente de e-commerce, por su facilidad y sencillez a la hora de navegar.
-   Al visualizar como promocionan vinos notamos muchas cosas a potenciar como podrían ser una distinción de sommeliers de cada bodega para una ayuda tanto al principiante como para el experimentado.
+     Al visualizar como promocionan vinos notamos muchas cosas a potenciar como podrían ser una distinción de sommeliers de cada bodega para una ayuda tanto al principiante como para el experimentado.
    - Espacio Vino: Brindan diferentes tipos de funcionalidades que permiten al comprador mas frecuente acceder a productos de distintas categorías basadas en las ventas generales.
-   a pesar de esta funcionalidad interesante, podemos destacar un punto negativo que es la prolijidad de la pagina, ya que esta muestra muchas cosas en pantalla pero que no es ningún tipo de información para el comprador.
+     a pesar de esta funcionalidad interesante, podemos destacar un punto negativo que es la prolijidad de la pagina, ya que esta muestra muchas cosas en pantalla pero que no es ningún tipo de información para el comprador.
    - Almacen Otamendi: Proporciono la idea de agregar un curso del vino ABC para aquellos que quieran aprender mas sobre la calidad de los vinos.
 
 4. Se creo la carpeta wireframes. Queda toda adjunto ahi.
@@ -22,11 +22,3 @@
 Sprint 2
 
 https://trello.com/b/IlFMtWwd/ecommerce
-
-Sprint 3 
-
-  - Continuando el proyecto luego de la devolucion del sprint 2, estamos avanzando con una nueva modalidad de trabajar todos al mismo tiempo para evitar contratiempos y mejorar la funcionalidad general del codigo.
-  - Al ser cada vez un poco mas dificil, tratamos de enfocarnos en la eficiencia del codigo frente a los problemas. Al estar juntos, cada problema que se presenta lo solucionamos relativamente mas rapido que estando solos en horarios distintos.
-  - Continuamos aprendiendo de la logica y el codigo del otro para progresar en nuestro conocimiento.
-  - Tratamos de no perder tanto tiempo en cosas superficiales que realmente podemos hacer de forma individual y nos enfocamos meramente en la complejidad de las tareas a realizar.
- 

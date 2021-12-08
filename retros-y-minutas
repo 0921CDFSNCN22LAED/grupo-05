@@ -67,6 +67,17 @@ Partir de la base con los siguientes estilos en todas las páginas:
 
 ---
 
+Sprint 2
+
+- En primer lugar, logramos concertar un horario para reunirnos y poder avanzar con el primer sprint. Al inicio teniamos una duda, cual seria nuestro proyecto? seria algo original o tomado al azar?. Por lo que decidimos ir por la tematica de los vinos, lo que represeta para nuestro pais y establecer un marketplace, en el cual tanto personas inexpertas como grandes conocedores se sientan comodos de la variedad e informacion que brindamos en cada uno de los productos ofrecidos.
+- En segundo lugar, establecer opciones dependiendo la perspectiva de cada de los miembros, para lograr un marketplace agradable al usuario, que no complique su experiencia en la pagina ni este abruumado por tanta informacion a simple vista. Buscamos lograrlo a lo largo del proyecto.
+- En tercer lugar, nos dividimos el trabajo acorde a la cantidad de miembros del equipo. Al ser la primera vez, tuvimos algunos contratiempos y falta de comunicación que pudimos aclarar y confiamos en poder ser mas eficientes con nuestro proyecto en los desafios siguientes.
+- Establecimos el viernes a las 10am como una weeclky donde podemos organizarnos y ayudarnos si es necesario, y hablamos de la posibilidad de agregar una segunda más corta (15/20 min) para ver si hay alguna novedad necesaria para hablar y comentar con el equipo.
+- Comenzamos a realizar las minutas (resumenes de las reuniones) por si alguno tiene algún problema para juntarse.
+- Decidimos utilizar más y mejor la herramienta de Trello para el desarrollo del ecommerce.
+
+---
+
 Reunión 5/11: Participantes, todos menos Tomas.
 
 Por unanimidad se eligio el logo de las uvas entre todas las opciones que estabamos manejando.
@@ -89,6 +100,13 @@ Es importante la comunicación y el status del grupo para saber cómo venimos co
 
 ---
 
+Sprint 3
+
+- Continuando el proyecto luego de la devolucion del sprint 2, estamos avanzando con una nueva modalidad de trabajar todos al mismo tiempo para evitar contratiempos y mejorar la funcionalidad general del codigo.
+- Al ser cada vez un poco mas dificil, tratamos de enfocarnos en la eficiencia del codigo frente a los problemas. Al estar juntos, cada problema que se presenta lo solucionamos relativamente mas rapido que estando solos en horarios distintos.
+- Continuamos aprendiendo de la logica y el codigo del otro para progresar en nuestro conocimiento.
+- Tratamos de no perder tanto tiempo en cosas superficiales que realmente podemos hacer de forma individual y nos enfocamos meramente en la complejidad de las tareas a realizar.
+
 En el sprint 3 tomamos la desicion de trabajar todos juntos en una video llamada, donde uno compartia la pantalla y todos juntos avanzabamos con el sprint, intentando de esta forma, resolver los problemas que aparecian entre todos los integrantes.
 Es por eso que los commits y los push de ese sprint posiblemente sean la gran mayoria del mismo integrante del grupo.
 El unico compañero que no participó del sprint fue Tomás.
@@ -101,7 +119,6 @@ Al mismo tiempo, algunos decidieron avanzar en cambiar la estética de la págin
 
 ---
 
-
 Viernes 3/11 - participantes: Ariel, Francisco, Enzo
 Intentamos solucionar problemas que tiene Ariel con git. Discutimos la funcionalidad del services y hablamos de como hacer la ruta para delete. Creamos carpeta para productos en imagenes y cambiamos rutas de json.
 
@@ -111,5 +128,3 @@ Falta hacer
 - Termina metodos http
 - Corregir json (categorias)
 - Modificar conceptualmente el index
-
-
