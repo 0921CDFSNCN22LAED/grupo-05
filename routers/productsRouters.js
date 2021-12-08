@@ -23,7 +23,7 @@ router.get("/vinoteca", productsController.vinoteca);
 
 router.get("/agregar", productsController.agregarProducto);
 
-router.post("/", productsController.store);
+router.post("/agregar", productsController.store);
 
 router.get("/editar/:id", productsController.editarProducto);
 router.put(

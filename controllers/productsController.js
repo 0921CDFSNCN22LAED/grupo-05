@@ -25,7 +25,7 @@ const productsController = {
   },
   store: (req, res) => {
     productsService.createOne(req.body);
-    res.redirect("/products");
+    res.redirect("/products/vinoteca");
   },
 
   editarProducto: (req, res) => {
