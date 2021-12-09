@@ -407,21 +407,5 @@
     "bodega": "Malbec",
     "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur dolore iusto magnam quaerat molestiae et, eaque maxime porro nam in! Sequi itaque mollitia eos voluptatibus vitae optio facilis repellat dolorum?",
     "precio": 500
-  },
-  {
-    "id": 1638988745315,
-    "nombre": "",
-    "bodega": "",
-    "precio": "",
-    "descripcion": "asda",
-    "imagen": "banner vino.jpg"
-  },
-  {
-    "id": 1638988837317,
-    "nombre": "Ariel",
-    "bodega": "asd",
-    "precio": "1000",
-    "descripcion": "asd",
-    "imagen": "documento dni d.jpeg"
   }
 ]

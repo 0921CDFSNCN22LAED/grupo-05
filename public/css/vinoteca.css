@@ -1,125 +1,78 @@
-*{
-    box-sizing: border-box;
-    font-family: 'Roboto';
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  font-family: "Roboto";
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    /* background-color: #d1cdcc; */
-    background-color: #aa0d3f;
+body {
+  /* background-color: #d1cdcc; */
+  background-color: #aa0d3f;
 }
 
-main{
-    width: 100%;
-    position: relative;
-}
-
-main h2{
-    padding: 10px;
-    color: #fff;
-    margin-left: 9%;
+main {
+  width: 100%;
+  position: relative;
 }
 
 .vinoteca-bg-img {
-    position: absolute;
-    z-index: -100;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  z-index: -100;
+  width: 100%;
+  height: 100%;
 }
 
-.vinoteca-bg-img-desktop {
-    display: none;
+main h2 {
+  color: #fff;
+  text-align: center;
+  padding-top: 5%;
+  margin-bottom: 2%;
 }
 
-.vinoteca-vinos {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding: 0 5%;
+.wine-shelf {
+  width: 90%;
+  margin: 0 auto;
+  padding: 5% 0;
 }
 
-#articulo-vino{
-    background-color: white;
+.flex-div {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.contenedor-vinoteca{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    background-color: white;
-    margin: 5%;
-    border-radius: 8px;
+.articles-wrapper {
+  width: 100%;
+}
+.wine-card {
+  background-color: #fff;
+  margin: 5%;
+  border-radius: 8px;
+}
+.wine-card-img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  width: 100%;
+}
+.wine-card-body {
+  padding: 2%;
+  display: flex;
 }
 
-.contenedor-vinoteca img{
-    padding: 10px;
+.wine-card-texts {
+  width: 100%;
 }
 
-.contenedor-vinoteca h4 {
-    width: 100%;
-    padding: 0;
-    margin: 7px 0 7px 7px;
+.wine-card-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.contenedor-vinoteca p {
-    width: 100%;
-    padding: 0;
-    margin: 7px 0 7px 7px;
+.wine-card-icons a i {
+  text-decoration: none;
+  color: black;
+  font-size: 1.25rem;
 }
-
-.contenedor-vinoteca h3{
-    margin: 7px 0 7px 0;
-    width: 76%;
-    padding-left: 5px;
-}
-
-.contenedor-vinoteca div{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 24%;
-    justify-content: space-around;
-}
-
-.contenedor-vinoteca div i{
-    width: 50%;
-    font-size: 20px;
-    text-align: center;
-}
-
-#total-pagar{
-    background-color: white;
-    margin: 10px;
-    border-radius: 8px;
-}
-
-#total-pagar h3 {
-    margin: 7px 0 7px 5px;
-    padding-top: 7px;
-}
-
-#total-pagar p{
-    margin: 7px 0 7px 5px;
-}
-
-main h2{
-    margin: 0;
-}
-
-
-#boton-pagar{
-    color: white;
-    background-color: #aa0d3f;
-    border: none;
-    border-radius: 5px;
-    height: 30px;
-    margin: 0 0 10px 3px;
-    padding: 0 4px;
-}
-
-/*Botones Vinoteca*/
-
 
 .button-add-product {
   position: fixed;
@@ -129,53 +82,46 @@ main h2{
   border: none;
   border-radius: 50%;
   padding: 1.5%;
-  background-color: #39b54a;
+  /* background-color: #39b54a; */
+  background-color: #07bc4c;
   color: #ffff;
   display: flex;
 }
 
-  .button-add-product {
-    right: 2.5%;
-    bottom: 2.5%;
+.button-add-product {
+  right: 2.5%;
+  bottom: 2.5%;
+}
+
+.button-add-product a {
+  text-decoration: none;
+  color: #ffff;
+}
+
+/*** QUERIES ***/
+
+/* Tablet */
+@media (min-width: 767px) {
+  .articles-wrapper {
+    width: 50%;
   }
 
-  .button-add-product a {
-      text-decoration: none;
-      color: #ffff;
-  }
-
-@media(min-width : 767px){
-    .vinoteca-vinos {
-        flex-direction: row;
-    }
-    .vinoteca-vinos article{
-        width : 50%;
-    }
-    
   .button-add-product {
     padding: 1%;
   }
 }
-@media(min-width : 1100px){
-    .vinoteca-bg-img-desktop {
-    display: block;
-    position: absolute;
-    z-index: -100;
-    width: 100%;
-    height: 100%;
-    }
 
-    .vinoteca-vinos article{
-        width : 25%
-    }
-    .button-add-product i {
-    font-size: 25px;
+/* Desktop */
+@media (min-width: 1100px) {
+  .articles-wrapper {
+    width: 25%;
   }
 
+  h2 {
+    margin-bottom: 3%;
+  }
+
+  .button-add-product i {
+    font-size: 25px;
+  }
 }
-
-
-/*
-
-
-Hacer cantidad un input de numero
