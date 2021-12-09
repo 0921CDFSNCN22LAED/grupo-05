@@ -4,16 +4,21 @@
   font-family: "Roboto";
 }
 
+.titulo-home-vinos {
+  color: white;
+  text-align: center;
+  margin: 15% 0 5% 0;
+}
+
 .contenedor1 {
   margin: 0 auto;
   width: 90%;
-  background-color: #d1cdcc;
 }
 
 .contenedor2 {
   display: flex;
   flex-wrap: wrap;
-  background-color: #d1cdcc;
+  justify-content: space-around;
 }
 
 .wrapper {
@@ -41,10 +46,6 @@
   border-radius: 8px;
 }
 
-.titulo-home-vinos {
-  background-color: white;
-}
-
 @media (min-width: 767px) {
   .wrapper {
     width: 50%;
@@ -54,6 +55,12 @@
 @media (min-width: 1100px) {
   .wrapper {
     width: 25%;
+  }
+
+  .titulo-home-vinos {
+    color: white;
+    text-align: center;
+    margin: 10% 0 5% 0;
   }
 }
 

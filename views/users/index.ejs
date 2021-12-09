@@ -101,130 +101,66 @@
       </div>
       
 
-      <!--ACA ESTAN LOS BOTONES
-
-      <section>
-        <form class="order-button">
-          <button type="button" class="main-button button-left">
-            Explorador
-          </button>
-
-          <button type="button" class="main-button">Degustador</button>
-
-          <button type="button" class="main-button button-right">
-            Gran catador
-          </button>
-        </form>
-      </section>
-
-      ACA TERMINAN LOS BOTONES-->
-
-      <!--ACA COMIENZA EL MAIN
-
-      <section class="container-box">
-        <img src="/images/rutini-box.png" class="img-perfect" />
-
-        <div class="div-parrafo">
-          <a href="" class="font-experience-name">- Rutini box - Experience </a>
-
-          <p class="font-experience price">Oferta exclusiva: $20.400</p>
-          <p class="font-experience detalle">
-            Este cajón de madera contiene tres botellas:
-          </p>
-
-          <p class="font-experience">
-            <i class="fas fa-circle circulos"></i>Single vineyard malbec de
-            Guatallary
-          </p>
-
-          <p class="font-experience">
-            <i class="fas fa-circle circulos"></i>Dominio gran malbec
-          </p>
-
-          <p class="font-experience">
-            <i class="fas fa-circle circulos"></i>Apartado gran malbec
-          </p>
-          <p class="contenedor-letra-carrito">
-            <a href="/cava" class="letra-carrito">Agregar a Mi cava</a>
-          </p>
-        </div>
-      </section>
-
-      <section class="container-box">
-        <img src="/images/luigi-box2.png" class="img-perfect" />
-
-        <div class="div-parrafo">
-          <a href="" class="font-experience-name">- Luigi box - Experience </a>
-
-          <p class="font-experience price">Oferta exclusiva: $12.000</p>
-          <p class="font-experience detalle">
-            Este estuche de madera contiene tres botellas:
-          </p>
-
-          <p class="font-experience">
-            <i class="fas fa-circle circulos"></i>Luigi bosca - Torrontes
-          </p>
-
-          <p class="font-experience">
-            <i class="fas fa-circle circulos"></i>De sangre - Malbec D.O.C.
-          </p>
-
-          <p class="font-experience">
-            <i class="fas fa-circle circulos"></i>La linda - Rose malbec
-          </p>
-          <p class="contenedor-letra-carrito">
-            <a href="/cava" class="letra-carrito">Agregar a Mi cava</a>
-          </p>
-        </div>
-      </section>
-
-      <section class="container-box">
-        <img src="/images/box-pinoquemado.jpg" class="img-perfect" />
-
-        <div class="div-parrafo">
-          <a href="" class="font-experience-name">- Pino box - Experience </a>
-
-          <p class="font-experience price"><i>Oferta exclusiva: $16.500</i></p>
-          <p class="font-experience detalle">
-            Este estuche de madera contiene tres botellas:
-          </p>
-
-          <p class="font-experience">
-            <i class="fas fa-circle circulos"></i>Pino quemado - Voigner
-          </p>
-
-          <p class="font-experience">
-            <i class="fas fa-circle circulos"></i>Pino quemado - Satisfaccion
-          </p>
-
-          <p class="font-experience">
-            <i class="fas fa-circle circulos"></i>Pino quemado - Suovign
-          </p>
-          <p class="contenedor-letra-carrito">
-            <a href="/cava" class="letra-carrito">Agregar a Mi cava</a>
-          </p>
-        </div>
-      </section>
-    </main>
-    ACA TERMINA EL MAIN-->
+      <!--termina el carousel -->
 
 <h2 class="titulo-home-vinos">Los recomendados por la casa</h2>
 <section class="contenedor1">
+  <div class="contenedor2">
  <% for (let vino of vinos) { %>
       <% if (vino.categoria == "Recomendados por nosotros") { %>
-        <div class="contenedor2">
           <article class="wrapper">
            <div class="card-wine">
             <a href="/products/detalle/<%= vino.id.categoria %>"><img class="card-wine-img" src="<%= vino.imagen %>"/></a>
-            <h3><%= vino.nombre %></h3>
-            <h4><%= vino.bodega %></h4>
-            <p><% vino.precio %></p>
+            <div class="card-body">
+             <h4 class="card-tittle"><%= vino.nombre %></h4>
+             <h5 class="card-subtitle mb-2 text-muted"><%= vino.bodega %></h5>
+             <p class="card-text">$<%= vino.precio %></p>
+            </div>
            </div>
          </article>
+         <% } }%>
         </div>
-  <% } }%>
  </section>
 
+ 
+<h2 class="titulo-home-vinos">Los más vendidos</h2>
+<section class="contenedor1">
+  <div class="contenedor2">
+ <% for (let vino of vinos) { %>
+      <% if (vino.categoria == "Los mas vendidos") { %>
+          <article class="wrapper">
+           <div class="card-wine">
+            <a href="/products/detalle/<%= vino.id.categoria %>"><img class="card-wine-img" src="<%= vino.imagen %>"/></a>
+            <div class="card-body">
+             <h4 class="card-tittle"><%= vino.nombre %></h4>
+             <h5 class="card-subtitle mb-2 text-muted"><%= vino.bodega %></h5>
+             <p class="card-text">$<%= vino.precio %></p>
+            </div>
+           </div>
+         </article>
+         <% } }%>
+        </div>
+ </section>
+
+ 
+<h2 class="titulo-home-vinos">Relación precio/calidad</h2>
+<section class="contenedor1">
+  <div class="contenedor2">
+ <% for (let vino of vinos) { %>
+      <% if (vino.categoria == "Relacion precio/calidad") { %>
+          <article class="wrapper">
+           <div class="card-wine">
+            <a href="/products/detalle/<%= vino.id.categoria %>"><img class="card-wine-img" src="<%= vino.imagen %>"/></a>
+            <div class="card-body">
+             <h4 class="card-tittle"><%= vino.nombre %></h4>
+             <h5 class="card-subtitle mb-2 text-muted"><%= vino.bodega %></h5>
+             <p class="card-text">$<%= vino.precio %></p>
+            </div>
+           </div>
+         </article>
+         <% } }%>
+        </div>
+ </section>
 
     <footer style="margin-top: 1.5%">
       <%- include ("../partials/footer") %>
