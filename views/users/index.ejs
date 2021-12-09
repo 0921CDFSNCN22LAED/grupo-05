@@ -208,78 +208,23 @@
     </main>
     ACA TERMINA EL MAIN-->
 
-   <h2>Los más vendidos</h2>
-      <section class="vinos-cava">
-        <article class="articulo-vino">
-          <div class="contenedor-cava">
-            <img src="images/img-products/vino1.jpeg" alt="vino1" width="100%" />
-            <h3>Vino 1</h3>
-            <h4>Malbec 2012</h4>
-            <p>$3000</p>
-            <p>Cantidad:</p>
-          </div>
-        </article>
-        <article>
-          <div class="contenedor-cava">
-            <img src="images/img-products/vino2.jpeg" alt="vino2" width="100%" />
-            <h3>Vino 2</h3>
-            <h4>Suavignon 2018</h4>
-            <p>$1500</p>
-            <p>Cantidad:</p>
-          </div>
-        </article>
-        <article>
-          <div class="contenedor-cava">
-            <img src="images/img-products/vino3.jpeg" alt="vino3" width="100%" />
-            <h3>Vino 3</h3>
-            <h4>Cabernet 2017</h4>
-            <p>$2000</p>
-            <p>Cantidad:</p>
-          </div>
-        </article>
-      </section>
-      
- <h2>Los recomendados por la casa</h2>
+<h2 class="titulo-home-vinos">Los recomendados por la casa</h2>
+<section class="contenedor1">
  <% for (let vino of vinos) { %>
       <% if (vino.categoria == "Recomendados por nosotros") { %>
-        <article class="articulo-vino">
-            <a href="/products/detalle/<%= vino.id.categoria %>"><img src="<%= vino.imagen %>" alt="" width="100%" /></a>
+        <div class="contenedor2">
+          <article class="wrapper">
+           <div class="card-wine">
+            <a href="/products/detalle/<%= vino.id.categoria %>"><img class="card-wine-img" src="<%= vino.imagen %>"/></a>
             <h3><%= vino.nombre %></h3>
-            <div>
-              <a href="/products/editar/<%= vino.id %>"></a>
-            </div>
             <h4><%= vino.bodega %></h4>
             <p><% vino.precio %></p>
-        </article>
-        <% } }%>
+           </div>
+         </article>
+        </div>
+  <% } }%>
+ </section>
 
-        <h2>Los más vendidos</h2>
- <% for (let vino of vinos) { %>
-      <% if (vino.categoria == "Los mas vendidos") { %>
-        <article class="articulo-vino">
-            <a href="/products/detalle/<%= vino.id.categoria %>"><img src="<%= vino.imagen %>" alt="" width="100%" /></a>
-            <h3><%= vino.nombre %></h3>
-            <div>
-              <a href="/products/editar/<%= vino.id %>"></a>
-            </div>
-            <h4><%= vino.bodega %></h4>
-            <p><% vino.precio %></p>
-        </article>
-        <% } }%>
-
-             <h2>Relacion precio/calidad</h2>
- <% for (let vino of vinos) { %>
-      <% if (vino.categoria == "Relacion precio/calidad") { %>
-        <article class="articulo-vino">
-            <a href="/products/detalle/<%= vino.id.categoria %>"><img src="<%= vino.imagen %>" alt="" width="100%" /></a>
-            <h3><%= vino.nombre %></h3>
-            <div>
-              <a href="/products/editar/<%= vino.id %>"></a>
-            </div>
-            <h4><%= vino.bodega %></h4>
-            <p><% vino.precio %></p>
-        </article>
-        <% } }%>
 
     <footer style="margin-top: 1.5%">
       <%- include ("../partials/footer") %>
