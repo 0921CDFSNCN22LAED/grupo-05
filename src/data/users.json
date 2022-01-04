@@ -440,5 +440,14 @@
         "dni": "111111111",
         "password": "$2a$10$0EvnRWkDv/9Y.pA7otNsUOHtgGhWhiqTDOrJfxVkezykW8Hlu93pS",
         "category": "user"
+    },
+    {
+        "id": 1641321229510,
+        "name": "bob smith",
+        "email": "bob@smith.com",
+        "birthday": "1999-11-11",
+        "dni": "1111111",
+        "password": "$2a$10$mhSveOR6M0jgx4GC1ldMJ.mV0UL.4C78gmIx3zzmcULxhEhsgoNMq",
+        "category": "user"
     }
 ]
