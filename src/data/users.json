@@ -422,5 +422,23 @@
         "dni": "999999999",
         "password": "$2a$10$hZ59ay2RMckEx.wODVF2tezhcbXuUzTeAcZLCNulFhr6olugHe6z6",
         "category": "user"
+    },
+    {
+        "id": 1641319699376,
+        "name": "james smith",
+        "email": "james@gmail.com",
+        "birthday": "2000-11-22",
+        "dni": "12134556",
+        "password": "$2a$10$43qZooE3MgleuYodPrqwAebmJihxvjvU.Uh2pdwyBSS.jv6LZMdr2",
+        "category": "user"
+    },
+    {
+        "id": 1641319907641,
+        "name": "enzo",
+        "email": "enzo@gmail.com",
+        "birthday": "2111-02-22",
+        "dni": "111111111",
+        "password": "$2a$10$0EvnRWkDv/9Y.pA7otNsUOHtgGhWhiqTDOrJfxVkezykW8Hlu93pS",
+        "category": "user"
     }
 ]

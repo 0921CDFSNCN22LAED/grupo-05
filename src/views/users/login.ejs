@@ -18,13 +18,19 @@
     <link rel="stylesheet" href="/css/login-styles.css" />
   </head>
   <body class="login-body">
+    <% if (locals.errors) { %>
+      <p>Errors</p>
+      <% for (let error of errors) { %>
+          <p><%= error.msg %></p>
+      <% } %>
+  <% } %>
     <header><%- include ("../partials/header") %></header>
 
     <main class="login-main-container">
       <img src="/images/bg-login-mobile.jpeg" class="login-mobile-bg-img" />
       <img src="/images/baco-ariadna.jpg" class="login-desktop-bg-img" />
 
-      <form action="/" method="POST" class="login-form-container">
+      <form action="/login" method="POST" class="login-form-container">
         <section>
           <div class="login-div-google">
             <button

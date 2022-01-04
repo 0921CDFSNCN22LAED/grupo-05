@@ -65,7 +65,23 @@ const controladorHome = {
       let userLogin = accountsService.findByField('email', req.body.email)
 
       if (userLogin){
-
+        let passwordOk = bcryptjs.compareSync(req.body.password, userLogin.password);
+        if (passwordOk){
+          res.redirect('/cuenta');
+          return
+        }
+        else{
+          errors.errors.push({
+            value: req.body.email,
+            msg: 'La contraseña es incorrecta',
+            param: 'password',
+            location: 'body'
+        })
+        res.render('users/login', {
+            errors: errors.errors
+        })
+        return
+        }
       }
     }
     

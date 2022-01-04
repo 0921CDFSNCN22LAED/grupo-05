@@ -40,6 +40,7 @@ router.get("/registro", mainController.registro);
 router.post("/registro", validateAccountRegister ,mainController.accountStore)
 
 router.get("/login", mainController.login);
+router.post("/login", mainController.loginProcess);
 
 router.get("/cuenta", mainController.cuenta);
 
