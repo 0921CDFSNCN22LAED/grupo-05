@@ -14,12 +14,20 @@
   </head>
 
   <body>
+    <div>
+      <% if (locals.errors) { %>
+          <p>Errors</p>
+          <% for (let error of errors) { %>
+              <p><%= error.msg %></p>
+          <% } %>
+      <% } %>
+  </div>
     <header><%- include ("../partials/header") %></header>
     <main class="register-main-container">
       <img src="/images/bg-login-mobile.jpeg" class="register-mobile-bg-img" />
       <img src="/images/venus-birth.jpeg" class="register-desktop-bg-img" />
 
-      <form action="/" method="POST" class="register-form-container box-shadow">
+      <form action="/registro" method="POST" class="register-form-container box-shadow">
         <section>
           <h4>Regístrate con:</h4>
           <div class="register-div-google">
@@ -54,7 +62,8 @@
             <label for="name" class="form-label"></label>
             <input
               class="register-imput-name box-shadow form-control"
-              name="nombre y apellido"
+              name="name"
+              id="name"
               type="text"
               placeholder=" Nombre y Apellido"
             />
@@ -73,13 +82,13 @@
             >
           </div>
           <div class="register-div-date">
-            <label for="fechaDeNacimiento" class="form-label"
+            <label for="birthday" class="form-label"
               >Fecha de Nacimiento:</label
             >
             <input
               type="date"
-              name="date"
-              id="fechaDeNacimiento"
+              name="birthday"
+              id="birthday"
               class="box-shadow form-control"
             />
           </div>
@@ -88,8 +97,8 @@
             <input
               class="register-imput-dni box-shadow form-control"
               type="number"
-              name="DNI"
-              id="DNI"
+              name="dni"
+              id="dni"
               placeholder=" DNI"
             />
           </div>
