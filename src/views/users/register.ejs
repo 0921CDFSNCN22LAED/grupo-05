@@ -16,18 +16,22 @@
   <body>
     <div>
       <% if (locals.errors) { %>
-          <p>Errors</p>
-          <% for (let error of errors) { %>
-              <p><%= error.msg %></p>
-          <% } %>
-      <% } %>
-  </div>
+      <p>Errors</p>
+      <% for (let error of errors) { %>
+      <p><%= error.msg %></p>
+      <% } %> <% } %>
+    </div>
     <header><%- include ("../partials/header") %></header>
     <main class="register-main-container">
       <img src="/images/bg-login-mobile.jpeg" class="register-mobile-bg-img" />
       <img src="/images/venus-birth.jpeg" class="register-desktop-bg-img" />
 
-      <form action="/users/registro" method="POST" class="register-form-container box-shadow">
+      <form
+        action="/users/registro"
+        method="POST"
+        class="register-form-container box-shadow"
+        enctype="multipart/form-data"
+      >
         <section>
           <h4>Regístrate con:</h4>
           <div class="register-div-google">
@@ -100,6 +104,18 @@
               name="dni"
               id="dni"
               placeholder=" DNI"
+            />
+          </div>
+
+          <div class="register-div-dni">
+            <label for="imagen-usuario" class="form-label"
+              >Imagen de usuario:</label
+            >
+            <input
+              class="register-imput-dni box-shadow form-control"
+              type="file"
+              name="imagen-usuario"
+              id="imagen-usuario"
             />
           </div>
         </section>

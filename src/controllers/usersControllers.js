@@ -3,42 +3,45 @@ const bcryptjs = require('bcryptjs');
 const accountsService = require('../services/accountsServices.js');
 const accounts = accountsService.getAll();
 
-const {validationResult} = require('express-validator');
+const { validationResult } = require('express-validator');
 
 const usersController = {
   registro: (req, res) => {
     res.render("users/register");
+  },
+  registroProcesado: (req, res) => {
+    let errors = validationResult(req);
   },
   login: (req, res) => {
     res.render("users/login");
   },
   loginProcess: (req, res) => {
     let errors = validationResult(req);
-    
-    if (errors.isEmpty()){
+
+    if (errors.isEmpty()) {
       let userLogin = accountsService.findByField('email', req.body.email)
 
-      if (userLogin){
+      if (userLogin) {
         let passwordOk = bcryptjs.compareSync(req.body.password, userLogin.password);
-        if (passwordOk){
+        if (passwordOk) {
           res.redirect('/users/cuenta');
           return
         }
-        else{
+        else {
           errors.errors.push({
             value: req.body.email,
             msg: 'La contraseña es incorrecta',
             param: 'password',
             location: 'body'
-        })
-        res.render('users/login', {
+          })
+          res.render('users/login', {
             errors: errors.errors
-        })
-        return
+          })
+          return
         }
       }
     }
-    
+
   },
   cuenta: (req, res) => {
     res.render('users/cuenta')
