@@ -5,12 +5,22 @@ const mainRouters = require("./routers/mainRouters.js");
 const productsRouters = require("./routers/productsRouters.js");
 const usersRouters = require("./routers/usersRouters.js");
 const methodOverride = require("method-override");
+const cookieParser = require("cookie-parser");
+const session = require("express-session");
+const authMiddleware = require("./Middlewares/authMiddleware");
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+
+
 const publicPath = path.join(__dirname, "../public");
 app.use(express.static(publicPath));
+app.use(cookieParser());
+app.use(session({secret: "secreto"}));
+
+
 
 //Servidor
 app.listen(3000, () => {

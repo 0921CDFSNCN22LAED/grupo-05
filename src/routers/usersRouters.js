@@ -51,6 +51,7 @@ router.post("/registro", upload.single("imagen-usuario"), usersController.regist
 router.get("/login", usersController.login);
 router.post("/login", usersController.loginProcess);
 
+
 router.get("/cuenta", usersController.cuenta);
 
 router.post("/login", validateAccountLogin, usersController.loginProcess)
