@@ -1,3 +1,5 @@
+const path = require('path');
+
 const productsService = require("../services/productsServices");
 
 const vinos = productsService.getAll();
@@ -24,7 +26,15 @@ const productsController = {
     res.render("products/agregarProducto");
   },
   store: (req, res) => {
-    productsService.createOne(req.body);
+    const product = {
+      id: Date.now(), 
+      ...req.body,
+      imagen: (req.file.path).split('public').pop(),
+      };
+  
+      vinos.push(product);
+  
+      productsService.saveProducts();
     res.redirect("/products/vinoteca");
   },
 
@@ -49,8 +59,8 @@ const productsController = {
 
     const updatedProduct = {
       id: vinos[index].id,
-      imagen: "/images/img-products/" + req.file.filename,
       ...req.body,
+      imagen: "/images/img-products/" + req.file.filename,
     };
 
     vinos[index] = updatedProduct;
