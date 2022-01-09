@@ -449,5 +449,14 @@
         "dni": "1111111",
         "password": "$2a$10$mhSveOR6M0jgx4GC1ldMJ.mV0UL.4C78gmIx3zzmcULxhEhsgoNMq",
         "category": "user"
+    },
+    {
+        "id": 1641568462538,
+        "name": "Enzo",
+        "email": "angel@gmail.com",
+        "birthday": "1111-11-11",
+        "dni": "111111111",
+        "password": "$2a$10$y2.xzv5vDczfUW8SpLNtaex8nwcEQp3Q84i.Mkvh7mFfGP/YR3C3i",
+        "category": "user"
     }
 ]

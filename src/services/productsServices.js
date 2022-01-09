@@ -21,9 +21,11 @@ function getAll() {
 }
 
 function createOne(body) {
+  console.log(req.file);
     const product = {
     id: Date.now(), 
-    ...body
+    ...body,
+    imagen: "/images/img-products/" + req.file.filename,
     };
 
     products.push(product);
