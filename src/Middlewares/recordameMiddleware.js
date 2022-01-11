@@ -12,15 +12,15 @@ function recordameMiddleware(req, res, next) {
         } else {
             users = JSON.parse(usersJSON);
         }
-    let userToLogin = []
+    let userLogin = []
     
         for (let i = 0; i < users.length; i++) {
             if (users[i].email == req.cookies.recordame) {
-                userToLogin = users[i];
+                userLogin = users[i];
                 break;
             }
         }
-        req.session.loggedUser = userToLogin;
+        req.session.loggedUser = userLogin;
     }
 }
 module.exports = recordameMiddleware;
