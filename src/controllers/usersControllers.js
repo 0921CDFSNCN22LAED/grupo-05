@@ -4,8 +4,6 @@ const accountsService = require("../services/accountsServices.js");
 const accounts = accountsService.getAll();
 
 const { validationResult } = require("express-validator");
-const { redirect } = require("express/lib/response");
-const userLoggin = require("../data/users.json");
 
 const usersController = {
     registro: (req, res) => {
@@ -64,8 +62,10 @@ const usersController = {
                 if (passwordOk) {
                     delete userLogin.password;
                     req.session.loggedUser = userLogin;
-                    if(req.body.recordame){
-                        res.cookie('userEmail', req.body.email, {maxAge:(60000)})
+                    if (req.body.recordame) {
+                        res.cookie("userEmail", req.body.email, {
+                            maxAge: 60000,
+                        });
                     }
                     res.redirect("/users/cuenta");
                     return;
@@ -83,7 +83,6 @@ const usersController = {
                 }
             }
         }
-        
     },
     cuenta: (req, res) => {
         res.render("users/cuenta", {
