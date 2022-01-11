@@ -81,7 +81,9 @@ const usersController = {
         }
     },
     cuenta: (req, res) => {
-        res.render("users/cuenta");
+        res.render("users/cuenta", {
+            user: req.session.loggedUser,
+        });
     },
 };
 
