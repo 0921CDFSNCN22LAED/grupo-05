@@ -3,7 +3,7 @@ function recordameMiddleware(req, res, next) {
 
 
     if(req.cookies.recordame != undefined && 
-    req.session.userLogged == undefined){
+    req.session.loggedUser == undefined){
         let usersJSON = fs.readFileSync('users.json', {
             encoding: 'utf8'});
         let users;
@@ -12,7 +12,7 @@ function recordameMiddleware(req, res, next) {
         } else {
             users = JSON.parse(usersJSON);
         }
-    let userToLogin 
+    let userToLogin = []
     
         for (let i = 0; i < users.length; i++) {
             if (users[i].email == req.cookies.recordame) {
@@ -20,7 +20,7 @@ function recordameMiddleware(req, res, next) {
                 break;
             }
         }
-        req.session.userLogged = userToLogin;
+        req.session.loggedUser = userToLogin;
     }
 }
 module.exports = recordameMiddleware;
