@@ -458,5 +458,23 @@
         "dni": "111111111",
         "password": "$2a$10$y2.xzv5vDczfUW8SpLNtaex8nwcEQp3Q84i.Mkvh7mFfGP/YR3C3i",
         "category": "user"
+    },
+    {
+        "id": 1641919800744,
+        "name": "Roberto Clemente",
+        "email": "robcle@gmail.com",
+        "birthday": "2000-11-11",
+        "dni": "111111111",
+        "password": "$2a$10$1/.tv5vw0DfIEZqk6VkyROJOMJzlm6t8Kp.IpDyXRaJWL87N7SiTW",
+        "category": "user"
+    },
+    {
+        "id": 1641919854351,
+        "name": "Cristiano Ronaldo",
+        "email": "cr7@gmail.com",
+        "birthday": "2000-11-11",
+        "dni": "111111111",
+        "password": "$2a$10$KL1f2Sm/JjaURI53OHVZ4OS0euOoqtrv5.oEyFMjMmfZTypb1Xaqm",
+        "category": "user"
     }
 ]
