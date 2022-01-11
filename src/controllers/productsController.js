@@ -60,7 +60,7 @@ const productsController = {
     const updatedProduct = {
       id: vinos[index].id,
       ...req.body,
-      imagen: "/images/img-products/" + req.file.filename,
+      imagen: (req.file.path).split('public').pop(),
     };
 
     vinos[index] = updatedProduct;
