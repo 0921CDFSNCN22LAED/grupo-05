@@ -85,6 +85,10 @@ const usersController = {
             user: req.session.loggedUser,
         });
     },
+    logout: (req, res) => {
+        req.session.destroy();
+        return res.redirect("/");
+    },
 };
 
 module.exports = usersController;

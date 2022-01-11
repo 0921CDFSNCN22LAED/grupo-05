@@ -70,4 +70,6 @@ router.get("/cuenta", ifNotLogged, usersController.cuenta);
 
 router.post("/login", validateAccountLogin, usersController.loginProcess);
 
+router.get("/logout", usersController.logout);
+
 module.exports = router;
