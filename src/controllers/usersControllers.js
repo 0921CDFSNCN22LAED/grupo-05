@@ -70,7 +70,6 @@ const usersController = {
         }
       }
     }
-
   },
   cuenta: (req, res) => {
     res.render('users/cuenta')

@@ -458,5 +458,14 @@
         "dni": "111111111",
         "password": "$2a$10$y2.xzv5vDczfUW8SpLNtaex8nwcEQp3Q84i.Mkvh7mFfGP/YR3C3i",
         "category": "user"
+    },
+    {
+        "id": 1641816918953,
+        "name": "chinchulin",
+        "email": "asd12@gmail.com",
+        "birthday": "2022-01-19",
+        "dni": "123432145",
+        "password": "$2a$10$HX5OLC9zOO8eoe55hXlrWuhxmws6BJZN8PmIieZQBctggLvaUeKnK",
+        "category": "user"
     }
 ]

@@ -7,11 +7,11 @@ const usersRouters = require("./routers/usersRouters.js");
 const methodOverride = require("method-override");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
-const authMiddleware = require("./Middlewares/authMiddleware");
-
+const recordameMiddleware = require("./Middlewares/recordameMiddleware");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
 
 
 
@@ -19,6 +19,7 @@ const publicPath = path.join(__dirname, "../public");
 app.use(express.static(publicPath));
 app.use(cookieParser());
 app.use(session({secret: "secreto"}));
+
 
 
 
@@ -34,3 +35,4 @@ app.use(methodOverride("_method"));
 app.use("/", mainRouters);
 app.use("/products", productsRouters);
 app.use("/users", usersRouters);
+

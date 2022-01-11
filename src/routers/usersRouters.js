@@ -56,5 +56,4 @@ router.get("/cuenta", usersController.cuenta);
 
 router.post("/login", validateAccountLogin, usersController.loginProcess)
 
-
 module.exports = router;
