@@ -4,6 +4,7 @@ const multer = require("multer");
 const path = require("path");
 const usersController = require("../controllers/usersControllers");
 const ifLogged = require("../Middlewares/ifLogged");
+const ifNotLogged = require("../Middlewares/ifNotLogged");
 
 //guardado de archivos de multer
 const storage = multer.diskStorage({
@@ -65,7 +66,7 @@ router.post(
 router.get("/login", ifLogged, usersController.login);
 router.post("/login", usersController.loginProcess);
 
-router.get("/cuenta", usersController.cuenta);
+router.get("/cuenta", ifNotLogged, usersController.cuenta);
 
 router.post("/login", validateAccountLogin, usersController.loginProcess);
 
