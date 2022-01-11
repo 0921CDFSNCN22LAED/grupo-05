@@ -64,11 +64,9 @@ router.post(
 );
 
 router.get("/login", ifLogged, usersController.login);
-router.post("/login", usersController.loginProcess);
+router.post("/login", validateAccountLogin, usersController.loginProcess);
 
 router.get("/cuenta", ifNotLogged, usersController.cuenta);
-
-router.post("/login", validateAccountLogin, usersController.loginProcess);
 
 router.get("/logout", usersController.logout);
 
