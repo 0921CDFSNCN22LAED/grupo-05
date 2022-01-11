@@ -21,6 +21,7 @@ app.use(cookieParser());
 app.use(
     session({ secret: "secreto", resave: false, saveUninitialized: false })
 );
+app.use(recordameMiddleware);
 
 
 //Servidor

@@ -23,3 +23,4 @@ function recordameMiddleware(req, res, next) {
         req.session.userLogged = userToLogin;
     }
 }
+module.exports = recordameMiddleware;
