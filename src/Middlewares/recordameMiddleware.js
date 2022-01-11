@@ -1,26 +1,21 @@
+const user = require('../services/usersServices');
+
+
 function recordameMiddleware(req, res, next) {
-    next();
+    res.locals.isLogged = false;
 
+    let emailInCookie = req.cookies.userEmail;
+	let userFromCookie = User.findByField('email', emailInCookie);
 
-    if(req.cookies.recordame != undefined && 
-    req.session.loggedUser == undefined){
-        let usersJSON = fs.readFileSync('users.json', {
-            encoding: 'utf8'});
-        let users;
-        if (usersJSON == ""){
-            users = [];
-        } else {
-            users = JSON.parse(usersJSON);
-        }
-    let userLogin = []
-    
-        for (let i = 0; i < users.length; i++) {
-            if (users[i].email == req.cookies.recordame) {
-                userLogin = users[i];
-                break;
-            }
-        }
-        req.session.loggedUser = userLogin;
-    }
+	if (userFromCookie) {
+		req.session.userLogged = userFromCookie;
+	}
+
+	if (req.session.userLogged) {
+		res.locals.isLogged = true;
+		res.locals.userLogged = req.session.userLogged;
+	}
+
+	next();
 }
 module.exports = recordameMiddleware;
