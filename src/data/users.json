@@ -467,5 +467,14 @@
         "dni": "111111111",
         "password": "$2a$10$KL1f2Sm/JjaURI53OHVZ4OS0euOoqtrv5.oEyFMjMmfZTypb1Xaqm",
         "category": "user"
+    },
+    {
+        "id": 1641926621177,
+        "name": "Cosme Fulanito",
+        "email": "cosmefulanito@gmail.com",
+        "birthday": "2022-01-13",
+        "dni": "11222333",
+        "password": "$2a$10$TuxubAMF0s4ZVZ3Ujb3Ee.2wCfDtpLNqMgikkQwfFLOXmjH/uwDZi",
+        "category": "user"
     }
 ]
