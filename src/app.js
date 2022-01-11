@@ -7,7 +7,7 @@ const usersRouters = require("./routers/usersRouters.js");
 const methodOverride = require("method-override");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
-const recordameMiddleware = require("./Middlewares/recordameMiddleware");
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use(
     session({ secret: "secreto", resave: false, saveUninitialized: false })
 );
-app.use(recordameMiddleware);
+
 
 
 //Servidor
