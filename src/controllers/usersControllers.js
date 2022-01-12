@@ -49,13 +49,11 @@ const usersController = {
     },
     loginProcess: (req, res) => {
         let errors = validationResult(req);
-
         if (errors.isEmpty()) {
             let userLogin = accountsService.findByField(
                 "email",
                 req.body.email
             );
-
             if (userLogin) {
                 let passwordOk = bcryptjs.compareSync(
                     req.body.password,
@@ -64,8 +62,8 @@ const usersController = {
                 if (passwordOk) {
                     delete userLogin.password;
                     req.session.loggedUser = userLogin;
-                    if(req.body.recordame){
-                        res.cookie('userEmail', req.body.email, {maxAge:(60000)})
+                    if(req.body.recuerdame){
+                        res.cookie('userEmail', req.body.email, {maxAge:(1000 * 60)*60})
                     }
                     res.redirect("/users/cuenta");
                     return;
@@ -86,6 +84,7 @@ const usersController = {
         
     },
     cuenta: (req, res) => {
+        console.log(req.cookies.userEmail);
         res.render("users/cuenta", {
             user: req.session.loggedUser,
         });
