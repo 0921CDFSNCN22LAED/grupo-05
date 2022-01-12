@@ -4,8 +4,6 @@ const accountsService = require("../services/accountsServices.js");
 const accounts = accountsService.getAll();
 
 const { validationResult } = require("express-validator");
-const { redirect } = require("express/lib/response");
-const userLoggin = require("../data/users.json");
 
 const usersController = {
     registro: (req, res) => {
@@ -81,7 +79,6 @@ const usersController = {
                 }
             }
         }
-        
     },
     cuenta: (req, res) => {
         console.log(req.cookies.userEmail);

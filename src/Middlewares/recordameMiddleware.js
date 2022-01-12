@@ -1,11 +1,11 @@
-const user = require('../services/usersServices');
-
+//const user = require('../services/usersServices');
+const accountsService = require("../services/accountsServices");
 
 function recordameMiddleware(req, res, next) {
     res.locals.isLogged = false;
 
     let emailInCookie = req.cookies.userEmail;
-	let userFromCookie = User.findByField('email', emailInCookie);
+    let userFromCookie = accountsService.findByField("email", emailInCookie);
 
 	if (userFromCookie) {
 		req.session.loggedUser = userFromCookie;
@@ -16,6 +16,6 @@ function recordameMiddleware(req, res, next) {
 		res.locals.loggedUser = req.session.loggedUser;
 	}
 
-	next();
+    next();
 }
 module.exports = recordameMiddleware;
