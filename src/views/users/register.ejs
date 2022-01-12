@@ -77,6 +77,11 @@
                             placeholder=" Nombre y Apellido"
                             value="<%= locals.old && old.name ? old.name : ''%> "
                         />
+                        <% if (locals.errors) { %>
+                            <% for (let error of errors) { %>
+                                <% if (error.param == 'name') { %>
+                                    <p class="register-invalid-text-input"><%= error.msg %> </p>
+                        <% } %> <% } %> <% } %>
                     </div>
                     <div class="register-div-email">
                         <label for="email" class="form-label"></label>
@@ -88,9 +93,11 @@
                             class="register-imput-email box-shadow form-control"
                             value="<%= locals.old && old.email ? old.email : ''%> "
                         />
-                        <span class="register-invalid-text-input"
-                            >Correo electrónico no válido</span
-                        >
+                        <% if (locals.errors) { %>
+                            <% for (let error of errors) { %>
+                                <% if (error.param == 'email') { %>
+                                    <p class="register-invalid-text-input"><%= error.msg %> </p>
+                        <% } %> <% } %> <% } %>
                     </div>
                     <div class="register-div-date">
                         <label for="birthday" class="form-label"
@@ -103,6 +110,11 @@
                             class="box-shadow form-control"
                             value="<%= locals.old && old.birthday ? old.birthday : ''%> "
                         />
+                        <% if (locals.errors) { %>
+                            <% for (let error of errors) { %>
+                                <% if (error.param == 'birthday') { %>
+                                    <p class="register-invalid-text-input"><%= error.msg %> </p>
+                        <% } %> <% } %> <% } %>
                     </div>
                     <div class="register-div-dni">
                         <label for="DNI" class="form-label"></label>
@@ -114,6 +126,11 @@
                             placeholder=" DNI"
                             value="<%= locals.old && old.dni ? old.dni : ''%> "
                         />
+                        <% if (locals.errors) { %>
+                            <% for (let error of errors) { %>
+                                <% if (error.param == 'dni') { %>
+                                    <p class="register-invalid-text-input"><%= error.msg %> </p>
+                        <% } %> <% } %> <% } %>
                     </div>
                 </section>
 
@@ -128,9 +145,11 @@
                             placeholder=" Contraseña"
                             class="register-imput-password box-shadow form-control"
                         />
-                        <span class="register-invalid-text-input"
-                            >Contraseña no válida</span
-                        >
+                        <% if (locals.errors) { %>
+                            <% for (let error of errors) { %>
+                                <% if (error.param == 'password') { %>
+                                    <p class="register-invalid-text-input"><%= error.msg %> </p>
+                        <% } %> <% } %> <% } %>
                     </div>
                     <div class="register-div-password">
                         <label
@@ -144,9 +163,11 @@
                             placeholder=" Confirmar Contraseña"
                             class="register-imput-password box-shadow form-control"
                         />
-                        <span class="register-invalid-text-input"
-                            >Contraseña no válida</span
-                        >
+                        <% if (locals.errors) { %>
+                            <% for (let error of errors) { %>
+                                <% if (error.param == 'confirm-password') { %>
+                                    <p class="register-invalid-text-input"><%= error.msg %> </p>
+                        <% } %> <% } %> <% } %>
                     </div>
                 </section>
 

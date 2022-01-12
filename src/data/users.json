@@ -476,5 +476,14 @@
         "dni": "11222333",
         "password": "$2a$10$TuxubAMF0s4ZVZ3Ujb3Ee.2wCfDtpLNqMgikkQwfFLOXmjH/uwDZi",
         "category": "user"
+    },
+    {
+        "id": 1642019874951,
+        "name": " ",
+        "email": "rejoalj@raeljk.com",
+        "birthday": "1111-11-11",
+        "dni": "11111",
+        "password": "$2a$10$cNkLbmbdURDUZ8i8NiCJ6utQqC45MXc1K2QCnH7aa9vdrD4UnNj6G",
+        "category": "user"
     }
 ]

@@ -12,6 +12,8 @@ const usersController = {
     registroProcesado: (req, res) => {
         let errors = validationResult(req);
 
+        console.log(errors);
+
         if (errors.isEmpty()) {
             let usuarioDb = accountsService.findByField(
                 "email",
@@ -25,6 +27,7 @@ const usersController = {
                     location: "body",
                 });
                 res.render("users/register", { errors: errors.errors });
+                return
             }
             let newAccount = {
                 id: Date.now(),
@@ -39,6 +42,8 @@ const usersController = {
             accountsService.saveAccounts();
             res.redirect("/");
         } else {
+
+          console.log('hola');
             res.render("users/register", {
                 old: req.body,
                 errors: errors.errors,
