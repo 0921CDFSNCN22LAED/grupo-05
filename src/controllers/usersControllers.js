@@ -12,6 +12,9 @@ const usersController = {
     registroProcesado: (req, res) => {
         let errors = validationResult(req);
 
+        console.log(errors)
+        console.log(req.body);
+
         if (errors.isEmpty()) {
             let usuarioDb = accountsService.findByField(
                 "email",
@@ -24,7 +27,7 @@ const usersController = {
                     param: "email",
                     location: "body",
                 });
-                res.render("users/register", { msg: errors.errors });
+                res.render("users/register", { errors: errors.errors });
             }
             let newAccount = {
                 id: Date.now(),
@@ -32,14 +35,14 @@ const usersController = {
                 email: req.body.email,
                 birthday: req.body.birthday,
                 dni: req.body.dni,
-                password: bcryptjs.hashSync(req.body.password, 10),
+                password: req.body.password,
                 category: "user",
             };
             accounts.push(newAccount);
             accountsService.saveAccounts();
             res.redirect("/");
         } else {
-            res.render("users/register", { old: req.body, msg: errors.errors });
+            res.render("users/register", { old: req.body, errors: errors.errors });
         }
     },
     login: (req, res) => {

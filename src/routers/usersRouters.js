@@ -61,7 +61,6 @@ let validateAccountRegister = [
 router.get("/registro", ifLogged, usersController.registro);
 router.post(
     "/registro",
-    upload.single("imagen-usuario"),
     usersController.registroProcesado
 );
 
