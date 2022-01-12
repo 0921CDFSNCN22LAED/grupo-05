@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const user = {
+const accountsServices = {
     filename: '/src/data/users.json',
 
     getData: function (){
@@ -18,4 +18,4 @@ const user = {
         return userFound;
     }
 }
-module.exports = User;
+module.exports = accountsServices;
