@@ -60,8 +60,10 @@ const usersController = {
                 if (passwordOk) {
                     delete userLogin.password;
                     req.session.loggedUser = userLogin;
-                    if(req.body.recuerdame){
-                        res.cookie('userEmail', req.body.email, {maxAge:(1000 * 60)*60})
+                    if (req.body.recuerdame) {
+                        res.cookie("userEmail", req.body.email, {
+                            maxAge: 1000 * 60 * 60,
+                        });
                     }
                     res.redirect("/users/cuenta");
                     return;
@@ -89,6 +91,9 @@ const usersController = {
     logout: (req, res) => {
         req.session.destroy();
         return res.redirect("/");
+    },
+    cava: (req, res) => {
+        res.render("users/cava");
     },
 };
 
