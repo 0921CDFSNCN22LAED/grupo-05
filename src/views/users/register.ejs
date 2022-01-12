@@ -75,6 +75,7 @@
                             id="name"
                             type="text"
                             placeholder=" Nombre y Apellido"
+                            value="<%= locals.old && old.name ? old.name : ''%> "
                         />
                     </div>
                     <div class="register-div-email">
@@ -85,6 +86,7 @@
                             id="email"
                             placeholder=" Correo Electrónico"
                             class="register-imput-email box-shadow form-control"
+                            value="<%= locals.old && old.email ? old.email : ''%> "
                         />
                         <span class="register-invalid-text-input"
                             >Correo electrónico no válido</span
@@ -99,6 +101,7 @@
                             name="birthday"
                             id="birthday"
                             class="box-shadow form-control"
+                            value="<%= locals.old && old.birthday ? old.birthday : ''%> "
                         />
                     </div>
                     <div class="register-div-dni">
@@ -109,6 +112,7 @@
                             name="dni"
                             id="dni"
                             placeholder=" DNI"
+                            value="<%= locals.old && old.dni ? old.dni : ''%> "
                         />
                     </div>
                 </section>
