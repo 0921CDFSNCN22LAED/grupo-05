@@ -24,7 +24,7 @@ const usersController = {
                     param: "email",
                     location: "body",
                 });
-                res.render("users/register", { msg: errors.errors });
+                res.render("users/register", { errors: errors.errors });
             }
             let newAccount = {
                 id: Date.now(),
@@ -39,7 +39,10 @@ const usersController = {
             accountsService.saveAccounts();
             res.redirect("/");
         } else {
-            res.render("users/register", { old: req.body, msg: errors.errors });
+            res.render("users/register", {
+                old: req.body,
+                errors: errors.errors,
+            });
         }
     },
     login: (req, res) => {
@@ -75,7 +78,7 @@ const usersController = {
                         location: "body",
                     });
                     res.render("users/login", {
-                        msg: errors.errors,
+                        errors: errors.errors,
                     });
                     return;
                 }

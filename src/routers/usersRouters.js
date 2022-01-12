@@ -1,30 +1,14 @@
 const express = require("express");
 const router = express.Router();
-const multer = require("multer");
-const path = require("path");
 const usersController = require("../controllers/usersControllers");
 const ifLogged = require("../Middlewares/ifLogged");
 const ifNotLogged = require("../Middlewares/ifNotLogged");
-
-//guardado de archivos de multer
-const storage = multer.diskStorage({
-    destination: (req, res, cb) => {
-        cb(null, path.join(__dirname, "../public/images/img-users"));
-    },
-    filename: (req, res, cb) => {
-        const newFilename = "user-" + Date.now();
-        cb(null, newFilename);
-    },
-});
-
-const upload = multer({ storage: storage });
 
 /* EXPRESS VALIDATOR PARA ACCOUNT*/
 
 const { check } = require("express-validator");
 
 const { body } = require("express-validator");
-const req = require("express/lib/request");
 
 let validateAccountLogin = [
     check("email").notEmpty().withMessage("Debes completar el mail"),
@@ -42,9 +26,7 @@ let validateAccountRegister = [
         .notEmpty()
         .withMessage("Debes completar tu fecha de cumpleaños"),
     check("dni").notEmpty().withMessage("Debes completar con tu dni"),
-    check("imagen-usuario")
-        .notEmpty()
-        .withMessage("Completa con una imagen valida"),
+
     check("password")
         .notEmpty()
         .withMessage("Debes completar con tu contraseña"),
@@ -59,7 +41,7 @@ let validateAccountRegister = [
 router.get("/registro", ifLogged, usersController.registro);
 router.post(
     "/registro",
-    upload.single("imagen-usuario"),
+    validateAccountRegister,
     usersController.registroProcesado
 );
 
