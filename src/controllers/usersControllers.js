@@ -24,8 +24,11 @@ const usersController = {
                     param: "email",
                     location: "body",
                 });
-                res.render("users/register", {old: req.body, errors: errors.errors});
-                return
+                res.render("users/register", {
+                    old: req.body,
+                    errors: errors.errors,
+                });
+                return;
             }
             let newAccount = {
                 id: Date.now(),
@@ -63,7 +66,6 @@ const usersController = {
                     userLogin.password
                 );
                 if (passwordOk) {
-                    delete userLogin.password;
                     req.session.loggedUser = userLogin;
                     if (req.body.recuerdame) {
                         res.cookie("userEmail", req.body.email, {
@@ -86,18 +88,19 @@ const usersController = {
                     return;
                 }
             } else {
-              errors.errors.push({
-                value: req.body.email,
-                msg: "Este usuario no existe",
-                param: "email",
-                location: "body",
-            })
-            res.render('users/login', {old: req.body, errors: errors.errors});
-
-
+                errors.errors.push({
+                    value: req.body.email,
+                    msg: "Este usuario no existe",
+                    param: "email",
+                    location: "body",
+                });
+                res.render("users/login", {
+                    old: req.body,
+                    errors: errors.errors,
+                });
             }
         } else {
-          res.render('users/login', {old: req.body, errors: errors.errors});
+            res.render("users/login", { old: req.body, errors: errors.errors });
         }
     },
     cuenta: (req, res) => {
