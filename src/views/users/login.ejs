@@ -18,18 +18,12 @@
     <link rel="stylesheet" href="/css/login-styles.css" />
   </head>
   <body class="login-body">
-    <% if (locals.errors) { %>
-      <p>Errors</p>
-      <% for (let error of errors) { %>
-          <p><%= error.msg %></p>
-      <% } %>
-  <% } %>
     <header><%- include ("../partials/header") %></header>
-
+    
     <main class="login-main-container">
       <img src="/images/bg-login-mobile.jpeg" class="login-mobile-bg-img" />
       <img src="/images/baco-ariadna.jpg" class="login-desktop-bg-img" />
-
+      
       <form action="/users/login" method="POST" class="login-form-container">
         <section>
           <div class="login-div-google">
@@ -68,9 +62,11 @@
               placeholder=" Correo electrónico"
               class="login-imput-email box-shadow form-control"
             />
-            <span class="login-invalid-text-input"
-              >Correo electrónico no válido</span
-            >
+            <% if (locals.errors) { %>
+              <% for (let error of errors) { %>
+                  <% if (error.param == 'email') { %>
+                      <p class="register-invalid-text-input"><%= error.msg %> </p>
+            <% } %> <% } %> <% } %>
           </div>
           <div class="login-div-password">
             <label for="password" class="form-label"></label>
@@ -81,8 +77,13 @@
               placeholder=" Contraseña"
               class="login-imput-password box-shadow form-control"
             />
-            <span class="login-invalid-text-input">Contraseña no válida</span>
-          </div>
+            <% if (locals.errors) { %>
+              <% for (let error of errors) { %>
+                  <% if (error.param == 'password') { %>
+                      <p class="register-invalid-text-input"><%= error.msg %> </p>
+            <% } %> <% } %> <% } %>
+
+            <br>
 
           <div class="login-div-enter">
             <button
@@ -90,7 +91,7 @@
               name="button-enter"
               class="login-button-enter box-shadow btn-secondary"
             >
-              <a href="/">INGRESAR</a>
+              <p href="/">INGRESAR</p>
             </button>
           </div>
 
@@ -105,7 +106,7 @@
           </div>
 
           <div class="login-div-forgot-password">
-            <a href="">¿Olvidaste tu contraseña?</a>
+            <a href="#">¿Olvidaste tu contraseña?</a>
           </div>
 
           <div class="login-div-subscribe">

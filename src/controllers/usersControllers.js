@@ -12,8 +12,6 @@ const usersController = {
     registroProcesado: (req, res) => {
         let errors = validationResult(req);
 
-        console.log(errors);
-
         if (errors.isEmpty()) {
             let usuarioDb = accountsService.findByField(
                 "email",
@@ -42,8 +40,6 @@ const usersController = {
             accountsService.saveAccounts();
             res.redirect("/");
         } else {
-
-          console.log('hola');
             res.render("users/register", {
                 old: req.body,
                 errors: errors.errors,
@@ -87,11 +83,22 @@ const usersController = {
                     });
                     return;
                 }
+            } else {
+              errors.errors.push({
+                value: req.body.email,
+                msg: "Este usuario no existe",
+                param: "email",
+                location: "body",
+            })
+            res.render('users/login', {old: req.body, errors: errors.errors});
+
+
             }
+        } else {
+          res.render('users/login', {old: req.body, errors: errors.errors});
         }
     },
     cuenta: (req, res) => {
-        console.log(req.cookies.userEmail);
         res.render("users/cuenta", {
             user: req.session.loggedUser,
         });

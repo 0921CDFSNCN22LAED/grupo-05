@@ -14,13 +14,6 @@
     </head>
 
     <body>
-        <div>
-            <% if (locals.errors) { %>
-            <p>Errors</p>
-            <% for (let error of errors) { %>
-            <p><%= error.msg %></p>
-            <% } %> <% } %>
-        </div>
         <header><%- include ("../partials/header") %></header>
         <main class="register-main-container">
             <img
@@ -75,7 +68,7 @@
                             id="name"
                             type="text"
                             placeholder=" Nombre y Apellido"
-                            value="<%= locals.old && old.name ? old.name : ''%> "
+                            value="<%= locals.old && old.name ? old.name : ''%>"
                         />
                         <% if (locals.errors) { %>
                             <% for (let error of errors) { %>
@@ -178,7 +171,7 @@
                             name="button-enter"
                             class="register-button-enter box-shadow btn-secondary"
                         >
-                            <a href="/">INGRESAR</a>
+                            <p>INGRESAR<p>
                         </button>
                     </div>
 
