@@ -61,6 +61,7 @@
               id="email"
               placeholder=" Correo electrónico"
               class="login-imput-email box-shadow form-control"
+              value="<%= locals.old && old.email ? old.email : ''%>"
             />
             <% if (locals.errors) { %>
               <% for (let error of errors) { %>

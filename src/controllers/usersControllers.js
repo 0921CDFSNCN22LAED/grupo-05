@@ -24,7 +24,7 @@ const usersController = {
                     param: "email",
                     location: "body",
                 });
-                res.render("users/register", { errors: errors.errors });
+                res.render("users/register", {old: req.body, errors: errors.errors});
                 return
             }
             let newAccount = {
@@ -51,6 +51,7 @@ const usersController = {
     },
     loginProcess: (req, res) => {
         let errors = validationResult(req);
+
         if (errors.isEmpty()) {
             let userLogin = accountsService.findByField(
                 "email",
@@ -79,6 +80,7 @@ const usersController = {
                         location: "body",
                     });
                     res.render("users/login", {
+                        old: req.body,
                         errors: errors.errors,
                     });
                     return;
