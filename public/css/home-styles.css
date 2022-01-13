@@ -4,7 +4,7 @@
 }
 
 .slide img {
-    height: 15%;
+    max-height: 400px;
     width: 40%;
 }
 
@@ -18,7 +18,7 @@
 
 .main {
     position: relative;
-    background-color: #201f1d;
+    background-color: #32312d;
 }
 
 #articulo-vino {

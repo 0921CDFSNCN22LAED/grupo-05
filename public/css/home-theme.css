@@ -1,78 +1,78 @@
 * {
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto";
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
 }
 
 .titulo-home-vinos {
-  color: white;
-  text-align: center;
-  margin: 15% 0 5% 0;
-  font-size: 20px;
+    color: white;
+    text-align: center;
+    margin: 5% 0 5% 0;
+    font-size: 20px;
 }
 
 .contenedor1 {
-  margin: 0 auto;
-  width: 90%;
+    margin: 0 auto;
+    width: 90%;
 }
 
 .contenedor2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .wrapper {
-  width: 100%;
+    width: 100%;
 }
 
 .card-wine {
-  background-color: #fff;
-  margin: 5%;
-  border-radius: 8px;
+    background-color: #fff;
+    margin: 5%;
+    border-radius: 8px;
 }
 
 .card-wine-img {
-  width: 100%;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .contenedor3 {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  background-color: white;
-  margin: 5%;
-  border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: white;
+    margin: 5%;
+    border-radius: 8px;
 }
 
 @media (min-width: 767px) {
-  .wrapper {
-    width: 50%;
-  }
-  .titulo-home-vinos {
-    font-size: 30px;
-  }
+    .wrapper {
+        width: 50%;
+    }
+    .titulo-home-vinos {
+        font-size: 30px;
+    }
 }
 
 @media (min-width: 1100px) {
-  .wrapper {
-    width: 25%;
-  }
+    .wrapper {
+        width: 25%;
+    }
 
-  .titulo-home-vinos {
-    font-size: 40px;
-  }
+    .titulo-home-vinos {
+        font-size: 40px;
+    }
 
-  .card-wine:hover {
-    box-shadow: 8px 5px 5px black;
-  }
+    .card-wine:hover {
+        box-shadow: 8px 5px 5px black;
+    }
 
-  .card-tittle:hover {
-    font-size: 25px;
-    color: brown;
-  }
+    .card-tittle:hover {
+        font-size: 25px;
+        color: brown;
+    }
 }
 
 /*
