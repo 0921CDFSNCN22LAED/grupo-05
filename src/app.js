@@ -8,6 +8,7 @@ const methodOverride = require("method-override");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const recordameMiddleware = require("./Middlewares/recordameMiddleware");
+const navBarDiscriminator = require("./Middlewares/navBarDiscriminator");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -19,6 +20,7 @@ app.use(
 );
 app.use(cookieParser());
 app.use(recordameMiddleware);
+app.use(navBarDiscriminator);
 
 //Servidor
 app.listen(3000, () => {

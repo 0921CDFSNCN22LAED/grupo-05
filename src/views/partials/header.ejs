@@ -20,9 +20,12 @@
     </div>
     <nav class="contenedor-links_grande">
         <a href="/products/vinoteca">Vinoteca</a>
-        <a href="/users/login">Login</a>
-        <a href="/users/registro">Registro</a>
+        <% if (locals.isLogged) { %>
         <a href="/users/cava">Cava</a>
         <a href="/users/cuenta">Mi Cuenta</a>
+        <% } else { %>
+        <a href="/users/login">Login</a>
+        <a href="/users/registro">Registro</a>
+        <% } %>
     </nav>
 </section>
