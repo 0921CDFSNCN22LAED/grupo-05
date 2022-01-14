@@ -38,6 +38,7 @@
                                     </h5>
                                     <p class="card-text">$<%= vino.precio %></p>
                                 </div>
+                                <% if (locals.isLogged) { %>
                                 <div class="wine-card-icons">
                                     <a href=""><i class="far fa-star"></i></a>
                                     <a href="/products/editar/<%= vino.id %>">
@@ -47,17 +48,20 @@
                                         <i class="fas fa-times"></i>
                                     </a>
                                 </div>
+                                <% } %>
                             </div>
                         </article>
                     </div>
                     <% } %>
                 </div>
             </section>
+            <% if (locals.isLogged) { %>
             <section>
                 <a class="button-add-product" href="/products/agregar">
                     <i class="fas fa-plus"></i>
                 </a>
             </section>
+            <% } %>
         </main>
         <footer><%- include ("../partials/footer") %></footer>
         <script
