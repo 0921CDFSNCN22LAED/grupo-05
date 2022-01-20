@@ -29,7 +29,7 @@ main h2 {
 }
 
 .articles-wrapper {
-    width: 100%;
+    width: 50%;
 }
 .wine-card {
     background-color: #fff;
@@ -91,7 +91,7 @@ main h2 {
 /* Tablet */
 @media (min-width: 767px) {
     .articles-wrapper {
-        width: 50%;
+        width: 33%;
     }
 
     .button-add-product {

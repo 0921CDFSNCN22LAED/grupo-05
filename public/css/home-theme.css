@@ -19,11 +19,10 @@
 .contenedor2 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
 }
 
 .wrapper {
-    width: 100%;
+    width: 50%;
 }
 
 .card-wine {
@@ -49,7 +48,7 @@
 
 @media (min-width: 767px) {
     .wrapper {
-        width: 50%;
+        width: 33%;
     }
     .titulo-home-vinos {
         font-size: 30px;
