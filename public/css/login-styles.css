@@ -1,16 +1,16 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
 }
 
 .login-body {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 .hide-icon-login {
-  display: none;
+    display: none;
 }
 
 /*
@@ -20,167 +20,167 @@ MAIN
 */
 
 .login-main-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .login-mobile-bg-img {
-  position: absolute;
-  z-index: -100;
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    z-index: -100;
+    width: 100%;
+    height: 100%;
 }
 
 .login-desktop-bg-img {
-  display: none;
+    display: none;
 }
 
 .login-form-container {
-  margin: 10% 15%;
-  border: none;
-  border-radius: 8px;
-  background-color: #ebebeb;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 5% 10%;
+    margin: 10% 15%;
+    border: none;
+    border-radius: 8px;
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 10%;
 }
 
 section {
-  width: 100%;
+    width: 100%;
 }
 
 .login-div-google {
-  margin-bottom: 10%;
+    margin-bottom: 10%;
 }
 
 .button-google {
-  background-color: #4285f4;
-  width: 100%;
-  padding: 4%;
-  border: none;
-  border-radius: 8px;
+    background-color: #4285f4;
+    width: 100%;
+    padding: 4%;
+    border: none;
+    border-radius: 8px;
 }
 
 .button-google a {
-  text-decoration: none;
-  color: #fff;
+    text-decoration: none;
+    color: #fff;
 }
 
 .google-icon {
-  margin-right: 2%;
+    margin-right: 2%;
 }
 
 .login-div-fb {
-  margin-bottom: 10%;
+    margin-bottom: 10%;
 }
 
 .button-facebook {
-  background-color: #4267f2;
-  width: 100%;
-  padding: 4%;
-  border: none;
-  border-radius: 8px;
+    background-color: #4267f2;
+    width: 100%;
+    padding: 4%;
+    border: none;
+    border-radius: 8px;
 }
 
 .button-facebook a {
-  text-decoration: none;
-  color: #fff;
+    text-decoration: none;
+    color: #fff;
 }
 
 .fb-icon {
-  margin-right: 2%;
+    margin-right: 2%;
 }
 
 .login-div-email {
-  margin-bottom: 10%;
+    margin-bottom: 10%;
 }
 
 .login-imput-email {
-  width: 100%;
-  padding: 4%;
-  border: none;
-  border-radius: 8px;
+    width: 100%;
+    padding: 4%;
+    border: none;
+    border-radius: 8px;
 }
 
 .login-invalid-text-input {
-  color: red;
-  font-style: italic;
-  padding: 4%;
-  display: none;
+    color: red;
+    font-style: italic;
+    padding: 4%;
+    display: none;
 }
 
 .login-div-password {
-  margin-bottom: 10%;
+    margin-bottom: 10%;
 }
 
 .login-imput-password {
-  width: 100%;
-  padding: 4%;
-  border: none;
-  border-radius: 8px;
+    width: 100%;
+    padding: 4%;
+    border: none;
+    border-radius: 8px;
 }
 
 .login-div-enter {
-  margin-bottom: 10%;
-  text-align: center;
+    margin-bottom: 10%;
+    text-align: center;
 }
 
 .login-button-enter {
-  width: 80%;
-  padding: 4%;
-  padding-bottom: none;
-  border: none;
-  border-radius: 8px;
-  background-color: #aa0d3f;
-}
-
-.login-button-enter p{
-  margin-bottom: 0;
+    width: 80%;
+    padding: 4%;
+    padding-bottom: none;
+    border: none;
+    border-radius: 8px;
+    background-color: #aa0d3f;
 }
 
 .login-button-enter a {
-  text-decoration: none;
-  color: #fff;
+    margin-bottom: 0;
+}
+
+.login-button-enter a {
+    text-decoration: none;
+    color: #fff;
 }
 
 .login-div-remember-me {
-  margin-bottom: 10%;
-  text-align: center;
+    margin-bottom: 10%;
+    text-align: center;
 }
 
 .login-div-forgot-password {
-  margin-bottom: 10%;
-  text-align: center;
+    margin-bottom: 10%;
+    text-align: center;
 }
 
 .login-div-forgot-password a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .login-div-subscribe {
-  margin-bottom: 10%;
-  text-align: center;
+    margin-bottom: 10%;
+    text-align: center;
 }
 
 .login-div-subscribe a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .login-div-legal-consequences {
-  text-align: center;
+    text-align: center;
 }
 
 .box-shadow {
-  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 .register-invalid-text-input {
-  color: red;
-  font-style: italic;
-  padding: 4%;
+    color: red;
+    font-style: italic;
+    padding: 4%;
 }
 
 /* 
@@ -188,49 +188,49 @@ section {
 */
 
 @media (min-width: 767px) {
-  .login-form-container {
-    width: 50%;
-    padding: 5%;
-  }
+    .login-form-container {
+        width: 50%;
+        padding: 5%;
+    }
 }
 
 @media (min-width: 1100px) {
-  .login-main-container {
-    flex-direction: row-reverse;
-  }
+    .login-main-container {
+        flex-direction: row-reverse;
+    }
 
-  .login-mobile-bg-img {
-    display: none;
-  }
+    .login-mobile-bg-img {
+        display: none;
+    }
 
-  .login-desktop-bg-img {
-    display: block;
-    position: absolute;
-    z-index: -100;
-    width: 100%;
-    height: 100%;
-  }
+    .login-desktop-bg-img {
+        display: block;
+        position: absolute;
+        z-index: -100;
+        width: 100%;
+        height: 100%;
+    }
 
-  .login-form-container {
-    width: 25%;
-    margin: 10% 5% 10% 0;
-    padding: 2%;
-    background-color: transparent;
-  }
+    .login-form-container {
+        width: 25%;
+        margin: 10% 5% 10% 0;
+        padding: 2%;
+        background-color: transparent;
+    }
 
-  .login-div-remember-me {
-    color: #ebebeb;
-  }
+    .login-div-remember-me {
+        color: #ebebeb;
+    }
 
-  .login-div-forgot-password a {
-    color: #ebebeb;
-  }
+    .login-div-forgot-password a {
+        color: #ebebeb;
+    }
 
-  .login-div-subscribe a {
-    color: #ebebeb;
-  }
+    .login-div-subscribe a {
+        color: #ebebeb;
+    }
 
-  .login-div-legal-consequences {
-    color: #ebebeb;
-  }
+    .login-div-legal-consequences {
+        color: #ebebeb;
+    }
 }
