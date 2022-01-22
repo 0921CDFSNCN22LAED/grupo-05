@@ -37,6 +37,10 @@
     border-top-right-radius: 8px;
 }
 
+.card-tittle {
+    color: #aa0d3f;
+}
+
 .contenedor3 {
     display: flex;
     flex-wrap: wrap;
