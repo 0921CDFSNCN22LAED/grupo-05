@@ -17,6 +17,24 @@ main h2 {
     margin-bottom: 2%;
 }
 
+.d-flex {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 5%;
+}
+
+.btn-outline-success {
+    background-color: #fff;
+    color: #aa0d3f;
+    border-color: #fff;
+}
+
+.btn-outline-success:hover {
+    color: #fff;
+    background-color: #aa0d3f;
+    border-color: #aa0d3f;
+}
+
 .wine-shelf {
     width: 90%;
     margin: 0 auto;
@@ -48,6 +66,10 @@ main h2 {
 
 .wine-card-texts {
     width: 100%;
+}
+
+.card-title {
+    color: #aa0d3f;
 }
 
 .wine-card-icons {
@@ -90,6 +112,10 @@ main h2 {
 
 /* Tablet */
 @media (min-width: 767px) {
+    .d-flex {
+        padding-top: 2%;
+    }
+
     .articles-wrapper {
         width: 33%;
     }
@@ -101,6 +127,10 @@ main h2 {
 
 /* Desktop */
 @media (min-width: 1100px) {
+    .d-flex {
+        width: 87%;
+    }
+
     .articles-wrapper {
         width: 25%;
     }

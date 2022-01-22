@@ -15,7 +15,18 @@
         <header><%- include ("../partials/header") %></header>
 
         <main>
-            <!-- <h2>Todos nuestros vinos</h2> -->
+            <h2>Todos nuestros vinos</h2>
+            <form class="d-flex">
+                <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Encuentra tu vino"
+                    aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                    Buscar
+                </button>
+            </form>
             <section class="wine-shelf">
                 <div class="flex-div">
                     <% for (let vino of vinos) { %>
