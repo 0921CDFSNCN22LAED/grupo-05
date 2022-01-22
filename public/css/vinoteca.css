@@ -139,6 +139,10 @@ main h2 {
         margin-bottom: 3%;
     }
 
+    .wine-card:hover {
+        box-shadow: 0px 0px 10px rgb(245, 245, 245);
+    }
+
     .button-add-product i {
         font-size: 25px;
     }
