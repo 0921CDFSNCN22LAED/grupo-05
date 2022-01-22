@@ -12,6 +12,7 @@ body {
 main {
     background-color: #32312d;
     padding: 2% 5%;
+    min-height: 700px;
 }
 
 /* EMPIEZA EL MAIN*/

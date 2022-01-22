@@ -12,11 +12,13 @@ body{
 main{
     background-color: #32312d;
     padding: 0 5% 5%;
+    min-height: 700px;
 }
 
 
 main h2{
     padding: 10px;
+    color: #ffff;
 }
 
 .vinos-cava{
