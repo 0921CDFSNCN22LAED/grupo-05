@@ -101,7 +101,7 @@ main h2 {
     border-radius: 50%;
     padding: 1.5%;
     /* background-color: #39b54a; */
-    background-color: #07bc4c;
+    background-color: #aa0d3f;
     color: #ffff;
     display: flex;
 }
@@ -172,7 +172,19 @@ main h2 {
         font-size: var(--bs-body-font-size);
     }
 
+    .wine-card-icons {
+        display: none;
+    }
+
+    .wine-card:hover .wine-card-icons {
+        display: flex;
+    }
+
     .button-add-product i {
         font-size: 25px;
+    }
+
+    .button-add-product:hover i {
+        color: #252525;
     }
 }
