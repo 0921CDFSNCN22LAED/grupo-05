@@ -1,31 +1,33 @@
 module.exports = (sequelize, dataTypes) => {
-    const Cliente = sequelize.define(
-        "Clientes",
-        {
-            id: {
-                type: dataTypes.INTEGER,
-                autoIncrement: true,
-                primaryKey: true,
-                allowNull: false
-            },
-            nombre: {
-                type: dataTypes.STRING(200),
-                allowNull: false
-            },
-            email: {
-                type: dataTypes.STRING(200),
-                allowNull: false,
-                unique: true
-            },
-            contrasenia: {
-                type: dataTypes.STRING(200),
-                allowNull: false
-            }
+    const alias = "Clientes";
+
+    const cols = {
+        id: {
+            type: dataTypes.INTEGER,
+            autoIncrement: true,
+            primaryKey: true,
+            allowNull: false,
         },
-        {
-            tableName: "Clientes",
-            timesTamps: false
-        }
-    );
-    return Cliente
-}
+        nombre: {
+            type: dataTypes.STRING(200),
+            allowNull: false,
+        },
+        email: {
+            type: dataTypes.STRING(200),
+            allowNull: false,
+            unique: true,
+        },
+        contrasenia: {
+            type: dataTypes.STRING(200),
+            allowNull: false,
+        },
+    };
+
+    const config = {
+        tableName: "clientes",
+        timesTamps: false,
+    };
+
+    const Cliente = sequelize.define(alias, cols, config);
+    return Cliente;
+};

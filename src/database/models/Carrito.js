@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    const alias = "Categorias";
+    const alias = "Carrito";
 
     const cols = {
         id: {
@@ -8,17 +8,21 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             allowNull: false,
         },
-        nombre: {
-            type: dataTypes.STRING(200),
+        cliente_id: {
+            type: dataTypes.INTEGER,
+            allowNull: false,
+        },
+        vino_id: {
+            type: dataTypes.INTEGER,
             allowNull: false,
         },
     };
 
     const config = {
-        tableName: "categorias",
+        tableName: "carrito",
         timesTamps: false,
     };
 
-    const Categoria = sequelize.define(alias, cols, config);
-    return Categoria;
+    const Carrito = sequelize.define(alias, cols, config);
+    return Carrito;
 };

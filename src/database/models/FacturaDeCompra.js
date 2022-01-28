@@ -1,31 +1,33 @@
 module.exports = (sequelize, dataTypes) => {
-    const Administrador = sequelize.define(
-        "Administradores",
-        {
-            id: {
-                type: dataTypes.INTEGER,
-                autoIncrement: true,
-                primaryKey: true,
-                allowNull: false
-            },
-            nombre: {
-                type: dataTypes.STRING(200),
-                allowNull: false
-            },
-            email: {
-                type: dataTypes.STRING(200),
-                allowNull: false,
-                unique: true
-            },
-            contrasenia: {
-                type: dataTypes.STRING(200),
-                allowNull: false
-            }
+    const alias = "FacturaDeCompras";
+
+    const cols = {
+        id: {
+            type: dataTypes.INTEGER,
+            autoIncrement: true,
+            primaryKey: true,
+            allowNull: false,
         },
-        {
-            tableName: "Administradores",
-            timesTamps: false
-        }
-    );
-    return Administrador
-}
+        nombre: {
+            type: dataTypes.STRING(200),
+            allowNull: false,
+        },
+        email: {
+            type: dataTypes.STRING(200),
+            allowNull: false,
+            unique: true,
+        },
+        contrasenia: {
+            type: dataTypes.STRING(200),
+            allowNull: false,
+        },
+    };
+
+    const config = {
+        tableName: "factura_de_compras",
+        timesTamps: false,
+    };
+
+    const FacturaDeCompra = sequelize.define(alias, cols, config);
+    return FacturaDeCompra;
+};
