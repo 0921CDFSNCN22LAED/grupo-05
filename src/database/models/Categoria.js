@@ -20,5 +20,15 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const Categoria = sequelize.define(alias, cols, config);
+
+    /*
+    Categoria.associate = (models)=>{
+        Categoria.hasMany(models.Vino), {
+            as: 'categoriaVino',
+            foreignKey: 'categoria_id'
+        }
+    }
+    */ //Relación de categoria y vinos. Una categoría tiene muchos vinos.
+
     return Categoria;
 };

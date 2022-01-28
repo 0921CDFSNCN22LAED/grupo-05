@@ -1,3 +1,5 @@
+const Bodega = require("./Bodega");
+
 module.exports = (sequelize, dataTypes) => {
     const alias = "Vinos";
 
@@ -52,5 +54,33 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const Vino = sequelize.define(alias, cols, config);
+
+    /*
+    Vino.associate = (models)=>{
+        Vino.belongsTo(models.Bodega), {
+            as: 'vinoBodega',
+            foreignKey: 'bodega_id'
+        }
+    }
+    */ //Relación de vinos y bodegas. Un vino pertenece a una bodega.
+
+    /*
+    Vino.associate = (models)=>{
+        Vino.belongsTo(models.Categoria), {
+            as: 'vinoCategoria',
+            foreignKey: 'categoria_id'
+        }
+    }
+    */ //Relación de vinos y categorías. Un vino pertenece a una categoría.
+
+    /*
+    Vino.associate = (models)=>{
+        Vino.belongsTo(models.Uva), {
+            as: 'vinoUva',
+            foreignKey: 'uva_id'
+        }
+    }
+    */ //Relación de vinos y uvas. Un vino pertenece a una uva -varietal-.
+
     return Vino;
 };

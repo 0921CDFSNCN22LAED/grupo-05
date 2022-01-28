@@ -20,5 +20,15 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const Uva = sequelize.define(alias, cols, config);
+
+    /*
+    Uva.associate = (models)=>{
+        Uva.hasMany(models.Vino), {
+            as: 'uvaVino',
+            foreignKey: 'uva_id'
+        }
+    }
+    */ //Relación de uva y vinos. Una uva -varietal- tiene muchos vinos.
+
     return Uva;
 };

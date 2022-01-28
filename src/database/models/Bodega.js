@@ -20,5 +20,15 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const Bodega = sequelize.define(alias, cols, config);
+
+    /*
+    Bodega.associate = (models)=>{
+        Bodega.hasMany(models.Vino), {
+            as: 'bodegaVino',
+            foreignKey: 'bodega_id'
+        }
+    }
+    */ //Relación de bodegas y vinos. Una bodega tiene muchos vinos
+
     return Bodega;
 };
