@@ -31,8 +31,8 @@ module.exports = (sequelize, dataTypes) => {
     const FacturaDeCompra = sequelize.define(alias, cols, config);
 
     /*
-    Bodega.associate = (models)=>{
-        Bodega.hasMany(models.Vino), {
+    FacturaDeCompra.associate = (models)=>{
+        FacturaDeCompra.hasMany(models.Vino), {
             as: 'facturaVino',
             foreignKey: 'vino_id'
         }
