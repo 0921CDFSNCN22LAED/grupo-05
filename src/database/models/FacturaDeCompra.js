@@ -29,5 +29,15 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const FacturaDeCompra = sequelize.define(alias, cols, config);
+
+    /*
+    Bodega.associate = (models)=>{
+        Bodega.hasMany(models.Vino), {
+            as: 'facturaVino',
+            foreignKey: 'vino_id'
+        }
+    }
+    */ //Relación de facturas de compra y vinos. Una factura de compra tiene muchos vinos.
+
     return FacturaDeCompra;
 };
