@@ -8,17 +8,24 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             allowNull: false,
         },
-        nombre: {
-            type: dataTypes.STRING(200),
+        codigo_postal: {
+            type: dataTypes.INTEGER,
             allowNull: false,
         },
-        email: {
-            type: dataTypes.STRING(200),
+        fecha_compra: {
+            type: dataTypes.DATEONLY,
             allowNull: false,
-            unique: true,
         },
-        contrasenia: {
-            type: dataTypes.STRING(200),
+        cliente_id: {
+            type: dataTypes.INTEGER,
+            allowNull: false,
+        },
+        vino_id: {
+            type: dataTypes.INTEGER,
+            allowNull: false,
+        },
+        total: {
+            type: dataTypes.INTEGER,
             allowNull: false,
         },
     };
