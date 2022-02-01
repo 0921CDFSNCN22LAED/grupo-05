@@ -54,6 +54,7 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const Vino = sequelize.define(alias, cols, config);
+    
 
     /*
     Vino.associate = (models)=>{
@@ -93,3 +94,4 @@ module.exports = (sequelize, dataTypes) => {
 
     return Vino;
 };
+1;
