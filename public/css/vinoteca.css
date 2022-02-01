@@ -159,6 +159,11 @@ main h2 {
         display: block;
     }
 
+    .card-title:hover {
+        font-size: 25px;
+        color: brown;
+    }
+
     .card-price {
         text-align: center;
         font-size: 1.25rem;

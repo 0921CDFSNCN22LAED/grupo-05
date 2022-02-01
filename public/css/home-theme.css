@@ -37,8 +37,20 @@
     border-top-right-radius: 8px;
 }
 
+.card-body {
+    padding: 2%;
+    background-color: rgb(245, 245, 245);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
 .card-tittle {
     color: #aa0d3f;
+}
+
+.card-text {
+    color: #39b54a;
+    font-weight: bold;
 }
 
 .contenedor3 {
@@ -72,9 +84,37 @@
         box-shadow: 0px 0px 10px rgb(245, 245, 245);
     }
 
+    .card-tittle {
+        display: none;
+    }
+
+    .card-wine:hover .card-tittle {
+        display: block;
+    }
+
     .card-tittle:hover {
         font-size: 25px;
         color: brown;
+    }
+
+    .card-subtitle {
+        display: none;
+    }
+
+    .card-wine:hover .card-subtitle {
+        display: block;
+    }
+
+    .card-text {
+        text-align: center;
+        font-size: 1.25rem;
+        color: #aa0d3f;
+    }
+
+    .card-wine:hover .card-text {
+        color: #39b54a;
+        font-weight: bold;
+        text-align: start;
     }
 }
 
