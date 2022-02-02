@@ -19,9 +19,16 @@ const productsController = {
             link: "/editarProductos/" + vinos.id,
         });*/
 
-        db.Vinos.findAll().then((vinos) => {
-            res.render("products/vinoteca", { vinos });
-        });
+        db.Vinos.findAll()
+            .then((vinos) => {
+                res.render("products/vinoteca", {
+                    vinos: vinos,
+                    link: "/editarProductos/" + vinos.id,
+                });
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     },
 
     agregarProducto: (req, res) => {
