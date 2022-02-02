@@ -18,7 +18,7 @@ const productsController = {
             vinos: vinos,
             link: "/editarProductos/" + vinos.id,
         });*/
-
+        //viejo crud
         db.Vinos.findAll()
             .then((vinos) => {
                 res.render("products/vinoteca", {
@@ -29,6 +29,12 @@ const productsController = {
             .catch((error) => {
                 console.log(error);
             });
+        //probando con async await. agregar el async
+        /*const vinos = await db.Vinos.findAll();
+        res.render("products/vinoteca", {
+            vinos: vinos,
+            link: "/editarProductos/" + vinos.id,
+        });*/
     },
 
     agregarProducto: (req, res) => {
