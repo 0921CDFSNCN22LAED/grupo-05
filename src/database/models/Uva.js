@@ -16,7 +16,7 @@ module.exports = (sequelize, dataTypes) => {
 
     const config = {
         tableName: "uvas",
-        timesTamps: false,
+        timestamps: false,
     };
 
     const Uva = sequelize.define(alias, cols, config);

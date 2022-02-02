@@ -4,6 +4,8 @@ const productsService = require("../services/productsServices");
 
 const vinos = productsService.getAll();
 
+const db = require("../database/models");
+
 const productsController = {
     detalleProducto: (req, res) => {
         const id = req.params.id;
@@ -12,9 +14,13 @@ const productsController = {
     },
 
     vinoteca: (req, res) => {
-        res.render("products/vinoteca", {
+        /*res.render("products/vinoteca", {
             vinos: vinos,
             link: "/editarProductos/" + vinos.id,
+        });*/
+
+        db.Vinos.findAll().then((vinos) => {
+            res.render("products/vinoteca", { vinos });
         });
     },
 

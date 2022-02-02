@@ -50,11 +50,10 @@ module.exports = (sequelize, dataTypes) => {
 
     const config = {
         tableName: "vinos",
-        timesTamps: false,
+        timestamps: false,
     };
 
     const Vino = sequelize.define(alias, cols, config);
-    
 
     /*
     Vino.associate = (models)=>{

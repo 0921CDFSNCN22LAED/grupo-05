@@ -20,11 +20,11 @@ module.exports = (sequelize, dataTypes) => {
 
     const config = {
         tableName: "carrito",
-        timesTamps: false,
+        timestamps: false,
     };
 
     const Carrito = sequelize.define(alias, cols, config);
-    Carrito.associate = function (models){
+    /* Carrito.associate = function (models){
         Carrito.belongsTo(models.Cliente,{
             as: "cliente",
             foreignKey: "user_id",
@@ -35,7 +35,6 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "carrito_id",
             otherkey: "vino_id",
         });
-    }; 
+    }; */
     return Carrito;
-
 };
