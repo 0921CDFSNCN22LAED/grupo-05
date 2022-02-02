@@ -8,9 +8,13 @@ const db = require("../database/models");
 
 const productsController = {
     detalleProducto: (req, res) => {
-        const id = req.params.id;
+        /*const id = req.params.id;
         const vino = productsService.findOne(id);
-        res.render("products/detalleProducto", { vino: vino });
+        res.render("products/detalleProducto", { vino: vino });*/ //viejo crud
+
+        db.Vinos.findByPk(req.params.id).then((vino) => {
+            res.render("products/detalleProducto", { vino: vino });
+        });
     },
 
     vinoteca: (req, res) => {
