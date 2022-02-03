@@ -58,13 +58,16 @@ const productsController = {
     },
 
     editarProducto: (req, res) => {
-        const id = req.params.id;
-        const vino = productsService.findOne(id);
+        /*const id = req.params.id;
+        const vino = productsService.findOne(id);  Cambio de CRUD*/
         if (vino) {
-            res.render("products/editarProducto", {
-                vino: vino,
-                pageTitle: vino.nombre,
-            });
+            db.Vinos.findByPk(req.params.id).then((vino) => {
+                res.render("products/editarProducto", {
+                    vino: vino,
+                    pageTitle: vino.nombre,
+                });
+            })
+
         } else {
             res.send(
                 "No seleccionaste ningun vino. Intenta /editarProductos/2"
