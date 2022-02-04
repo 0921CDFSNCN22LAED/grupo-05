@@ -124,12 +124,12 @@ const productsController = {
                 const id = req.params.id;
                 await db.Vinos.update({
                     nombre: req.body.nombre,
-                    bodega: 3,
+                    bodega_id: 3,
                     precio: req.body.precio,
                     descripcion: req.body.descripcion,
-                    imagen: req.body.imagen,
-                    uva: 3,
-                    categoría: 3
+                    imagen: req.file.path.split("public").pop(),
+                    uva_id: 3,
+                    categoria_id: 3
                 }, {
                     where: {
                         id: req.params.id
