@@ -54,9 +54,9 @@ const usersController = {
     },
     loginProcess: (req, res) => {
         let errors = validationResult(req);
-
         if (errors.isEmpty()) {
             let userLogin = accountsService.findByField(
+                // let userLogin = await db.Clientes.findAll({where:{email:req.body.email}})[0]; //a cheaquear lo del [o] (si devuelve array)
                 "email",
                 req.body.email
             );
@@ -103,10 +103,15 @@ const usersController = {
             res.render("users/login", { old: req.body, errors: errors.errors });
         }
     },
-    cuenta: (req, res) => {
+/*     cuenta: (req, res) => {
         res.render("users/cuenta", {
             user: req.session.loggedUser,
         });
+    }, */
+    cuenta: (req, res) => {
+        res.render("users/cuenta",
+        {user:req.session.loggedUser,
+        })
     },
     logout: (req, res) => {
         req.session.destroy();

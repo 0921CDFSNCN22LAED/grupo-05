@@ -51,17 +51,36 @@ const productsController = {
     agregarProducto: (req, res) => {
         res.render("products/agregarProducto");
     },
+    /*     store: (req, res) => {
+            const product = {
+                id: Date.now(),
+                ...req.body,
+                imagen: req.file.path.split("public").pop(),
+            };
+    
+            vinos.push(product);
+    
+            productsService.saveProducts();
+            res.redirect("/products/vinoteca");
+        }, */
     store: (req, res) => {
-        const product = {
-            id: Date.now(),
-            ...req.body,
-            imagen: req.file.path.split("public").pop(),
-        };
+        let errors = validationResult(req);
 
-        vinos.push(product);
-
-        productsService.saveProducts();
-        res.redirect("/products/vinoteca");
+        if (errors.isEmpty()) {
+            db.Vinos.store({
+                nombre: req.body.nombre,
+                imagen: (req.file.path).split('imagen').pop(),
+                bodega: req.body.bodega,
+                descripcion: req.body.descripcion,
+                precio: req.body.precio
+            }).then(() => {
+                res.redirect("/products/vinoteca")
+            }).catch((err) => {
+                console.log(err);
+            });
+        } else {
+            res.render('agregarProducto', { errors: errors.errors, old: req.body })
+        }
     },
 
     editarProducto: async (req, res) => {
