@@ -54,7 +54,6 @@ const usersController = {
     },
     loginProcess: (req, res) => {
         let errors = validationResult(req);
-
         if (errors.isEmpty()) {
             let userLogin = accountsService.findByField(
                 "email",
@@ -103,10 +102,15 @@ const usersController = {
             res.render("users/login", { old: req.body, errors: errors.errors });
         }
     },
-    cuenta: (req, res) => {
+/*     cuenta: (req, res) => {
         res.render("users/cuenta", {
             user: req.session.loggedUser,
         });
+    }, */
+    cuenta: (req, res) => {
+        res.render("users/cuenta",
+        {user:req.session.loggedUser,
+        })
     },
     logout: (req, res) => {
         req.session.destroy();

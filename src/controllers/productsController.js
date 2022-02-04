@@ -6,6 +6,10 @@ const vinos = productsService.getAll();
 
 const db = require("../database/models");
 
+const {validationResult} = require('express-validator');
+const req = require("express/lib/request");
+const res = require("express/lib/response");
+
 const productsController = {
     detalleProducto: (req, res) => {
         /*const id = req.params.id;
@@ -44,7 +48,7 @@ const productsController = {
     agregarProducto: (req, res) => {
         res.render("products/agregarProducto");
     },
-    store: (req, res) => {
+/*     store: (req, res) => {
         const product = {
             id: Date.now(),
             ...req.body,
@@ -55,8 +59,26 @@ const productsController = {
 
         productsService.saveProducts();
         res.redirect("/products/vinoteca");
+    }, */
+    store: (req, res) => {
+        let errors = validationResult (req);
+    
+    if (errors.isEmpty()){
+        db.Vinos.store({
+            nombre: req.body.nombre,
+            imagen: (req.file.path).split('imagen').pop(),
+            bodega: req.body.bodega,
+            descripcion: req.body.descripcion,
+            precio: req.body.precio
+        }).then(() => {
+            res.redirect("/products/vinoteca")
+        }).catch((err) => {
+            console.log(err);
+        });
+    }else{
+        res.render('agregarProducto', {errors: errors.errors, old: req.body})
+    }
     },
-
     editarProducto: (req, res) => {
         /*const id = req.params.id;
         const vino = productsService.findOne(id);  Cambio de CRUD*/
@@ -67,7 +89,6 @@ const productsController = {
                     pageTitle: vino.nombre,
                 });
             })
-
         } else {
             res.send(
                 "No seleccionaste ningun vino. Intenta /editarProductos/2"
