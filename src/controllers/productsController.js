@@ -17,11 +17,21 @@ const productsController = {
         });
     },
 
-    vinoteca: (req, res) => {
+    vinoteca: async (req, res) => {
+        try {
+            const vinos = await db.Vinos.findAll();
+            res.render("products/vinoteca", {
+                vinos: vinos,
+                link: "/editarProductos/" + vinos.id,
+            });
+        } catch (error) {
+            console.error(error);
+        }
+
         /*res.render("products/vinoteca", {
             vinos: vinos,
             link: "/editarProductos/" + vinos.id,
-        });*/
+        });
         //viejo crud
         db.Vinos.findAll()
             .then((vinos) => {
@@ -32,13 +42,8 @@ const productsController = {
             })
             .catch((error) => {
                 console.log(error);
-            });
+            });*/
         //probando con async await. agregar el async
-        /*const vinos = await db.Vinos.findAll();
-        res.render("products/vinoteca", {
-            vinos: vinos,
-            link: "/editarProductos/" + vinos.id,
-        });*/
     },
 
     agregarProducto: (req, res) => {
@@ -57,23 +62,22 @@ const productsController = {
         res.redirect("/products/vinoteca");
     },
 
-    editarProducto: (req, res) => {
+    editarProducto: async (req, res) => {
         /*const id = req.params.id;
         const vino = productsService.findOne(id);  Cambio de CRUD*/
-        if (vino) {
-            db.Vinos.findByPk(req.params.id).then((vino) => {
-                res.render("products/editarProducto", {
-                    vino: vino,
-                    pageTitle: vino.nombre,
-                });
-            })
 
-        } else {
-            res.send(
-                "No seleccionaste ningun vino. Intenta /editarProductos/2"
-            );
+        try {
+            let vino = await db.Vinos.findByPk(req.params.id);
+            if (vino) {
+                res.render("products/editarProducto", { vino: vino, pageTitle: vino.nombre });
+            } else {
+                res.send("No seleccionaste ningún vino")
+            };
+        } catch (error) {
+            console.error(error);
         }
     },
+
 
     actualizarProducto: (req, res) => {
         const id = req.params.id;
