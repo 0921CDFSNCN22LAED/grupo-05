@@ -82,15 +82,6 @@ module.exports = (sequelize, dataTypes) => {
     }
     */ //Relación de vinos y uvas. Un vino pertenece a una uva -varietal-.
 
-    /*
-    Vino.associate = (models)=>{
-        Vino.belongsTo(models.FacturaDeCompra), {
-            as: 'vinoFractura',
-            foreignKey: 'vino_id'
-        }
-    }
-    */ //Relación de vinos y uvas. Un vino pertenece a una uva -varietal-.
-
     return Vino;
 };
 1;
