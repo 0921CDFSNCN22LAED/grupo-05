@@ -6,6 +6,8 @@ const vinos = productsService.getAll();
 
 const db = require("../database/models");
 
+const { validationResult } = require("express-validator");
+
 const productsController = {
     detalleProducto: (req, res) => {
         /*const id = req.params.id;
@@ -79,23 +81,53 @@ const productsController = {
     },
 
 
-    actualizarProducto: (req, res) => {
-        const id = req.params.id;
-        const index = vinos.findIndex((vino) => {
-            return vino.id == id;
-        });
+    actualizarProducto: async (req, res) => {
+        /* const id = req.params.id;
+         const index = vinos.findIndex((vino) => {
+             return vino.id == id;
+         });
+ 
+         const updatedProduct = {
+             id: vinos[index].id,
+             ...req.body,
+             imagen: req.file.path.split("public").pop(),
+         };
+ 
+         vinos[index] = updatedProduct;
+ 
+         productsService.saveProducts();
+ 
+         res.redirect("/products/detalle/" + updatedProduct.id);
+         */
+        try {
+            let errors = validationResult(req);
+            if (errors.isEmpty()) {
+                const id = req.params.id;
+                await db.Vinos.update({
+                    nombre: req.body.nombre,
+                    bodega: 3,
+                    precio: req.body.precio,
+                    descripcion: req.body.descripcion,
+                    imagen: req.body.imagen,
+                    uva: 3,
+                    categoría: 3
+                }, {
+                    where: {
+                        id: req.params.id
+                    }
+                }
+                )
+                /* Cambiar la información de uva, categoría y bodega */
+                res.redirect("/products/detalle/" + updatedProduct.id);
 
-        const updatedProduct = {
-            id: vinos[index].id,
-            ...req.body,
-            imagen: req.file.path.split("public").pop(),
-        };
+            } else {
+                const vino = await db.Vinos.findByPk(req.params.id);
+                res.render("products/editarProducto", { vino: vino, pageTitle: vino.nombre, errors: errors.errors });
+            }
 
-        vinos[index] = updatedProduct;
-
-        productsService.saveProducts();
-
-        res.redirect("/products/detalle/" + updatedProduct.id);
+        } catch (error) {
+            console.error(error);
+        }
     },
 
     eliminarProducto: (req, res) => {
