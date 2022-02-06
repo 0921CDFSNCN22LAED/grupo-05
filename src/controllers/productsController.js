@@ -166,6 +166,9 @@ const productsController = {
 
         res.redirect("/products/vinoteca");
     },
+    buscarProducto: (req, res) => {
+        
+    }
 };
 
 module.exports = productsController;
