@@ -74,6 +74,7 @@ const usersController = {
                 );
                 if (passwordOk) {
                     req.session.loggedUser = userLogin;
+                    req.session.loggedAdmin = adminLogin;
                     if (req.body.recuerdame) {
                         res.cookie("userEmail", req.body.email, {
                             maxAge: 1000 * 60 * 60,
