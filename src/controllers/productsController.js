@@ -161,11 +161,23 @@ const productsController = {
         }
     },
 
-    borrarProducto: (req, res) => {
-        const id = req.params.id;
-        productsService.deleteOne(id);
+    borrarProducto: async (req, res) => {
+        try {
+            const id = req.params.id;
 
-        res.redirect("/products/vinoteca");
+            await db.Vinos.destroy(
+                { where : {id: id}, force: true}
+            )
+            res.redirect('/products/vinoteca')
+
+        } catch(err) {
+            console.log(error);
+        }
+
+        // const id = req.params.id;
+        // productsService.deleteOne(id);
+
+        // res.redirect("/products/vinoteca");
     },
     buscarProducto: async (req, res) => {
         try {
