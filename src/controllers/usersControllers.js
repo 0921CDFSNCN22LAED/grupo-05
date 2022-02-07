@@ -3,6 +3,8 @@ const bcryptjs = require("bcryptjs");
 const accountsService = require("../services/accountsServices.js");
 const accounts = accountsService.getAll();
 
+const db = require("../database/models");
+
 const { validationResult } = require("express-validator");
 
 const usersController = {
@@ -52,15 +54,20 @@ const usersController = {
     login: (req, res) => {
         res.render("users/login");
     },
-    loginProcess: (req, res) => {
+    loginProcess: async (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-            let userLogin = accountsService.findByField(
-                // let userLogin = await db.Clientes.findAll({where:{email:req.body.email}})[0]; //a cheaquear lo del [o] (si devuelve array)
+            /*let userLogin = accountsService.findByField(
                 "email",
                 req.body.email
-            );
-            if (userLogin) {
+            );*/
+            let userLogin = await db.Clientes.findOne({
+                where: { email: req.body.email },
+            })[0];
+            let adminLogin = await db.Administradores.findOne({
+                where: { email: req.body.email },
+            })[0];
+            if (userLogin || adminLogin) {
                 let passwordOk = bcryptjs.compareSync(
                     req.body.password,
                     userLogin.password
@@ -103,15 +110,13 @@ const usersController = {
             res.render("users/login", { old: req.body, errors: errors.errors });
         }
     },
-/*     cuenta: (req, res) => {
+    /*     cuenta: (req, res) => {
         res.render("users/cuenta", {
             user: req.session.loggedUser,
         });
     }, */
     cuenta: (req, res) => {
-        res.render("users/cuenta",
-        {user:req.session.loggedUser,
-        })
+        res.render("users/cuenta", { user: req.session.loggedUser });
     },
     logout: (req, res) => {
         req.session.destroy();
