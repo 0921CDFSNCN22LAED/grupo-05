@@ -7,6 +7,7 @@ const vinos = productsService.getAll();
 const db = require("../database/models");
 
 const { validationResult } = require("express-validator");
+const { Op } = require("sequelize");
 
 const productsController = {
     detalleProducto: (req, res) => {
@@ -166,8 +167,21 @@ const productsController = {
 
         res.redirect("/products/vinoteca");
     },
-    buscarProducto: (req, res) => {
-        
+    buscarProducto: async (req, res) => {
+        try {
+            const nombre = req.query.nombre
+            const vinos = await db.Vinos.findAll({
+                where: {
+                    nombre: { [Op.like]: "%" + nombre + "%" }
+                }
+            })
+            res.render("products/vinoteca", {
+                vinos: vinos,
+                link: "/editarProductos/" + vinos.id,
+            });
+        } catch (error) {
+            console.error(error);
+        }
     }
 };
 

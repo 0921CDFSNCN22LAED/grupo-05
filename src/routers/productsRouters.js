@@ -32,4 +32,6 @@ router.put(
 router.get("/eliminar/:id", productsController.eliminarProducto);
 router.delete("/eliminar/:id", productsController.borrarProducto);
 
+router.get('/buscar', productsController.buscarProducto);
+
 module.exports = router;
