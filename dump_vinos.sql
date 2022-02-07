@@ -189,7 +189,7 @@ CREATE TABLE `vinos` (
   CONSTRAINT `vinos_ibfk_1` FOREIGN KEY (`bodega_id`) REFERENCES `bodegas` (`id`),
   CONSTRAINT `vinos_ibfk_2` FOREIGN KEY (`uva_id`) REFERENCES `uvas` (`id`),
   CONSTRAINT `vinos_ibfk_3` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -198,6 +198,7 @@ CREATE TABLE `vinos` (
 
 LOCK TABLES `vinos` WRITE;
 /*!40000 ALTER TABLE `vinos` DISABLE KEYS */;
+INSERT INTO `vinos` VALUES (1,'Saint Felicien',2,2019,'Esta línea de vinos Saint Felicien contempla varias cepas, la clásica que fue el Cabernet Sauvignon, luego apareció el Malbec, el Cabernet Merlot, el Syrah y el Cabernet Franc. Son vinos con una complejidad que los hace únicos.',1700,'/images/img-products/vino9.jpeg',50,1,2),(2,'Apalta',5,2018,'Apalta, es un vino con notas de cata, a la vista se destaca su color rojo leve amoratado intenso contundente Nariz dulce con frutos rojos predominio frambuesa fresca se siente buena acidez Boca intensa, equilibrada, acidez aumentada, aparece esa fruta roja, inunda toda la boca y se queda en región posterior de lengua.',2000,'/images/img-products/vino4.jpeg',20,5,2),(3,'Tierras Altas',3,2018,'Un vino perfecto para acompañar tus momentos!',1000,'/images/img-products/vino1.jpeg',45,2,3),(4,'Allende Lopez',6,2019,'Allende Lopez es un Gran Vino que se origina en el corazón de Gualtallary, en el Valle de Uco. Elaborado para celebrar los primeros 10 años del emprendemiento de dos amigos Alejandro Allende y José Federico Lopez. Este vino proviene de uvas preseleccionadas de viñedos propios, 18 meses añejado en barricas de roble francés y 12 meses de estiba en botella. Expresa el carácter fuerte y profundo de ese lugar tan particular de Los Andes.',3000,'/images/img-products/vino7.jpeg',25,7,1),(5,'Ojo Negro',1,2019,'Las noches frías, los dias cálidos y el suelo arenoso, mineralizado del Rio Negro son la esencia de nuestro terroir en el valle medio cerca de Choel Choel en la Patagonia, desde donde las uvas de nuestro exclusivo Sauvignon Blanc están creciendo.',1800,'/images/img-products/vino3.jpeg',15,5,3),(6,'Malo Malo',4,2020,'Malo Malo es un cuento del escritor ecuatoriano Enrique Gil Gilbert, publicado en 1930 como parte del libro de relatos Los que se van. Es considerado uno de los cuentos representativos del realismo social ecuatoriano de la década de 1930.',2000,'/images/img-products/vino2.jpeg',10,2,1);
 /*!40000 ALTER TABLE `vinos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -210,4 +211,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-02-06  3:33:03
+-- Dump completed on 2022-02-06 22:36:30
