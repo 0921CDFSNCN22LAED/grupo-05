@@ -36,24 +36,31 @@
                     <% } %>
                 </div>
                 <div>
-                    <!--  modificar por Select ENZO!!!! -->
-                    <label for="descripcionProducto" class="form-label"
-                        >Bodega:</label
-                    >
-                    <% if (vino) {%>
-                    <input
-                        class="box-shadow form-control"
-                        type="text"
-                        name="bodega"
-                        id="bodega"
-                        value="<%= vino.bodega %>"
-                    />
-                    <% } %>
+                    <label for="descripcionProducto" class="form-label">Bodega:</label>
+                    <select name="bodega_id" id="bodega_id">
+                        <% for(let bodega of bodegas) { %>
+                            <option value="<%= bodega.id %>"><%= bodega.nombre %> </option>
+                        <% } %>
+                    </select>
                 </div>
                 <div>
-                    <label for="precioProducto" class="form-label"
-                        >Precio:</label
-                    >
+                    <label for="categoria_id" class="form-label">Categoría:</label>
+                    <select name="categoria_id" id="categoria_id">
+                        <% for(let categoria of categorias) { %>
+                            <option value="<%= categoria.id %>"><%= categoria.nombre %> </option>
+                        <% } %>
+                    </select>
+                </div>
+                <div>
+                    <label for="uva_id" class="form-label">Uva:</label>
+                    <select name="uva_id" id="uva_id">
+                        <% for(let uva of uvas) { %>
+                            <option value="<%= uva.id %>"><%= uva.nombre %> </option>
+                        <% } %>
+                    </select>
+                </div>
+                <div>
+                    <label for="precioProducto" class="form-label">Precio:</label>
                     <% if (vino) {%>
                     <input
                         class="box-shadow form-control"
@@ -65,9 +72,7 @@
                     <% } %>
                 </div>
                 <div>
-                    <label for="precioProducto" class="form-label"
-                        >Descripcion:</label
-                    >
+                    <label for="precioProducto" class="form-label">Descripcion:</label>
                     <% if (vino) {%>
                     <textarea
                         class="editarProducto-text-area box-shadow form-control"

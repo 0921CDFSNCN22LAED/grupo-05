@@ -49,8 +49,15 @@ const productsController = {
         //probando con async await. agregar el async
     },
 
-    agregarProducto: (req, res) => {
-        res.render("products/agregarProducto");
+    agregarProducto: async (req, res) => {
+        try {
+            let bodegas = await db.Bodegas.findAll();
+            let uvas = await db.Uvas.findAll();
+            let categorias = await db.Categorias.findAll();
+            res.render("products/agregarProducto", {bodegas, uvas, categorias});
+        } catch (err) {
+            console.log(err);
+        }
     },
     /*     store: (req, res) => {
             const product = {
@@ -90,8 +97,11 @@ const productsController = {
 
         try {
             let vino = await db.Vinos.findByPk(req.params.id);
+            let bodegas = await db.Bodegas.findAll();
+            let uvas = await db.Uvas.findAll();
+            let categorias = await db.Categorias.findAll();
             if (vino) {
-                res.render("products/editarProducto", { vino: vino, pageTitle: vino.nombre });
+                res.render("products/editarProducto", { vino: vino, pageTitle: vino.nombre, bodegas, uvas, categorias });
             } else {
                 res.send("No seleccionaste ningún vino")
             };
