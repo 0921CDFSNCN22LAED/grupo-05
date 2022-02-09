@@ -13,25 +13,12 @@ const usersController = {
     },
     registroProcesado: async (req, res) => {
 
-        db.Clientes.create(
-            {
-                nombre: req.body.name,
-                email: req.body.email,
-                contrasenia: bcryptjs.hashSync(req.body.password, 10),
-            }
-        )
-        res.redirect("/");
-
-        //  ERROR EN LAS VALIDACIONES  ----> SOLUCIONAR!  
-
-        /*let errors = validationResult(req);
-
+        let errors = validationResult(req);
         if (errors.isEmpty()) {
-            let usuarioDb = accountsService.findByField(
-                "email",
-                req.body.email
-            );
-            if (usuarioDb) {
+            let existingEmail = await db.Clientes.findOne({
+                where: { email: req.body.email },
+            });
+            if (existingEmail) {
                 errors.errors.push({
                     value: req.body.email,
                     msg: "Ya existe un usuario con ese email",
@@ -44,25 +31,61 @@ const usersController = {
                 });
                 return;
             }
-            let newAccount = {
-                id: Date.now(),
-                name: req.body.name,
+            db.Clientes.create({
+                nombre: req.body.name,
                 email: req.body.email,
-                birthday: req.body.birthday,
-                dni: req.body.dni,
-                password: bcryptjs.hashSync(req.body.password, 10),
-                category: "user",
-            };
-            accounts.push(newAccount);
-            accountsService.saveAccounts();
+                contrasenia: bcryptjs.hashSync(req.body.password, 10),
+            });
             res.redirect("/");
         } else {
+            res.render("user/register", {
+                old: req.body,
+                errors: errors.errors,
+            });
+        }
+    },
+
+    //  ERROR EN LAS VALIDACIONES  ----> SOLUCIONAR!  
+
+    /*let errors = validationResult(req);
+
+    if (errors.isEmpty()) {
+        let usuarioDb = accountsService.findByField(
+            "email",
+            req.body.email
+        );
+        if (usuarioDb) {
+            errors.errors.push({
+                value: req.body.email,
+                msg: "Ya existe un usuario con ese email",
+                param: "email",
+                location: "body",
+            });
             res.render("users/register", {
                 old: req.body,
                 errors: errors.errors,
             });
-        }*/
-    },
+            return;
+        }
+        let newAccount = {
+            id: Date.now(),
+            name: req.body.name,
+            email: req.body.email,
+            birthday: req.body.birthday,
+            dni: req.body.dni,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            category: "user",
+        };
+        accounts.push(newAccount);
+        accountsService.saveAccounts();
+        res.redirect("/");
+    } else {
+        res.render("users/register", {
+            old: req.body,
+            errors: errors.errors,
+        });
+    }*/
+
     login: (req, res) => {
         res.render("users/login");
     },
