@@ -75,7 +75,7 @@ module.exports = (sequelize, dataTypes) => {
 
     /*
     Vino.associate = (models)=>{
-        Vino.belongsTo(models.Uva), {
+        Vinos.belongsTo(models.Uva), {
             as: 'vinoUva',
             foreignKey: 'uva_id'
         }

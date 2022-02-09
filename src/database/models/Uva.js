@@ -23,7 +23,7 @@ module.exports = (sequelize, dataTypes) => {
 
     /*
     Uva.associate = (models)=>{
-        Uva.hasMany(models.Vino), {
+        Uvas.hasMany(models.Vino), {
             as: 'uvaVino',
             foreignKey: 'uva_id'
         }

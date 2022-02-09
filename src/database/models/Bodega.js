@@ -23,7 +23,7 @@ module.exports = (sequelize, dataTypes) => {
 
     /*
     Bodega.associate = (models)=>{
-        Bodega.hasMany(models.Vino), {
+        Bodegas.hasMany(models.Vino), {
             as: 'bodegaVino',
             foreignKey: 'bodega_id'
         }
