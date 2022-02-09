@@ -11,8 +11,20 @@ const usersController = {
     registro: (req, res) => {
         res.render("users/register");
     },
-    registroProcesado: (req, res) => {
-        let errors = validationResult(req);
+    registroProcesado: async (req, res) => {
+
+        db.Clientes.create(
+            {
+                nombre: req.body.name,
+                email: req.body.email,
+                contrasenia: bcryptjs.hashSync(req.body.password, 10),
+            }
+        )
+        res.redirect("/");
+
+        //  ERROR EN LAS VALIDACIONES  ----> SOLUCIONAR!  
+
+        /*let errors = validationResult(req);
 
         if (errors.isEmpty()) {
             let usuarioDb = accountsService.findByField(
@@ -49,7 +61,7 @@ const usersController = {
                 old: req.body,
                 errors: errors.errors,
             });
-        }
+        }*/
     },
     login: (req, res) => {
         res.render("users/login");
