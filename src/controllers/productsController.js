@@ -25,7 +25,7 @@ const productsController = {
             const vinos = await db.Vinos.findAll();
             res.render("products/vinoteca", {
                 vinos: vinos,
-                link: "/editarProductos/" + vinos.id,
+                link: "/detalle/" + vinos.id,
             });
         } catch (error) {
             console.error(error);
@@ -54,7 +54,11 @@ const productsController = {
             let bodegas = await db.Bodegas.findAll();
             let uvas = await db.Uvas.findAll();
             let categorias = await db.Categorias.findAll();
-            res.render("products/agregarProducto", {bodegas, uvas, categorias});
+            res.render("products/agregarProducto", {
+                bodegas,
+                uvas,
+                categorias,
+            });
         } catch (err) {
             console.log(err);
         }
@@ -77,17 +81,22 @@ const productsController = {
         if (errors.isEmpty()) {
             db.Vinos.store({
                 nombre: req.body.nombre,
-                imagen: (req.file.path).split('imagen').pop(),
+                imagen: req.file.path.split("imagen").pop(),
                 bodega: req.body.bodega,
                 descripcion: req.body.descripcion,
-                precio: req.body.precio
-            }).then(() => {
-                res.redirect("/products/vinoteca")
-            }).catch((err) => {
-                console.log(err);
-            });
+                precio: req.body.precio,
+            })
+                .then(() => {
+                    res.redirect("/products/vinoteca");
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
         } else {
-            res.render('agregarProducto', { errors: errors.errors, old: req.body })
+            res.render("agregarProducto", {
+                errors: errors.errors,
+                old: req.body,
+            });
         }
     },
 
@@ -101,15 +110,20 @@ const productsController = {
             let uvas = await db.Uvas.findAll();
             let categorias = await db.Categorias.findAll();
             if (vino) {
-                res.render("products/editarProducto", { vino: vino, pageTitle: vino.nombre, bodegas, uvas, categorias });
+                res.render("products/editarProducto", {
+                    vino: vino,
+                    pageTitle: vino.nombre,
+                    bodegas,
+                    uvas,
+                    categorias,
+                });
             } else {
-                res.send("No seleccionaste ningún vino")
-            };
+                res.send("No seleccionaste ningún vino");
+            }
         } catch (error) {
             console.error(error);
         }
     },
-
 
     actualizarProducto: async (req, res) => {
         /* const id = req.params.id;
@@ -133,28 +147,32 @@ const productsController = {
             let errors = validationResult(req);
             if (errors.isEmpty()) {
                 const id = req.params.id;
-                await db.Vinos.update({
-                    nombre: req.body.nombre,
-                    bodega_id: 3,
-                    precio: req.body.precio,
-                    descripcion: req.body.descripcion,
-                    imagen: req.file.path.split("public").pop(),
-                    uva_id: 3,
-                    categoria_id: 3
-                }, {
-                    where: {
-                        id: req.params.id
+                await db.Vinos.update(
+                    {
+                        nombre: req.body.nombre,
+                        bodega_id: 3,
+                        precio: req.body.precio,
+                        descripcion: req.body.descripcion,
+                        imagen: req.file.path.split("public").pop(),
+                        uva_id: 3,
+                        categoria_id: 3,
+                    },
+                    {
+                        where: {
+                            id: req.params.id,
+                        },
                     }
-                }
-                )
+                );
                 /* Cambiar la información de uva, categoría y bodega */
                 res.redirect("/products/detalle/" + updatedProduct.id);
-
             } else {
                 const vino = await db.Vinos.findByPk(req.params.id);
-                res.render("products/editarProducto", { vino: vino, pageTitle: vino.nombre, errors: errors.errors });
+                res.render("products/editarProducto", {
+                    vino: vino,
+                    pageTitle: vino.nombre,
+                    errors: errors.errors,
+                });
             }
-
         } catch (error) {
             console.error(error);
         }
@@ -175,12 +193,9 @@ const productsController = {
         try {
             const id = req.params.id;
 
-            await db.Vinos.destroy(
-                { where : {id: id}, force: true}
-            )
-            res.redirect('/products/vinoteca')
-
-        } catch(err) {
+            await db.Vinos.destroy({ where: { id: id }, force: true });
+            res.redirect("/products/vinoteca");
+        } catch (err) {
             console.log(error);
         }
 
@@ -191,12 +206,12 @@ const productsController = {
     },
     buscarProducto: async (req, res) => {
         try {
-            const nombre = req.query.nombre
+            const nombre = req.query.nombre;
             const vinos = await db.Vinos.findAll({
                 where: {
-                    nombre: { [Op.like]: "%" + nombre + "%" }
-                }
-            })
+                    nombre: { [Op.like]: "%" + nombre + "%" },
+                },
+            });
             res.render("products/vinoteca", {
                 vinos: vinos,
                 link: "/editarProductos/" + vinos.id,
@@ -204,7 +219,7 @@ const productsController = {
         } catch (error) {
             console.error(error);
         }
-    }
+    },
 };
 
 module.exports = productsController;
