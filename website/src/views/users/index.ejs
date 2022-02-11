@@ -106,10 +106,10 @@
 <section class="contenedor1">
   <div class="contenedor2">
  <% for (let vino of vinos) { %>
-      <% if (vino.categoria == "Recomendados por nosotros") { %>
+      <% if (vino.categoria_id == 1) { %>
           <article class="wrapper">
            <div class="card-wine">
-            <a href="/products/detalle/<%= vino.id.categoria %>"><img class="card-wine-img" src="<%= vino.imagen %>"/></a>
+            <a href="/products/detalle/<%= vino.id %>"><img class="card-wine-img" src="<%= vino.imagen %>"/></a>
             <div class="card-body">
              <h4 class="card-tittle"><%= vino.nombre %></h4>
              <h5 class="card-subtitle mb-2 text-muted"><%= vino.bodega %></h5>
@@ -126,10 +126,10 @@
 <section class="contenedor1">
   <div class="contenedor2">
  <% for (let vino of vinos) { %>
-      <% if (vino.categoria == "Los mas vendidos") { %>
+      <% if (vino.categoria_id == 2) { %>
           <article class="wrapper">
            <div class="card-wine">
-            <a href="/products/detalle/<%= vino.id.categoria %>"><img class="card-wine-img" src="<%= vino.imagen %>"/></a>
+            <a href="/products/detalle/<%= vino.id %>"><img class="card-wine-img" src="<%= vino.imagen %>"/></a>
             <div class="card-body">
              <h4 class="card-tittle"><%= vino.nombre %></h4>
              <h5 class="card-subtitle mb-2 text-muted"><%= vino.bodega %></h5>
@@ -146,10 +146,10 @@
 <section class="contenedor1">
   <div class="contenedor2">
  <% for (let vino of vinos) { %>
-      <% if (vino.categoria == "Relacion precio/calidad") { %>
+      <% if (vino.categoria_id == 3) { %>
           <article class="wrapper">
            <div class="card-wine">
-            <a href="/products/detalle/<%= vino.id.categoria %>"><img class="card-wine-img" src="<%= vino.imagen %>"/></a>
+            <a href="/products/detalle/<%= vino.id %>"><img class="card-wine-img" src="<%= vino.imagen %>"/></a>
             <div class="card-body">
              <h4 class="card-tittle"><%= vino.nombre %></h4>
              <h5 class="card-subtitle mb-2 text-muted"><%= vino.bodega %></h5>

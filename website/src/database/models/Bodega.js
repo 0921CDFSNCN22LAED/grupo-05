@@ -21,14 +21,13 @@ module.exports = (sequelize, dataTypes) => {
 
     const Bodega = sequelize.define(alias, cols, config);
 
-    /*
-    Bodega.associate = (models)=>{
-        Bodega.hasMany(models.Vino), {
-            as: 'bodegaVino',
-            foreignKey: 'bodega_id'
-        }
-    }
-    */ //Relación de bodegas y vinos. Una bodega tiene muchos vinos
+    //Relación de bodegas y vinos. Una bodega tiene muchos vinos.
+    Bodega.associate = function (models) {
+        Bodega.hasMany(models.Vinos, {
+            as: "bodegaVino",
+            foreignKey: "bodega_id",
+        });
+    };
 
     return Bodega;
 };

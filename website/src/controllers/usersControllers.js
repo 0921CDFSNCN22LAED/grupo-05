@@ -12,7 +12,6 @@ const usersController = {
         res.render("users/register");
     },
     registroProcesado: async (req, res) => {
-
         let errors = validationResult(req);
         if (errors.isEmpty()) {
             let existingEmail = await db.Clientes.findOne({
@@ -45,7 +44,7 @@ const usersController = {
         }
     },
 
-    //  ERROR EN LAS VALIDACIONES  ----> SOLUCIONAR!  
+    //  ERROR EN LAS VALIDACIONES  ----> SOLUCIONAR!
 
     /*let errors = validationResult(req);
 
@@ -98,14 +97,14 @@ const usersController = {
             );*/
             let userLogin = await db.Clientes.findOne({
                 where: { email: req.body.email },
-            })[0];
+            });
             let adminLogin = await db.Administradores.findOne({
                 where: { email: req.body.email },
-            })[0];
+            });
             if (userLogin || adminLogin) {
                 let passwordOk = bcryptjs.compareSync(
                     req.body.password,
-                    userLogin.password
+                    userLogin.contrasenia
                 );
                 if (passwordOk) {
                     req.session.loggedUser = userLogin;
