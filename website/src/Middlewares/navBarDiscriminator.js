@@ -1,7 +1,7 @@
 function navBarDiscriminator(req, res, next) {
     res.locals.isLogged = false;
 
-    if (req.session.loggedUser && req.session.loggedAdmin) {
+    if (req.session.loggedUser) {
         res.locals.isLogged = true;
     }
 

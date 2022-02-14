@@ -14,7 +14,7 @@ const usersController = {
     registroProcesado: async (req, res) => {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
-            let existingEmail = await db.Clientes.findOne({
+            let existingEmail = await db.Usuarios.findOne({
                 where: { email: req.body.email },
             });
             if (existingEmail) {
@@ -30,7 +30,7 @@ const usersController = {
                 });
                 return;
             }
-            db.Clientes.create({
+            db.Usuarios.create({
                 nombre: req.body.name,
                 email: req.body.email,
                 contrasenia: bcryptjs.hashSync(req.body.password, 10),
@@ -90,60 +90,47 @@ const usersController = {
     },
     loginProcess: async (req, res) => {
         let errors = validationResult(req);
+
         if (errors.isEmpty()) {
-            /*let userLogin = accountsService.findByField(
-                "email",
-                req.body.email
-            );*/
-            let userLogin = await db.Clientes.findOne({
-                where: { email: req.body.email },
-            });
-            let adminLogin = await db.Administradores.findOne({
-                where: { email: req.body.email },
-            });
-            if (userLogin || adminLogin) {
-                let passwordOk = bcryptjs.compareSync(
-                    req.body.password,
-                    userLogin.contrasenia
-                );
+
+            const usuarioLogin = await db.Usuarios.findOne({
+                where: {email: req.body.email}
+            })
+
+            if (usuarioLogin) {
+                let passwordOk = bcryptjs.compareSync(req.body.password, usuarioLogin.contrasenia)
+
                 if (passwordOk) {
-                    req.session.loggedUser = userLogin;
-                    req.session.loggedAdmin = adminLogin;
-                    if (req.body.recuerdame) {
-                        res.cookie("userEmail", req.body.email, {
-                            maxAge: 1000 * 60 * 60,
-                        });
-                    }
-                    res.redirect("/users/cuenta");
-                    return;
+                    req.session.loggedUser = usuarioLogin
+                    res.redirect("/users/cuenta")
+                    return
+
                 } else {
                     errors.errors.push({
                         value: req.body.email,
-                        msg: "La contraseña es incorrecta",
-                        param: "password",
-                        location: "body",
-                    });
-                    res.render("users/login", {
-                        old: req.body,
-                        errors: errors.errors,
-                    });
-                    return;
+                        msg: 'La contraseña es incorrecta',
+                        param: 'password',
+                        location: 'body'
+                    })
+                    res.render("users/login", { old: req.body, errors: errors.errors })
+                    return
                 }
             } else {
                 errors.errors.push({
                     value: req.body.email,
-                    msg: "Este usuario no existe",
-                    param: "email",
-                    location: "body",
-                });
-                res.render("users/login", {
-                    old: req.body,
-                    errors: errors.errors,
-                });
+                    msg: 'No existe un usuario con este mail',
+                    param: 'email',
+                    location: 'body'
+                })
+                res.render("users/login", { old: req.body, errors: errors.errors })
             }
         } else {
             res.render("users/login", { old: req.body, errors: errors.errors });
         }
+        /*let userLogin = accountsService.findByField(
+            "email",
+            req.body.email
+        );*/
     },
     /*     cuenta: (req, res) => {
         res.render("users/cuenta", {
