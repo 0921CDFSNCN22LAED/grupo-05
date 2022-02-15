@@ -1,5 +1,6 @@
 import React from "react";
-import logo from "../img/logo.png";
+import Brand from "./Brand";
+import Divider from "./Divider";
 
 function Sidebar() {
     return (
@@ -8,17 +9,10 @@ function Sidebar() {
             id="accordionSidebar"
         >
             {/* <!-- Sidebar - Brand --> */}
-            <a
-                className="sidebar-brand d-flex align-items-center justify-content-center"
-                href="/"
-            >
-                <div className="sidebar-brand-icon">
-                    <img className="w-100" src={logo} alt="Digital House" />
-                </div>
-            </a>
+            <Brand />
 
             {/* <!-- Divider --> */}
-            <hr className="sidebar-divider my-0" />
+            <Divider />
 
             {/* <!-- Nav Item - Dashboard --> */}
             <li className="nav-item active">
@@ -59,7 +53,7 @@ function Sidebar() {
             </li>
 
             {/* <!-- Divider --> */}
-            <hr className="sidebar-divider d-none d-md-block" />
+            <Divider />
         </ul>
     );
 }
