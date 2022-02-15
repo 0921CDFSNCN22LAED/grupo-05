@@ -112,7 +112,7 @@
             <a href="/products/detalle/<%= vino.id %>"><img class="card-wine-img" src="<%= vino.imagen %>"/></a>
             <div class="card-body">
              <h4 class="card-tittle"><%= vino.nombre %></h4>
-             <h5 class="card-subtitle mb-2 text-muted"><%= vino.bodega %></h5>
+             <h5 class="card-subtitle mb-2 text-muted"><%= vino.vinoBodega.nombre %></h5>
              <p class="card-text">$<%= vino.precio %></p>
             </div>
            </div>

@@ -61,23 +61,16 @@ module.exports = (sequelize, dataTypes) => {
             as: "vinoBodega",
             foreignKey: "bodega_id",
         });
-    };
-
-    //Relación de vinos y categorías. Un/os vino/s pertenece/n a una categoría.
-    Vino.associate = function (models) {
         Vino.belongsTo(models.Categorias, {
             as: "vinoCategoria",
             foreignKey: "categoria_id",
         });
-    };
-
-    //Relación de vinos y uvas. Un/os vino/s pertenece/n a una uva -varietal-.
-    Vino.associate = function (models) {
         Vino.belongsTo(models.Uvas, {
             as: "vinoUva",
             foreignKey: "uva_id",
         });
     };
+
 
     return Vino;
 };

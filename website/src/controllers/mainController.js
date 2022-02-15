@@ -3,7 +3,13 @@ const db = require("../database/models");
 const controladorHome = {
     index: async (req, res) => {
         try {
-            const vinos = await db.Vinos.findAll();
+            const vinos = await db.Vinos.findAll({
+                include: [
+                    {association: "vinoBodega"},
+                    {association: "vinoCategoria"},
+                ]
+            });
+            console.log(vinos);
             res.render("users/index", {
                 vinos: vinos,
                 link: "/detalle/" + vinos.id,
