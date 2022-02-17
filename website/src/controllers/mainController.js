@@ -8,6 +8,7 @@ const controladorHome = {
                     { association: "vinoBodega" },
                     { association: "vinoCategoria" },
                 ],
+                order: [["nombre", "ASC"]],
             });
             res.render("users/index", {
                 vinos: vinos,
