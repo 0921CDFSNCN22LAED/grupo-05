@@ -27,6 +27,7 @@ const productsController = {
                     { association: "vinoBodega" },
                     { association: "vinoCategoria" },
                 ],
+                order: [["nombre", "ASC"]],
             });
             res.render("products/vinoteca", {
                 vinos: vinos,
