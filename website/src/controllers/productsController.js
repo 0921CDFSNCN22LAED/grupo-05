@@ -22,7 +22,12 @@ const productsController = {
 
     vinoteca: async (req, res) => {
         try {
-            const vinos = await db.Vinos.findAll();
+            const vinos = await db.Vinos.findAll({
+                include: [
+                    { association: "vinoBodega" },
+                    { association: "vinoCategoria" },
+                ],
+            });
             res.render("products/vinoteca", {
                 vinos: vinos,
                 link: "/detalle/" + vinos.id,
