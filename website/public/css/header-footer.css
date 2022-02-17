@@ -21,11 +21,33 @@ header {
     width: 30%;
     display: flex;
     justify-content: space-around;
+    text-decoration: none;
+    padding: 1% 0;
 }
 
 .contenedor_logo img {
-    max-width: 161px;
-    max-height: 188px;
+    display: none;
+}
+
+.logo-texto-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-texto-D {
+    color: #aa0d3f;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.logo-texto-W {
+    color: #aa0d3f;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
 }
 
 .contenedor-links_chica {
@@ -53,6 +75,22 @@ header {
 
 .contenedor-links_grande {
     display: none;
+}
+
+@media (min-width: 767px) {
+    .contenedor_logo {
+        padding: 0;
+    }
+
+    .logo-texto-wrapper {
+        display: none;
+    }
+
+    .contenedor_logo img {
+        display: block;
+        max-width: 161px;
+        max-height: 188px;
+    }
 }
 
 @media (min-width: 1100px) {
