@@ -5,11 +5,10 @@ const controladorHome = {
         try {
             const vinos = await db.Vinos.findAll({
                 include: [
-                    {association: "vinoBodega"},
-                    {association: "vinoCategoria"},
-                ]
+                    { association: "vinoBodega" },
+                    { association: "vinoCategoria" },
+                ],
             });
-            console.log(vinos);
             res.render("users/index", {
                 vinos: vinos,
                 link: "/detalle/" + vinos.id,
