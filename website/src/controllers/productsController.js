@@ -213,6 +213,10 @@ const productsController = {
         try {
             const nombre = req.query.nombre;
             const vinos = await db.Vinos.findAll({
+                include: [
+                    { association: "vinoBodega" },
+                    { association: "vinoCategoria" },
+                ],
                 where: {
                     nombre: { [Op.like]: "%" + nombre + "%" },
                 },
