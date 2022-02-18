@@ -34,9 +34,7 @@
                     />
                 </div>
                 <div>
-                    <label for="descripcionProducto" class="form-label"
-                        >Bodega:</label
-                    >
+                    <label for="bodega_id" class="form-label">Bodega:</label>
                     <select name="bodega_id" id="bodega_id">
                         <% for(let bodega of bodegas) { %>
                         <option value="<%= bodega.id %>">
@@ -66,9 +64,7 @@
                     </select>
                 </div>
                 <div>
-                    <label for="precioProducto" class="form-label"
-                        >Precio:</label
-                    >
+                    <label for="precio" class="form-label">Precio:</label>
                     <input
                         class="box-shadow form-control"
                         type="number"
@@ -78,7 +74,7 @@
                     />
                 </div>
                 <div>
-                    <label for="anioProducto" class="form-label">Anio:</label>
+                    <label for="anio" class="form-label">Anio:</label>
                     <input
                         class="box-shadow form-control"
                         type="number"
@@ -88,7 +84,7 @@
                     />
                 </div>
                 <div>
-                    <label for="stockProducto" class="form-label">Stock:</label>
+                    <label for="stock" class="form-label">Stock:</label>
                     <input
                         class="box-shadow form-control"
                         type="number"
@@ -110,7 +106,7 @@
                     ></textarea>
                 </div>
                 <div class="agregarProducto-div-img-product">
-                    <label for="imagenProducto" class="form-label"
+                    <label for="imagen" class="form-label"
                         >Imagen del producto:
                     </label>
                     <input
