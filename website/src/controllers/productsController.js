@@ -85,12 +85,16 @@ const productsController = {
         let errors = validationResult(req);
 
         if (errors.isEmpty()) {
-            db.Vinos.store({
+            db.Vinos.create({
                 nombre: req.body.nombre,
                 imagen: req.file.path.split("imagen").pop(),
-                bodega: req.body.bodega,
+                bodega: req.body.bodega_id,
                 descripcion: req.body.descripcion,
                 precio: req.body.precio,
+                anio: req.body.anio,
+                uva: req.body.uva_id,
+                categoria: req.body.categoria_id,
+                stock: req.body.stock,
             })
                 .then(() => {
                     res.redirect("/products/vinoteca");
