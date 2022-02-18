@@ -9,6 +9,8 @@ const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const recordameMiddleware = require("./Middlewares/recordameMiddleware");
 const navBarDiscriminator = require("./Middlewares/navBarDiscriminator");
+const usuariosRouters = require("./routers/apiRouters/usuariosRouters");
+const vinosRouters = require("./routers/apiRouters/vinosRouters");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -34,3 +36,6 @@ app.use(methodOverride("_method"));
 app.use("/", mainRouters);
 app.use("/products", productsRouters);
 app.use("/users", usersRouters);
+
+app.use("/api/usuarios", usuariosRouters);
+app.use("/api/vinos", vinosRouters);
