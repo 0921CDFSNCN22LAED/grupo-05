@@ -1,7 +1,7 @@
 const db = require("../../database/models");
 module.exports = {
     listar: async (req, res) => {
-        const usaurios = await db.Usuarios.findAll(
+        const usuarios = await db.Usuarios.findAll(
             { include: { all: true } },
             { order: [["nombre", "ASC"]] }
         );
@@ -9,10 +9,10 @@ module.exports = {
         let respuesta = {
             meta: {
                 status : 200,
-                total: usaurios.length,
+                total: usuarios.length,
                 url: 'api/usuarios'
             },
-            data: usaurios
+            data: usuarios
         }
 
         res.json(respuesta);
