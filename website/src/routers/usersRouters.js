@@ -3,8 +3,8 @@ const router = express.Router();
 const usersController = require("../controllers/usersControllers");
 const ifLogged = require("../Middlewares/ifLogged");
 const ifNotLogged = require("../Middlewares/ifNotLogged");
-const validateAccountLogin = require("../Middlewares/validateAccountLogin");
-const validateAccountRegister = require("../Middlewares/validateAccountRegister");
+const validateAccountLogin = require("../Middlewares/validaciones/backend/validateAccountLogin");
+const validateAccountRegister = require("../Middlewares/validaciones/backend/validateAccountRegister");
 
 router.get("/registro", ifLogged, usersController.registro);
 router.post(
