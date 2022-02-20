@@ -19,7 +19,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
         },
         anio: {
-            type: dataTypes.DATE,
+            type: dataTypes.INTEGER,
             allowNull: false,
         },
         descripcion: {

@@ -87,13 +87,13 @@ const productsController = {
         if (errors.isEmpty()) {
             db.Vinos.create({
                 nombre: req.body.nombre,
-                imagen: req.file.path.split("imagen").pop(),
-                bodega: req.body.bodega_id,
+                imagen: req.file.path.split("public").pop(),
+                bodega_id: req.body.bodega_id,
                 descripcion: req.body.descripcion,
                 precio: req.body.precio,
                 anio: req.body.anio,
-                uva: req.body.uva_id,
-                categoria: req.body.categoria_id,
+                uva_id: req.body.uva_id,
+                categoria_id: req.body.categoria_id,
                 stock: req.body.stock,
             })
                 .then(() => {
