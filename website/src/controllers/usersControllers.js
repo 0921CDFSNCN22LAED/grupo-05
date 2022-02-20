@@ -30,11 +30,26 @@ const usersController = {
                 });
                 return;
             }
+
+            console.log(req.body)
+
             db.Usuarios.create({
                 nombre: req.body.name,
                 email: req.body.email,
                 contrasenia: bcryptjs.hashSync(req.body.password, 10),
+                tipo_id: 1
             });
+
+            let usuarioNuevo = {
+                nombre: req.body.name,
+                email: req.body.email,
+                contrasenia: bcryptjs.hashSync(req.body.password, 10),
+                tipo_id: 1
+            }
+            console.log(usuarioNuevo);
+            req.session.loggedUser = usuarioNuevo;
+
+
             res.redirect("/");
         } else {
             res.render("user/register", {

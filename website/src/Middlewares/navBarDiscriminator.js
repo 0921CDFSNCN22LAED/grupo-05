@@ -5,6 +5,8 @@ function navBarDiscriminator(req, res, next) {
         res.locals.isLogged = true;
     }
 
+    console.log('hola');
+
     next();
 }
 
