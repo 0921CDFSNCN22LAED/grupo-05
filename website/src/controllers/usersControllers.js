@@ -37,7 +37,7 @@ const usersController = {
                 nombre: req.body.name,
                 email: req.body.email,
                 contrasenia: bcryptjs.hashSync(req.body.password, 10),
-                tipo_id: 1
+                tipo_id: 2
             });
 
             let usuarioNuevo = {

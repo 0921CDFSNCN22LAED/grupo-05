@@ -3,6 +3,8 @@ const router = express.Router();
 const path = require("path");
 const productsController = require("../controllers/productsController.js");
 const multer = require("multer");
+const ifAdmin = require("../Middlewares/ifadmin.js");
+
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -17,7 +19,7 @@ const uploadFile = multer({ storage });
 
 router.get("/detalle/:id/", productsController.detalleProducto);
 
-router.get("/vinoteca", productsController.vinoteca);
+router.get("/vinoteca", ifAdmin ,productsController.vinoteca);
 
 router.get("/agregar", productsController.agregarProducto);
 router.post("/agregar", uploadFile.single("imagen"), productsController.store);

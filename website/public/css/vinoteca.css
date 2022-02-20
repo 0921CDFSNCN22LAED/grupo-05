@@ -100,7 +100,6 @@ main h2 {
     border: none;
     border-radius: 50%;
     padding: 1.5%;
-    /* background-color: #39b54a; */
     background-color: #aa0d3f;
     color: #ffff;
     display: flex;
@@ -190,6 +189,6 @@ main h2 {
     }
 
     .button-add-product:hover i {
-        color: #252525;
+        color: #39b54a;
     }
 }
