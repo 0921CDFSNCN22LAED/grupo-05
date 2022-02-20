@@ -60,12 +60,14 @@
                                 <% if (locals.isLogged) { %>
                                 <div class="wine-card-icons">
                                     <a href=""><i class="far fa-star"></i></a>
-                                    <a href="/products/editar/<%= vino.id %>">
-                                        <i class="far fa-edit"></i>
-                                    </a>
-                                    <a href="/products/eliminar/<%= vino.id %>">
-                                        <i class="fas fa-times"></i>
-                                    </a>
+                                    <% if (locals.isAdmin) { %>
+                                        <a href="/products/editar/<%= vino.id %>">
+                                            <i class="far fa-edit"></i>
+                                        </a>
+                                        <a href="/products/eliminar/<%= vino.id %>">
+                                            <i class="fas fa-times"></i>
+                                        </a>
+                                    <% } %>
                                 </div>
                                 <% } %>
                             </div>

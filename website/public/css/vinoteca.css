@@ -184,11 +184,16 @@ main h2 {
         display: flex;
     }
 
+    .button-add-product:hover{
+        background-color: #f6004a;
+    }
+
     .button-add-product i {
         font-size: 25px;
     }
 
-    .button-add-product:hover i {
-        color: #39b54a;
+    .button-add-product i:hover{
+        color: white
     }
+
 }
