@@ -174,7 +174,7 @@ const productsController = {
                     }
                 );
                 /* Cambiar la información de uva, categoría y bodega */
-                res.redirect("/products/detalle/" + updatedProduct.id);
+                res.redirect("/products/detalle/" + req.params.id);
             } else {
                 const vino = await db.Vinos.findByPk(req.params.id);
                 res.render("products/editarProducto", {

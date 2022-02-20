@@ -72,6 +72,32 @@
                     <% } %>
                 </div>
                 <div>
+                    <label for="anio" class="form-label">Anio:</label>
+                    <% if (vino) { %>
+                    <input
+                        class="box-shadow form-control"
+                        type="number"
+                        name="anio"
+                        id="anio"
+                        placeholder=" Ej: 2017"
+                        value="<%= vino.anio %>"
+                    />
+                    <% } %>
+                </div>
+                <div>
+                    <label for="stock" class="form-label">Stock:</label>
+                    <% if (vino) { %>
+                    <input
+                        class="box-shadow form-control"
+                        type="number"
+                        name="stock"
+                        id="stock"
+                        placeholder=" Ej: 08"
+                        value="<%= vino.stock %>" 
+                    />
+                    <% } %>
+                </div>
+                <div>
                     <label for="precioProducto" class="form-label">Descripcion:</label>
                     <% if (vino) {%>
                     <textarea
