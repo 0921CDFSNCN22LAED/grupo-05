@@ -25,15 +25,14 @@
                 class="register-desktop-bg-img"
             />
 
-            <div class="errores">
-                <ul></ul>
-            </div>
-
             <form
                 action="/users/registro"
                 method="POST"
                 class="register-form-container box-shadow"
             >
+                <div class="errores">
+                    <ul class="hola"></ul>
+                </div>
                 <section>
                     <h4>Regístrate con:</h4>
                     <div class="register-div-google">
@@ -199,6 +198,7 @@
         </main>
 
         <footer><%- include ("../partials/footer") %></footer>
+        <script src="/js/frontend/validateRegister.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
             integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"

@@ -52,7 +52,7 @@ const usersController = {
 
             res.redirect("/");
         } else {
-            res.render("user/register", {
+            res.render("users/register", {
                 old: req.body,
                 errors: errors.errors,
             });
@@ -109,7 +109,7 @@ const usersController = {
         if (errors.isEmpty()) {
 
             const usuarioLogin = await db.Usuarios.findOne({
-                where: {email: req.body.email}
+                where: { email: req.body.email }
             })
 
             if (usuarioLogin) {
