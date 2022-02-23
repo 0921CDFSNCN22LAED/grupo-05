@@ -1,12 +1,12 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Roboto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
 }
 
 .agregarProducto-body {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 /*
@@ -16,100 +16,99 @@ MAIN
 */
 
 .hide-icon-agregarProducto {
-  display: none;
+    display: none;
 }
 
 .agregarProducto-main-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .mobile-bg-img {
-  position: absolute;
-  z-index: -100;
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    z-index: -100;
+    width: 100%;
+    height: 100%;
 }
 
 .desktop-bg-img {
-  display: none;
+    display: none;
 }
 
 .agregarProducto-form-container {
-  max-width: 400px;
-  margin: 10% 15%;
-  /* padding: 5% 10%; */
-  padding: 5%;
-  border: none;
-  border-radius: 8px;
-  background-color: #ebebeb;
-  display: flex;
-  flex-direction: column;
+    max-width: 400px;
+    margin: 10% 15%;
+    /* padding: 5% 10%; */
+    padding: 5%;
+    border: none;
+    border-radius: 8px;
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
 }
 
 h2 {
-  text-align: center;
-  color: #aa0d3f;
+    text-align: center;
+    color: #aa0d3f;
 }
 
 form div {
-  margin-bottom: 5%;
+    margin-bottom: 5%;
 }
 
 form div label {
-  margin-left: 2.5%;
+    margin-left: 2.5%;
 }
 
 form div input {
-  width: 100%;
-  border: none;
-  border-radius: 8px;
-  padding: 4%;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 4%;
 }
 
 .agregarProducto-text-area {
-  width: 100%;
-  height: 110px;
-  border: none;
-  border-radius: 8px;
-  padding: 4%;
+    width: 100%;
+    height: 110px;
+    border: none;
+    border-radius: 8px;
+    padding: 4%;
 }
 
 .agregarProducto-div-img-product {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
 }
 
 .agregarProducto-input-img-product {
-  width: 100%;
-  padding: 0;
+    width: 100%;
 }
 
 .agregarProducto-div-button {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
 }
 
 .agregarProducto-button {
-  width: 60%;
-  border: none;
-  border-radius: 8px;
-  padding: 2%;
-  background-color: #aa0d3f;
-  color: #fff;
+    width: 60%;
+    border: none;
+    border-radius: 8px;
+    padding: 2%;
+    background-color: #aa0d3f;
+    color: #fff;
 }
 
 .box-shadow {
-  box-shadow: 0px 0px 10px rgb(100, 100, 100);
-  border: none;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    border: none;
 }
 
 /* 
@@ -117,42 +116,42 @@ form div input {
 */
 
 @media (min-width: 767px) {
-  .agregarProducto-form-container {
-    max-width: 500px;
-  }
+    .agregarProducto-form-container {
+        max-width: 500px;
+    }
 }
 
 @media (min-width: 1100px) {
-  .agregarProducto-main-container {
-    flex-direction: row;
-    align-items: center;
-  }
+    .agregarProducto-main-container {
+        flex-direction: row;
+        align-items: center;
+    }
 
-  .mobile-bg-img {
-    display: none;
-  }
+    .mobile-bg-img {
+        display: none;
+    }
 
-  .desktop-bg-img {
-    display: block;
-    position: absolute;
-    z-index: -100;
-    width: 100%;
-    height: 100%;
-  }
+    .desktop-bg-img {
+        display: block;
+        position: absolute;
+        z-index: -100;
+        width: 100%;
+        height: 100%;
+    }
 
-  .agregarProducto-form-container {
-    padding: 2.5% 5%;
-    margin: 20%;
-    width: 40%;
-    background-color: transparent;
-  }
+    .agregarProducto-form-container {
+        padding: 2.5% 5%;
+        margin: 20%;
+        width: 40%;
+        background-color: transparent;
+    }
 
-  h2 {
-    color: #fff;
-  }
+    h2 {
+        color: #fff;
+    }
 
-  form div label {
-    color: #fff;
-    font-weight: bold;
-  }
+    form div label {
+        color: #fff;
+        font-weight: bold;
+    }
 }
