@@ -34,4 +34,6 @@ module.exports = {
 
         res.json(respuesta);
     },
+
+    //Falta array por cada relación
 };
