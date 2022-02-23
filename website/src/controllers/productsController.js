@@ -83,7 +83,8 @@ const productsController = {
         }, */
     store: (req, res) => {
         let errors = validationResult(req);
-
+        console.log(req.body);
+        console.log(errors);
         if (errors.isEmpty()) {
             db.Vinos.create({
                 nombre: req.body.nombre,
@@ -95,16 +96,11 @@ const productsController = {
                 uva_id: req.body.uva_id,
                 categoria_id: req.body.categoria_id,
                 stock: req.body.stock,
-            })
-                .then(() => {
-                    res.redirect("/products/vinoteca");
-                })
-                .catch((err) => {
-                    console.log(err);
-                });
+            });
+            res.redirect("/products/vinoteca");
         } else {
-            res.render("agregarProducto", {
-                errors: errors.errors,
+            res.render("products/agregarProducto", {
+                errors: errors.array(),
                 old: req.body,
             });
         }

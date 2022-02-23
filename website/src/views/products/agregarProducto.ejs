@@ -32,6 +32,11 @@
                         id="nombre"
                         placeholder=" Ej: Toro"
                     />
+                    <% if (locals.errors && errors.nombre) { %>
+                    <div class="text-danger">
+                        <p style="color: red"><%= errors.nombre.msg %></p>
+                    </div>
+                    <% } %>
                 </div>
                 <div>
                     <label for="precio" class="form-label">Precio:</label>
@@ -42,6 +47,11 @@
                         id="precio"
                         placeholder=" Ej: 1000"
                     />
+                    <% if (locals.errors && errors.precio) { %>
+                    <div class="text-danger">
+                        <p style="color: red"><%= errors.precio.msg %></p>
+                    </div>
+                    <% } %>
                 </div>
                 <div>
                     <label for="anio" class="form-label">Anio:</label>
@@ -52,6 +62,11 @@
                         id="anio"
                         placeholder=" Ej: 2017"
                     />
+                    <% if (locals.errors && errors.anio) { %>
+                    <div class="text-danger">
+                        <p style="color: red"><%= errors.anio.msg %></p>
+                    </div>
+                    <% } %>
                 </div>
                 <div>
                     <label for="stock" class="form-label">Stock:</label>
@@ -62,6 +77,11 @@
                         id="stock"
                         placeholder=" Ej: 32"
                     />
+                    <% if (locals.errors && errors.stock) { %>
+                    <div class="text-danger">
+                        <p style="color: red"><%= errors.stock.msg %></p>
+                    </div>
+                    <% } %>
                 </div>
                 <div>
                     <label for="precioProducto" class="form-label"
@@ -74,6 +94,11 @@
                         cols="30"
                         rows="10"
                     ></textarea>
+                    <% if (locals.errors && errors.descripcion) { %>
+                    <div class="text-danger">
+                        <p style="color: red"><%= errors.descripcion.msg %></p>
+                    </div>
+                    <% } %>
                 </div>
                 <div>
                     <label for="bodega_id" class="form-label">Bodega:</label>
@@ -88,6 +113,11 @@
                         </option>
                         <% } %>
                     </select>
+                    <% if (locals.errors && errors.bodega_id) { %>
+                    <div class="text-danger">
+                        <p style="color: red"><%= errors.bodega_id.msg %></p>
+                    </div>
+                    <% } %>
                 </div>
                 <div>
                     <label for="categoria_id" class="form-label"
@@ -104,6 +134,11 @@
                         </option>
                         <% } %>
                     </select>
+                    <% if (locals.errors && errors.categoria_id) { %>
+                    <div class="text-danger">
+                        <p style="color: red"><%= errors.categoria_id.msg %></p>
+                    </div>
+                    <% } %>
                 </div>
                 <div>
                     <label for="uva_id" class="form-label">Uva:</label>
@@ -116,6 +151,11 @@
                         <option value="<%= uva.id %>"><%= uva.nombre %></option>
                         <% } %>
                     </select>
+                    <% if (locals.errors && errors.uva_id) { %>
+                    <div class="text-danger">
+                        <p style="color: red"><%= errors.uva_id.msg %></p>
+                    </div>
+                    <% } %>
                 </div>
                 <div class="agregarProducto-div-img-product">
                     <label for="imagen" class="form-label"
@@ -127,6 +167,11 @@
                         name="imagen"
                         id="imagen"
                     />
+                    <% if (locals.errors && errors.imagen) { %>
+                    <div class="text-danger">
+                        <p style="color: red"><%= errors.imagen.msg %></p>
+                    </div>
+                    <% } %>
                 </div>
 
                 <div class="agregarProducto-div-button">
