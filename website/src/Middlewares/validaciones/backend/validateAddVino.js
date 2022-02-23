@@ -12,11 +12,6 @@ const validateAddVino = [
     body("descripcion")
         .notEmpty()
         .withMessage("Tienes que escribir una descripción"),
-    body("bodega_id").notEmpty().withMessage("Tienes que elegir una bodega"),
-    body("categoria_id")
-        .notEmpty()
-        .withMessage("Tienes que elegir una categoría"),
-    body("uva_id").notEmpty().withMessage("Tienes que elegir un tipo de uva"),
     body("imagen").custom((value, { req }) => {
         let file = req.file;
         let acceptedExtensions = [".jpg", ".png"];

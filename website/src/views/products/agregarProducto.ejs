@@ -113,11 +113,6 @@
                         </option>
                         <% } %>
                     </select>
-                    <% if (locals.errors && errors.bodega_id) { %>
-                    <div class="text-danger">
-                        <p style="color: red"><%= errors.bodega_id.msg %></p>
-                    </div>
-                    <% } %>
                 </div>
                 <div>
                     <label for="categoria_id" class="form-label"
@@ -134,11 +129,6 @@
                         </option>
                         <% } %>
                     </select>
-                    <% if (locals.errors && errors.categoria_id) { %>
-                    <div class="text-danger">
-                        <p style="color: red"><%= errors.categoria_id.msg %></p>
-                    </div>
-                    <% } %>
                 </div>
                 <div>
                     <label for="uva_id" class="form-label">Uva:</label>
@@ -151,11 +141,6 @@
                         <option value="<%= uva.id %>"><%= uva.nombre %></option>
                         <% } %>
                     </select>
-                    <% if (locals.errors && errors.uva_id) { %>
-                    <div class="text-danger">
-                        <p style="color: red"><%= errors.uva_id.msg %></p>
-                    </div>
-                    <% } %>
                 </div>
                 <div class="agregarProducto-div-img-product">
                     <label for="imagen" class="form-label"
