@@ -36,31 +36,7 @@
                     <% } %>
                 </div>
                 <div>
-                    <label for="descripcionProducto" class="form-label">Bodega:</label>
-                    <select name="bodega_id" id="bodega_id">
-                        <% for(let bodega of bodegas) { %>
-                            <option value="<%= bodega.id %>"><%= bodega.nombre %> </option>
-                        <% } %>
-                    </select>
-                </div>
-                <div>
-                    <label for="categoria_id" class="form-label">Categoría:</label>
-                    <select name="categoria_id" id="categoria_id">
-                        <% for(let categoria of categorias) { %>
-                            <option value="<%= categoria.id %>"><%= categoria.nombre %> </option>
-                        <% } %>
-                    </select>
-                </div>
-                <div>
-                    <label for="uva_id" class="form-label">Uva:</label>
-                    <select name="uva_id" id="uva_id">
-                        <% for(let uva of uvas) { %>
-                            <option value="<%= uva.id %>"><%= uva.nombre %> </option>
-                        <% } %>
-                    </select>
-                </div>
-                <div>
-                    <label for="precioProducto" class="form-label">Precio:</label>
+                    <label for="precio" class="form-label">Precio:</label>
                     <% if (vino) {%>
                     <input
                         class="box-shadow form-control"
@@ -93,12 +69,14 @@
                         name="stock"
                         id="stock"
                         placeholder=" Ej: 08"
-                        value="<%= vino.stock %>" 
+                        value="<%= vino.stock %>"
                     />
                     <% } %>
                 </div>
                 <div>
-                    <label for="precioProducto" class="form-label">Descripcion:</label>
+                    <label for="descripcion" class="form-label"
+                        >Descripcion:</label
+                    >
                     <% if (vino) {%>
                     <textarea
                         class="editarProducto-text-area box-shadow form-control"
@@ -111,12 +89,54 @@
                     >
                     <% } %>
                 </div>
+                <div>
+                    <label for="bodega_id" class="form-label">Bodega:</label>
+                    <select
+                        name="bodega_id"
+                        id="bodega_id"
+                        class="form-select box-shadow"
+                    >
+                        <% for(let bodega of bodegas) { %>
+                        <option value="<%= bodega.id %>">
+                            <%= bodega.nombre %>
+                        </option>
+                        <% } %>
+                    </select>
+                </div>
+                <div>
+                    <label for="categoria_id" class="form-label"
+                        >Categoría:</label
+                    >
+                    <select
+                        name="categoria_id"
+                        id="categoria_id"
+                        class="form-select box-shadow"
+                    >
+                        <% for(let categoria of categorias) { %>
+                        <option value="<%= categoria.id %>">
+                            <%= categoria.nombre %>
+                        </option>
+                        <% } %>
+                    </select>
+                </div>
+                <div>
+                    <label for="uva_id" class="form-label">Uva:</label>
+                    <select
+                        name="uva_id"
+                        id="uva_id"
+                        class="form-select box-shadow"
+                    >
+                        <% for(let uva of uvas) { %>
+                        <option value="<%= uva.id %>"><%= uva.nombre %></option>
+                        <% } %>
+                    </select>
+                </div>
                 <div class="editarProducto-div-img-product">
-                    <label for="imagenProducto" class="form-label"
+                    <label for="imagen" class="form-label"
                         >Imagen del producto:
                     </label>
                     <input
-                        class="editarProducto-input-img-product"
+                        class="editarProducto-input-img-product form-control box-shadow"
                         type="file"
                         accept="image/jpg"
                         name="imagen"
@@ -133,9 +153,14 @@
                         Editar
                     </button>
                 </div>
+
+                <div class="errores">
+                    <ul class="errores-front"></ul>
+                </div>
             </form>
         </main>
         <footer><%- include ("../partials/footer") %></footer>
+        <script src="/js/frontend/validateActualizarProducto.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
             integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"

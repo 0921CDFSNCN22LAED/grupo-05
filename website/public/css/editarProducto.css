@@ -1,12 +1,12 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Roboto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
 }
 
 .editarProducto-body {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 /*
@@ -16,101 +16,106 @@ MAIN
 */
 
 .hide-icon-editarProducto {
-  display: none;
+    display: none;
 }
 
 .editarProducto-main-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .mobile-bg-img {
-  position: absolute;
-  z-index: -100;
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    z-index: -100;
+    width: 100%;
+    height: 100%;
 }
 
 .desktop-bg-img {
-  display: none;
+    display: none;
 }
 
 .editarProducto-form-container {
-  max-width: 400px;
-  margin: 10% 15%;
-  /* padding: 5% 10%; */
-  padding: 5%;
-  border: none;
-  border-radius: 8px;
-  background-color: #ebebeb;
-  display: flex;
-  flex-direction: column;
+    max-width: 400px;
+    margin: 10% 15%;
+    /* padding: 5% 10%; */
+    padding: 5%;
+    border: none;
+    border-radius: 8px;
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
 }
 
 h2 {
-  text-align: center;
-  color: #aa0d3f;
+    text-align: center;
+    color: #aa0d3f;
 }
 
 form div {
-  margin-bottom: 5%;
+    margin-bottom: 5%;
 }
 
 form div label {
-  margin-left: 2.5%;
+    margin-left: 2.5%;
 }
 
 form div input {
-  width: 100%;
-  border: none;
-  border-radius: 8px;
-  padding: 4%;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 4%;
 }
 
 .editarProducto-text-area {
-  width: 100%;
-  height: 110px;
-  border: none;
-  border-radius: 8px;
-  padding: 4%;
-  text-align: justify;
+    width: 100%;
+    height: 110px;
+    border: none;
+    border-radius: 8px;
+    padding: 4%;
+    text-align: justify;
 }
 
 .editarProducto-div-img-product {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
 }
 
 .editarProducto-input-img-product {
-  width: 100%;
-  padding: 0;
+    width: 100%;
 }
 
 .editarProducto-div-button {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
 }
 
 .editarProducto-button {
-  width: 60%;
-  border: none;
-  border-radius: 8px;
-  padding: 2%;
-  background-color: #aa0d3f;
-  color: #fff;
+    width: 60%;
+    border: none;
+    border-radius: 8px;
+    padding: 2%;
+    background-color: #aa0d3f;
+    color: #fff;
+}
+
+.errores-front {
+    color: #aa0d3f;
+    font-weight: bold;
+    font-style: italic;
 }
 
 .box-shadow {
-  box-shadow: 0px 0px 10px rgb(100, 100, 100);
-  border: none;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    border: none;
 }
 
 /* 
@@ -118,38 +123,38 @@ form div input {
 */
 
 @media (min-width: 767px) {
-  .editarProducto-form-container {
-    max-width: 500px;
-  }
+    .editarProducto-form-container {
+        max-width: 500px;
+    }
 }
 
 @media (min-width: 1100px) {
-  .editarProducto-main-container {
-    flex-direction: row;
-    align-items: center;
-  }
+    .editarProducto-main-container {
+        flex-direction: row;
+        align-items: center;
+    }
 
-  .mobile-bg-img {
-    display: none;
-  }
+    .mobile-bg-img {
+        display: none;
+    }
 
-  .desktop-bg-img {
-    display: block;
-    position: absolute;
-    z-index: -100;
-    width: 100%;
-    height: 100%;
-  }
+    .desktop-bg-img {
+        display: block;
+        position: absolute;
+        z-index: -100;
+        width: 100%;
+        height: 100%;
+    }
 
-  .editarProducto-form-container {
-    padding: 2.5% 5%;
-    margin: 20%;
-    width: 40%;
-    background-color: transparent;
-  }
+    .editarProducto-form-container {
+        padding: 2.5% 5%;
+        margin: 20%;
+        width: 40%;
+        background-color: transparent;
+    }
 
-  form div label {
-    color: #fff;
-    font-weight: bold;
-  }
+    form div label {
+        color: #fff;
+        font-weight: bold;
+    }
 }
