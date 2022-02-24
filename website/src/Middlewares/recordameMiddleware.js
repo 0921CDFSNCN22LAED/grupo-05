@@ -1,3 +1,4 @@
+/*Cookies*/
 //const user = require('../services/usersServices');
 const accountsService = require("../services/accountsServices");
 
