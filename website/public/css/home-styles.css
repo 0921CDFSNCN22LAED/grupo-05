@@ -50,7 +50,7 @@
     .videoWrapper {
         display: block;
         border-radius: 8px;
-        padding: 4%;
+        padding: 4% 4% 0 4%;
     }
 
     .videoHome {

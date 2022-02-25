@@ -7,8 +7,8 @@
 .titulo-home-vinos {
     color: white;
     text-align: center;
-    padding: 5% 0 5% 0;
-    font-size: 20px;
+    padding: 5% 0 0 0;
+    font-size: calc(2rem + 0.3vw);
 }
 
 .contenedor1 {
@@ -71,28 +71,23 @@
 .nuestrosVarietales h3 {
     padding-left: 5%;
     color: #fff;
+    font-size: calc(1.675rem + 0.3vw);
 }
 
 .nuestrosVarietales p {
     color: #fff;
+    font-size: 1.25rem;
 }
 
 @media (min-width: 767px) {
     .wrapper {
         width: 33%;
     }
-    .titulo-home-vinos {
-        font-size: 30px;
-    }
 }
 
 @media (min-width: 1100px) {
     .wrapper {
         width: 25%;
-    }
-
-    .titulo-home-vinos {
-        font-size: 40px;
     }
 
     .card-wine:hover {
