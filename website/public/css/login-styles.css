@@ -94,6 +94,12 @@ section {
     margin-right: 2%;
 }
 
+.errores-front {
+    color: #aa0d3f;
+    font-weight: bold;
+    font-style: italic;
+}
+
 .login-div-email {
     margin-bottom: 10%;
 }
