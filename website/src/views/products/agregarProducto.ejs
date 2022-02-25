@@ -25,47 +25,50 @@
                 <h2>AGREGAR PRODUCTO</h2>
                 <div>
                     <label for="nombre" class="form-label">Nombre:</label>
-                    <input
-                        class="box-shadow form-control"
+                    <input 
+                        class="box-shadow form-control" 
                         type="text"
-                        name="nombre"
-                        id="nombre"
+                        name="nombre" 
+                        id="nombre" 
                         placeholder=" Ej: Toro"
+                        value="<%=locals.old && old.nombre ? old.nombre : ""%>" 
                     />
                     <% if (locals.errors && errors.nombre) { %>
-                    <div class="text-danger">
-                        <p style="color: red"><%= errors.nombre.msg %></p>
-                    </div>
+                        <div class="text-danger">
+                            <p style="color: red"><%= errors.nombre.msg %></p>
+                        </div>
                     <% } %>
                 </div>
                 <div>
                     <label for="precio" class="form-label">Precio:</label>
-                    <input
-                        class="box-shadow form-control"
+                    <input 
+                        class="box-shadow form-control" 
                         type="number"
-                        name="precio"
-                        id="precio"
-                        placeholder=" Ej: 1000"
-                    />
+                        name="precio" 
+                        id="precio" 
+                        placeholder=" Ej: 1000" 
+                        value="<%=locals.old && old.precio ? old.precio : "" %>" 
+                    /> 
                     <% if (locals.errors && errors.precio) { %>
-                    <div class="text-danger">
-                        <p style="color: red"><%= errors.precio.msg %></p>
-                    </div>
+                        <div class="text-danger">
+                            <p style="color: red"><%= errors.precio.msg %></p>
+                        </div>
                     <% } %>
                 </div>
                 <div>
-                    <label for="anio" class="form-label">Anio:</label>
+                    <label for="anio" class="form-label">Año:</label>
                     <input
                         class="box-shadow form-control"
                         type="number"
                         name="anio"
                         id="anio"
                         placeholder=" Ej: 2017"
+                        value="<%= locals.old && old.anio ? old.anio : "" %>"
                     />
                     <% if (locals.errors && errors.anio) { %>
-                    <div class="text-danger">
-                        <p style="color: red"><%= errors.anio.msg %></p>
-                    </div>
+                        <div class="text-danger">
+                            <p style="color: red"><%= errors.anio.msg %></p>
+                        </div>
                     <% } %>
                 </div>
                 <div>
@@ -76,28 +79,28 @@
                         name="stock"
                         id="stock"
                         placeholder=" Ej: 32"
+                        value="<%= locals.old && old.stock ? old.stock : "" %>"
                     />
                     <% if (locals.errors && errors.stock) { %>
-                    <div class="text-danger">
-                        <p style="color: red"><%= errors.stock.msg %></p>
-                    </div>
+                        <div class="text-danger">
+                            <p style="color: red"><%= errors.stock.msg %></p>
+                        </div>
                     <% } %>
                 </div>
                 <div>
-                    <label for="precioProducto" class="form-label"
-                        >Descripcion:</label
-                    >
+                    <label for="precioProducto" class="form-label">Descripcion:</label>
                     <textarea
                         class="agregarProducto-text-area box-shadow form-control"
                         name="descripcion"
                         id="descripcion"
                         cols="30"
                         rows="10"
+                        value="<%= locals.old && old.descripcion ? old.descripcion : "" %>"
                     ></textarea>
                     <% if (locals.errors && errors.descripcion) { %>
-                    <div class="text-danger">
-                        <p style="color: red"><%= errors.descripcion.msg %></p>
-                    </div>
+                        <div class="text-danger">
+                            <p style="color: red"><%= errors.descripcion.msg %></p>
+                        </div>
                     <% } %>
                 </div>
                 <div>
@@ -108,25 +111,23 @@
                         class="form-select box-shadow"
                     >
                         <% for(let bodega of bodegas) { %>
-                        <option value="<%= bodega.id %>">
-                            <%= bodega.nombre %>
-                        </option>
+                            <option value="<%= bodega.id %>">
+                                <%= bodega.nombre %>
+                            </option>
                         <% } %>
                     </select>
                 </div>
                 <div>
-                    <label for="categoria_id" class="form-label"
-                        >Categoría:</label
-                    >
+                    <label for="categoria_id" class="form-label">Categoría:</label>
                     <select
                         name="categoria_id"
                         id="categoria_id"
                         class="form-select box-shadow"
                     >
                         <% for(let categoria of categorias) { %>
-                        <option value="<%= categoria.id %>">
-                            <%= categoria.nombre %>
-                        </option>
+                            <option value="<%= categoria.id %>">
+                                <%= categoria.nombre %>
+                            </option>
                         <% } %>
                     </select>
                 </div>
@@ -138,24 +139,23 @@
                         class="form-select box-shadow"
                     >
                         <% for(let uva of uvas) { %>
-                        <option value="<%= uva.id %>"><%= uva.nombre %></option>
+                            <option value="<%= uva.id %>"><%= uva.nombre %></option>
                         <% } %>
                     </select>
                 </div>
                 <div class="agregarProducto-div-img-product">
-                    <label for="imagen" class="form-label"
-                        >Imagen del producto:
-                    </label>
+                    <label for="imagen" class="form-label">Imagen del producto:</label>
                     <input
                         class="agregarProducto-input-img-product form-control box-shadow"
                         type="file"
                         name="imagen"
                         id="imagen"
+                        value="<%= locals.old && old.imagen ? old.imagen : "" %>"
                     />
                     <% if (locals.errors && errors.imagen) { %>
-                    <div class="text-danger">
-                        <p style="color: red"><%= errors.imagen.msg %></p>
-                    </div>
+                        <div class="text-danger">
+                            <p style="color: red"><%= errors.imagen.msg %></p>
+                        </div>
                     <% } %>
                 </div>
 

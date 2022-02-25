@@ -9,7 +9,7 @@ window.addEventListener("load", function () {
         let nombreApellido = document.querySelector("#name");
 
         if (nombreApellido.value.length == 0) {
-            errores.push("El campo de Nombre y Apellido deberán estar completos.")
+            errores.push("El campo de Nombre y Apellido deberá estar completo.")
         }
 
         let email = document.querySelector("#email");
