@@ -1,0 +1,64 @@
+#wrapper #content-wrapper {
+    background-color: #353535;
+}
+
+.navbar {
+    background-color: #272727;
+}
+
+.burger-menu {
+    color: #fff;
+}
+
+.title-content-wrapper {
+    color: #fff;
+}
+
+/* INICIO SIDEBAR */
+.bg-gradient-secondary {
+    background-color: #aa0d3f;
+    background-image: linear-gradient(180deg, #aa0d3f 10%, #aa0d3f 100%);
+    background-size: cover;
+}
+
+.bg-gradient-secondary {
+    background-color: #aa0d3f;
+    background-image: linear-gradient(180deg, #aa0d3f 10%, #aa0d3f 100%);
+    background-size: cover;
+}
+
+.sidebar-dark .sidebar-heading {
+    color: #fff;
+}
+
+.sidebar-dark .nav-item .nav-link {
+    color: #fff;
+}
+
+.sidebar-dark .nav-item .nav-link i {
+    color: #fff;
+}
+/* FIN SIDEBAR */
+
+/* INICIO ÚLTIMO VINO DB */
+.img-br {
+    border-radius: calc(0.35rem - 1px);
+    border: none;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #aa0d3f;
+    border-color: #aa0d3f;
+}
+/* FIN ÚLTIMO VINO DB */
+
+/* INICIO FOOTER */
+.bg-grey {
+    background-color: #d1cdcc;
+}
+
+.span-footer {
+    color: #fff;
+}
+/* FIN FOOTER */

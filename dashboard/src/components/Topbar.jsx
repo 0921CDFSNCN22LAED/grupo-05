@@ -1,15 +1,16 @@
 import React from "react";
 import profileImg from "../img/tilin.png";
+import "../css/dashboard-styles.css";
 
 function Topbar() {
     return (
-        <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+        <nav className="navbar navbar-expand navbar-light  topbar mb-4 static-top shadow">
             {/* <!-- Sidebar Toggle (Topbar) --> */}
             <button
                 id="sidebarToggleTop"
                 className="btn btn-link d-md-none rounded-circle mr-3"
             >
-                <i className="fa fa-bars"></i>
+                <i className="fa fa-bars burger-menu"></i>
             </button>
 
             {/* <!-- Topbar Navbar --> */}

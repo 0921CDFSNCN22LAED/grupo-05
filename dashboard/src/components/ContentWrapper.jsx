@@ -7,6 +7,7 @@ import Bodegas from "./Bodegas";
 import Categorias from "./Categorias";
 import Varietales from "./Varietales";
 import Footer from "./Footer";
+import "../css/dashboard-styles.css";
 
 function ContentWrapper() {
     return (
