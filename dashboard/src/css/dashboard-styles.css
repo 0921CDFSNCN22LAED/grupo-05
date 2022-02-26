@@ -61,4 +61,13 @@
 .span-footer {
     color: #fff;
 }
+
+.bo {
+    color: blue;
+    padding-left: 5px;
+}
+
+.quita {
+    color: gold;
+}
 /* FIN FOOTER */

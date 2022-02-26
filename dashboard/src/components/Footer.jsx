@@ -9,6 +9,9 @@ function Footer() {
                     <span className="span-footer">
                         Copyright &copy; Dashboard 2021
                     </span>
+
+                    <i className="fas fa-heart bo"></i>
+                    <i className="fas fa-heart quita"></i>
                 </div>
             </div>
         </footer>
