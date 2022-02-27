@@ -112,7 +112,8 @@ header {
     .contenedor-links_grande a {
         width: 20%;
         text-align: center;
-        font-size: 1.5rem;
+
+        font-size: calc(2rem + 0.3vw);
         text-decoration: none;
         color: #aa0d3f;
     }
