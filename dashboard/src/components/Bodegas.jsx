@@ -1,10 +1,11 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-function Bodegas() {
+function Bodegas(props) {
     return (
         <div className="col-lg-6 mb-4">
             <div className="card shadow mb-4">
-                <div className="card-header py-3">
+                <div className="card-header ${props.titleColor} py-3">
                     <h5 className="m-0 font-weight-bold text-gray-800">
                         Bodegas in Data Base
                     </h5>
@@ -13,42 +14,42 @@ function Bodegas() {
                     <div className="row">
                         <div className="col-lg-6 mb-4">
                             <div className="card bg-dark text-white shadow">
-                                <div className="card-body">Bodega 1</div>
+                                <div className="card-body">Malbec</div>
                             </div>
                         </div>
                         <div className="col-lg-6 mb-4">
                             <div className="card bg-dark text-white shadow">
-                                <div className="card-body">Bodega 2</div>
+                                <div className="card-body">Cabernet</div>
                             </div>
                         </div>
                         <div className="col-lg-6 mb-4">
                             <div className="card bg-dark text-white shadow">
-                                <div className="card-body">Bodega 3</div>
+                                <div className="card-body">Pinot Noir</div>
                             </div>
                         </div>
                         <div className="col-lg-6 mb-4">
                             <div className="card bg-dark text-white shadow">
-                                <div className="card-body">Bodega 4</div>
+                                <div className="card-body">Cabernet Suavignon</div>
                             </div>
                         </div>
                         <div className="col-lg-6 mb-4">
                             <div className="card bg-dark text-white shadow">
-                                <div className="card-body">Bodega 5</div>
+                                <div className="card-body">Blend</div>
                             </div>
                         </div>
                         <div className="col-lg-6 mb-4">
                             <div className="card bg-dark text-white shadow">
-                                <div className="card-body">Bodega 6</div>
+                                <div className="card-body">500</div>
                             </div>
                         </div>
                         <div className="col-lg-6 mb-4">
                             <div className="card bg-dark text-white shadow">
-                                <div className="card-body">Bodega 7</div>
+                                <div className="card-body">Syrah Malbec</div>
                             </div>
                         </div>
                         <div className="col-lg-6 mb-4">
                             <div className="card bg-dark text-white shadow">
-                                <div className="card-body">Bodega 8</div>
+                                <div className="card-body">Red Blend</div>
                             </div>
                         </div>
                         <div className="col-lg-6 mb-4">
