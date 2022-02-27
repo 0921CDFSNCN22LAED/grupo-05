@@ -1,5 +1,5 @@
 import React from "react";
-import Brand from "./Brand";
+import "../css/dashboard-styles.css";
 import Divider from "./Divider";
 
 function Sidebar() {
@@ -8,8 +8,7 @@ function Sidebar() {
             className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion"
             id="accordionSidebar"
         >
-            {/* <!-- Sidebar - Brand --> */}
-            <Brand />
+            {/* <!-- Sidebar --> */}
 
             {/* <!-- Divider --> */}
             <Divider />
@@ -18,7 +17,7 @@ function Sidebar() {
             <li className="nav-item active">
                 <a className="nav-link" href="/">
                     <i className="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard - DH movies</span>
+                    <span>Dashboard - Digital Wines</span>
                 </a>
             </li>
 

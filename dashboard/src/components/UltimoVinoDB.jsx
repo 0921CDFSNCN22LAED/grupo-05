@@ -1,5 +1,6 @@
 import React from "react";
 import imgVino from "../img/harambee.jpeg";
+import "../css/dashboard-styles.css";
 
 function UltimoVinoDB() {
     return (
@@ -13,7 +14,7 @@ function UltimoVinoDB() {
                 <div className="card-body">
                     <div className="text-center">
                         <img
-                            className="img-fluid px-3 px-sm-4 mt-3 mb-4"
+                            className="img-fluid img-br mb-4"
                             style={{ width: "40rem" }}
                             src={imgVino}
                             alt=" Harambee "
@@ -22,14 +23,16 @@ function UltimoVinoDB() {
                     <p>
                         Es un vino que pega en garganta cual tiro en el pecho.
                     </p>
-                    <a
-                        className="btn btn-danger"
-                        target="_blank"
-                        rel="nofollow"
-                        href="/"
-                    >
-                        View wine details
-                    </a>
+                    <div className="text-center">
+                        <a
+                            className="btn btn-danger"
+                            target="_blank"
+                            rel="nofollow"
+                            href="/"
+                        >
+                            View wine details
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

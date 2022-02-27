@@ -7,6 +7,7 @@ import Bodegas from "./Bodegas";
 import Categorias from "./Categorias";
 import Varietales from "./Varietales";
 import Footer from "./Footer";
+import "../css/dashboard-styles.css";
 
 function ContentWrapper() {
     return (
@@ -26,19 +27,20 @@ function ContentWrapper() {
                     {/* <!-- End General Info of DB  --> */}
 
                     {/* <!-- Content Row Last wine in Data Base --> */}
-                    <div className="row">
+                    <div className="row justify-content-center">
                         {/* <!-- Last Wine in DB --> */}
                         <UltimoVinoDB />
                         {/* <!-- End content row last wine in Data Base --> */}
-
-                        {/* <!-- Categorias in DB --> */}
-                        <Categorias />
+                    </div>
+                    <div className="row">
+                        {/* <!-- Bodegas in DB --> */}
+                        <Bodegas />
 
                         {/* <!-- Varietales in DB --> */}
                         <Varietales />
 
-                        {/* <!-- Bodegas in DB --> */}
-                        <Bodegas />
+                        {/* <!-- Categorias in DB --> */}
+                        <Categorias />
                     </div>
                 </div>
                 {/* <!--End Content Row Top--> */}
