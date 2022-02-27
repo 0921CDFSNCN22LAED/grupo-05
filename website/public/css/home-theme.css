@@ -74,7 +74,16 @@
     margin-bottom: 2%;
     border: none;
     border-radius: 8px;
+    background-color: #aa0d3f;
     /* border-top-left-radius: 0.25rem; */
+}
+
+.accordion-item:first-of-type .accordion-button {
+    border-radius: 8px;
+}
+
+.accordion-item:last-of-type .accordion-button.collapsed {
+    border-radius: 8px;
 }
 
 .accordion-button {
