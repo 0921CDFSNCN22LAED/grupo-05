@@ -5,7 +5,7 @@ import InfoGeneral from "./InfoGeneral";
 import UltimoVinoDB from "./UltimoVinoDB";
 import Bodegas from "./Bodegas";
 import Categorias from "./Categorias";
-import Varietales from "./Varietales";
+import Uvas from "./Uvas";
 import Footer from "./Footer";
 import "../css/dashboard-styles.css";
 
@@ -36,8 +36,8 @@ function ContentWrapper() {
                         {/* <!-- Bodegas in DB --> */}
                         <Bodegas />
 
-                        {/* <!-- Varietales in DB --> */}
-                        <Varietales />
+                        {/* <!-- Uvas in DB --> */}
+                        <Uvas />
 
                         {/* <!-- Categorias in DB --> */}
                         <Categorias />

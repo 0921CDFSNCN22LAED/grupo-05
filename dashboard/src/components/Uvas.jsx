@@ -1,27 +1,25 @@
 import React, { Component } from "react";
 
-export default class Categorias extends Component {
-    
+export default class Varietales extends Component {
     constructor(props){
         super(props)
 
         this.state = {
-            categorias: []
+            uvas: []
         }
     }
 
-    async getCategorias(){
-        let categoriasRes = await fetch("http://localhost:3001/api/categorias")
-        let categoriasJson = await categoriasRes.json()
+    async getUvas(){
+        let uvasRes = await fetch("http://localhost:3001/api/uvas")
+        let uvasJson = await uvasRes.json()
 
-        this.setState({
-            categorias: categoriasJson.data
-        })
+        this.setState({uvas: uvasJson.data})
     }
 
     componentDidMount(){
-        this.getCategorias()
+        this.getUvas()
     }
+    
     
     render(){
         return (
@@ -29,15 +27,15 @@ export default class Categorias extends Component {
                 <div className="card shadow mb-4">
                     <div className="card-header py-3">
                         <h5 className="m-0 font-weight-bold text-gray-800">
-                            Categorias in Data Base
+                            Uvas in Data Base
                         </h5>
                     </div>
                     <div className="card-body">
                         <div className="row">
-                            {this.state.categorias.map((categoria) => (
+                            {this.state.uvas.map((uva) => (
                                 <div className="col-lg-6 mb-4">
                                     <div className="card bg-dark text-white shadow">
-                                        <div className="card-body" key={categoria.id}>{categoria.nombre}</div>
+                                        <div className="card-body" key={uva.id}>{uva.nombre}</div>
                                     </div>
                                 </div>
                             ))}
@@ -45,6 +43,6 @@ export default class Categorias extends Component {
                     </div>
                 </div>
             </div>
-        );
+        )
     }
 }

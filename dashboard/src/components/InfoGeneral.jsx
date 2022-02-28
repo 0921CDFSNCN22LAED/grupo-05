@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import InfoGeneralCard from "./InfoGeneralCard";
 
 const metrics = [
@@ -6,38 +6,39 @@ const metrics = [
         borderColor: "primary",
         titleColor: "primary",
         title: "Vinos en la Base de Datos",
-        number: 47,
+        number: 0
     },
     {
         borderColor: "success",
         titleColor: "success",
-        title: "Bodegas totales",
-        number: 10,
+        title: "Bodegas en la Base de Datos",
+        number: 0
     },
     {
         borderColor: "warning",
         titleColor: "warning",
-        title: "Varietales",
-        number: 7,
+        title: "Uvas en la Base de Datos",
+        number: 0
     },
 ];
 
-function InfoGeneral() {
-    return (
-        <div className="row">
-            {metrics.map((metric, i) => {
-                return (
-                    <InfoGeneralCard
-                        borderColor={metric.borderColor}
-                        titleColor={metric.titleColor}
-                        title={metric.title}
-                        number={metric.number}
-                        key={i + metric}
-                    />
-                );
-            })}
-        </div>
-    );
+export default class InfoGeneral extends Component {
+    render(){
+        return (
+            <div className="row">
+                {metrics.map((metric, i) => {
+                    return (
+                        <InfoGeneralCard
+                            borderColor={metric.borderColor}
+                            titleColor={metric.titleColor}
+                            title={metric.title}
+                            number={metric.number}
+                            key={i + metric}
+                        />
+                    );
+                })}
+            </div>
+        );
+    }
 }
 
-export default InfoGeneral;

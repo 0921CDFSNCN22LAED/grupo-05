@@ -1,8 +1,5 @@
 const bcryptjs = require("bcryptjs");
 
-const accountsService = require("../services/accountsServices.js");
-const accounts = accountsService.getAll();
-
 const db = require("../database/models");
 
 const { validationResult } = require("express-validator");

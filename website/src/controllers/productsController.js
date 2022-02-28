@@ -1,9 +1,5 @@
 const path = require("path");
 
-const productsService = require("../services/productsServices");
-
-const vinos = productsService.getAll();
-
 const db = require("../database/models");
 
 const { validationResult } = require("express-validator");

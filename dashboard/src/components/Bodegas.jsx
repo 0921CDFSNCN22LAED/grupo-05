@@ -1,8 +1,32 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { Component } from "react";
 
-function Bodegas(props) {
-    return (
+export default class Bodegas extends Component {
+
+    constructor(props){
+        super(props)
+
+        this.state = {
+            bodegas: []
+        }
+    }
+
+    async getBodegas(){
+        let bodegasRes = await fetch('http://localhost:3001/api/bodegas')
+        let bodegasJson = await bodegasRes.json()
+
+        this.setState({
+            bodegas: bodegasJson.data
+        })
+    }
+
+    componentDidMount(){
+        this.getBodegas()
+        console.log(this.state.bodegas)
+    }
+
+    render(){
+        return(
+            
         <div className="col-lg-6 mb-4">
             <div className="card shadow mb-4">
                 <div className="card-header ${props.titleColor} py-3">
@@ -12,61 +36,17 @@ function Bodegas(props) {
                 </div>
                 <div className="card-body">
                     <div className="row">
-                        <div className="col-lg-6 mb-4">
-                            <div className="card bg-dark text-white shadow">
-                                <div className="card-body">Malbec</div>
+                        {this.state.bodegas.map((bodega) => (    
+                            <div className="col-lg-6 mb-4">
+                                <div className="card bg-dark text-white shadow">
+                                    <div className="card-body" key={bodega.id}>{bodega.nombre}</div>
+                                </div>
                             </div>
-                        </div>
-                        <div className="col-lg-6 mb-4">
-                            <div className="card bg-dark text-white shadow">
-                                <div className="card-body">Cabernet</div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 mb-4">
-                            <div className="card bg-dark text-white shadow">
-                                <div className="card-body">Pinot Noir</div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 mb-4">
-                            <div className="card bg-dark text-white shadow">
-                                <div className="card-body">Cabernet Suavignon</div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 mb-4">
-                            <div className="card bg-dark text-white shadow">
-                                <div className="card-body">Blend</div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 mb-4">
-                            <div className="card bg-dark text-white shadow">
-                                <div className="card-body">500</div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 mb-4">
-                            <div className="card bg-dark text-white shadow">
-                                <div className="card-body">Syrah Malbec</div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 mb-4">
-                            <div className="card bg-dark text-white shadow">
-                                <div className="card-body">Red Blend</div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 mb-4">
-                            <div className="card bg-dark text-white shadow">
-                                <div className="card-body">Bodega 9</div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 mb-4">
-                            <div className="card bg-dark text-white shadow">
-                                <div className="card-body">Bodega 10</div>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>
         </div>
-    );
+        )
+    }
 }
-
-export default Bodegas;

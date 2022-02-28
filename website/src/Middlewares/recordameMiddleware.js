@@ -1,22 +1,33 @@
 /*Cookies*/
-//const user = require('../services/usersServices');
-const accountsService = require("../services/accountsServices");
 
-function recordameMiddleware(req, res, next) {
+const db = require("../database/models");
+
+//const user = require('../services/usersServices');
+
+function recordameMiddleware (req, res, next) {
     res.locals.isLogged = false;
 
     let emailInCookie = req.cookies.userEmail;
-    let userFromCookie = accountsService.findByField("email", emailInCookie);
 
-	if (userFromCookie) {
-		req.session.loggedUser = userFromCookie;
+	if (emailInCookie){
+
+		db.Usuarios.findOne({
+			where: {email: emailInCookie}
+		}).then((userFromCookie) => {
+			if (userFromCookie) {
+				req.session.loggedUser = userFromCookie;
+			}
+		
+			if (req.session.loggedUser) {
+				res.locals.isLogged = true;
+				res.locals.loggedUser = req.session.loggedUser;
+			}
+			
+		})
 	}
 
-	if (req.session.loggedUser) {
-		res.locals.isLogged = true;
-		res.locals.loggedUser = req.session.loggedUser;
-	}
-
-    next();
+	
+	next();
+	
 }
 module.exports = recordameMiddleware;
