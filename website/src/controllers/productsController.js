@@ -6,16 +6,6 @@ const { validationResult } = require("express-validator");
 const { Op } = require("sequelize");
 
 const productsController = {
-    detalleProducto: (req, res) => {
-        /*const id = req.params.id;
-        const vino = productsService.findOne(id);
-        res.render("products/detalleProducto", { vino: vino });*/ //viejo crud
-
-        db.Vinos.findByPk(req.params.id).then((vino) => {
-            res.render("products/detalleProducto", { vino: vino });
-        });
-    },
-
     vinoteca: async (req, res) => {
         try {
             const vinos = await db.Vinos.findAll({
@@ -32,23 +22,33 @@ const productsController = {
         } catch (error) {
             console.error(error);
         }
+    },
 
-        /*res.render("products/vinoteca", {
-            vinos: vinos,
-            link: "/editarProductos/" + vinos.id,
+    buscarProducto: async (req, res) => {
+        try {
+            const nombre = req.query.nombre;
+            const vinos = await db.Vinos.findAll({
+                include: [
+                    { association: "vinoBodega" },
+                    { association: "vinoCategoria" },
+                ],
+                where: {
+                    nombre: { [Op.like]: "%" + nombre + "%" },
+                },
+            });
+            res.render("products/vinoteca", {
+                vinos: vinos,
+                link: "/editarProductos/" + vinos.id,
+            });
+        } catch (error) {
+            console.error(error);
+        }
+    },
+
+    detalleProducto: (req, res) => {
+        db.Vinos.findByPk(req.params.id).then((vino) => {
+            res.render("products/detalleProducto", { vino: vino });
         });
-        //viejo crud
-        db.Vinos.findAll()
-            .then((vinos) => {
-                res.render("products/vinoteca", {
-                    vinos: vinos,
-                    link: "/editarProductos/" + vinos.id,
-                });
-            })
-            .catch((error) => {
-                console.log(error);
-            });*/
-        //probando con async await. agregar el async
     },
 
     agregarProducto: async (req, res) => {
@@ -65,18 +65,7 @@ const productsController = {
             console.log(err);
         }
     },
-    /*     store: (req, res) => {
-            const product = {
-                id: Date.now(),
-                ...req.body,
-                imagen: req.file.path.split("public").pop(),
-            };
-    
-            vinos.push(product);
-    
-            productsService.saveProducts();
-            res.redirect("/products/vinoteca");
-        }, */
+
     store: (req, res) => {
         let errors = validationResult(req);
         console.log(req.body);
@@ -103,9 +92,6 @@ const productsController = {
     },
 
     editarProducto: async (req, res) => {
-        /*const id = req.params.id;
-        const vino = productsService.findOne(id);  Cambio de CRUD*/
-
         try {
             let vino = await db.Vinos.findByPk(req.params.id);
             let bodegas = await db.Bodegas.findAll();
@@ -128,23 +114,6 @@ const productsController = {
     },
 
     actualizarProducto: async (req, res) => {
-        /* const id = req.params.id;
-         const index = vinos.findIndex((vino) => {
-             return vino.id == id;
-         });
- 
-         const updatedProduct = {
-             id: vinos[index].id,
-             ...req.body,
-             imagen: req.file.path.split("public").pop(),
-         };
- 
-         vinos[index] = updatedProduct;
- 
-         productsService.saveProducts();
- 
-         res.redirect("/products/detalle/" + updatedProduct.id);
-         */
         try {
             let errors = validationResult(req);
             if (errors.isEmpty()) {
@@ -199,31 +168,6 @@ const productsController = {
             res.redirect("/products/vinoteca");
         } catch (err) {
             console.log(error);
-        }
-
-        // const id = req.params.id;
-        // productsService.deleteOne(id);
-
-        // res.redirect("/products/vinoteca");
-    },
-    buscarProducto: async (req, res) => {
-        try {
-            const nombre = req.query.nombre;
-            const vinos = await db.Vinos.findAll({
-                include: [
-                    { association: "vinoBodega" },
-                    { association: "vinoCategoria" },
-                ],
-                where: {
-                    nombre: { [Op.like]: "%" + nombre + "%" },
-                },
-            });
-            res.render("products/vinoteca", {
-                vinos: vinos,
-                link: "/editarProductos/" + vinos.id,
-            });
-        } catch (error) {
-            console.error(error);
         }
     },
 };

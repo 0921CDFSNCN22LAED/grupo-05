@@ -3,14 +3,16 @@ const router = express.Router();
 const path = require("path");
 const productsController = require("../controllers/productsController.js");
 const ifAdmin = require("../Middlewares/ifadmin.js");
+const onlyAdmin = require("../Middlewares/onlyAdmin.js");
 const validateAddVino = require("../Middlewares/validaciones/backend/validateAddVino.js");
 const uploadFile = require("../Middlewares/multerMiddleware");
 
 router.get("/detalle/:id/", productsController.detalleProducto);
 
 router.get("/vinoteca", ifAdmin, productsController.vinoteca);
+router.get("/buscar", productsController.buscarProducto);
 
-router.get("/agregar", productsController.agregarProducto);
+router.get("/agregar", onlyAdmin, productsController.agregarProducto);
 router.post(
     "/agregar",
     uploadFile.single("imagen"),
@@ -18,16 +20,14 @@ router.post(
     productsController.store
 );
 
-router.get("/editar/:id", productsController.editarProducto);
+router.get("/editar/:id", onlyAdmin, productsController.editarProducto);
 router.put(
     "/editar/:id",
     uploadFile.single("imagen"),
     productsController.actualizarProducto
 );
 
-router.get("/eliminar/:id", productsController.eliminarProducto);
+router.get("/eliminar/:id", onlyAdmin, productsController.eliminarProducto);
 router.delete("/eliminar/:id", productsController.borrarProducto);
-
-router.get("/buscar", productsController.buscarProducto);
 
 module.exports = router;
