@@ -5,7 +5,7 @@
 }
 
 .titulo-home-vinos {
-    color: white;
+    color: #aa0d3f;
     text-align: center;
     padding: 5% 0 0 0;
     font-size: calc(2rem + 0.3vw);
@@ -144,25 +144,40 @@
         width: 33%;
     }
 
+    .nuestrosVarietales {
+        padding: 0;
+    }
+
+    #accordion-section {
+        display: none;
+    }
+
     .accordion {
         display: none;
     }
 
     #nuestrosTintillos {
         display: block;
+        padding-bottom: 5%;
+    }
+
+    .columns {
+        padding: 2%;
     }
 
     .nuestrosVarietales h3 {
         display: block;
         padding-left: 5%;
-        color: #fff;
+        color: #aa0d3f;
         font-size: calc(1.675rem + 0.3vw);
     }
 
     .nuestrosVarietales p {
         display: block;
-        color: #fff;
+        color: rgb(245, 245, 245);
         font-size: 1.25rem;
+        margin: 0;
+        padding-bottom: 1rem;
     }
 }
 
@@ -206,6 +221,16 @@
         color: #39b54a;
         font-weight: bold;
         text-align: start;
+    }
+
+    .columns-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .columns {
+        flex: 0 0 auto;
+        width: 50%;
     }
 }
 
