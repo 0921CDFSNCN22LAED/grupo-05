@@ -78,8 +78,18 @@
     /* border-top-left-radius: 0.25rem; */
 }
 
+.accordion-item:first-of-type {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
 .accordion-item:first-of-type .accordion-button {
     border-radius: 8px;
+}
+
+.accordion-item:last-of-type {
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
 .accordion-item:last-of-type .accordion-button.collapsed {
@@ -88,7 +98,7 @@
 
 .accordion-button {
     color: #aa0d3f;
-    background-color: rgb(245, 245, 245);
+    background-color: #373a3e;
     font-size: calc(1.675rem + 0.3vw);
     font-weight: bold;
     border-radius: 8px;
