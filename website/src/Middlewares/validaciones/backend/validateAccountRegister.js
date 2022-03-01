@@ -10,11 +10,6 @@ let validateAccountRegister = [
         .withMessage("Debes completar el mail")
         .isEmail()
         .withMessage("Debes ingresar un email valido"),
-    check("birthday")
-        .notEmpty()
-        .withMessage("Debes completar tu fecha de cumpleaños"),
-    check("dni").notEmpty().withMessage("Debes completar con tu dni"),
-
     check("password")
         .notEmpty()
         .withMessage("Debes completar con tu contraseña"),

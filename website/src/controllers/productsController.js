@@ -149,9 +149,16 @@ const productsController = {
         }
     },
 
-    eliminarProducto: (req, res) => {
+    eliminarProducto: async (req, res) => {
         const id = req.params.id;
-        const vino = productsService.findOne(id);
+        const vino = await db.Vinos.findByPk(id, {include: [
+            {association: "vinoBodega"},
+            {association: "vinoUva"},
+            {association: "vinoCategoria"}
+        ]});
+
+        // HAY QUE ARREGLAR ESTO!!
+
         if (vino) {
             res.render("products/eliminarProducto", {
                 vino: vino,
