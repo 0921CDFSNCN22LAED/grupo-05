@@ -97,41 +97,6 @@
                         </p>
                         <% } %> <% } %> <% } %>
                     </div>
-                    <div class="register-div-date">
-                        <label for="birthday" class="form-label"
-                            >Fecha de Nacimiento:</label
-                        >
-                        <input
-                            type="date"
-                            name="birthday"
-                            id="birthday"
-                            class="box-shadow form-control"
-                            value="<%= locals.old && old.birthday ? old.birthday : ''%> "
-                        />
-                        <% if (locals.errors) { %> <% for (let error of errors)
-                        { %> <% if (error.param == 'birthday') { %>
-                        <p class="register-invalid-text-input">
-                            <%= error.msg %>
-                        </p>
-                        <% } %> <% } %> <% } %>
-                    </div>
-                    <div class="register-div-dni">
-                        <label for="DNI" class="form-label"></label>
-                        <input
-                            class="register-imput-dni box-shadow form-control"
-                            type="number"
-                            name="dni"
-                            id="dni"
-                            placeholder=" DNI"
-                            value="<%= locals.old && old.dni ? old.dni : ''%> "
-                        />
-                        <% if (locals.errors) { %> <% for (let error of errors)
-                        { %> <% if (error.param == 'dni') { %>
-                        <p class="register-invalid-text-input">
-                            <%= error.msg %>
-                        </p>
-                        <% } %> <% } %> <% } %>
-                    </div>
                 </section>
 
                 <section>

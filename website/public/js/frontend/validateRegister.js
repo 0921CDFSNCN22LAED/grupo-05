@@ -23,18 +23,6 @@ window.addEventListener("load", function () {
             errores.push("El campo de Email deberá estar completo.")
         }
 
-        let birthday = document.querySelector("#birthday");
-
-        if (birthday.value.length == 0) {
-            errores.push("Debes completar con tu fecha de cumpleaños.")
-        }
-
-        let dni = document.querySelector("#dni");
-
-        if (dni.value.length == 0) {
-            errores.push("Debes completar con tu DNI.")
-        }
-
         let password = document.querySelector("#password");
 
         if (password.value.length == 0) {
