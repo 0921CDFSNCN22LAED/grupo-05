@@ -157,6 +157,8 @@ const productsController = {
             {association: "vinoCategoria"}
         ]});
 
+        console.log(vino.vinoBodega)
+
         // HAY QUE ARREGLAR ESTO!!
 
         if (vino) {

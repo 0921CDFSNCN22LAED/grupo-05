@@ -51,7 +51,33 @@
             type="text"
             name="bodega"
             id="bodega"
-            value="<%= vino.bodega %>"
+            value="<%= vino.vinoBodega.nombre %>"
+            disabled
+          />
+          <% } %>
+        </div>
+        <div>
+          <label for="descripcionProducto" class="form-label">Categoria:</label>
+          <% if (vino) {%>
+          <input
+            class="box-shadow form-control"
+            type="text"
+            name="categoria"
+            id="categoria"
+            value="<%= vino.vinoCategoria.nombre %>"
+            disabled
+          />
+          <% } %>
+        </div>
+        <div>
+          <label for="descripcionProducto" class="form-label">Uva:</label>
+          <% if (vino) {%>
+          <input
+            class="box-shadow form-control"
+            type="text"
+            name="uva"
+            id="uva"
+            value="<%= vino.vinoUva.nombre %>"
             disabled
           />
           <% } %>
