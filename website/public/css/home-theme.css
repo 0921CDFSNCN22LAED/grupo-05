@@ -8,7 +8,8 @@
     color: #aa0d3f;
     text-align: center;
     padding: 5% 0 0 0;
-    font-size: calc(2rem + 0.3vw);
+    /* font-size: calc(2rem + 0.3vw); */
+    font-size: 1.5rem;
 }
 
 .contenedor1 {
@@ -46,6 +47,7 @@
 
 .card-tittle {
     color: #aa0d3f;
+    font-size: 1.2rem;
 }
 
 .card-text {
@@ -99,7 +101,7 @@
 .accordion-button {
     color: #aa0d3f;
     background-color: #373a3e;
-    font-size: calc(1.675rem + 0.3vw);
+    font-size: 1.5rem;
     font-weight: bold;
     border-radius: 8px;
 }
@@ -150,6 +152,18 @@
 }
 
 @media (min-width: 767px) {
+    .titulo-home-vinos {
+        font-size: calc(2rem + 0.3vw);
+    }
+
+    .card-tittle {
+        font-size: calc(1.275rem + 0.3vw);
+    }
+
+    .card-subtitle {
+        font-size: 1.25rem;
+    }
+
     .wrapper {
         width: 33%;
     }
