@@ -3,8 +3,13 @@ window.addEventListener("load", function () {
     let register = document.querySelector(".register-form-container");
 
     register.addEventListener("submit", function (e) {
-
         let errores = [];
+        let ulErrores = document.querySelector(".errores-front")
+        let misErrores = document.querySelectorAll(".errores-front li")
+
+        if (misErrores.length > 0) {
+            ulErrores.innerHTML = ""
+        }
 
         let nombreApellido = document.querySelector("#name");
 
@@ -46,8 +51,6 @@ window.addEventListener("load", function () {
         console.log(errores)
         if (errores.length > 0) {
             e.preventDefault();
-
-            let ulErrores = document.querySelector(".hola")
 
             for (let i = 0; i < errores.length; i++) {
                 ulErrores.innerHTML += "<li>" + errores[i] + "</li>";

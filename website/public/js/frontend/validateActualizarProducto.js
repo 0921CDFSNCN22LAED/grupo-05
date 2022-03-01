@@ -4,6 +4,12 @@ window.addEventListener("load", function () {
 
     form.addEventListener("submit", function (e) {
         let errores = [];
+        let ulErrores = document.querySelector(".errores-front");
+        let misErrores = document.querySelectorAll(".errores-front li")
+
+        if (misErrores.length > 0) {
+            ulErrores.innerHTML = ""
+        }
 
         let nombre = document.getElementById("nombre");
         if (nombre.value.length == 0) {
@@ -38,8 +44,6 @@ window.addEventListener("load", function () {
         console.log(errores);
         if (errores.length > 0) {
             e.preventDefault();
-
-            let ulErrores = document.querySelector(".errores-front");
 
             for (let i = 0; i < errores.length; i++) {
                 ulErrores.innerHTML += "<li>" + errores[i] + "</li>";
