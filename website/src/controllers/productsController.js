@@ -66,7 +66,10 @@ const productsController = {
         }
     },
 
-    store: (req, res) => {
+    store: async (req, res) => {
+        let bodegas = await db.Bodegas.findAll();
+        let uvas = await db.Uvas.findAll();
+        let categorias = await db.Categorias.findAll();
         let errors = validationResult(req);
         console.log(req.body);
         console.log(errors);
@@ -87,6 +90,7 @@ const productsController = {
             res.render("products/agregarProducto", {
                 errors: errors.array(),
                 old: req.body,
+                bodegas, uvas, categorias
             });
         }
     },
@@ -116,6 +120,9 @@ const productsController = {
     actualizarProducto: async (req, res) => {
         try {
             let errors = validationResult(req);
+            let bodegas = await db.Bodegas.findAll();
+            let uvas = await db.Uvas.findAll();
+            let categorias = await db.Categorias.findAll();
             if (errors.isEmpty()) {
                 const id = req.params.id;
                 await db.Vinos.update(
@@ -142,6 +149,7 @@ const productsController = {
                     vino: vino,
                     pageTitle: vino.nombre,
                     errors: errors.errors,
+                    bodegas, uvas, categorias
                 });
             }
         } catch (error) {
