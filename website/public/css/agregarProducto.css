@@ -106,6 +106,14 @@ form div input {
     color: #fff;
 }
 
+.errores-front {
+    color: #aa0d3f;
+    font-weight: bold;
+    font-style: italic;
+    background-color: white;
+    border-radius: 8px;
+}
+
 .box-shadow {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     border: none;
