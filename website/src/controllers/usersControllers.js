@@ -156,8 +156,31 @@ const usersController = {
         req.session.destroy();
         return res.redirect("/");
     },
-    cava: (req, res) => {
-        res.render("users/cava");
+    cava: async (req, res) => {
+        try{
+            console.log(req.session);
+            let vinosCava = await db.Usuarios.findAll({include: {association: 'cava_id'}, where: {id: req.session.loggedUser.id}})
+                let arrayVinos = vinosCava[0].cava_id
+                let vinos = []
+                let precio = 0;
+
+                for (let i = 0; i < arrayVinos.length; i++) {
+                    vinos.push(arrayVinos[i].dataValues)
+                }
+
+                for (const vino of vinos) {
+                    console.log(vino.precio);
+                    console.log(vino);
+                    precio += vino.precio
+                }
+
+                console.log('final');
+                console.log(precio);
+
+                res.render("users/cava", {vinos, precio});
+        } catch (error) {
+            console.log(error);
+        }
     },
 };
 

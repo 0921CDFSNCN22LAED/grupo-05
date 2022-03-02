@@ -11,7 +11,6 @@ body{
 
 main{
     background-color: #252525;
-    padding: 0 5% 5%;
     min-height: 700px;
 }
 
@@ -21,64 +20,14 @@ main h2{
     color: #ffff;
 }
 
-.vinos-cava{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-#articulo-vino{
-    background-color: white;
-}
-
-.contenedor-cava{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    background-color: white;
-    margin: 10px;
-    border-radius: 8px;
-}
-
-.contenedor-cava img{
-    padding: 10px;
-}
-
-.contenedor-cava h4 {
-    width: 100%;
-    padding: 0;
-    margin: 7px 0 7px 7px;
-}
-
-.contenedor-cava p {
-    width: 100%;
-    padding: 0;
-    margin: 7px 0 7px 7px;
-}
-
-.contenedor-cava h3{
-    margin: 7px 0 7px 0;
-    width: 76%;
-    padding-left: 5px;
-}
-
-.contenedor-cava div{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 24%;
-    justify-content: space-around;
-}
-
-.contenedor-cava div i{
-    width: 50%;
-    font-size: 20px;
-    text-align: center;
+.wrapper-total-pagar{
+    padding: 0 5%;
+    padding-bottom: 3%;
 }
 
 #total-pagar{
     background-color: white;
-    margin: 10px;
+    padding-bottom: 1%;
     border-radius: 8px;
 }
 

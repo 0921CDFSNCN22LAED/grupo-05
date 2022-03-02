@@ -69,6 +69,10 @@ module.exports = (sequelize, dataTypes) => {
             as: "vinoUva",
             foreignKey: "uva_id",
         });
+        Vino.belongsToMany(models.Usuarios, {
+            through: models.Cavas,
+            as: 'usuario_id'
+        })
     };
 
 
