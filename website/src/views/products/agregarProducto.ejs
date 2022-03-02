@@ -33,10 +33,16 @@
                         placeholder=" Ej: Toro"
                         value="<%=locals.old && old.nombre ? old.nombre : ""%>" 
                     />
-                    <% if (locals.errors && errors.nombre) { %>
-                        <div class="text-danger">
-                            <p style="color: red"><%= errors.nombre.msg %></p>
-                        </div>
+                    <% if (locals.errors) { %> 
+                        <% for (let error of errors){%>
+                            <% if (error.param == 'nombre') { %>
+                                <div class="text-danger">
+                                    <p style="color: red">
+                                        <%= error.msg %>
+                                    </p>
+                                </div>
+                            <% } %> 
+                        <% } %> 
                     <% } %>
                 </div>
                 <div>
@@ -49,10 +55,16 @@
                         placeholder=" Ej: 1000" 
                         value="<%=locals.old && old.precio ? old.precio : "" %>" 
                     /> 
-                    <% if (locals.errors && errors.precio) { %>
-                        <div class="text-danger">
-                            <p style="color: red"><%= errors.precio.msg %></p>
-                        </div>
+                    <% if (locals.errors) { %> 
+                        <% for (let error of errors){%>
+                            <% if (error.param == 'precio') { %>
+                                <div class="text-danger">
+                                    <p style="color: red">
+                                        <%= error.msg %>
+                                    </p>
+                                </div>
+                            <% } %> 
+                        <% } %> 
                     <% } %>
                 </div>
                 <div>
@@ -65,10 +77,16 @@
                         placeholder=" Ej: 2017"
                         value="<%= locals.old && old.anio ? old.anio : "" %>"
                     />
-                    <% if (locals.errors && errors.anio) { %>
-                        <div class="text-danger">
-                            <p style="color: red"><%= errors.anio.msg %></p>
-                        </div>
+                    <% if (locals.errors) { %> 
+                        <% for (let error of errors){%>
+                            <% if (error.param == 'anio') { %>
+                                <div class="text-danger">
+                                    <p style="color: red">
+                                        <%= error.msg %>
+                                    </p>
+                                </div>
+                            <% } %> 
+                        <% } %> 
                     <% } %>
                 </div>
                 <div>
@@ -81,10 +99,16 @@
                         placeholder=" Ej: 32"
                         value="<%= locals.old && old.stock ? old.stock : "" %>"
                     />
-                    <% if (locals.errors && errors.stock) { %>
-                        <div class="text-danger">
-                            <p style="color: red"><%= errors.stock.msg %></p>
-                        </div>
+                    <% if (locals.errors) { %> 
+                        <% for (let error of errors){%>
+                            <% if (error.param == 'stock') { %>
+                                <div class="text-danger">
+                                    <p style="color: red">
+                                        <%= error.msg %>
+                                    </p>
+                                </div>
+                            <% } %> 
+                        <% } %> 
                     <% } %>
                 </div>
                 <div>
@@ -97,10 +121,16 @@
                         rows="10"
                         value="<%= locals.old && old.descripcion ? old.descripcion : "" %>"
                     ></textarea>
-                    <% if (locals.errors && errors.descripcion) { %>
-                        <div class="text-danger">
-                            <p style="color: red"><%= errors.descripcion.msg %></p>
-                        </div>
+                    <% if (locals.errors) { %> 
+                        <% for (let error of errors){%>
+                            <% if (error.param == 'descripcion') { %>
+                                <div class="text-danger">
+                                    <p style="color: red">
+                                        <%= error.msg %>
+                                    </p>
+                                </div>
+                            <% } %> 
+                        <% } %> 
                     <% } %>
                 </div>
                 <div>
@@ -152,10 +182,16 @@
                         id="imagen"
                         value="<%= locals.old && old.imagen ? old.imagen : "" %>"
                     />
-                    <% if (locals.errors && errors.imagen) { %>
-                        <div class="text-danger">
-                            <p style="color: red"><%= errors.imagen.msg %></p>
-                        </div>
+                    <% if (locals.errors) { %> 
+                        <% for (let error of errors){%>
+                            <% if (error.param == 'imagen') { %>
+                                <div class="text-danger">
+                                    <p style="color: red">
+                                        <%= error.msg %>
+                                    </p>
+                                </div>
+                            <% } %> 
+                        <% } %> 
                     <% } %>
                 </div>
 
@@ -168,13 +204,13 @@
                         Agregar
                     </button>
                 </div>
-                <div class="errores">
+                <!-- <div class="errores">
                     <ul class="errores-front"></ul>
-                </div>
+                </div> -->
             </form>
         </main>
         <footer><%- include ("../partials/footer") %></footer>
-        <script src="/js/frontend/validateCrearProducto.js"></script>
+        <!-- <script src="/js/frontend/validateCrearProducto.js"></script> -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
             integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"

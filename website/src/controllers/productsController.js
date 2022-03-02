@@ -46,19 +46,24 @@ const productsController = {
     },
 
     detalleProducto: (req, res) => {
-        db.Vinos.findByPk(req.params.id, {include: {all: true}}).then((vino) => {
-            let favorito = false;
+        db.Vinos.findByPk(req.params.id, { include: { all: true } }).then(
+            (vino) => {
+                let favorito = false;
 
-            if (req.session.loggedUser){
-                for (let id of vino.usuario_id) {
-                    if (id.id == req.session.loggedUser.id) {
-                        favorito = true;
+                if (req.session.loggedUser) {
+                    for (let id of vino.usuario_id) {
+                        if (id.id == req.session.loggedUser.id) {
+                            favorito = true;
+                        }
                     }
                 }
-            }
 
-            res.render("products/detalleProducto", { vino: vino, favorito });
-        });
+                res.render("products/detalleProducto", {
+                    vino: vino,
+                    favorito,
+                });
+            }
+        );
     },
 
     agregarProducto: async (req, res) => {
@@ -98,9 +103,11 @@ const productsController = {
             res.redirect("/products/vinoteca");
         } else {
             res.render("products/agregarProducto", {
-                errors: errors.array(),
+                errors: errors.errors,
                 old: req.body,
-                bodegas, uvas, categorias
+                bodegas,
+                uvas,
+                categorias,
             });
         }
     },
@@ -160,7 +167,9 @@ const productsController = {
                     vino: vino,
                     pageTitle: vino.nombre,
                     errors: errors.errors,
-                    bodegas, uvas, categorias
+                    bodegas,
+                    uvas,
+                    categorias,
                 });
             }
         } catch (error) {
@@ -170,13 +179,15 @@ const productsController = {
 
     eliminarProducto: async (req, res) => {
         const id = req.params.id;
-        const vino = await db.Vinos.findByPk(id, {include: [
-            {association: "vinoBodega"},
-            {association: "vinoUva"},
-            {association: "vinoCategoria"}
-        ]});
+        const vino = await db.Vinos.findByPk(id, {
+            include: [
+                { association: "vinoBodega" },
+                { association: "vinoUva" },
+                { association: "vinoCategoria" },
+            ],
+        });
 
-        console.log(vino.vinoBodega)
+        console.log(vino.vinoBodega);
 
         // HAY QUE ARREGLAR ESTO!!
 
@@ -200,25 +211,27 @@ const productsController = {
     },
     agregarCava: async (req, res) => {
         try {
-            let vinoDb = await db.Cavas.findOne({where: {
-                UsuarioId: req.session.loggedUser.id,
-                VinoId: req.params.id
-            }})
-    
+            let vinoDb = await db.Cavas.findOne({
+                where: {
+                    UsuarioId: req.session.loggedUser.id,
+                    VinoId: req.params.id,
+                },
+            });
+
             if (vinoDb) {
+                await db.Cavas.destroy({
+                    where: { id: vinoDb.id },
+                    force: true,
+                });
 
-                await db.Cavas.destroy({where: {id: vinoDb.id}, force: true})
-
-                res.redirect('/products/detalle/' + req.params.id)
-
+                res.redirect("/products/detalle/" + req.params.id);
             } else {
-
                 await db.Cavas.create({
                     UsuarioId: req.session.loggedUser.id,
-                    VinoId: req.params.id
-                })
+                    VinoId: req.params.id,
+                });
 
-                res.redirect('/products/detalle/' + req.params.id)
+                res.redirect("/products/detalle/" + req.params.id);
             }
         } catch (error) {
             console.log(error);
