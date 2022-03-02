@@ -7,7 +7,15 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true,
             primaryKey: true,
             allowNull: false,
-        }
+        }//,
+        // UsuarioId: {
+        //     type: dataTypes.INTEGER,
+        //     allowNull: false
+        // },
+        // VinoId: {
+        //     type: dataTypes.INTEGER,
+        //     allowNull: false
+        // }
     }
 
     const config = {

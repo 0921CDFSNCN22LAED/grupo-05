@@ -46,8 +46,18 @@ const productsController = {
     },
 
     detalleProducto: (req, res) => {
-        db.Vinos.findByPk(req.params.id).then((vino) => {
-            res.render("products/detalleProducto", { vino: vino });
+        db.Vinos.findByPk(req.params.id, {include: {all: true}}).then((vino) => {
+            let favorito = false;
+
+            if (req.session.loggedUser){
+                for (let id of vino.usuario_id) {
+                    if (id.id == req.session.loggedUser.id) {
+                        favorito = true;
+                    }
+                }
+            }
+
+            res.render("products/detalleProducto", { vino: vino, favorito });
         });
     },
 
@@ -184,6 +194,32 @@ const productsController = {
             await db.Vinos.destroy({ where: { id: id }, force: true });
             res.redirect("/products/vinoteca");
         } catch (err) {
+            console.log(error);
+        }
+    },
+    agregarCava: async (req, res) => {
+        try {
+            let vinoDb = await db.Cavas.findOne({where: {
+                UsuarioId: req.session.loggedUser.id,
+                VinoId: req.params.id
+            }})
+    
+            if (vinoDb) {
+
+                await db.Cavas.destroy({where: {id: vinoDb.id}, force: true})
+
+                res.redirect('/products/detalle/' + req.params.id)
+
+            } else {
+
+                await db.Cavas.create({
+                    UsuarioId: req.session.loggedUser.id,
+                    VinoId: req.params.id
+                })
+
+                res.redirect('/products/detalle/' + req.params.id)
+            }
+        } catch (error) {
             console.log(error);
         }
     },

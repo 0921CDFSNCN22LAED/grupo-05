@@ -6,6 +6,10 @@ const ifAdmin = require("../Middlewares/ifadmin.js");
 const onlyAdmin = require("../Middlewares/onlyAdmin.js");
 const validateAddVino = require("../Middlewares/validaciones/backend/validateAddVino.js");
 const uploadFile = require("../Middlewares/multerMiddleware");
+const ifNotLogged = require("../Middlewares/ifNotLogged.js");
+
+
+
 
 router.get("/detalle/:id/", productsController.detalleProducto);
 
@@ -29,5 +33,7 @@ router.put(
 
 router.get("/eliminar/:id", onlyAdmin, productsController.eliminarProducto);
 router.delete("/eliminar/:id", productsController.borrarProducto);
+
+router.post("/detalle/:id/cava", ifNotLogged ,productsController.agregarCava);
 
 module.exports = router;
