@@ -24,6 +24,13 @@
             >
                 <h2>EDITAR PRODUCTO</h2>
                 <div>
+                    <ul>
+                        <% if (locals.errors) { %> <% for (let error of errors)
+                            { %>
+                                <li><%= error.msg %></li>
+                        <% } %> <% } %>
+                    </ul>
+                    
                     <label for="nombre" class="form-label">Nombre</label>
                     <% if (vino) {%>
                     <input
@@ -160,7 +167,7 @@
             </form>
         </main>
         <footer><%- include ("../partials/footer") %></footer>
-        <script src="/js/frontend/validateActualizarProducto.js"></script>
+        <!-- <script src="/js/frontend/validateActualizarProducto.js"></script> -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
             integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"

@@ -7,6 +7,7 @@ const onlyAdmin = require("../Middlewares/onlyAdmin.js");
 const validateAddVino = require("../Middlewares/validaciones/backend/validateAddVino.js");
 const uploadFile = require("../Middlewares/multerMiddleware");
 const ifNotLogged = require("../Middlewares/ifNotLogged.js");
+const validateEditProduct = require("../Middlewares/validaciones/backend/validateEditProduct.js");
 
 
 
@@ -28,6 +29,7 @@ router.get("/editar/:id", onlyAdmin, productsController.editarProducto);
 router.put(
     "/editar/:id",
     uploadFile.single("imagen"),
+    validateEditProduct,
     productsController.actualizarProducto
 );
 

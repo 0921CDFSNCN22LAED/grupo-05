@@ -130,6 +130,7 @@ const productsController = {
     actualizarProducto: async (req, res) => {
         try {
             let errors = validationResult(req);
+            console.log(errors);
             let bodegas = await db.Bodegas.findAll();
             let uvas = await db.Uvas.findAll();
             let categorias = await db.Categorias.findAll();
@@ -138,12 +139,12 @@ const productsController = {
                 await db.Vinos.update(
                     {
                         nombre: req.body.nombre,
-                        bodega_id: 3,
+                        bodega_id: req.body.bodega_id,
                         precio: req.body.precio,
                         descripcion: req.body.descripcion,
                         imagen: req.file.path.split("public").pop(),
-                        uva_id: 3,
-                        categoria_id: 3,
+                        uva_id: req.body.uva_id,
+                        categoria_id: req.body.categoria_id,
                     },
                     {
                         where: {
