@@ -152,7 +152,9 @@ footer {
     width: 33%;
     margin: 20px 10px;
 }
-
+p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 .presentacion p {
     text-align: center;
 }
@@ -181,10 +183,11 @@ footer {
     justify-content: flex-end;
     width: 33%;
     margin: 20px 10px;
+    color: blue;
 }
 
 .lista .fab {
-    color: rgb(87, 85, 85);
+    color: rgb(98, 98, 100);
     font-size: 20px;
     margin: 0 10px;
 }

@@ -11,7 +11,9 @@
     /* font-size: calc(2rem + 0.3vw); */
     font-size: 1.5rem;
 }
-
+.contenedor-links_grande a{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 .contenedor1 {
     margin: 0 auto;
     width: 90%;
@@ -142,6 +144,8 @@
     padding-left: 5%;
     color: #fff;
     font-size: calc(1.675rem + 0.3vw);
+    font-family: 'Playfair Display', serif;
+    
 }
 
 .nuestrosVarietales p {
@@ -154,6 +158,7 @@
 @media (min-width: 767px) {
     .titulo-home-vinos {
         font-size: calc(2rem + 0.3vw);
+        font-family: 'Bai Jamjuree', sans-serif;
     }
 
     .card-tittle {
