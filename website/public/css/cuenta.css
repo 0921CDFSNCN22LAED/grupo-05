@@ -15,10 +15,14 @@ main {
     min-height: 700px;
 }
 
+.contenedor-links_grande a{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 /* EMPIEZA EL MAIN*/
 
 .cuenta_container {
-    background-color: white;
+    background-color: rgb(231, 227, 227);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -26,6 +30,10 @@ main {
 
 .cuenta_container h2 {
     margin: 15px;
+    font-family: 'Cinzel', serif;
+}
+.cuenta_container h3 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .cuenta_container-info {

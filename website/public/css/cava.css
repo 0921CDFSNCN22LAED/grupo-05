@@ -18,6 +18,7 @@ main{
 main h2{
     padding: 10px;
     color: #ffff;
+    font-size: 30px;
 }
 
 .wrapper-total-pagar{
@@ -26,7 +27,7 @@ main h2{
 }
 
 #total-pagar{
-    background-color: white;
+    background-color: rgb(231, 227, 227);
     padding-bottom: 1%;
     border-radius: 8px;
 }
@@ -34,10 +35,12 @@ main h2{
 #total-pagar h3 {
     margin: 7px 0 7px 5px;
     padding-top: 7px;
+    font-family: 'Cinzel', serif;
 }
 
 #total-pagar p{
     margin: 7px 0 7px 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 main h2{
