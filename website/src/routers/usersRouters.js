@@ -5,10 +5,13 @@ const ifLogged = require("../Middlewares/ifLogged");
 const ifNotLogged = require("../Middlewares/ifNotLogged");
 const validateAccountLogin = require("../Middlewares/validaciones/backend/validateAccountLogin");
 const validateAccountRegister = require("../Middlewares/validaciones/backend/validateAccountRegister");
+const uploadFile = require("../Middlewares/multerMiddlewareUsers");
+const path = require("path");
 
 router.get("/registro", ifLogged, usersController.registro);
 router.post(
     "/registro",
+    uploadFile.single("imagen"),
     validateAccountRegister,
     usersController.registroProcesado
 );
