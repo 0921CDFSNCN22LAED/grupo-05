@@ -29,10 +29,8 @@
                 action="/users/registro"
                 method="POST"
                 class="register-form-container box-shadow"
+                enctype="multipart/form-data"
             >
-                <div class="errores">
-                    <ul class="errores-front"></ul>
-                </div>
                 <section>
                     <h4>Regístrate con:</h4>
                     <div class="register-div-google">
@@ -136,7 +134,32 @@
                         </p>
                         <% } %> <% } %> <% } %>
                     </div>
+                    <div class="register-div-password">
+                        <label for="imagen" class="form-label">
+                            Foto de Perfil:
+                        </label>
+                        <input
+                            class="form-control box-shadow"
+                            width="100%"
+                            type="file"
+                            name="imagen"
+                            id="imagen"
+                            accept="image/jpg"
+                        />
+                        <% if (locals.errors) { %> <% for (let error of
+                        errors){%> <% if (error.param == 'imagen') { %>
+                        <div class="text-danger">
+                            <p class="register-invalid-text-input">
+                                <%= error.msg %>
+                            </p>
+                        </div>
+                        <% } %> <% } %> <% } %>
+                    </div>
                 </section>
+
+                <div class="errores">
+                    <ul class="errores-front"></ul>
+                </div>
 
                 <section>
                     <div class="register-div-enter">
