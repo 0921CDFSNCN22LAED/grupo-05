@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    const alias = "Usuarios"
+    const alias = "Usuarios";
 
     const cols = {
         id: {
@@ -23,27 +23,31 @@ module.exports = (sequelize, dataTypes) => {
         },
         tipo_id: {
             type: dataTypes.INTEGER,
-            allowNull: false
-        }
-    }
+            allowNull: false,
+        },
+        imagen: {
+            type: dataTypes.STRING(200),
+            allowNull: false,
+        },
+    };
 
     const config = {
         tableName: "usuarios",
-        timestamps: false
-    }
+        timestamps: false,
+    };
 
     const Usuario = sequelize.define(alias, cols, config);
 
     Usuario.associate = function (models) {
         Usuario.belongsTo(models.Tipos, {
             as: "usuarioTipo",
-            foreignKey: "tipo_id"
+            foreignKey: "tipo_id",
         });
         Usuario.belongsToMany(models.Vinos, {
-            through: models.Cavas, 
-            as: 'cava_id'
-        })
-    }
+            through: models.Cavas,
+            as: "cava_id",
+        });
+    };
 
-    return Usuario
-}
+    return Usuario;
+};
