@@ -11,10 +11,11 @@ main {
 }
 
 main h2 {
-    color: #fff;
+    color: rgb(201, 196, 196);
     text-align: center;
     padding-top: 5%;
     margin-bottom: 2%;
+    font-family: 'Bai Jamjuree', sans-serif; 
 }
 
 .d-flex {
