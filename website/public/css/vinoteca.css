@@ -18,6 +18,10 @@ main h2 {
     font-family: 'Bai Jamjuree', sans-serif; 
 }
 
+.contenedor-links_grande a{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .d-flex {
     width: 85%;
     margin: 0 auto;

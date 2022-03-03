@@ -13,6 +13,10 @@
     display: none;
 }
 
+.contenedor-links_grande a{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 /*
 
 MAIN
