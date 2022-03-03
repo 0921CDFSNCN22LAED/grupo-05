@@ -4,8 +4,8 @@
   
    ## Comenzando 🚀
     
-   • Nueve Copas: Fue el inicializador del proyecto que queriamos realizar. Presenta un catalogo de vinos y paquetes mensuales para degustar para cada tipo de cliente.
-   • Bodegas Bianchi: La página trabaja con sus distintos tipos de bodegas, vende por cajas para mayorista y minorista. Como nuestro e-commerce tendrá vinos de diferentes bodegas nos pareció un buen ejemplo para sacar algunas ideas y potenciarlas.
+   - Nueve Copas: Fue el inicializador del proyecto que queriamos realizar. Presenta un catalogo de vinos y paquetes mensuales para degustar para cada tipo de cliente.
+   - Bodegas Bianchi: La página trabaja con sus distintos tipos de bodegas, vende por cajas para mayorista y minorista. Como nuestro e-commerce tendrá vinos de diferentes bodegas nos pareció un buen ejemplo para sacar algunas ideas y potenciarlas.
    • Mercado Libre: Tomamos como referencia a Mercado Libre siendo un referente de e-commerce, por su facilidad y sencillez a la hora de navegar.
      Al visualizar como promocionan vinos notamos muchas cosas a potenciar como podrían ser una distinción de sommeliers de cada bodega para una ayuda tanto al principiante como para el experimentado.
    • Espacio Vino: Brindan diferentes tipos de funcionalidades que permiten al comprador mas frecuente acceder a productos de distintas categorías basadas en las ventas generales.
