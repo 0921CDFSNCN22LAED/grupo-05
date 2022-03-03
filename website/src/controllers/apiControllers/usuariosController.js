@@ -6,13 +6,24 @@ module.exports = {
             { order: [["nombre", "ASC"]] }
         );
 
+        let usuarios2 = [];
+
+        for (const usuario of usuarios) {
+            usuarios2.push(usuario.dataValues)
+        }
+        for (const usuario2 of usuarios2) {
+            usuario2.detail = 'localhost:3001/api/usuarios/' + usuario2.id
+            delete usuario2.contrasenia
+        }
+
+
         let respuesta = {
             meta: {
                 status: 200,
-                total: usuarios.length,
+                total: usuarios2.length,
                 url: "api/usuarios",
             },
-            data: usuarios,
+            data: usuarios2,
         };
 
         res.json(respuesta);
@@ -23,10 +34,14 @@ module.exports = {
             { include: { all: true } }
         );
 
+        delete usuario.contrasenia
+        usuario.imagen = 'localhost:3001' + usuario.imagen
+
+
         let respuesta = {
             meta: {
                 status: 200,
-                url: "api/usuarios/:id",
+                url: "localhost:3001/api/usuarios/" + usuario.id,
             },
             data: usuario,
         };
