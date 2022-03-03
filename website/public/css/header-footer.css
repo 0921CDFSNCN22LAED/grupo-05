@@ -89,11 +89,11 @@ header {
 
     .contenedor_logo img {
         display: block;
-        max-width: 161px;
-        max-height: 188px;
+        max-width: 73px;
+        max-height: 100px;
     }
     .link_chica i {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 }
 
@@ -103,6 +103,12 @@ header {
     }
     .contenedor_logo {
         width: 20%;
+    }
+
+    .contenedor_logo img {
+        display: block;
+        max-width: 100px;
+        max-height: 127px;
     }
 
     .contenedor-links_grande {
@@ -116,8 +122,7 @@ header {
     .contenedor-links_grande a {
         width: 20%;
         text-align: center;
-
-        font-size: calc(2rem + 0.3vw);
+        font-size: 1.5rem;
         text-decoration: none;
         color: #aa0d3f;
     }
@@ -152,8 +157,9 @@ footer {
     width: 33%;
     margin: 20px 10px;
 }
-p{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+p {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 .presentacion p {
     text-align: center;
