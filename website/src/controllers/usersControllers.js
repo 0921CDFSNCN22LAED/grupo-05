@@ -28,24 +28,25 @@ const usersController = {
                 return;
             }
 
-            console.log(req.body)
+            console.log(req.body);
 
             db.Usuarios.create({
                 nombre: req.body.name,
                 email: req.body.email,
                 contrasenia: bcryptjs.hashSync(req.body.password, 10),
-                tipo_id: 2
+                tipo_id: 2,
+                imagen: req.file.path.split("public").pop(),
             });
 
             let usuarioNuevo = {
                 nombre: req.body.name,
                 email: req.body.email,
                 contrasenia: bcryptjs.hashSync(req.body.password, 10),
-                tipo_id: 2
-            }
+                tipo_id: 2,
+                imagen: req.file.path.split("public").pop(),
+            };
             console.log(usuarioNuevo);
             req.session.loggedUser = usuarioNuevo;
-
 
             res.redirect("/");
         } else {
@@ -104,37 +105,44 @@ const usersController = {
         let errors = validationResult(req);
 
         if (errors.isEmpty()) {
-
             const usuarioLogin = await db.Usuarios.findOne({
-                where: { email: req.body.email }
-            })
+                where: { email: req.body.email },
+            });
 
             if (usuarioLogin) {
-                let passwordOk = bcryptjs.compareSync(req.body.password, usuarioLogin.contrasenia)
+                let passwordOk = bcryptjs.compareSync(
+                    req.body.password,
+                    usuarioLogin.contrasenia
+                );
 
                 if (passwordOk) {
-                    req.session.loggedUser = usuarioLogin
-                    res.redirect("/users/cuenta")
-                    return
-
+                    req.session.loggedUser = usuarioLogin;
+                    res.redirect("/users/cuenta");
+                    return;
                 } else {
                     errors.errors.push({
                         value: req.body.email,
-                        msg: 'La contraseña es incorrecta',
-                        param: 'password',
-                        location: 'body'
-                    })
-                    res.render("users/login", { old: req.body, errors: errors.errors })
-                    return
+                        msg: "La contraseña es incorrecta",
+                        param: "password",
+                        location: "body",
+                    });
+                    res.render("users/login", {
+                        old: req.body,
+                        errors: errors.errors,
+                    });
+                    return;
                 }
             } else {
                 errors.errors.push({
                     value: req.body.email,
-                    msg: 'No existe un usuario con este mail',
-                    param: 'email',
-                    location: 'body'
-                })
-                res.render("users/login", { old: req.body, errors: errors.errors })
+                    msg: "No existe un usuario con este mail",
+                    param: "email",
+                    location: "body",
+                });
+                res.render("users/login", {
+                    old: req.body,
+                    errors: errors.errors,
+                });
             }
         } else {
             res.render("users/login", { old: req.body, errors: errors.errors });
@@ -157,27 +165,30 @@ const usersController = {
         return res.redirect("/");
     },
     cava: async (req, res) => {
-        try{
+        try {
             console.log(req.session);
-            let vinosCava = await db.Usuarios.findAll({include: {association: 'cava_id'}, where: {id: req.session.loggedUser.id}})
-                let arrayVinos = vinosCava[0].cava_id
-                let vinos = []
-                let precio = 0;
+            let vinosCava = await db.Usuarios.findAll({
+                include: { association: "cava_id" },
+                where: { id: req.session.loggedUser.id },
+            });
+            let arrayVinos = vinosCava[0].cava_id;
+            let vinos = [];
+            let precio = 0;
 
-                for (let i = 0; i < arrayVinos.length; i++) {
-                    vinos.push(arrayVinos[i].dataValues)
-                }
+            for (let i = 0; i < arrayVinos.length; i++) {
+                vinos.push(arrayVinos[i].dataValues);
+            }
 
-                for (const vino of vinos) {
-                    console.log(vino.precio);
-                    console.log(vino);
-                    precio += vino.precio
-                }
+            for (const vino of vinos) {
+                console.log(vino.precio);
+                console.log(vino);
+                precio += vino.precio;
+            }
 
-                console.log('final');
-                console.log(precio);
+            console.log("final");
+            console.log(precio);
 
-                res.render("users/cava", {vinos, precio});
+            res.render("users/cava", { vinos, precio });
         } catch (error) {
             console.log(error);
         }
