@@ -32,6 +32,6 @@
  - REACT
  - MYSQL
  
- ## Tablero de trabajo 📌
+   ## Tablero de trabajo 📌
 
   -https://trello.com/b/IlFMtWwd/ecommerce
