@@ -31,5 +31,7 @@
  - NODE JS
  - REACT
  - MYSQL
+ 
+ ## Tablero de trabajo 📌
 
-https://trello.com/b/IlFMtWwd/ecommerce
+  -https://trello.com/b/IlFMtWwd/ecommerce
