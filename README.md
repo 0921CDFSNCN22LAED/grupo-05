@@ -22,7 +22,7 @@
 - Enzo Baitelo: Tengo 19 años. Estudio administración de empresas. Me gusta leer y ver peliculas. Me interesa la programación porque pienso que el futuro de los negocios se encuentra en ella y para poder incorporarme a ese mundo decidi hacer este curso para meterme en este mundo.
 
 
-   ## Construido con 🛠️
+ ## Construido con 🛠️
    
  - HTML
  - CSS
@@ -32,6 +32,6 @@
  - REACT
  - MYSQL
  
-   ## Tablero de trabajo 📌
+ ## Tablero de trabajo 📌
 
   -https://trello.com/b/IlFMtWwd/ecommerce
