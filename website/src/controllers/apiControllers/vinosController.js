@@ -88,6 +88,7 @@ module.exports = {
                 bodegas: {zuccardi, catenaZapata, trapiche, elEnemigo, elEsteco, salentein, luigiBosca},
                 categorias: {vendidos, economicos, destacados}
             },
+            relations: ['vinoBodega', 'vinoUva', 'vinoCategoria'],
             data: vinos,
         };
 
@@ -96,9 +97,10 @@ module.exports = {
 
     detail: async (req, res) => {
         const vino = await db.Vinos.findOne(
-            { where: { id: req.params.id } },
-            { include: { all: true } }
+            { include: { all: true } },
+            { where: { id: req.params.id } }
         );
+        
 
         let respuesta = {
             meta: {
