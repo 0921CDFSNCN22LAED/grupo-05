@@ -13,6 +13,7 @@ module.exports = {
         }
         for (const usuario2 of usuarios2) {
             usuario2.detail = 'localhost:3001/api/usuarios/' + usuario2.id
+            usuario2.imagen = 'localhost:3001' + usuario2.imagen
             delete usuario2.contrasenia
         }
 
