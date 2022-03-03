@@ -74,6 +74,11 @@ module.exports = {
         
         for (let vino of vinos) {
             vino.imagen = 'localhost:3001' + vino.imagen
+            vino.dataValues.detail = 'localhost:3001/api/vinos/' + vino.id
+
+            for (let usuario of vino.usuario_id) {
+                delete usuario.dataValues.contrasenia
+            }
         }
 
 
@@ -100,7 +105,7 @@ module.exports = {
             { include: { all: true } },
             { where: { id: req.params.id } }
         );
-        
+
 
         let respuesta = {
             meta: {
