@@ -6,6 +6,7 @@ import UltimoDB from "./UltimoDB";
 import Bodegas from "./Bodegas";
 import Categorias from "./Categorias";
 import Uvas from "./Uvas";
+import Vinos from "./Vinos";
 import Footer from "./Footer";
 import "../css/dashboard-styles.css";
 
@@ -46,6 +47,9 @@ function ContentWrapper() {
 
                         {/* <!-- Categorias in DB --> */}
                         <Categorias />
+
+                        {/* <!-- Categorias in DB --> */}
+                        <Vinos />
                     </div>
                 </div>
                 {/* <!--End Content Row Top--> */}
