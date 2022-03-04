@@ -76,7 +76,7 @@ module.exports = {
             vino.imagen = 'localhost:3001' + vino.imagen
             vino.dataValues.detail = 'localhost:3001/api/vinos/' + vino.id
 
-            for (let usuario of vino.usuario_id) {
+            for (let usuario of vino.usuario_cava_id) {
                 delete usuario.dataValues.contrasenia
             }
         }

@@ -48,10 +48,17 @@ const productsController = {
     detalleProducto: (req, res) => {
         db.Vinos.findByPk(req.params.id, { include: { all: true } }).then(
             (vino) => {
-                let favorito = false;
+                let cava = false;
+                let favorito = false
+
 
                 if (req.session.loggedUser) {
-                    for (let id of vino.usuario_id) {
+                    for (let id of vino.usuario_cava_id) {
+                        if (id.id == req.session.loggedUser.id) {
+                            cava = true;
+                        }
+                    }
+                    for (let id of vino.usuario_favorito_id) {
                         if (id.id == req.session.loggedUser.id) {
                             favorito = true;
                         }
@@ -60,7 +67,7 @@ const productsController = {
 
                 res.render("products/detalleProducto", {
                     vino: vino,
-                    favorito,
+                    cava, favorito
                 });
             }
         );
@@ -237,6 +244,36 @@ const productsController = {
             console.log(error);
         }
     },
+    agregarFavorito: async (req, res) => {
+        try {
+            let vinoDb = await db.Favoritos.findOne({
+                where: {
+                    UsuarioId: req.session.loggedUser.id,
+                    VinoId: req.params.id,
+                },
+            });
+
+            console.log('hellloooooo!');
+
+            if (vinoDb) {
+                await db.Favoritos.destroy({
+                    where: { id: vinoDb.id },
+                    force: true,
+                });
+
+                res.redirect("/products/detalle/" + req.params.id);
+            } else {
+                await db.Favoritos.create({
+                    UsuarioId: req.session.loggedUser.id,
+                    VinoId: req.params.id,
+                });
+
+                res.redirect("/products/detalle/" + req.params.id);
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
 };
 
 module.exports = productsController;

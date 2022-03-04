@@ -36,6 +36,8 @@ router.put(
 router.get("/eliminar/:id", onlyAdmin, productsController.eliminarProducto);
 router.delete("/eliminar/:id", productsController.borrarProducto);
 
-router.post("/detalle/:id/cava", ifNotLogged ,productsController.agregarCava);
+router.post("/detalle/cava/:id", ifNotLogged ,productsController.agregarCava);
+
+router.post("/detalle/favorito/:id", ifNotLogged ,productsController.agregarFavorito);
 
 module.exports = router;
