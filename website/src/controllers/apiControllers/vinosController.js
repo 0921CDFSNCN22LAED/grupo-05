@@ -79,6 +79,9 @@ module.exports = {
             for (let usuario of vino.usuario_cava_id) {
                 delete usuario.dataValues.contrasenia
             }
+            for (let usuario of vino.usuario_favorito_id) {
+                delete usuario.dataValues.contrasenia
+            }
         }
 
 
