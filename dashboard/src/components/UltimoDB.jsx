@@ -60,10 +60,6 @@ export default class UltimoDB extends Component {
                                 alt=" Harambee "
                             />
                         </div>
-                        <p>
-                            Es un vino que pega en garganta cual tiro en el
-                            pecho.
-                        </p>
                         <div className="text-center">
                             <a
                                 className="btn btn-danger"
