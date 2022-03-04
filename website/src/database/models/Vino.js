@@ -71,7 +71,11 @@ module.exports = (sequelize, dataTypes) => {
         });
         Vino.belongsToMany(models.Usuarios, {
             through: models.Cavas,
-            as: 'usuario_id'
+            as: 'usuario_cava_id'
+        })
+        Vino.belongsToMany(models.Usuarios, {
+            through: models.Favoritos,
+            as: 'usuario_favorito_id'
         })
     };
 

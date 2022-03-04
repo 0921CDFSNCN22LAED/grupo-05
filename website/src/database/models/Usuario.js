@@ -47,6 +47,10 @@ module.exports = (sequelize, dataTypes) => {
             through: models.Cavas,
             as: "cava_id",
         });
+        Usuario.belongsToMany(models.Vinos, {
+            through: models.Favoritos,
+            as: "favorito_id",
+        });
     };
 
     return Usuario;

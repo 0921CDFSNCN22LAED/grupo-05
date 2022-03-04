@@ -16,6 +16,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="/css/cuenta.css" />
+        <link rel="stylesheet" href="/css/vinoteca.css">
     </head>
     <body>
         <header><%- include ("../partials/header") %></header>
@@ -57,6 +58,35 @@
                     </div>
                 </div>
             </div>
+            <section class="wine-shelf">
+                <div class="flex-div">
+                    <% for (let vino of vinos) { %>
+                    <div class="articles-wrapper">
+                        <article class="wine-card">
+                            <a href="/products/detalle/<%= vino.id %>"
+                                ><img
+                                    src="<%= vino.imagen %>"
+                                    alt=""
+                                    width="100%"
+                                    class="wine-card-img"
+                            /></a>
+                            <div class="wine-card-body">
+                                <div class="wine-card-texts">
+                                    <div class="wine-card-product-description">
+                                        <h4 class="card-title">
+                                            <%= vino.nombre %>
+                                        </h4>
+                                    </div>
+                                    <p class="card-text card-price">
+                                        $<%= vino.precio %>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <% } %>
+                </div>
+            </section>
         </main>
         <footer><%- include ("../partials/footer") %></footer>
         <script

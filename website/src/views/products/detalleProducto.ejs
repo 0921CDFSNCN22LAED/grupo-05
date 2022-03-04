@@ -25,15 +25,23 @@
                         <p><%=vino.precio%></p>
                     </div>
                     <div id="contenedor-detalle-botones">
-                        <form action="/products/detalle/<%= vino.id %>/cava" method="POST">
+                        <form action="/products/detalle/cava/<%= vino.id %>" method="POST">
                             <button type="submit" class="boton-detalle">
-                                <% if (favorito == true) { %>
+                                <% if (cava == true) { %>
                                     Sacar de la cava
                                 <% } else { %>
                                     Agregar a la cava
                                 <% } %>
                             </button>
                         </form>
+                        <form action="/products/detalle/favorito/<%= vino.id %>" method="POST">
+                            <button type="submit" class="boton-detalle">
+                                <% if (favorito == true) { %>
+                                    Sacar de favoritos
+                                <% } else { %>
+                                    Favorito
+                                <% } %>
+                            </button>
                     </div>
                 </div>
             </section>

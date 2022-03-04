@@ -157,8 +157,25 @@ const usersController = {
             user: req.session.loggedUser,
         });
     }, */
-    cuenta: (req, res) => {
-        res.render("users/cuenta", { user: req.session.loggedUser });
+    cuenta: async (req, res) => {
+        try{
+            let vinosFavorito = await db.Usuarios.findAll({
+                include: { association: "favorito_id" },
+                where: { id: req.session.loggedUser.id },
+            });
+            let arrayVinos = vinosFavorito[0].favorito_id;
+            let vinos = [];
+
+            for (let i = 0; i < arrayVinos.length; i++) {
+                vinos.push(arrayVinos[i].dataValues);
+            }
+
+            console.log(vinos);
+
+            res.render("users/cuenta", { user: req.session.loggedUser, vinos });
+        } catch (error) {
+            console.log(error);
+        }
     },
     logout: (req, res) => {
         req.session.destroy();
@@ -166,7 +183,6 @@ const usersController = {
     },
     cava: async (req, res) => {
         try {
-            console.log(req.session);
             let vinosCava = await db.Usuarios.findAll({
                 include: { association: "cava_id" },
                 where: { id: req.session.loggedUser.id },
@@ -179,14 +195,9 @@ const usersController = {
                 vinos.push(arrayVinos[i].dataValues);
             }
 
-            for (const vino of vinos) {
-                console.log(vino.precio);
-                console.log(vino);
+            for (let vino of vinos) {
                 precio += vino.precio;
             }
-
-            console.log("final");
-            console.log(precio);
 
             res.render("users/cava", { vinos, precio });
         } catch (error) {

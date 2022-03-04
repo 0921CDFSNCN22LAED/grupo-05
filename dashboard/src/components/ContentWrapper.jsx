@@ -9,6 +9,8 @@ import Uvas from "./Uvas";
 import Vinos from "./Vinos";
 import Footer from "./Footer";
 import "../css/dashboard-styles.css";
+import VinosCaracteristicas from "./VinosCaracteristicas";
+
 
 function ContentWrapper() {
     return (
@@ -40,16 +42,17 @@ function ContentWrapper() {
                     </div>
                     <div className="row">
                         {/* <!-- Bodegas in DB --> */}
-                        <Bodegas />
+                        <VinosCaracteristicas caracteristica="bodegas"/>
 
                         {/* <!-- Uvas in DB --> */}
-                        <Uvas />
+                        <VinosCaracteristicas caracteristica="uvas"/>
 
                         {/* <!-- Categorias in DB --> */}
-                        <Categorias />
+                        <VinosCaracteristicas caracteristica="categorias"/>
 
                         {/* <!-- Categorias in DB --> */}
                         <Vinos />
+                        
                     </div>
                 </div>
                 {/* <!--End Content Row Top--> */}
