@@ -223,6 +223,10 @@
 }
 
 @media (min-width: 1100px) {
+    .titulo-home-vinos {
+        margin-top: 50px;
+    }
+
     .wrapper {
         width: 25%;
     }
