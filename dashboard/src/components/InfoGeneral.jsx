@@ -21,8 +21,8 @@ const metrics = [
         number: 0,
     },
     {
-        borderColor: "Secondary",
-        titleColor: "Secondary",
+        borderColor: "secondary",
+        titleColor: "secondary",
         title: "Usuarios en la Base de Datos",
         number: 0,
     },
