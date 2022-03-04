@@ -17,22 +17,16 @@
         <%- include ("../partials/header") %>
     </header>
     <main class="editarProducto-main-container">
-        <img src="/images/mobile-bg-black-2.jpeg" class="mobile-bg-img" />
-        <img src="/images/bg-edit.jpeg" class="desktop-bg-img" />
         <form class="editarProducto-form-container" action="/products/editar/<%= vino.id %>?_method=PUT" method="post"
             enctype="multipart/form-data">
             <h2>EDITAR PRODUCTO</h2>
+            <div class="editarProducto-div-img-product">
+                <label for="imagen" class="form-label">Imagen del producto:
+                </label class="form-label">
+                <input class="editarProducto-input-img-product form-control box-shadow" type="file" accept="image/jpg"
+                    name="imagen" id="imagen" value="<%= vino.imagen %>" />
+            </div>
             <div>
-                <ul>
-                    <% if (locals.errors) { %>
-                        <% for (let error of errors) { %>
-                            <li>
-                                <%= error.msg %>
-                            </li>
-                            <% } %>
-                                <% } %>
-                </ul>
-
                 <label for="nombre" class="form-label">Nombre</label>
                 <% if (vino) {%>
                     <input class="box-shadow form-control" type="text" name="nombre" id="nombre"
@@ -58,14 +52,6 @@
                 <% if (vino) { %>
                     <input class="box-shadow form-control" type="number" name="stock" id="stock" placeholder=" Ej: 08"
                         value="<%= vino.stock %>" />
-                    <% } %>
-            </div>
-            <div>
-                <label for="descripcion" class="form-label">Descripcion:</label>
-                <% if (vino) {%>
-                    <textarea class="editarProducto-text-area box-shadow form-control" name="descripcion"
-                        id="descripcion" cols="30" rows="10">
-<%= vino.descripcion %></textarea>
                     <% } %>
             </div>
             <div>
@@ -98,16 +84,31 @@
                         <% } %>
                 </select>
             </div>
-            <div class="editarProducto-div-img-product">
-                <label for="imagen" class="form-label">Imagen del producto:
-                </label class="form-label">
-                <input class="editarProducto-input-img-product form-control box-shadow" type="file" accept="image/jpg"
-                    name="imagen" id="imagen" value="<%= vino.imagen %>" />
+            <div>
+                <label for="descripcion" class="form-label">Descripcion:</label>
+                <% if (vino) {%>
+                    <textarea class="editarProducto-text-area box-shadow form-control" name="descripcion"
+                        id="descripcion" cols="30" rows="10"><%= vino.descripcion %></textarea>
+                    <% } %>
             </div>
+
+
             <div class="editarProducto-div-button">
                 <button class="editarProducto-button btn-secondary" type="submit" value="Editar producto">
-                    Editar
+                    EDITAR
                 </button>
+            </div>
+
+            <div>
+                <ul>
+                    <% if (locals.errors) { %>
+                        <% for (let error of errors) { %>
+                            <li>
+                                <%= error.msg %>
+                            </li>
+                            <% } %>
+                                <% } %>
+                </ul>
             </div>
 
             <div class="errores">
