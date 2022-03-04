@@ -10,10 +10,16 @@
             crossorigin="anonymous"
         />
         <!-- link de bootstrap -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Playfair+Display:ital,wght@1,600&family=Roboto&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@1,700&family=Cinzel:wght@700&family=Oswald&family=Playfair+Display:ital,wght@1,600&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Oswald&family=Playfair+Display:ital,wght@1,600&family=Roboto&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@1,700&family=Cinzel:wght@700&family=Oswald&family=Playfair+Display:ital,wght@1,600&family=Roboto&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="/css/home-theme.css" />
         <link rel="stylesheet" href="/css/home-styles.css" />
     </head>
@@ -146,9 +152,7 @@
                 </div>
             </section>
 
-            <h2 class="titulo-home-vinos">
-                <i class="fas fa-plus"></i> VENDIDOS
-            </h2>
+            <h2 class="titulo-home-vinos">MAS VENDIDOS</h2>
             <section class="contenedor1">
                 <div class="contenedor2">
                     <% for (let vino of vinos) { %> <% if (vino.categoria_id ==
@@ -173,9 +177,7 @@
                 </div>
             </section>
 
-            <h2 class="titulo-home-vinos mx-3">
-                <i class="fas fa-plus"></i> ECONÓMICOS
-            </h2>
+            <h2 class="titulo-home-vinos mx-3">PROMOCIONES</h2>
             <section class="contenedor1">
                 <div class="contenedor2">
                     <% for (let vino of vinos) { %> <% if (vino.categoria_id ==
@@ -262,22 +264,26 @@
                             class="accordion-collapse collapse"
                             aria-labelledby="panelsStayOpen-headingTwo"
                         >
-                            <div class="accordion-body">
-                                <strong
-                                    >Vino tinto con bajo contenido de
-                                    taninos.</strong
-                                >
-                                La Bonarda es la segunda cepa más plantada en el
-                                país y algunos incluso la consideran el "nuevo"
-                                Malbec, debido a su enorme potencial. La
-                                diferencia entre la que se encuentra en Italia
-                                con la versión argentina es que tiene
-                                características similares a la rarísima uva
-                                Douce Noir, de la región de Savoie, Francia. Su
-                                producción también se concentra en la provincia
-                                de Mendoza (además de San Juan). Con un color
-                                intenso y oscuro, recomendamos combinarlas con
-                                unas ricas empanadas de carne.
+                            <div class="conteiner-vinos">
+                                <div class="accordion-body">
+                                    <img src="#" alt="" />
+                                    <strong>
+                                        Vino tinto con bajo contenido de
+                                        taninos.</strong
+                                    >
+                                    La Bonarda es la segunda cepa más plantada
+                                    en el país y algunos incluso la consideran
+                                    el "nuevo" Malbec, debido a su enorme
+                                    potencial. La diferencia entre la que se
+                                    encuentra en Italia con la versión argentina
+                                    es que tiene características similares a la
+                                    rarísima uva Douce Noir, de la región de
+                                    Savoie, Francia. Su producción también se
+                                    concentra en la provincia de Mendoza (además
+                                    de San Juan). Con un color intenso y oscuro,
+                                    recomendamos combinarlas con unas ricas
+                                    empanadas de carne.
+                                </div>
                             </div>
                         </div>
                     </div>
