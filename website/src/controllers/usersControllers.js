@@ -30,7 +30,7 @@ const usersController = {
 
             console.log(req.body);
 
-            db.Usuarios.create({
+            let usuarioNuevo = await db.Usuarios.create({
                 nombre: req.body.name,
                 email: req.body.email,
                 contrasenia: bcryptjs.hashSync(req.body.password, 10),
@@ -38,17 +38,11 @@ const usersController = {
                 imagen: req.file.path.split("public").pop(),
             });
 
-            let usuarioNuevo = {
-                nombre: req.body.name,
-                email: req.body.email,
-                contrasenia: bcryptjs.hashSync(req.body.password, 10),
-                tipo_id: 2,
-                imagen: req.file.path.split("public").pop(),
-            };
             console.log(usuarioNuevo);
+            delete usuarioNuevo.contrasenia;
             req.session.loggedUser = usuarioNuevo;
 
-            res.redirect("/");
+            res.redirect("/users/cuenta");
         } else {
             res.render("users/register", {
                 old: req.body,
@@ -158,7 +152,7 @@ const usersController = {
         });
     }, */
     cuenta: async (req, res) => {
-        try{
+        try {
             let vinosFavorito = await db.Usuarios.findAll({
                 include: { association: "favorito_id" },
                 where: { id: req.session.loggedUser.id },
