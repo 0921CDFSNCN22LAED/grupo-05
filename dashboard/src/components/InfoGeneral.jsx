@@ -6,24 +6,30 @@ const metrics = [
         borderColor: "primary",
         titleColor: "primary",
         title: "Vinos en la Base de Datos",
-        number: 0
+        number: 0,
     },
     {
         borderColor: "success",
         titleColor: "success",
         title: "Bodegas en la Base de Datos",
-        number: 0
+        number: 0,
     },
     {
         borderColor: "warning",
         titleColor: "warning",
         title: "Uvas en la Base de Datos",
-        number: 0
+        number: 0,
+    },
+    {
+        borderColor: "Secondary",
+        titleColor: "Secondary",
+        title: "Usuarios en la Base de Datos",
+        number: 0,
     },
 ];
 
 export default class InfoGeneral extends Component {
-    render(){
+    render() {
         return (
             <div className="row">
                 {metrics.map((metric, i) => {
@@ -41,4 +47,3 @@ export default class InfoGeneral extends Component {
         );
     }
 }
-

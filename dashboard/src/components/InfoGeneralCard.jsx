@@ -2,44 +2,51 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 export default class InfoGeneralCard extends Component {
-    constructor(props){
-        super(props)
+    constructor(props) {
+        super(props);
 
         this.state = {
-            numero: 0
-        }
+            numero: 0,
+        };
     }
 
     async getNumber() {
-        if(this.props.title == 'Vinos en la Base de Datos') {
-            let vinosRes = await fetch("http://localhost:3001/api/vinos")
-            let vinosJson = await vinosRes.json()
+        if (this.props.title == "Vinos en la Base de Datos") {
+            let vinosRes = await fetch("http://localhost:3001/api/vinos");
+            let vinosJson = await vinosRes.json();
 
             this.setState({
-                numero: vinosJson.meta.total
-            })
-        } else if (this.props.title == 'Bodegas en la Base de Datos') {
-            let bodegasRes = await fetch('http://localhost:3001/api/bodegas')
-            let bodegasJson = await bodegasRes.json()
+                numero: vinosJson.meta.total,
+            });
+        } else if (this.props.title == "Bodegas en la Base de Datos") {
+            let bodegasRes = await fetch("http://localhost:3001/api/bodegas");
+            let bodegasJson = await bodegasRes.json();
 
             this.setState({
-                numero: bodegasJson.meta.total
-            })
-        } else if (this.props.title == 'Uvas en la Base de Datos'){
-            let uvasRes = await fetch("http://localhost:3001/api/uvas")
-            let uvasJson = await uvasRes.json()
-    
+                numero: bodegasJson.meta.total,
+            });
+        } else if (this.props.title == "Uvas en la Base de Datos") {
+            let uvasRes = await fetch("http://localhost:3001/api/uvas");
+            let uvasJson = await uvasRes.json();
+
             this.setState({
-                numero: uvasJson.meta.total
-            })
+                numero: uvasJson.meta.total,
+            });
+        } else if (this.props.title == "Usuarios en la Base de Datos") {
+            let usuariosRes = await fetch("http://localhost:3001/api/usuarios");
+            let usuariosJson = await usuariosRes.json();
+
+            this.setState({
+                numero: usuariosJson.meta.total,
+            });
         }
     }
 
-    componentDidMount(){
-        this.getNumber()
+    componentDidMount() {
+        this.getNumber();
     }
-    
-    render(){
+
+    render() {
         return (
             <div className="col-md-4 mb-4">
                 <div
@@ -61,7 +68,7 @@ export default class InfoGeneralCard extends Component {
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 }
 InfoGeneralCard.propTypes = {
@@ -70,4 +77,3 @@ InfoGeneralCard.propTypes = {
     title: PropTypes.string,
     number: PropTypes.number,
 };
-
