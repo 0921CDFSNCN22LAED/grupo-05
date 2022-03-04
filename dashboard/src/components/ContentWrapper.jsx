@@ -2,7 +2,7 @@ import React from "react";
 import Topbar from "./Topbar";
 import H1 from "./H1";
 import InfoGeneral from "./InfoGeneral";
-import UltimoVinoDB from "./UltimoVinoDB";
+import UltimoDB from "./UltimoDB";
 import Bodegas from "./Bodegas";
 import Categorias from "./Categorias";
 import Uvas from "./Uvas";
@@ -29,7 +29,12 @@ function ContentWrapper() {
                     {/* <!-- Content Row Last wine in Data Base --> */}
                     <div className="row justify-content-center">
                         {/* <!-- Last Wine in DB --> */}
-                        <UltimoVinoDB />
+                        <UltimoDB />
+                        {/* <!-- End content row last wine in Data Base --> */}
+                    </div>
+                    <div className="row justify-content-center">
+                        {/* <!-- Last Wine in DB --> */}
+                        <UltimoDB />
                         {/* <!-- End content row last wine in Data Base --> */}
                     </div>
                     <div className="row">
