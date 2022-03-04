@@ -23,7 +23,7 @@ main {
 /* EMPIEZA EL MAIN*/
 
 .cuenta_container {
-    background-color: rgb(231, 227, 227);
+    background-color: rgb(204, 204, 204);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -34,6 +34,8 @@ main {
 .cuenta_container h2 {
     margin: 15px;
     font-family: "Cinzel", serif;
+    color: #aa0d3f;
+    font-size: calc(1rem + .9vw);
 }
 
 .img-usurio {

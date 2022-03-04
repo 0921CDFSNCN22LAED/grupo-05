@@ -17,8 +17,10 @@ main{
 
 main h2{
     padding: 10px;
+    margin: 0;
     color: #ffff;
     font-size: 30px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .wrapper-total-pagar{
@@ -27,7 +29,7 @@ main h2{
 }
 
 #total-pagar{
-    background-color: rgb(231, 227, 227);
+    background-color: rgb(204, 204, 204);
     padding-bottom: 1%;
     border-radius: 8px;
 }
@@ -36,15 +38,14 @@ main h2{
     margin: 7px 0 7px 5px;
     padding-top: 7px;
     font-family: 'Cinzel', serif;
+    color: #aa0d3f;
+    text-align: center;
+    font-size: calc(1rem + .9vw);
 }
 
 #total-pagar p{
     margin: 7px 0 7px 5px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-main h2{
-    margin: 0;
 }
 
 
