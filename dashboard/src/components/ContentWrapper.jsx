@@ -28,12 +28,12 @@ function ContentWrapper() {
                     {/* <!-- Content Row Last wine in Data Base --> */}
                     <div className="row justify-content-center">
                         {/* <!-- Last Wine in DB --> */}
-                        <UltimoDB />
+                        <UltimoDB caracteristica="vinos" />
                         {/* <!-- End content row last wine in Data Base --> */}
                     </div>
                     <div className="row justify-content-center">
                         {/* <!-- Last Wine in DB --> */}
-                        <UltimoDB />
+                        <UltimoDB caracteristica="usuarios" />
                         {/* <!-- End content row last wine in Data Base --> */}
                     </div>
                     <div className="row">
