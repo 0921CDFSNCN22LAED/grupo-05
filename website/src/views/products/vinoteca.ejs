@@ -62,7 +62,25 @@
                                 </div>
                                 <% if (locals.isLogged) { %>
                                 <div class="wine-card-icons">
-                                    <a href=""><i class="far fa-star"></i></a>
+                                    <form action="/products/detalle/favorito/<%= vino.id %>" method="POST">
+                                        <button type="submit" class="button-estrella-carrito">
+                                            <i class=<% if (favoritos.includes(vino.id)) { %>
+                                                "fas fa-star"
+                                            <% } else {%>
+                                                "far fa-star"
+                                            <% } %> ></i>
+                                        </button>
+                                    </form>
+                                    <form action="/products/detalle/cava/<%= vino.id %>" method="POST">
+                                        <button type="submit" class="button-estrella-carrito">
+                                            <i class="material-icons">
+                                            <% if (cavas.includes(vino.id)) { %>
+                                                remove_shopping_cart
+                                            <% } else {%>
+                                                add_shopping_cart
+                                            <% } %> </i>
+                                        </button>
+                                    </form>
                                     <% if (locals.isAdmin) { %>
                                         <a href="/products/editar/<%= vino.id %>">
                                             <i class="far fa-edit"></i>
