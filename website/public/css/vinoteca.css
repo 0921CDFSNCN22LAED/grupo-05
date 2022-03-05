@@ -99,10 +99,14 @@ main h2 {
     font-size: 1.25rem;
 }
 
-.button-estrella-carrito{
-    background-color: transparent;   
+.button-estrella-carrito {
+    background-color: transparent;
     border-color: transparent;
     font-size: 1.25rem;
+}
+
+.button-estrella-carrito i:hover {
+    color: #aa0d3f;
 }
 
 .wine-card-icons a i:hover {
