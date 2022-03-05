@@ -143,9 +143,6 @@ form {
         width: 100%;
     }
 
-    .contenedor-detalle-info p {
-    }
-
     #contenedor-detalle-botones {
         display: flex;
         flex-direction: row;
