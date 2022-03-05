@@ -90,7 +90,7 @@ main h2 {
 .wine-card-icons {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .wine-card-icons a i {

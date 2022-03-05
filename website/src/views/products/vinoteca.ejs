@@ -54,11 +54,11 @@
                                     <div class="wine-card-icons">
 
                                         <% if (locals.isAdmin) { %>
-                                            <a href="/products/editar/<%= vino.id %>">
-                                                <i class="far fa-edit"></i>
-                                            </a>
                                             <a href="/products/eliminar/<%= vino.id %>">
                                                 <i class="fas fa-times"></i>
+                                            </a>
+                                            <a href="/products/editar/<%= vino.id %>">
+                                                <i class="far fa-edit"></i>
                                             </a>
                                             <% } else { %>
                                                 <form action="/products/detalle/favorito/<%= vino.id %>" method="POST">
