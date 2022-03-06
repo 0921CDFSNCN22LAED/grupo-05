@@ -86,11 +86,11 @@ form div input {
 
 .editarProducto-button {
     width: 60%;
-    border: none;
     border-radius: 8px;
     padding: 2%;
-    background-color: #aa0d3f;
-    color: #fff;
+    background-color: transparent;
+    border: 2px solid #aa0d3f;
+    color: #aa0d3f;
 }
 
 .errores-front {
@@ -140,11 +140,11 @@ form div input {
 
     .editarProducto-button {
         width: 30%;
-        border: none;
         border-radius: 8px;
         padding: 1%;
-        background-color: #aa0d3f;
-        color: #fff;
+        background-color: transparent;
+        border: 2px solid #aa0d3f;
+        color: #aa0d3f;
     }
 }
 

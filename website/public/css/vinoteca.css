@@ -149,8 +149,6 @@ main h2 {
 }
 
 .button-add-product:hover {
-    right: 2.5%;
-    bottom: 2.5%;
     background-color: transparent;
     border: 2px solid rgb(201, 196, 196);
     color: #aa0d3f;
@@ -172,10 +170,6 @@ main h2 {
 
     .articles-wrapper {
         width: 33%;
-    }
-
-    .button-add-product {
-        padding: 1%;
     }
 }
 
@@ -229,17 +223,5 @@ main h2 {
 
     .wine-card:hover .wine-card-icons {
         display: flex;
-    }
-
-    .button-add-product:hover {
-        background-color: #f6004a;
-    }
-
-    .button-add-product i {
-        font-size: 25px;
-    }
-
-    .button-add-product i:hover {
-        color: white;
     }
 }

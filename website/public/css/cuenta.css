@@ -35,6 +35,8 @@ main {
     color: #aa0d3f;
     padding-top: 2%;
     font-size: calc(1rem + 0.9vw);
+    text-align: center;
+    width: 100%;
 }
 
 .img-usurio {

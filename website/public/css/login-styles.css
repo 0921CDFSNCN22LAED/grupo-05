@@ -253,7 +253,8 @@ label {
         color: #aa0d3f;
         margin-bottom: 5%;
         font-family: fansong;
-        font-size:1.70rem;
+        font-size: 1.7rem;
+        font-weight: bold;
     }
 
     .login-desktop-bg-img {
