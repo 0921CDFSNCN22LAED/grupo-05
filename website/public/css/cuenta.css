@@ -30,7 +30,7 @@ main {
     max-width: 324px;
 }
 
-.cuenta_container h2 {
+h2 {
     font-family: "Cinzel", serif;
     color: #aa0d3f;
     padding-top: 2%;
@@ -144,19 +144,6 @@ main {
 
 .wine-card-icons a i:hover {
     color: #aa0d3f;
-}
-
-.button-add-product {
-    position: fixed;
-    text-decoration: none;
-    right: 5%;
-    bottom: 5%;
-    border: none;
-    border-radius: 50%;
-    padding: 1.5%;
-    background-color: #aa0d3f;
-    color: #ffff;
-    display: flex;
 }
 
 /* Tablet */
@@ -295,17 +282,5 @@ main {
 
     .wine-card:hover .wine-card-icons {
         display: flex;
-    }
-
-    .button-add-product:hover {
-        background-color: #f6004a;
-    }
-
-    .button-add-product i {
-        font-size: 25px;
-    }
-
-    .button-add-product i:hover {
-        color: white;
     }
 }
