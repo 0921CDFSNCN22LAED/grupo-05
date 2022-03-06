@@ -252,6 +252,8 @@ label {
     h2 {
         color: #aa0d3f;
         margin-bottom: 5%;
+        font-family: fansong;
+        font-size:1.70rem;
     }
 
     .login-desktop-bg-img {

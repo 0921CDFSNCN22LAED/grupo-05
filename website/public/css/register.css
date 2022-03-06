@@ -48,6 +48,9 @@ MAIN
 .register-title {
     color: #aa0d3f;
     text-align: center;
+    margin-bottom: 5%;
+    font-family: fansong;
+    font-size:1.70rem;
 }
 
 h4 {
