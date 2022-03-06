@@ -1,51 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <%- include ("../partials/head") %>
+
+<head>
+    <%- include ("../partials/head") %>
         <title>Detalles de Producto</title>
         <link rel="stylesheet" href="/css/detalle-producto.css" />
-    </head>
-    <body>
-        <header><%- include ("../partials/header") %></header>
-        <main>
+</head>
+
+<body>
+    <header>
+        <%- include ("../partials/header") %>
+    </header>
+    <main>
+        <div class="item-wrapper">
             <section id="contenedor-detalle">
-                <img src="<%= vino.imagen %>" alt="vino1" />
+                <div class="img-wrapper"><img src="<%= vino.imagen %>" alt="vino1" /></div>
                 <div id="contenedor-detalle-vino">
-                    <h2><%=vino.nombre%></h2>
+                    <h2>
+                        <%=vino.nombre%>
+                    </h2>
+                    <div class="contenedor-detalle-info">
+                        <h3>Precio:</h3>
+                        <p>
+                            $<%=vino.precio%>
+                        </p>
+                    </div>
+                    <div class="contenedor-detalle-info">
+                        <h3>Bodega:</h3>
+                        <p>
+                            <%= vino.vinoBodega.nombre %>
+                        </p>
+                    </div>
                     <div class="contenedor-detalle-info">
                         <h3>Variedad:</h3>
-                        <p><%= vino.bodega %></p>
+                        <p>
+                            <%= vino.vinoUva.nombre %>
+                        </p>
                     </div>
                     <div class="contenedor-detalle-info">
                         <h3>Descripción:</h3>
-                        <p><%=vino.descripcion%></p>
+                        <p id="descripcion">
+                            <%=vino.descripcion%>
+                        </p>
                     </div>
-                    <div class="contenedor-detalle-info">
-                        <h3>Precio:</h3>
-                        <p><%=vino.precio%></p>
-                    </div>
-                    <div id="contenedor-detalle-botones">
-                        <form action="/products/detalle/cava/<%= vino.id %>" method="POST">
-                            <button type="submit" class="boton-detalle">
-                                <% if (cava == true) { %>
-                                    Sacar de la cava
-                                <% } else { %>
-                                    Agregar a la cava
-                                <% } %>
-                            </button>
-                        </form>
-                        <form action="/products/detalle/favorito/<%= vino.id %>" method="POST">
-                            <button type="submit" class="boton-detalle">
-                                <% if (favorito == true) { %>
-                                    Sacar de favoritos
-                                <% } else { %>
-                                    Favorito
-                                <% } %>
-                            </button>
-                    </div>
-                </div>
             </section>
-        </main>
-        <footer><%- include ("../partials/footer") %></footer>
-    </body>
+
+            <div id="contenedor-detalle-botones">
+                <form action="/products/detalle/cava/<%= vino.id %>" method="POST">
+                    <button type="submit" class="boton-detalle">
+                        <% if (cava==true) { %>
+                            SACAR DE MI CAVA
+                        <% } else { %>
+                            AGREGAR A MI CAVA
+                        <% } %>
+                    </button>
+                </form>
+                <form action="/products/detalle/favorito/<%= vino.id %>" method="POST">
+                    <button type="submit" class="boton-detalle">
+                        <% if (favorito==true) { %>
+                            SACAR DE FAVORITOS
+                        <% } else { %>
+                            AÑADIR A FAVORITOS
+                        <% } %>
+                    </button>
+                </form>
+            </div>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <%- include ("../partials/footer") %>
+    </footer>
+</body>
+
 </html>

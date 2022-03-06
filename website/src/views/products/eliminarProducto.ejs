@@ -1,137 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include ("../partials/head") %>
-    <title><%= pageTitle %></title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="/css/eliminarProducto.css" />
-  </head>
-  <body class="eliminarProducto-body">
-    <header><%- include ("../partials/header") %></header>
-    <main class="eliminarProducto-main-container">
-      <img src="/images/mobile-bg-black-2.jpeg" class="mobile-bg-img" />
-      <img src="/images/bg-desktop-eliminar.jpeg" class="desktop-bg-img" />
-      <form
-        class="eliminarProducto-form-container"
-        action="/products/eliminar/<%= vino.id %>?_method=DELETE"
-        method="post"
-        enctype="multipart/form-data"
-      >
-        <h2>ELIMINAR PRODUCTO</h2>
-        <div>
-          <img
-            src="<%= vino.imagen %>"
-            alt="vino1"
-            class="eliminarProducto-img-product box-shadow"
-          />
-        </div>
-        <div>
-          <label for="nombre" class="form-label">Nombre</label>
-          <% if (vino) {%>
-          <input
-            class="box-shadow form-control"
-            type="text"
-            name="nombre"
-            id="nombre"
-            value="<%= vino.nombre %>"
-            disabled
-          />
-          <% } %>
-        </div>
-        <div>
-          <label for="descripcionProducto" class="form-label">Bodega:</label>
-          <% if (vino) {%>
-          <input
-            class="box-shadow form-control"
-            type="text"
-            name="bodega"
-            id="bodega"
-            value="<%= vino.vinoBodega.nombre %>"
-            disabled
-          />
-          <% } %>
-        </div>
-        <div>
-          <label for="descripcionProducto" class="form-label">Categoria:</label>
-          <% if (vino) {%>
-          <input
-            class="box-shadow form-control"
-            type="text"
-            name="categoria"
-            id="categoria"
-            value="<%= vino.vinoCategoria.nombre %>"
-            disabled
-          />
-          <% } %>
-        </div>
-        <div>
-          <label for="descripcionProducto" class="form-label">Uva:</label>
-          <% if (vino) {%>
-          <input
-            class="box-shadow form-control"
-            type="text"
-            name="uva"
-            id="uva"
-            value="<%= vino.vinoUva.nombre %>"
-            disabled
-          />
-          <% } %>
-        </div>
-        <div>
-          <label for="precioProducto" class="form-label">Precio:</label>
-          <% if (vino) {%>
-          <input
-            class="box-shadow form-control"
-            type="number"
-            name="precio"
-            id="precio"
-            value="<%= vino.precio %>"
-            disabled
-          />
-          <% } %>
-        </div>
-        <div>
-          <label for="precioProducto" class="form-label">Descripcion:</label>
-          <% if (vino) {%>
-          <textarea
-            class="eliminarProducto-text-area box-shadow form-control"
-            name="descripcion"
-            id="descripcion"
-            cols="30"
-            rows="10"
-            disabled
-          >
-<%= vino.descripcion %></textarea
-          >
-          <% } %>
-        </div>
 
-        <div class="eliminarProducto-div-button">
-          <button
-            class="eliminarProducto-button btn-secondary"
-            type="submit"
-            value="Eliminar producto"
-          >
-            ELIMINAR
-          </button>
-        </div>
-      </form>
+<head>
+    <%- include ("../partials/head") %>
+        <title>
+            <%= pageTitle %>
+        </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+            crossorigin="anonymous" />
+        <link rel="stylesheet" href="/css/eliminarProducto.css" />
+</head>
+
+<body class="eliminarProducto-body">
+    <header>
+        <%- include ("../partials/header") %>
+    </header>
+    <main class="eliminarProducto-main-container">
+        <form class="eliminarProducto-form-container" action="/products/eliminar/<%= vino.id %>?_method=DELETE"
+            method="post" enctype="multipart/form-data">
+            <h2>ELIMINAR PRODUCTO</h2>
+            <div>
+                <label for="nombre" class="form-label">Nombre:</label>
+                <% if (vino) {%>
+                    <input class="box-shadow form-control" type="text" name="nombre" id="nombre"
+                        value="<%= vino.nombre %>" disabled />
+                    <% } %>
+            </div>
+            <div>
+                <label for="descripcionProducto" class="form-label">Bodega:</label>
+                <% if (vino) {%>
+                    <input class="box-shadow form-control" type="text" name="bodega" id="bodega"
+                        value="<%= vino.vinoBodega.nombre %>" disabled />
+                    <% } %>
+            </div>
+            <div>
+                <label for="descripcionProducto" class="form-label">Categoria:</label>
+                <% if (vino) {%>
+                    <input class="box-shadow form-control" type="text" name="categoria" id="categoria"
+                        value="<%= vino.vinoCategoria.nombre %>" disabled />
+                    <% } %>
+            </div>
+            <div>
+                <label for="descripcionProducto" class="form-label">Uva:</label>
+                <% if (vino) {%>
+                    <input class="box-shadow form-control" type="text" name="uva" id="uva"
+                        value="<%= vino.vinoUva.nombre %>" disabled />
+                    <% } %>
+            </div>
+            <div>
+                <label for="precioProducto" class="form-label">Precio:</label>
+                <% if (vino) {%>
+                    <input class="box-shadow form-control" type="number" name="precio" id="precio"
+                        value="<%= vino.precio %>" disabled />
+                    <% } %>
+            </div>
+            <div class="big-divs-wrapper">
+                <div>
+                    <label for="precioProducto" class="form-label">Descripcion:</label>
+                    <% if (vino) {%>
+                        <textarea class="eliminarProducto-text-area box-shadow form-control" name="descripcion"
+                            id="descripcion" cols="30" rows="10" disabled>
+<%= vino.descripcion %></textarea>
+                        <% } %>
+                </div>
+                <div>
+                    <label class="form-label">Imagen:</label>
+                    <img src="<%= vino.imagen %>" alt="vino1" class="eliminarProducto-img-product box-shadow" />
+                </div>
+            </div>
+
+            <div class="eliminarProducto-div-button">
+                <button class="eliminarProducto-button btn-secondary" type="submit" value="Eliminar producto">
+                    ELIMINAR
+                </button>
+            </div>
+        </form>
     </main>
-    <footer><%- include ("../partials/footer") %></footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <footer>
+        <%- include ("../partials/footer") %>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>

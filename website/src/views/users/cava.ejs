@@ -37,6 +37,15 @@
                                         $<%= vino.precio %>
                                     </p>
                                 </div>
+                                <div class="wine-card-icons">
+                                    <form action="/products/detalle/cava/<%= vino.id %>" method="POST">
+                                        <button type="submit" class="button-estrella-carrito">
+                                            <i class="material-icons">
+                                                remove_shopping_cart
+                                            </i>
+                                        </button>
+                                    </form>
+                                </div>
                             </div>
                         </article>
                     </div>

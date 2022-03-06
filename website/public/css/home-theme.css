@@ -8,8 +8,8 @@
     color: #af194b;
     text-align: center;
     letter-spacing: 0.1em;
-    /* font-size: calc(2rem + 0.3vw); */
     font-size: 1.5rem;
+    margin-top: 1%;
 }
 .contenedor-links_grande a {
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
@@ -143,6 +143,10 @@
 
 /* FIN ACCORDION */
 
+#titulo-varietales {
+    display: none;
+}
+
 #nuestrosTintillos {
     display: none;
 }
@@ -180,6 +184,10 @@
 
     .wrapper {
         width: 33%;
+    }
+
+    #titulo-varietales {
+        display: block;
     }
 
     .nuestrosVarietales {

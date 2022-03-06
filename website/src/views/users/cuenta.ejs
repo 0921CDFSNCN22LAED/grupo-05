@@ -81,6 +81,13 @@
                                         $<%= vino.precio %>
                                     </p>
                                 </div>
+                                <div class="wine-card-icons">
+                                    <form action="/products/detalle/favorito/<%= vino.id %>" method="POST">
+                                        <button type="submit" class="button-estrella-carrito">
+                                            <i class="fas fa-star"></i>
+                                        </button>
+                                    </form>
+                                </div>
                             </div>
                         </article>
                     </div>

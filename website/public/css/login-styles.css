@@ -1,3 +1,9 @@
+/* 
+////////////////////////////////////////////////////////////////////////////////////
+    NUEVO CSS
+////////////////////////////////////////////////////////////////////////////////////
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -13,8 +19,9 @@
     display: none;
 }
 
-.contenedor-links_grande a{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.contenedor-links_grande a {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
 }
 
 /*
@@ -24,17 +31,10 @@ MAIN
 */
 
 .login-main-container {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.login-mobile-bg-img {
-    position: absolute;
-    z-index: -100;
-    width: 100%;
-    height: 100%;
+    background-color: #252525;
 }
 
 .login-desktop-bg-img {
@@ -42,14 +42,17 @@ MAIN
 }
 
 .login-form-container {
-    margin: 10% 15%;
+    max-width: 400px;
+    margin-top: 5%;
+    padding: 5%;
     border: none;
-    border-radius: 8px;
-    background-color: #ebebeb;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 5% 10%;
+}
+
+h2 {
+    color: #aa0d3f;
+    text-align: center;
 }
 
 section {
@@ -57,7 +60,7 @@ section {
 }
 
 .login-div-google {
-    margin-bottom: 10%;
+    margin-bottom: 6%;
 }
 
 .button-google {
@@ -66,11 +69,9 @@ section {
     padding: 4%;
     border: none;
     border-radius: 8px;
-}
-
-.button-google a {
     text-decoration: none;
     color: #fff;
+    text-align: center;
 }
 
 .google-icon {
@@ -78,7 +79,7 @@ section {
 }
 
 .login-div-fb {
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 .button-facebook {
@@ -87,6 +88,9 @@ section {
     padding: 4%;
     border: none;
     border-radius: 8px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
 }
 
 .button-facebook a {
@@ -104,8 +108,8 @@ section {
     font-style: italic;
 }
 
-.login-div-email {
-    margin-bottom: 10%;
+label {
+    color: #fff;
 }
 
 .login-imput-email {
@@ -116,7 +120,7 @@ section {
 }
 
 .login-invalid-text-input {
-    color: red;
+    color: #aa0d3f;
     font-style: italic;
     padding: 4%;
     display: none;
@@ -148,17 +152,14 @@ section {
 }
 
 .login-button-enter a {
-    margin-bottom: 0;
-}
-
-.login-button-enter a {
     text-decoration: none;
     color: #fff;
+    margin-bottom: 0;
 }
 
 .login-div-remember-me {
     margin-bottom: 10%;
-    text-align: center;
+    padding-left: 42%;
 }
 
 .login-div-forgot-password {
@@ -168,19 +169,31 @@ section {
 
 .login-div-forgot-password a {
     text-decoration: none;
+    color: #fff;
 }
 
 .login-div-subscribe {
     margin-bottom: 10%;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .login-div-subscribe a {
     text-decoration: none;
+    text-align: start;
+    padding-left: 4%;
+}
+
+.login-div-subscribe p {
+    color: #fff;
+    width: 50%;
+    text-align: end;
 }
 
 .login-div-legal-consequences {
     text-align: center;
+    color: #fff;
 }
 
 .box-shadow {
@@ -188,7 +201,7 @@ section {
 }
 
 .register-invalid-text-input {
-    color: red;
+    color: #aa0d3f;
     font-style: italic;
     padding: 4%;
 }
@@ -199,18 +212,46 @@ section {
 
 @media (min-width: 767px) {
     .login-form-container {
-        width: 50%;
-        padding: 5%;
+        max-width: 50%;
+        margin-top: 0;
+        padding: 5% o;
+    }
+
+    .button-google {
+        padding: 2%;
+    }
+
+    .button-facebook {
+        padding: 2%;
+    }
+
+    .login-imput-email {
+        padding: 2%;
+    }
+
+    .login-div-password {
+        margin-bottom: 10%;
+    }
+
+    .login-imput-password {
+        padding: 2%;
+    }
+
+    .login-button-enter {
+        padding: 2%;
     }
 }
 
 @media (min-width: 1100px) {
     .login-main-container {
         flex-direction: row-reverse;
+        position: relative;
+        background-color: transparent;
     }
 
-    .login-mobile-bg-img {
-        display: none;
+    h2 {
+        color: #aa0d3f;
+        margin-bottom: 5%;
     }
 
     .login-desktop-bg-img {
@@ -223,24 +264,31 @@ section {
 
     .login-form-container {
         width: 25%;
-        margin: 10% 5% 10% 0;
+        margin: 5% 5% 10% 0;
         padding: 2%;
-        background-color: transparent;
+        background-color: #ebebeb;
+        border-radius: 8px;
     }
 
     .login-div-remember-me {
-        color: #ebebeb;
+        color: black;
+        padding-left: 40%;
+    }
+
+    label {
+        color: black;
     }
 
     .login-div-forgot-password a {
-        color: #ebebeb;
+        color: black;
     }
 
-    .login-div-subscribe a {
-        color: #ebebeb;
+    .login-div-subscribe p {
+        color: black;
+        width: 60%;
     }
 
     .login-div-legal-consequences {
-        color: #ebebeb;
+        color: black;
     }
 }

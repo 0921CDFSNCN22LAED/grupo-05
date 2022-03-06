@@ -10,94 +10,164 @@ body {
 }
 
 main {
-    background-color: #32312d;
-    padding: 2.5% 5%;
+    background-color: #252525;
+}
+
+.item-wrapper {
+    padding: 10%;
 }
 
 main h2 {
-    padding: 10px;
+    padding-top: 5%;
     color: #aa0d3f;
     text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
 }
 
 #contenedor-detalle {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    background-color: white;
-    margin-bottom: 10px;
     border-radius: 8px;
+    max-width: 324px;
+    margin: 0 auto;
 }
 
 #contenedor-detalle img {
     width: 100%;
-
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-radius: 8px;
 }
 
 #contenedor-detalle-vino {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    padding: 2%;
 }
 
 .contenedor-detalle-info {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin: 10px 0;
+    align-items: center;
 }
 
 .contenedor-detalle-info h3 {
     color: #aa0d3f;
-    margin: 0 0 0 8px;
-    font-size: 20px;
+    padding: 0 2% 0 4%;
+    font-size: 1.2rem;
 }
 
 .contenedor-detalle-info p {
     text-align: justify;
-    margin: 0 8px;
-    font-size: 20px;
+    color: rgb(245, 245, 245);
+    font-size: 1rem;
+}
+
+#descripcion {
+    padding-top: 2%;
 }
 
 #contenedor-detalle-botones {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 5% 0;
+    max-width: 324px;
+    margin: 0 auto;
+}
+
+form {
+    padding: 5%;
 }
 
 .boton-detalle {
-    color: white;
-    background-color: #aa0d3f;
-    border: none;
-    border-radius: 5px;
-    height: 30px;
-    margin: 10px 6px;
-    padding: 5px;
+    color: rgb(245, 245, 245);
+    background-color: transparent;
+    border: 2px solid #aa0d3f;
+    border-radius: 8px;
+    padding: 5%;
 }
 
 @media (min-width: 767px) {
+    main {
+        padding: 5% 5% 20% 5%;
+    }
+    .item-wrapper {
+        padding: 5%;
+    }
+
     #contenedor-detalle {
         flex-direction: row;
+        max-width: 100%;
     }
-    #contenedor-detalle img {
+
+    .img-wrapper {
+        width: 30%;
+        display: flex;
+    }
+
+    .img-wrapper img {
         width: 50%;
         border-top-right-radius: 0px;
         border-bottom-left-radius: 8px;
     }
-    #contenedor-detalle-vino {
-        width: 50%;
+
+    main h2 {
+        padding-top: 0;
+        width: 100%;
     }
-    .contenedor-detalle-info {
-        margin: 20px 0;
+
+    .contenedor-detalle-info h3 {
+        color: #aa0d3f;
+        padding: 2% 2% 0 0;
+        font-size: 1.2rem;
     }
+
     .contenedor-detalle-info p {
-        margin: 0px 20px 0 8px;
+        padding: 2% 2% 0 0;
     }
+
+    #descripcion {
+        padding-top: 1%;
+    }
+
+    #contenedor-detalle-vino {
+        width: 70%;
+        flex-direction: row;
+        padding: 0 0 0 5%;
+    }
+
+    .contenedor-detalle-info {
+        width: 100%;
+    }
+
     #contenedor-detalle-botones {
-        align-self: flex-start;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 0;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    form {
+        padding: 3% 0 0;
+        width: 50%;
+        justify-content: space-around;
+        display: flex;
+    }
+
+    .boton-detalle {
+        border-radius: 8px;
+        padding: 2%;
+    }
+
+    .boton-detalle:hover {
+        color: #fff;
+        background-color: #6c757d;
+        border-color: #6c757d;
     }
 }

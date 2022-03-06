@@ -15,11 +15,13 @@ main h2 {
     text-align: center;
     padding-top: 5%;
     margin-bottom: 2%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
 }
 
-.contenedor-links_grande a{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.contenedor-links_grande a {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
 }
 
 .d-flex {
@@ -88,13 +90,27 @@ main h2 {
 .wine-card-icons {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .wine-card-icons a i {
     text-decoration: none;
     color: black;
     font-size: 1.25rem;
+}
+
+.button-estrella-carrito {
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 1.25rem;
+}
+
+.button-estrella-carrito i:hover {
+    color: #aa0d3f;
+}
+
+.wine-card-icons a i:hover {
+    color: #aa0d3f;
 }
 
 .button-add-product {
@@ -189,7 +205,7 @@ main h2 {
         display: flex;
     }
 
-    .button-add-product:hover{
+    .button-add-product:hover {
         background-color: #f6004a;
     }
 
@@ -197,8 +213,7 @@ main h2 {
         font-size: 25px;
     }
 
-    .button-add-product i:hover{
-        color: white
+    .button-add-product i:hover {
+        color: white;
     }
-
 }
