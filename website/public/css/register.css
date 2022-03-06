@@ -5,18 +5,13 @@
     font-family: Roboto;
 }
 
-.errores {
-    font-size: 22px;
-    color: red;
-    text-shadow: black;
-}
-
 .register-body {
     font-size: 1rem;
 }
 
-.contenedor-links_grande a{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.contenedor-links_grande a {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
 }
 
 /*
@@ -26,17 +21,10 @@ MAIN
 */
 
 .register-main-container {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.register-mobile-bg-img {
-    position: absolute;
-    z-index: -100;
-    width: 100%;
-    height: 100%;
+    background-color: #252525;
 }
 
 .register-desktop-bg-img {
@@ -44,22 +32,31 @@ MAIN
 }
 
 .register-form-container {
-    margin: 10% 15%;
+    max-width: 400px;
+    margin-top: 5%;
+    padding: 5%;
     border: none;
-    border-radius: 8px;
-    background-color: #ebebeb;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 5% 10%;
 }
 
-section {
+.register-section {
     width: 100%;
+    margin-bottom: 10%;
+}
+
+.register-title {
+    color: #aa0d3f;
+    text-align: center;
+}
+
+h4 {
+    color: #fff;
+    text-align: center;
 }
 
 .register-div-google {
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 .button-google {
@@ -79,10 +76,6 @@ section {
     margin-right: 2%;
 }
 
-.register-div-fb {
-    margin-bottom: 10%;
-}
-
 .button-facebook {
     background-color: #4267f2;
     width: 100%;
@@ -98,15 +91,6 @@ section {
 
 .fb-icon {
     margin-right: 2%;
-}
-
-h4 {
-    margin: 0 0 5% 0;
-    text-align: center;
-}
-
-.register-div-name {
-    margin-bottom: 10%;
 }
 
 .register-imput-name {
@@ -128,41 +112,9 @@ h4 {
 }
 
 .register-invalid-text-input {
-    color: red;
+    color: #aa0d3f;
     font-style: italic;
     padding: 4%;
-}
-
-.register-div-date {
-    margin-bottom: 10%;
-}
-
-.register-div-date label {
-    margin-left: 2%;
-}
-
-.register-div-date input {
-    width: 100%;
-    margin-top: 2%;
-    padding: 3%;
-    border: none;
-    border-radius: 8px;
-    background-color: #fff;
-}
-
-.register-div-dni {
-    margin-bottom: 10%;
-}
-
-.register-imput-dni {
-    width: 100%;
-    padding: 4%;
-    border: none;
-    border-radius: 8px;
-}
-
-.register-div-password {
-    margin-bottom: 10%;
 }
 
 .register-imput-password {
@@ -170,6 +122,19 @@ h4 {
     padding: 4%;
     border: none;
     border-radius: 8px;
+}
+
+.register-div-confirmPassword {
+    margin-bottom: 5%;
+}
+
+.register-div-img {
+    margin-top: 8%;
+}
+
+.register-div-img label {
+    color: #aa0d3f;
+    font-weight: bold;
 }
 
 .register-div-enter {
@@ -199,13 +164,20 @@ h4 {
     text-align: center;
 }
 
-.register-div-to-login a {
-    text-decoration: none;
-    color: blue;
+.register-div-to-login p {
+    color: #fff;
 }
 
-.box-shadow {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+.register-div-to-login a {
+    text-decoration: none;
+    color: #0d6efd;
+    font-weight: bold;
+}
+
+.errores {
+    color: #aa0d3f;
+    text-shadow: black;
+    padding-bottom: 10%;
 }
 
 /* 
@@ -221,11 +193,9 @@ h4 {
 
 @media (min-width: 1100px) {
     .register-main-container {
+        position: relative;
         flex-direction: row-reverse;
-    }
-
-    .register-mobile-bg-img {
-        display: none;
+        background-color: transparent;
     }
 
     .register-desktop-bg-img {
@@ -240,5 +210,24 @@ h4 {
         width: 30%;
         margin: 10% 5% 10% 0;
         padding: 2%;
+        background-color: rgb(245, 245, 245);
+        border-radius: 8px;
+        border: none;
+    }
+
+    .box-shadow {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    h4 {
+        color: #aa0d3f;
+    }
+
+    .register-div-to-login p {
+        color: #252525;
+    }
+
+    .errores {
+        padding-bottom: 0%;
     }
 }
