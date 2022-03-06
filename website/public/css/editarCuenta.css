@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+.editarCuenta-body {
+    font-size: 1rem;
+}
+
+.contenedor-links_grande a {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+
+/*
+
+MAIN
+
+*/
+
+.editarCuenta-main-container {
+    background-color: #252525;
+}
+
+.editarCuenta-title {
+    color: #aa0d3f;
+    text-align: center;
+    padding: 5% 0 0;
+    font-family: fansong;
+    font-size: 1.7rem;
+    margin-bottom: 0px;
+}
+
+.editarCuenta-form-container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 324px;
+    display: flex;
+    flex-direction: column;
+}
+
+.editarCuenta-div-img {
+    margin-top: 0%;
+}
+
+.editarCuenta-div-img label {
+    color: rgb(201, 196, 196);
+    font-weight: bold;
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+.editarCuenta-div-img input {
+    margin-bottom: 5%;
+}
+
+.img-usurio {
+    width: 100%;
+    border-radius: 8px;
+    max-width: 324px;
+    max-height: 324px;
+}
+
+.editarCuenta-section {
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+h4 {
+    color: rgb(201, 196, 196);
+    text-align: center;
+    font-weight: bold;
+}
+
+.editarCuenta-imput-name {
+    width: 100%;
+    padding: 2%;
+    border: none;
+    border-radius: 8px;
+}
+
+.editarCuenta-div-email {
+    margin-bottom: 5%;
+}
+
+.editarCuenta-imput-email {
+    width: 100%;
+    padding: 2%;
+    border: none;
+    border-radius: 8px;
+}
+
+.editarCuenta-invalid-text-input {
+    color: #aa0d3f;
+    font-style: italic;
+    padding: 4%;
+}
+
+.editarCuenta-imput-password {
+    width: 100%;
+    padding: 2%;
+    border: none;
+    border-radius: 8px;
+}
+
+.editarCuenta-div-confirmPassword {
+    margin-bottom: 5%;
+}
+
+.editarCuenta-div-enter {
+    padding-top: 10%;
+    text-align: center;
+}
+
+.editarCuenta-button-enter {
+    width: 80%;
+    padding: 2%;
+    border-radius: 8px;
+    border: 2px solid #aa0d3f;
+    color: #aa0d3f;
+    background-color: transparent;
+}
+
+.editarCuenta-button-enter p {
+    margin-bottom: 0;
+}
+
+.editarCuenta-button-enter a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.errores {
+    color: #aa0d3f;
+    text-shadow: black;
+    padding-bottom: 10%;
+}
+
+/* 
+    QUERIES
+*/
+
+@media (min-width: 767px) {
+    .editarCuenta-form-container {
+        max-width: 767px;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+    }
+
+    .img-section {
+        width: 50%;
+        padding: 2.5%;
+    }
+
+    .img-usurio {
+        max-width: 345.88px;
+        max-height: 345.88px;
+    }
+
+    .input-section {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        padding: 2.5%;
+    }
+
+    .editarCuenta-div-enter {
+        width: 100%;
+        padding-top: 0%;
+    }
+
+    .editarCuenta-button-enter {
+        width: 20%;
+        padding: 1%;
+    }
+
+    .errores {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1100px) {
+    .editarCuenta-form-container {
+        max-width: 1100px;
+    }
+
+    .img-usurio {
+        max-width: 447.929px;
+        max-height: 447.929px;
+    }
+}
