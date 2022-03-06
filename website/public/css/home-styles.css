@@ -44,11 +44,16 @@
 }
 .titulo-home-vinos {
     border-style: groove solid 1px;
-    background-color: rgb(19, 18, 18);
     display: flex;
     align-items: center;
     justify-content: center;
     bottom: 100px;
+}
+.linea {
+    border-top: 1px solid black;
+    height: 5px;
+    padding: 0;
+    margin: 2px auto 0 auto;
 }
 
 @media (min-width: 767px) {

@@ -27,22 +27,11 @@ MAIN
 }
 
 .eliminarProducto-form-container {
-<<<<<<< HEAD
-  max-width: 400px;
-  margin: 10% 15%;
-  padding: 5%;
-  border: none;
-  border-radius: 8px;
-  background-color: #ebebeb;
-  display: flex;
-  flex-direction: column;
-=======
     max-width: 400px;
     padding: 5%;
     border: none;
     display: flex;
     flex-direction: column;
->>>>>>> b30c9768579b82a3efc71b0b6a54a23b26a425f3
 }
 
 h2 {

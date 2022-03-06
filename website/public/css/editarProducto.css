@@ -109,7 +109,6 @@ form div input {
 */
 
 @media (min-width: 767px) {
-<<<<<<< HEAD
 .editarProducto-form-container {
     max-width: 500px;
 }
@@ -144,49 +143,4 @@ form div label {
     color: #fff;
     font-weight: bold;
 }
-=======
-    .editarProducto-form-container {
-        max-width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    h2 {
-        width: 100%;
-    }
-
-    form div {
-        width: 50%;
-        margin-bottom: 5%;
-        padding: 0 5%;
-    }
-
-    .editarProducto-div-img-product {
-        width: 50%;
-    }
-
-    .editarProducto-div-button {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 2%;
-    }
-
-    .editarProducto-button {
-        width: 30%;
-        border: none;
-        border-radius: 8px;
-        padding: 1%;
-        background-color: #aa0d3f;
-        color: #fff;
-    }
-}
-
-@media (min-width: 1100px) {
-    .editarProducto-form-container {
-        max-width: 1100px;
-    }
->>>>>>> b30c9768579b82a3efc71b0b6a54a23b26a425f3
 }
