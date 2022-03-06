@@ -20,6 +20,12 @@ router.post("/login", validateAccountLogin, usersController.loginProcess);
 
 router.get("/cuenta", ifNotLogged, usersController.cuenta);
 
+router.get('/editar/:id',ifNotLogged, usersController.editarCuenta)
+router.put('/editar/:id',
+    uploadFile.single("imagen"),
+    validateAccountRegister,
+    usersController.actualizarCuenta)
+
 router.get("/logout", usersController.logout);
 
 router.get("/cava", ifNotLogged, usersController.cava);

@@ -167,12 +167,10 @@ const productsController = {
     actualizarProducto: async (req, res) => {
         try {
             let errors = validationResult(req);
-            console.log(errors);
             let bodegas = await db.Bodegas.findAll();
             let uvas = await db.Uvas.findAll();
             let categorias = await db.Categorias.findAll();
             if (errors.isEmpty()) {
-                const id = req.params.id;
                 await db.Vinos.update(
                     {
                         nombre: req.body.nombre,

@@ -35,17 +35,8 @@
                         <h3>Correo Electronico:</h3>
                         <p><%= user.email %></p>
                     </div>
-                    <div class="cuenta_container-info">
-                        <h3>Fecha de Nacimiento:</h3>
-                        <p><%= user.birthday %></p>
-                    </div>
-                    <div class="cuenta_container-info">
-                        <h3>DNI:</h3>
-                        <p><%= user.dni %></p>
-                    </div>
-
                     <div class="cuenta_container-boton">
-                        <a class="cuenta_boton-editar btn-secondary" href=""
+                        <a class="cuenta_boton-editar btn-secondary" href="/users/editar/<%= user.id %>"
                             >Editar tu cuenta</a
                         >
                     </div>

@@ -32,9 +32,9 @@ main {
 }
 
 .cuenta_container h2 {
-    margin: 15px;
     font-family: "Cinzel", serif;
     color: #aa0d3f;
+    padding-top: 2%;
     font-size: calc(1rem + .9vw);
 }
 

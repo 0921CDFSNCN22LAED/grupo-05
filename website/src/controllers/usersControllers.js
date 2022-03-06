@@ -28,8 +28,6 @@ const usersController = {
                 return;
             }
 
-            console.log(req.body);
-
             let usuarioNuevo = await db.Usuarios.create({
                 nombre: req.body.name,
                 email: req.body.email,
@@ -38,7 +36,6 @@ const usersController = {
                 imagen: req.file.path.split("public").pop(),
             });
 
-            console.log(usuarioNuevo);
             delete usuarioNuevo.contrasenia;
             req.session.loggedUser = usuarioNuevo;
 
@@ -122,8 +119,6 @@ const usersController = {
                 vinos.push(arrayVinos[i].dataValues);
             }
 
-            console.log(vinos);
-
             res.render("users/cuenta", { user: req.session.loggedUser, vinos });
         } catch (error) {
             console.log(error);
@@ -156,6 +151,58 @@ const usersController = {
             console.log(error);
         }
     },
+    editarCuenta: async(req, res) => {
+        let usuario = await db.Usuarios.findOne({where: {id: req.session.loggedUser.id}})
+
+        res.render('users/editarCuenta', {usuario})
+    },
+    actualizarCuenta: async(req, res) => {
+        let errors = validationResult(req);
+        let usuario = await db.Usuarios.findByPk(req.params.id)
+        if (errors.isEmpty()){
+
+            let existingEmail = await db.Usuarios.findOne({
+                where: { email: req.body.email },
+            });
+
+            if (existingEmail && existingEmail.email != req.session.loggedUser.email) {
+                errors.errors.push({
+                    value: req.body.email,
+                    msg: "Ya existe un usuario con ese email",
+                    param: "email",
+                    location: "body",
+                });
+                res.render("users/editarCuenta" , {
+                    old: req.body,
+                    errors: errors.errors,
+                    usuario
+                });
+                return;
+            }
+            await db.Usuarios.update({
+                nombre: req.body.name,
+                email: req.body.email,
+                contrasenia: bcryptjs.hashSync(req.body.password, 10),
+                tipo_id: 2,
+                imagen: req.file.path.split("public").pop(),
+            },{
+                where: {id: req.params.id}
+            })
+    
+            let usuarioActualizado = {
+                id: req.params.id,
+                nombre: req.body.name,
+                email: req.body.email,
+                tipo_id: 2,
+                imagen: req.file.path.split("public").pop(),
+            }
+            req.session.loggedUser = usuarioActualizado
+    
+            res.redirect('/users/cuenta')
+        } else {
+            res.render('users/editarCuenta', {old: req.body, errors: errors.errors, usuario})
+        }
+    }
 };
 
 module.exports = usersController;
