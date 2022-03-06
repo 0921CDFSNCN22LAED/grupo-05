@@ -65,7 +65,7 @@ h4 {
 .button-google {
     background-color: #4285f4;
     width: 100%;
-    padding: 4%;
+    padding: 2%;
     border: none;
     border-radius: 8px;
 }
@@ -82,7 +82,7 @@ h4 {
 .button-facebook {
     background-color: #4267f2;
     width: 100%;
-    padding: 4%;
+    padding: 2%;
     border: none;
     border-radius: 8px;
 }
@@ -98,7 +98,7 @@ h4 {
 
 .register-imput-name {
     width: 100%;
-    padding: 4%;
+    padding: 2%;
     border: none;
     border-radius: 8px;
 }
@@ -109,7 +109,7 @@ h4 {
 
 .register-imput-email {
     width: 100%;
-    padding: 4%;
+    padding: 2%;
     border: none;
     border-radius: 8px;
 }
@@ -122,7 +122,7 @@ h4 {
 
 .register-imput-password {
     width: 100%;
-    padding: 4%;
+    padding: 2%;
     border: none;
     border-radius: 8px;
 }
@@ -146,8 +146,8 @@ h4 {
 }
 
 .register-button-enter {
-    width: 85%;
-    padding: 4%;
+    width: 80%;
+    padding: 2%;
     border: none;
     border-radius: 8px;
     background-color: #aa0d3f;
@@ -211,7 +211,7 @@ h4 {
 
     .register-form-container {
         width: 30%;
-        margin: 10% 5% 10% 0;
+        margin: 6% 5% 10% 0;
         padding: 2%;
         background-color: rgb(245, 245, 245);
         border-radius: 8px;
