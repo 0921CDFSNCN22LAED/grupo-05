@@ -252,6 +252,8 @@ label {
     h2 {
         color: #aa0d3f;
         margin-bottom: 5%;
+        font-family: fansong;
+        font-size:1.70rem;
     }
 
     .login-desktop-bg-img {
@@ -263,7 +265,7 @@ label {
     }
 
     .login-form-container {
-        width: 25%;
+        width: 30%;
         margin: 5% 5% 10% 0;
         padding: 2%;
         background-color: #ebebeb;
