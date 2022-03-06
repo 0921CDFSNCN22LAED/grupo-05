@@ -26,7 +26,7 @@ main {
     flex-direction: column;
     width: 90%;
     padding: 5% 0;
-    margin: auto;
+    margin: 0 auto;
     max-width: 324px;
 }
 
@@ -148,50 +148,21 @@ h2 {
 
 /* Tablet */
 @media (min-width: 767px) {
+    main {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 5% 0 15%;
+    }
+
     .cuenta_container {
-        max-width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .img-usurio {
-        max-width: 454.984px;
-        max-height: 255.922px;
-    }
-
-    .cuenta_container-info {
-        width: 50%;
-        padding: 2%;
-    }
-
-    .input-wrapper {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        padding: 2%;
-    }
-
-    .cuenta_container-info-input {
-        width: 100%;
-        padding: 0 0 5% 0;
-    }
-
-    .cuenta_container-boton {
-        padding: 0 2%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-
-    .button-wrapper {
-        width: 35%;
+        width: 40%;
+        padding: 0 5% 0 2.5%;
     }
 
     .wine-shelf {
         max-width: 100%;
+        width: 70%;
+        padding: 0 2.5% 0 5%;
     }
 
     .articles-wrapper {
@@ -201,51 +172,6 @@ h2 {
 
 /* Desktop */
 @media (min-width: 1100px) {
-    .cuenta_container {
-        max-width: 1100px;
-    }
-
-    .img-usurio {
-        max-width: 535.094px;
-        max-height: 300.984px;
-    }
-
-    .cuenta_container-info {
-        width: 58%;
-        padding: 2%;
-    }
-
-    .input-wrapper {
-        width: 28%;
-        justify-content: space-evenly;
-        padding: 2%;
-    }
-
-    .cuenta_container-info-input {
-        width: 100%;
-        padding: 0 0 5% 0;
-    }
-
-    .cuenta_container-boton {
-        width: 13%;
-        padding: 0 2%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-
-    .button-wrapper {
-        width: 100%;
-    }
-
-    .articles-wrapper {
-        width: 25%;
-    }
-
-    h2 {
-        margin-bottom: 3%;
-    }
-
     .wine-card:hover {
         box-shadow: 0px 0px 10px rgb(245, 245, 245);
     }
