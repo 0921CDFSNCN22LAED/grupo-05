@@ -11,8 +11,6 @@ body {
 
 main {
     background-color: #252525;
-    padding: 2% 0;
-    min-height: 700px;
 }
 
 .contenedor-links_grande a {
@@ -23,73 +21,290 @@ main {
 /* EMPIEZA EL MAIN*/
 
 .cuenta_container {
-    background-color: rgb(204, 204, 204);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     width: 90%;
+    padding: 5% 0;
     margin: auto;
+    max-width: 324px;
 }
 
-.cuenta_container h2 {
-    margin: 15px;
+h2 {
     font-family: "Cinzel", serif;
     color: #aa0d3f;
-    font-size: calc(1rem + .9vw);
+    font-size: calc(1rem + 0.9vw);
+    text-align: center;
+    width: 100%;
 }
 
 .img-usurio {
     width: 100%;
     border-radius: 8px;
-    max-width: 100px;
-    max-height: 100px;
-}
-
-.cuenta_container h3 {
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    max-width: 324px;
+    max-height: 324px;
 }
 
 .cuenta_container-info {
-    padding: 10px;
+    width: 100%;
+    padding: 0 0 5% 0;
+}
+
+.cuenta_container-info-input {
+    width: 100%;
+    padding: 0 0 5% 0;
 }
 
 .cuenta_container-boton {
-    margin: 20px 10px;
+    width: 100%;
+    padding: 5% 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .cuenta_boton-editar {
-    color: white;
-    background-color: #aa0d3f;
-    border: none;
-    border-radius: 5px;
+    background-color: transparent;
+    color: #aa0d3f;
+    border: 2px solid #aa0d3f;
+    border-radius: 8px;
     text-decoration: none;
-    padding: 10px;
+    padding: 0.375rem 0.75rem;
 }
 
-@media (min-width: 480px) {
-    .cuenta_container-info {
+.wine-shelf {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 324px;
+    padding-bottom: 15%;
+}
+
+.flex-div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.articles-wrapper {
+    width: 50%;
+}
+.wine-card {
+    background-color: #fff;
+    margin: 5%;
+    border-radius: 8px;
+}
+.wine-card-img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
+}
+.wine-card-body {
+    padding: 2%;
+    display: flex;
+    background-color: rgb(245, 245, 245);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.wine-card-texts {
+    width: 100%;
+}
+
+.card-title {
+    color: #aa0d3f;
+}
+
+.card-price {
+    color: #39b54a;
+    font-weight: bold;
+}
+
+.wine-card-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.wine-card-icons a i {
+    text-decoration: none;
+    color: black;
+    font-size: 1.25rem;
+}
+
+.button-estrella-carrito {
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 1.25rem;
+}
+
+.button-estrella-carrito i:hover {
+    color: #aa0d3f;
+}
+
+.wine-card-icons a i:hover {
+    color: #aa0d3f;
+}
+
+.button-add-product {
+    position: fixed;
+    text-decoration: none;
+    right: 5%;
+    bottom: 5%;
+    border: none;
+    border-radius: 50%;
+    padding: 1.5%;
+    background-color: #aa0d3f;
+    color: #ffff;
+    display: flex;
+}
+
+/* Tablet */
+@media (min-width: 767px) {
+    .cuenta_container {
+        max-width: 100%;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
     }
-    .cuenta_container-info p {
-        margin: 2px 0 0 5px;
+
+    .img-usurio {
+        max-width: 454.984px;
+        max-height: 255.922px;
+    }
+
+    .cuenta_container-info {
+        width: 50%;
+        padding: 2%;
+    }
+
+    .input-wrapper {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 2%;
+    }
+
+    .cuenta_container-info-input {
+        width: 100%;
+        padding: 0 0 5% 0;
+    }
+
+    .cuenta_container-boton {
+        padding: 0 2%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .button-wrapper {
+        width: 35%;
+    }
+
+    .wine-shelf {
+        max-width: 100%;
+    }
+
+    .articles-wrapper {
+        width: 33%;
     }
 }
 
-@media (min-width: 767px) {
+/* Desktop */
+@media (min-width: 1100px) {
     .cuenta_container {
-        flex-direction: row;
-        flex-wrap: wrap;
+        max-width: 1100px;
     }
-    .cuenta_container h2 {
+
+    .img-usurio {
+        max-width: 535.094px;
+        max-height: 300.984px;
+    }
+
+    .cuenta_container-info {
+        width: 58%;
+        padding: 2%;
+    }
+
+    .input-wrapper {
+        width: 28%;
+        justify-content: space-evenly;
+        padding: 2%;
+    }
+
+    .cuenta_container-info-input {
+        width: 100%;
+        padding: 0 0 5% 0;
+    }
+
+    .cuenta_container-boton {
+        width: 13%;
+        padding: 0 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .button-wrapper {
         width: 100%;
     }
-    .cuenta_container-info {
-        flex-direction: column;
-        width: 50%;
+
+    .articles-wrapper {
+        width: 25%;
     }
-    .cuenta_container-info p {
-        margin: 0;
+
+    h2 {
+        margin-bottom: 3%;
+    }
+
+    .wine-card:hover {
+        box-shadow: 0px 0px 10px rgb(245, 245, 245);
+    }
+
+    .wine-card-product-description {
+        display: none;
+    }
+
+    .wine-card:hover .wine-card-product-description {
+        display: block;
+    }
+
+    .card-title:hover {
+        font-size: 25px;
+        color: brown;
+    }
+
+    .card-price {
+        text-align: center;
+        font-size: 1.25rem;
+        color: #aa0d3f;
+    }
+
+    .wine-card:hover .card-price {
+        text-align: start;
+        color: #39b54a;
+        font-weight: bold;
+        font-size: var(--bs-body-font-size);
+    }
+
+    .wine-card-icons {
+        display: none;
+    }
+
+    .wine-card:hover .wine-card-icons {
+        display: flex;
+    }
+
+    .button-add-product:hover {
+        background-color: #f6004a;
+    }
+
+    .button-add-product i {
+        font-size: 25px;
+    }
+
+    .button-add-product i:hover {
+        color: white;
     }
 }
