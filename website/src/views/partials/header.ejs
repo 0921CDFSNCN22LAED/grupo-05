@@ -7,24 +7,32 @@
         </div>
     </a>
     <nav class="contenedor-links_chica">
-        <a class="link_chica" href="/users/login"
-            ><i class="fas fa-user hide-icon-login"></i
-        ></a>
-        <a class="link_chica" href="/users/cava"
-            ><i class="fas fa-wine-glass-alt"></i
-        ></a>
-        <a class="link_chica" href="/products/vinoteca"
-            ><i class="fas fa-wine-bottle"></i
-        ></a>
+        <a class="link_chica" href="/products/vinoteca"><i class="fas fa-wine-bottle"></i></a>
+        <% if (locals.isLogged) { %>
+            <% if (locals.isAdmin){ %>
+                <a class="link_chica" href="/users/cuenta"><i class="fas fa-user"></i></a>
+                <% } else { %>
+                    <a class="link_chica" href="/users/cava"><i class="fas fa-wine-glass-alt"></i></a>
+                    <a class="link_chica" href="/users/cuenta"><i class="fas fa-user"></i></a>
+                    <% } %>
+                        <% } else { %>
+                            <a class="link_chica" href="/users/login"><i class="fas fa-user"></i></a>
+                            <a class="link_chica" href="/users/registro"><i class="far fa-id-card"></i></a>
+                            <% } %>
     </nav>
+
     <nav class="contenedor-links_grande">
         <a href="/products/vinoteca">Vinoteca</a>
         <% if (locals.isLogged) { %>
-        <a href="/users/cava">Mi Cava</a>
-        <a href="/users/cuenta">Mi Cuenta</a>
-        <% } else { %>
-        <a href="/users/login">Login</a>
-        <a href="/users/registro">Registro</a>
-        <% } %>
+            <% if (locals.isAdmin) {%>
+                <a href="/users/cuenta">Mi Cuenta</a>
+                <% } else {%>
+                    <a href="/users/cava">Mi Cava</a>
+                    <a href="/users/cuenta">Mi Cuenta</a>
+                    <% } %>
+                        <% } else { %>
+                            <a href="/users/login">Login</a>
+                            <a href="/users/registro">Registro</a>
+                            <% } %>
     </nav>
 </section>
