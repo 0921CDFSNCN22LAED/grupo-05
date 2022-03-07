@@ -3,6 +3,7 @@ const router = express.Router();
 const usersController = require("../controllers/usersControllers");
 const ifLogged = require("../Middlewares/ifLogged");
 const ifNotLogged = require("../Middlewares/ifNotLogged");
+const onlyUser = require("../Middlewares/onlyUser");
 const validateAccountLogin = require("../Middlewares/validaciones/backend/validateAccountLogin");
 const validateAccountRegister = require("../Middlewares/validaciones/backend/validateAccountRegister");
 const uploadFile = require("../Middlewares/multerMiddlewareUsers");
@@ -20,14 +21,16 @@ router.post("/login", validateAccountLogin, usersController.loginProcess);
 
 router.get("/cuenta", ifNotLogged, usersController.cuenta);
 
-router.get('/editar/:id',ifNotLogged, usersController.editarCuenta)
-router.put('/editar/:id',
+router.get("/editar/:id", ifNotLogged, usersController.editarCuenta);
+router.put(
+    "/editar/:id",
     uploadFile.single("imagen"),
     validateAccountRegister,
-    usersController.actualizarCuenta)
+    usersController.actualizarCuenta
+);
 
 router.get("/logout", usersController.logout);
 
-router.get("/cava", ifNotLogged, usersController.cava);
+router.get("/cava", ifNotLogged, onlyUser, usersController.cava);
 
 module.exports = router;
