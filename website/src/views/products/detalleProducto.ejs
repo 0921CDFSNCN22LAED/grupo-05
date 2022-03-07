@@ -45,27 +45,28 @@
                     </div>
             </section>
 
-            <div id="contenedor-detalle-botones">
-                <form action="/products/detalle/cava/<%= vino.id %>" method="POST">
-                    <button type="submit" class="boton-detalle">
-                        <% if (cava==true) { %>
-                            SACAR DE MI CAVA
-                        <% } else { %>
-                            AGREGAR A MI CAVA
-                        <% } %>
-                    </button>
-                </form>
-                <form action="/products/detalle/favorito/<%= vino.id %>" method="POST">
-                    <button type="submit" class="boton-detalle">
-                        <% if (favorito==true) { %>
-                            SACAR DE FAVORITOS
-                        <% } else { %>
-                            AÑADIR A FAVORITOS
-                        <% } %>
-                    </button>
-                </form>
-            </div>
-        </div>
+            <% if (!locals.isAdmin) {%>
+                <div id="contenedor-detalle-botones">
+                    <form action="/products/detalle/cava/<%= vino.id %>" method="POST">
+                        <button type="submit" class="boton-detalle">
+                            <% if (cava==true) { %>
+                                SACAR DE MI CAVA
+                                <% } else { %>
+                                    AGREGAR A MI CAVA
+                                    <% } %>
+                        </button>
+                    </form>
+                    <form action="/products/detalle/favorito/<%= vino.id %>" method="POST">
+                        <button type="submit" class="boton-detalle">
+                            <% if (favorito==true) { %>
+                                SACAR DE FAVORITOS
+                                <% } else { %>
+                                    AÑADIR A FAVORITOS
+                                    <% } %>
+                        </button>
+                    </form>
+                </div>
+                <% } %>
         </div>
     </main>
     <footer>
