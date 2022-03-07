@@ -130,34 +130,14 @@ main h2 {
 .button-add-product {
     position: fixed;
     text-decoration: none;
-    right: 5%;
-    bottom: 5%;
-    border: none;
-    border-radius: 50%;
-    padding: 1.5%;
-    background-color: #aa0d3f;
-    color: #ffff;
-    display: flex;
-}
-
-.button-add-product {
     right: 2.5%;
     bottom: 2.5%;
+    border-radius: 50%;
+    padding: 1.5%;
     color: rgb(201, 196, 196);
     background-color: transparent;
     border: 2px solid #aa0d3f;
-}
-
-.button-add-product:hover {
-    background-color: transparent;
-    border: 2px solid rgb(201, 196, 196);
-    color: #aa0d3f;
-    text-decoration: none;
-}
-
-.button-add-product i:hover {
-    text-decoration: none;
-    color: #aa0d3f;
+    display: flex;
 }
 
 /*** QUERIES ***/
@@ -223,5 +203,9 @@ main h2 {
 
     .wine-card:hover .wine-card-icons {
         display: flex;
+    }
+
+    .button-add-product {
+        padding: 1%;
     }
 }
