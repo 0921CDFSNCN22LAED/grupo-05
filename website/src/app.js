@@ -7,7 +7,8 @@ const usersRouters = require("./routers/usersRouters.js");
 const methodOverride = require("method-override");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
-const cors = require("cors")
+const cors = require("cors");
+const ifAdmin = require("./Middlewares/ifAdmin.js");
 const recordameMiddleware = require("./Middlewares/recordameMiddleware");
 const navBarDiscriminator = require("./Middlewares/navBarDiscriminator");
 const usuariosRouters = require("./routers/apiRouters/usuariosRouters");
@@ -25,7 +26,8 @@ app.use(
     session({ secret: "secreto", resave: false, saveUninitialized: false })
 );
 app.use(cookieParser());
-app.use(cors(["http://localhost:3001/", "https://localhost:3001/"]))
+app.use(cors(["http://localhost:3001/", "https://localhost:3001/"]));
+app.use(ifAdmin);
 app.use(recordameMiddleware);
 app.use(navBarDiscriminator);
 // <div key={bodega.id}>{bodega.nombre}</div>
