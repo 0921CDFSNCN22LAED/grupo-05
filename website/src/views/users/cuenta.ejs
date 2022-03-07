@@ -21,19 +21,19 @@
     </header>
     <main>
         <% if (locals.isAdmin) { %>
-            <div class="cuenta_container">
+            <div class="cuenta_container cuenta_container_admin">
                 <h2>Informacion de tu cuenta</h2>
 
-                <div class="input-wrapper">
-                    <div class="cuenta_container-info-input">
+                <div class="input-wrapper input-wrapper-admin">
+                    <div class="cuenta_container-info-input cuenta_container-info-input-admin">
                         <input class="form-control" type="text" value="<%= user.nombre %>" disabled readonly />
                     </div>
-                    <div class="cuenta_container-info-input">
+                    <div class="cuenta_container-info-input cuenta_container-info-input-admin">
                         <input class="form-control" type="text" value="<%= user.email %>" disabled readonly />
                     </div>
                 </div>
                 <div class="cuenta_container-info">
-                    <img src="<%= user.imagen %>" class="img-usurio" />
+                    <img src="<%= user.imagen %>" class="img-usurio img-usurio-admin" />
                 </div>
                 <div class="cuenta_container-boton">
                     <div class="button-wrapper">

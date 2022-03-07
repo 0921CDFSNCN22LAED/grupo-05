@@ -146,6 +146,11 @@ h2 {
     color: #aa0d3f;
 }
 
+/* Estilos para admins */
+.cuenta_container_admin {
+    padding-bottom: 35%;
+}
+
 /* Tablet */
 @media (min-width: 767px) {
     main {
@@ -167,6 +172,17 @@ h2 {
 
     .articles-wrapper {
         width: 33%;
+    }
+
+    /* Estilos para admins */
+    .cuenta_container_admin {
+        width: 60%;
+        max-width: 512.929px;
+    }
+
+    .img-usurio-admin {
+        max-width: 512.929px;
+        max-height: 512.929px;
     }
 }
 
@@ -208,5 +224,28 @@ h2 {
 
     .wine-card:hover .wine-card-icons {
         display: flex;
+    }
+
+    /* Estilos para admins */
+    .cuenta_container_admin {
+        width: 100%;
+        max-width: 579.609px;
+    }
+
+    .input-wrapper-admin {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .cuenta_container-info-input-admin {
+        width: 50%;
+        padding: 2%;
+    }
+
+    .img-usurio-admin {
+        max-width: 496.812px;
+        max-height: 496.812px;
+        padding: 2%;
+        border-radius: 8px;
     }
 }
