@@ -1,13 +1,14 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Sidebar from './components/Sidebar';
-import ContentWrapper from './components/ContentWrapper';
+import Home from "./components/Home"
+
+
+
 
 function App() {
   return (
-    <div id="wrapper">
-      <Sidebar />
-      <ContentWrapper />
+    <div>
+      <Home />
     </div>
   );
 }
