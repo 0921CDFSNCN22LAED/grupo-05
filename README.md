@@ -29,9 +29,14 @@
  - JAVASCRIPT
  - EJS
  - NODE JS
+ - EXPRESS
  - REACT
  - MYSQL
+ 
  
  ## Tablero de trabajo 📌
 
   -https://trello.com/b/IlFMtWwd/ecommerce
+  
+
+ ## Pagina Online Heroku 💻
