@@ -6,10 +6,10 @@ module.exports = {
             { order: [["nombre", "ASC"]] }
         );
 
-        
+
         for (const usuario of usuarios) {
             usuario.dataValues.detail = 'localhost:3001/api/usuarios/' + usuario.dataValues.id
-            usuario.dataValues.imagen = 'localhost:3001' + usuario.dataValues.imagen
+            usuario.dataValues.imagen = 'http://localhost:3001' + usuario.dataValues.imagen
             delete usuario.dataValues.contrasenia
         }
 
@@ -32,7 +32,7 @@ module.exports = {
         );
 
         delete usuario.contrasenia
-        usuario.imagen = 'localhost:3001' + usuario.imagen
+        usuario.imagen = 'http://localhost:3001' + usuario.imagen
 
 
         let respuesta = {

@@ -15,24 +15,24 @@ module.exports = {
         let luigiBosca = 0
 
         for (let vino of vinos) {
-            if (vino.vinoBodega.nombre == 'Zuccardi'){
+            if (vino.vinoBodega.nombre == 'Zuccardi') {
                 zuccardi++
-            } else if (vino.vinoBodega.nombre == 'Catena Zapata'){
+            } else if (vino.vinoBodega.nombre == 'Catena Zapata') {
                 catenaZapata++
-            } else if (vino.vinoBodega.nombre == 'Trapiche'){
+            } else if (vino.vinoBodega.nombre == 'Trapiche') {
                 trapiche++
-            } else if (vino.vinoBodega.nombre == 'El Enemigo'){
+            } else if (vino.vinoBodega.nombre == 'El Enemigo') {
                 elEnemigo++
-            } else if (vino.vinoBodega.nombre == 'El Esteco'){
+            } else if (vino.vinoBodega.nombre == 'El Esteco') {
                 elEsteco++
-            } else if (vino.vinoBodega.nombre == 'Salentein'){
+            } else if (vino.vinoBodega.nombre == 'Salentein') {
                 salentein++
-            } else if (vino.vinoBodega.nombre == 'Luigi Bosca'){
+            } else if (vino.vinoBodega.nombre == 'Luigi Bosca') {
                 luigiBosca++
             }
         }
 
-        let malbec = 0 
+        let malbec = 0
         let bonarda = 0
         let cabernetSauvignon = 0
         let merlot = 0
@@ -41,19 +41,19 @@ module.exports = {
         let chardonnay = 0
 
         for (let vino of vinos) {
-            if (vino.vinoUva.nombre == 'Malbec'){
+            if (vino.vinoUva.nombre == 'Malbec') {
                 malbec++
-            } else if (vino.vinoUva.nombre == 'Bonarda'){
+            } else if (vino.vinoUva.nombre == 'Bonarda') {
                 bonarda++
-            } else if (vino.vinoUva.nombre == 'Cabernet Sauvignon'){
+            } else if (vino.vinoUva.nombre == 'Cabernet Sauvignon') {
                 cabernetSauvignon++
-            } else if (vino.vinoUva.nombre == 'Merlot'){
+            } else if (vino.vinoUva.nombre == 'Merlot') {
                 merlot++
-            } else if (vino.vinoUva.nombre == 'Syrah'){
+            } else if (vino.vinoUva.nombre == 'Syrah') {
                 syrah++
-            } else if (vino.vinoUva.nombre == 'Pinot Noir'){
+            } else if (vino.vinoUva.nombre == 'Pinot Noir') {
                 pinotNoir++
-            } else if (vino.vinoUva.nombre == 'Chardonnay'){
+            } else if (vino.vinoUva.nombre == 'Chardonnay') {
                 chardonnay++
             }
         }
@@ -63,17 +63,17 @@ module.exports = {
         let economicos = 0
 
         for (let vino of vinos) {
-            if (vino.vinoCategoria.nombre == 'Destacados'){
+            if (vino.vinoCategoria.nombre == 'Destacados') {
                 destacados++
-            } else if (vino.vinoCategoria.nombre == '+ Vendidos'){
+            } else if (vino.vinoCategoria.nombre == '+ Vendidos') {
                 vendidos++
-            } else if (vino.vinoCategoria.nombre == '+ Económicos'){
+            } else if (vino.vinoCategoria.nombre == '+ Económicos') {
                 economicos++
             }
         }
-        
+
         for (let vino of vinos) {
-            vino.imagen = 'localhost:3001' + vino.imagen
+            vino.imagen = 'http://localhost:3001' + vino.imagen
             vino.dataValues.detail = 'localhost:3001/api/vinos/' + vino.id
 
             for (let usuario of vino.usuario_cava_id) {
@@ -92,9 +92,9 @@ module.exports = {
                 url: "api/vinos",
             },
             countByCategory: {
-                uvas: {malbec, bonarda, cabernetSauvignon, merlot, syrah, pinotNoir, chardonnay},
-                bodegas: {zuccardi, catenaZapata, trapiche, elEnemigo, elEsteco, salentein, luigiBosca},
-                categorias: {vendidos, economicos, destacados}
+                uvas: { malbec, bonarda, cabernetSauvignon, merlot, syrah, pinotNoir, chardonnay },
+                bodegas: { zuccardi, catenaZapata, trapiche, elEnemigo, elEsteco, salentein, luigiBosca },
+                categorias: { vendidos, economicos, destacados }
             },
             relations: ['vinoBodega', 'vinoUva', 'vinoCategoria'],
             data: vinos,
