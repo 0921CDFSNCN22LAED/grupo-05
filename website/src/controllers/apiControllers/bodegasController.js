@@ -10,7 +10,7 @@ module.exports = {
             meta: {
                 status: 200,
                 total: bodegas.length,
-                url: "api/bodegas",
+                url: "http://localhost:3001/api/bodegas",
             },
             data: bodegas,
         };

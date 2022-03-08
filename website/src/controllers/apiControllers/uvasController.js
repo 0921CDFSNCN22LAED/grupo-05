@@ -10,7 +10,7 @@ module.exports = {
             meta: {
                 status: 200,
                 total: uvas.length,
-                url: "api/uvas",
+                url: "http://localhost:3001/api/uvas",
             },
             data: uvas,
         };

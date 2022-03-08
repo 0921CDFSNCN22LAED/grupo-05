@@ -74,7 +74,7 @@ module.exports = {
 
         for (let vino of vinos) {
             vino.imagen = 'http://localhost:3001' + vino.imagen
-            vino.dataValues.detail = 'localhost:3001/api/vinos/' + vino.id
+            vino.dataValues.detail = 'http://localhost:3001/api/vinos/' + vino.id
 
             for (let usuario of vino.usuario_cava_id) {
                 delete usuario.dataValues.contrasenia
@@ -89,7 +89,7 @@ module.exports = {
             meta: {
                 status: 200,
                 total: vinos.length,
-                url: "api/vinos",
+                url: "http://localhost:3001/api/vinos",
             },
             countByCategory: {
                 uvas: { malbec, bonarda, cabernetSauvignon, merlot, syrah, pinotNoir, chardonnay },
@@ -113,7 +113,7 @@ module.exports = {
         let respuesta = {
             meta: {
                 status: 200,
-                url: "api/vinos/:id",
+                url: "http://localhost:3001/api/vinos/:id",
             },
             data: vino,
         };

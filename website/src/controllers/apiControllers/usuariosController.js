@@ -8,7 +8,7 @@ module.exports = {
 
 
         for (const usuario of usuarios) {
-            usuario.dataValues.detail = 'localhost:3001/api/usuarios/' + usuario.dataValues.id
+            usuario.dataValues.detail = 'http://localhost:3001/api/usuarios/' + usuario.dataValues.id
             usuario.dataValues.imagen = 'http://localhost:3001' + usuario.dataValues.imagen
             delete usuario.dataValues.contrasenia
         }
@@ -18,7 +18,7 @@ module.exports = {
             meta: {
                 status: 200,
                 total: usuarios.length,
-                url: "api/usuarios",
+                url: "http://localhost:3001/api/usuarios",
             },
             data: usuarios,
         };
@@ -38,7 +38,7 @@ module.exports = {
         let respuesta = {
             meta: {
                 status: 200,
-                url: "localhost:3001/api/usuarios/" + usuario.id,
+                url: "http://localhost:3001/api/usuarios/" + usuario.id,
             },
             data: usuario,
         };
