@@ -1,14 +1,20 @@
 
 import './App.css';
-import Home from "./components/Home"
-
+import Home from "./components/Home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import DetalleVinos from './components/DetalleVinos';
 
 
 
 function App() {
   return (
     <div>
-      <Home />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" exact={true} element={<Home />} />
+          <Route path="/detalle-vino/:id" element={<DetalleVinos />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
