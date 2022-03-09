@@ -4,6 +4,7 @@ const usersController = require("../controllers/usersControllers");
 const ifLogged = require("../Middlewares/ifLogged");
 const ifNotLogged = require("../Middlewares/ifNotLogged");
 const onlyUser = require("../Middlewares/onlyUser");
+const onlyAdmin = require("../Middlewares/onlyAdmin.js");
 const validateAccountLogin = require("../Middlewares/validaciones/backend/validateAccountLogin");
 const validateAccountRegister = require("../Middlewares/validaciones/backend/validateAccountRegister");
 const uploadFile = require("../Middlewares/multerMiddlewareUsers");
@@ -14,6 +15,15 @@ router.post(
     uploadFile.single("imagen"),
     validateAccountRegister,
     usersController.registroProcesado
+);
+
+router.get("/registro-admin", onlyAdmin, usersController.registroAdmin);
+router.post(
+    "/registro-admin",
+    onlyAdmin,
+    uploadFile.single("imagen"),
+    validateAccountRegister,
+    usersController.registroAdminProcesado
 );
 
 router.get("/login", ifLogged, usersController.login);
