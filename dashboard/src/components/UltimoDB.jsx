@@ -57,7 +57,7 @@ export default class UltimoDB extends Component {
                                 className="img-fluid img-br mb-4"
                                 style={{ width: "40rem" }}
                                 src={this.state.ultimo.imagen}
-                                alt=" Harambee "
+                                id="imagen"
                             />
                         </div>
                         <div className="text-center">
