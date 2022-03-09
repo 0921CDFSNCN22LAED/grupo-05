@@ -40,10 +40,15 @@
 }
 /* FIN SIDEBAR */
 
-/* INICIO ÚLTIMO VINO DB */
+/* INICIO ÚLTIMO DB */
 .img-br {
     border-radius: calc(0.35rem - 1px);
     border: none;
+}
+
+#imagen {
+    max-width: 200px;
+    max-height: 200px;
 }
 
 .btn-danger {
@@ -51,7 +56,7 @@
     background-color: #aa0d3f;
     border-color: #aa0d3f;
 }
-/* FIN ÚLTIMO VINO DB */
+/* FIN ÚLTIMO DB */
 
 /* INICIO FOOTER */
 .bg-grey {
@@ -71,3 +76,10 @@
     color: gold;
 }
 /* FIN FOOTER */
+
+@media (min-width: 768px) {
+    #imagen {
+        max-width: 300px;
+        max-height: 300px;
+    }
+}
