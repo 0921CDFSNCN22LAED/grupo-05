@@ -13,7 +13,8 @@ export default class ContentWrapper extends Component {
         super(props)
 
         this.state = {
-            caracteristicas: []
+            caracteristicas: [],
+            ultimos: []
         }
     }
 
@@ -41,8 +42,46 @@ export default class ContentWrapper extends Component {
         })
     }
 
+    async getUltimos(){
+        let vinosRes = await fetch("http://localhost:3001/api/vinos")
+        let vinos = await vinosRes.json()
+        let usuariosRes = await fetch("http://localhost:3001/api/usuarios")
+        let usuarios = await usuariosRes.json()
+        let nuevoUltimos = []
+        let vinoId = 0
+        let usuarioId = 0
+
+        for (let vino of vinos.data) {
+            if (vino.id > vinoId) {
+                vinoId = vino.id;
+            }
+        }
+        for (let usuario of usuarios.data) {
+            if (usuario.id > usuarioId) {
+                usuarioId = usuario.id;
+            }
+        }
+        for (let vino of vinos.data) {
+            if (vinoId === vino.id) {
+                nuevoUltimos.push(vino)
+            }
+        }
+        for (let usuario of usuarios.data) {
+            if (usuarioId === usuario.id) {
+                nuevoUltimos.push(usuario)
+            }
+        }
+
+        this.setState({
+            ultimos: nuevoUltimos
+        })
+
+        console.log(this.state.ultimos);
+    }
+
     componentDidMount(){
         this.getCaracteristicas()
+        this.getUltimos()
     }
 
     render() {
@@ -65,12 +104,11 @@ export default class ContentWrapper extends Component {
                         {/* <!-- Content Row Last wine in Data Base --> */}
                         <div className="row justify-content-center">
                             {/* <!-- Last Wine in DB --> */}
-                            <UltimoDB caracteristica="vinos" />
-                            {/* <!-- End content row last wine in Data Base --> */}
 
-                            {/* <!-- Last Wine in DB --> */}
-                            <UltimoDB caracteristica="usuarios" />
-                            {/* <!-- End content row last wine in Data Base --> */}
+                            {this.state.ultimos.map((ultimo) => (
+                                <UltimoDB nombre={ultimo.nombre} imagen={ultimo.imagen} />
+                            ))}
+
                         </div>
                         <div className="row">
                             {/* <!-- Caracteristicas in DB --> */}
