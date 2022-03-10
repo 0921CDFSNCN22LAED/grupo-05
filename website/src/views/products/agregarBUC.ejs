@@ -17,7 +17,7 @@
     <main>
         <div class="forms-wrapper">
             <h2>AGREGAR A LA DB:</h2>
-            <form action="" method="POST">
+            <form action="plusBodegas" method="POST">
                 <div class="input-wrapper">
                     <label for="bodega" class="form-label">Bodega:</label>
                     <input class="box-shadow form-control" type="text" name="bodega" id="bodega"
@@ -26,9 +26,20 @@
                         AGREGAR
                     </button>
                 </div>
+                <% if (locals.errors) { %>
+                    <% for (let error of errors) {%>
+                        <% if (error.param=="bodega" ) { %>
+                            <div class="text-danger">
+                                <p>
+                                    <%= error.msg %>
+                                </p>
+                            </div>
+                            <% } %>
+                                <% } %>
+                                    <% } %>
             </form>
 
-            <form action="" method="POST">
+            <form action="plusUvas" method="POST">
                 <div class="input-wrapper">
                     <label for="varietal" class="form-label">Varietal:</label>
                     <input class="box-shadow form-control" type="text" name="varietal" id="varietal"
@@ -37,9 +48,20 @@
                         AGREGAR
                     </button>
                 </div>
+                <% if (locals.errors) { %>
+                    <% for (let error of errors) {%>
+                        <% if (error.param=="varietal" ) { %>
+                            <div class="text-danger">
+                                <p>
+                                    <%= error.msg %>
+                                </p>
+                            </div>
+                            <% } %>
+                                <% } %>
+                                    <% } %>
             </form>
 
-            <form action="" method="POST">
+            <form action="plusCategorias" method="POST">
                 <div class="input-wrapper">
                     <label for="categoria" class="form-label">Categoria de vinos:</label>
                     <input class="box-shadow form-control" type="text" name="categoria" id="categoria"
@@ -48,6 +70,17 @@
                         AGREGAR
                     </button>
                 </div>
+                <% if (locals.errors) { %>
+                    <% for (let error of errors) {%>
+                        <% if (error.param=="categoria" ) { %>
+                            <div class="text-danger">
+                                <p>
+                                    <%= error.msg %>
+                                </p>
+                            </div>
+                            <% } %>
+                                <% } %>
+                                    <% } %>
             </form>
         </div>
     </main>

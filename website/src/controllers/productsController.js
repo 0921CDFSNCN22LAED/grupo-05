@@ -391,30 +391,49 @@ const productsController = {
     agregarBUC: (req, res) => {
         res.render("products/agregarBUC");
     },
-    ProcessAgregarBUC: async (req, res) => {
-        console.log(req.body.bodega);
-        console.log(req.body.varietal);
-        console.log(req.body.categoria);
-
-        if (req.body.bodega) {
+    ProcessAgregarBodegas: async (req, res) => {
+        let errors = validationResult(req);
+        console.log(errors);
+        if (errors.isEmpty()) {
             await db.Bodegas.create({
                 nombre: req.body.bodega,
             });
             res.redirect("/products/agregar");
+        } else {
+            res.render("products/agregarBUC", {
+                errors: errors.errors,
+                old: req.body,
+            });
         }
+    },
 
-        if (req.body.varietal) {
+    ProcessAgregarUvas: async (req, res) => {
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
             await db.Uvas.create({
                 nombre: req.body.varietal,
             });
             res.redirect("/products/agregar");
+        } else {
+            res.render("products/agregarBUC", {
+                errors: errors.errors,
+                old: req.body,
+            });
         }
+    },
 
-        if (req.body.categoria) {
+    ProcessAgregarCategorias: async (req, res) => {
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
             await db.Categorias.create({
                 nombre: req.body.categoria,
             });
             res.redirect("/products/agregar");
+        } else {
+            res.render("products/agregarBUC", {
+                errors: errors.errors,
+                old: req.body,
+            });
         }
     },
 };
