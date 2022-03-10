@@ -50,16 +50,32 @@ const productsController = {
         try {
             const nombre = req.query.nombre;
             const vinos = await db.Vinos.findAll({
-                include: [
-                    { association: "vinoBodega" },
-                    { association: "vinoCategoria" },
-                ],
+                include: {all: true},
                 where: {
                     nombre: { [Op.like]: "%" + nombre + "%" },
                 },
             });
+            let cavas = [];
+            let favoritos = [];
+
+            if (req.session.loggedUser) {
+                for (let vino of vinos) {
+                    for (const usuario of vino.usuario_cava_id) {
+                        if (usuario.id == req.session.loggedUser.id) {
+                            cavas.push(vino.id);
+                        }
+                    }
+                }
+                for (let vino of vinos) {
+                    for (const usuario of vino.usuario_favorito_id) {
+                        if (usuario.id == req.session.loggedUser.id) {
+                            favoritos.push(vino.id);
+                        }
+                    }
+                }
+            }
             res.render("products/vinoteca", {
-                vinos: vinos,
+                vinos: vinos, cavas, favoritos,
                 link: "/editarProductos/" + vinos.id,
             });
         } catch (error) {
