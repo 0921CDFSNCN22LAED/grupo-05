@@ -62,10 +62,12 @@ module.exports = {
     },
 
     detail: async (req, res) => {
-        const vino = await db.Vinos.findOne(
-            { include: { all: true } },
-            { where: { id: req.params.id } }
+        const vino = await db.Vinos.findByPk( req.params.id,
+            { include: { all: true } }
         );
+
+        console.log(req.params.id);
+        console.log(vino);
 
         let respuesta = {
             meta: {
@@ -77,6 +79,4 @@ module.exports = {
 
         res.json(respuesta);
     },
-
-    //Falta array por cada relación
 };

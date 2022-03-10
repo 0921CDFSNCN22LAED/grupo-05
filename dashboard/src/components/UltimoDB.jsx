@@ -1,7 +1,15 @@
 import React, { Component } from "react";
 import "../css/dashboard-styles.css";
+import {Link} from "react-router-dom"
 
 export default class UltimoDB extends Component {
+    constructor(props){
+        super(props)
+
+        this.state = {
+            link: `/detalle-vino/${props.tipo}/${props.id}`
+        }
+    }
 
     render() {
         return (
@@ -22,14 +30,12 @@ export default class UltimoDB extends Component {
                             />
                         </div>
                         <div className="text-center">
-                            <a
+                            <Link
                                 className="btn btn-danger"
-                                target="_blank"
-                                rel="nofollow"
-                                href="/"
+                                to={this.state.link}
                             >
-                                View wine details
-                            </a>
+                                DETALLE
+                            </Link>
                         </div>
                     </div>
                 </div>
