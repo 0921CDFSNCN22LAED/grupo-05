@@ -9,37 +9,36 @@ const productsController = {
     vinoteca: async (req, res) => {
         try {
             const vinos = await db.Vinos.findAll({
-                include: [
-                    {all: true}
-                ],
+                include: [{ all: true }],
                 order: [["nombre", "ASC"]],
             });
 
-            let cavas = []
-            let favoritos = []
+            let cavas = [];
+            let favoritos = [];
 
-
-            if (req.session.loggedUser){
+            if (req.session.loggedUser) {
                 for (let vino of vinos) {
                     for (const usuario of vino.usuario_cava_id) {
-                        if (usuario.id == req.session.loggedUser.id){
-                            cavas.push(vino.id)
+                        if (usuario.id == req.session.loggedUser.id) {
+                            cavas.push(vino.id);
                         }
                     }
                 }
                 for (let vino of vinos) {
                     for (const usuario of vino.usuario_favorito_id) {
-                        if (usuario.id == req.session.loggedUser.id){
-                            favoritos.push(vino.id)
+                        if (usuario.id == req.session.loggedUser.id) {
+                            favoritos.push(vino.id);
                         }
                     }
                 }
             }
 
             console.log(cavas);
-            
+
             res.render("products/vinoteca", {
-                vinos, cavas, favoritos,
+                vinos,
+                cavas,
+                favoritos,
                 link: "/detalle/" + vinos.id,
             });
         } catch (error) {
@@ -72,8 +71,7 @@ const productsController = {
         db.Vinos.findByPk(req.params.id, { include: { all: true } }).then(
             (vino) => {
                 let cava = false;
-                let favorito = false
-
+                let favorito = false;
 
                 if (req.session.loggedUser) {
                     for (let id of vino.usuario_cava_id) {
@@ -90,7 +88,8 @@ const productsController = {
 
                 res.render("products/detalleProducto", {
                     vino: vino,
-                    cava, favorito
+                    cava,
+                    favorito,
                 });
             }
         );
@@ -252,62 +251,62 @@ const productsController = {
                     force: true,
                 });
 
-                db.Vinos.findByPk(req.params.id, { include: { all: true } }).then(
-                    (vino) => {
-                        let cava = false;
-                        let favorito = false
-        
-        
-                        if (req.session.loggedUser) {
-                            for (let id of vino.usuario_cava_id) {
-                                if (id.id == req.session.loggedUser.id) {
-                                    cava = true;
-                                }
-                            }
-                            for (let id of vino.usuario_favorito_id) {
-                                if (id.id == req.session.loggedUser.id) {
-                                    favorito = true;
-                                }
+                db.Vinos.findByPk(req.params.id, {
+                    include: { all: true },
+                }).then((vino) => {
+                    let cava = false;
+                    let favorito = false;
+
+                    if (req.session.loggedUser) {
+                        for (let id of vino.usuario_cava_id) {
+                            if (id.id == req.session.loggedUser.id) {
+                                cava = true;
                             }
                         }
-        
-                        res.render("products/detalleProducto", {
-                            vino: vino,
-                            cava, favorito
-                        });
+                        for (let id of vino.usuario_favorito_id) {
+                            if (id.id == req.session.loggedUser.id) {
+                                favorito = true;
+                            }
+                        }
                     }
-                );
+
+                    res.render("products/detalleProducto", {
+                        vino: vino,
+                        cava,
+                        favorito,
+                    });
+                });
             } else {
                 await db.Cavas.create({
                     UsuarioId: req.session.loggedUser.id,
                     VinoId: req.params.id,
                 });
 
-                db.Vinos.findByPk(req.params.id, { include: { all: true } }).then(
-                    (vino) => {
-                        let cava = false;
-                        let favorito = false
-        
-        
-                        if (req.session.loggedUser) {
-                            for (let id of vino.usuario_cava_id) {
-                                if (id.id == req.session.loggedUser.id) {
-                                    cava = true;
-                                }
-                            }
-                            for (let id of vino.usuario_favorito_id) {
-                                if (id.id == req.session.loggedUser.id) {
-                                    favorito = true;
-                                }
+                db.Vinos.findByPk(req.params.id, {
+                    include: { all: true },
+                }).then((vino) => {
+                    let cava = false;
+                    let favorito = false;
+
+                    if (req.session.loggedUser) {
+                        for (let id of vino.usuario_cava_id) {
+                            if (id.id == req.session.loggedUser.id) {
+                                cava = true;
                             }
                         }
-        
-                        res.render("products/detalleProducto", {
-                            vino: vino,
-                            cava, favorito
-                        });
+                        for (let id of vino.usuario_favorito_id) {
+                            if (id.id == req.session.loggedUser.id) {
+                                favorito = true;
+                            }
+                        }
                     }
-                );
+
+                    res.render("products/detalleProducto", {
+                        vino: vino,
+                        cava,
+                        favorito,
+                    });
+                });
             }
         } catch (error) {
             console.log(error);
@@ -328,67 +327,96 @@ const productsController = {
                     force: true,
                 });
 
-                db.Vinos.findByPk(req.params.id, { include: { all: true } }).then(
-                    (vino) => {
-                        let cava = false;
-                        let favorito = false
-        
-        
-                        if (req.session.loggedUser) {
-                            for (let id of vino.usuario_cava_id) {
-                                if (id.id == req.session.loggedUser.id) {
-                                    cava = true;
-                                }
-                            }
-                            for (let id of vino.usuario_favorito_id) {
-                                if (id.id == req.session.loggedUser.id) {
-                                    favorito = true;
-                                }
+                db.Vinos.findByPk(req.params.id, {
+                    include: { all: true },
+                }).then((vino) => {
+                    let cava = false;
+                    let favorito = false;
+
+                    if (req.session.loggedUser) {
+                        for (let id of vino.usuario_cava_id) {
+                            if (id.id == req.session.loggedUser.id) {
+                                cava = true;
                             }
                         }
-        
-                        res.render("products/detalleProducto", {
-                            vino: vino,
-                            cava, favorito
-                        });
+                        for (let id of vino.usuario_favorito_id) {
+                            if (id.id == req.session.loggedUser.id) {
+                                favorito = true;
+                            }
+                        }
                     }
-                );
+
+                    res.render("products/detalleProducto", {
+                        vino: vino,
+                        cava,
+                        favorito,
+                    });
+                });
             } else {
                 await db.Favoritos.create({
                     UsuarioId: req.session.loggedUser.id,
                     VinoId: req.params.id,
                 });
 
-                db.Vinos.findByPk(req.params.id, { include: { all: true } }).then(
-                    (vino) => {
-                        let cava = false;
-                        let favorito = false
-        
-        
-                        if (req.session.loggedUser) {
-                            for (let id of vino.usuario_cava_id) {
-                                if (id.id == req.session.loggedUser.id) {
-                                    cava = true;
-                                }
-                            }
-                            for (let id of vino.usuario_favorito_id) {
-                                if (id.id == req.session.loggedUser.id) {
-                                    favorito = true;
-                                }
+                db.Vinos.findByPk(req.params.id, {
+                    include: { all: true },
+                }).then((vino) => {
+                    let cava = false;
+                    let favorito = false;
+
+                    if (req.session.loggedUser) {
+                        for (let id of vino.usuario_cava_id) {
+                            if (id.id == req.session.loggedUser.id) {
+                                cava = true;
                             }
                         }
-        
-                        res.render("products/detalleProducto", {
-                            vino: vino,
-                            cava, favorito
-                        });
+                        for (let id of vino.usuario_favorito_id) {
+                            if (id.id == req.session.loggedUser.id) {
+                                favorito = true;
+                            }
+                        }
                     }
-                );
+
+                    res.render("products/detalleProducto", {
+                        vino: vino,
+                        cava,
+                        favorito,
+                    });
+                });
             }
         } catch (error) {
             console.log(error);
         }
-    }
+    },
+    agregarBUC: (req, res) => {
+        res.render("products/agregarBUC");
+    },
+    ProcessAgregarBUC: async (req, res) => {
+        console.log(req.body.bodega);
+        console.log(req.body.varietal);
+        console.log(req.body.categoria);
+
+        if (req.body.bodega) {
+            await db.Bodegas.create({
+                nombre: req.body.bodega,
+            });
+            res.redirect("/products/agregar");
+        }
+
+        if (req.body.varietal) {
+            await db.Uvas.create({
+                nombre: req.body.varietal,
+            });
+            res.redirect("/products/agregar");
+        }
+
+        if (req.body.categoria) {
+            await db.Categorias.create({
+                nombre: req.body.categoria,
+            });
+            res.redirect("/products/agregar");
+        }
+    },
 };
 
 module.exports = productsController;
