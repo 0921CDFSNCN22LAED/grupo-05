@@ -32,7 +32,7 @@ app.use(recordameMiddleware);
 app.use(navBarDiscriminator);
 // <div key={bodega.id}>{bodega.nombre}</div>
 //Servidor
-app.listen(3001, () => {
+app.listen(process.env.PORT || 3001, () => {
     console.log("Servidor funciona");
 });
 
