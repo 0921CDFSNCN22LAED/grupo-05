@@ -72,6 +72,9 @@ export default class ContentWrapper extends Component {
             }
         }
 
+        nuevoUltimos[0].tipo = 'vinos'
+        nuevoUltimos[1].tipo = 'usuarios'
+
         this.setState({
             ultimos: nuevoUltimos
         })
@@ -106,7 +109,7 @@ export default class ContentWrapper extends Component {
                             {/* <!-- Last Wine in DB --> */}
 
                             {this.state.ultimos.map((ultimo) => (
-                                <UltimoDB nombre={ultimo.nombre} imagen={ultimo.imagen} />
+                                <UltimoDB nombre={ultimo.nombre} imagen={ultimo.imagen} id={ultimo.id} tipo={ultimo.tipo}/>
                             ))}
 
                         </div>

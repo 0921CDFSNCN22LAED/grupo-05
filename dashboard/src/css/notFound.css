@@ -1,0 +1,12 @@
+.contenedor{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.texto-not-found{
+    font-size: 45px;
+    margin-top: 20%;
+    margin-left: 39%;
+    color: #aa0d3f;
+
+}

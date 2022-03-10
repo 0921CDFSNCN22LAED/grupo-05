@@ -62,10 +62,11 @@ module.exports = {
     },
 
     detail: async (req, res) => {
-        const vino = await db.Vinos.findOne(
-            { include: { all: true } },
-            { where: { id: req.params.id } }
+        const vino = await db.Vinos.findByPk( req.params.id,
+            { include: { all: true } }
         );
+
+        vino.imagen = "http://localhost:3001" + vino.imagen
 
         let respuesta = {
             meta: {
@@ -77,6 +78,4 @@ module.exports = {
 
         res.json(respuesta);
     },
-
-    //Falta array por cada relación
 };

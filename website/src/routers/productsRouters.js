@@ -9,9 +9,6 @@ const uploadFile = require("../Middlewares/multerMiddleware");
 const ifNotLogged = require("../Middlewares/ifNotLogged.js");
 const validateEditProduct = require("../Middlewares/validaciones/backend/validateEditProduct.js");
 
-
-
-
 router.get("/detalle/:id/", productsController.detalleProducto);
 
 router.get("/vinoteca", ifAdmin, productsController.vinoteca);
@@ -36,8 +33,15 @@ router.put(
 router.get("/eliminar/:id", onlyAdmin, productsController.eliminarProducto);
 router.delete("/eliminar/:id", productsController.borrarProducto);
 
-router.post("/detalle/cava/:id", ifNotLogged ,productsController.agregarCava);
+router.post("/detalle/cava/:id", ifNotLogged, productsController.agregarCava);
 
-router.post("/detalle/favorito/:id", ifNotLogged ,productsController.agregarFavorito);
+router.post(
+    "/detalle/favorito/:id",
+    ifNotLogged,
+    productsController.agregarFavorito
+);
+
+router.get("/plus", productsController.agregarBUC);
+router.post("/plus", productsController.ProcessAgregarBUC);
 
 module.exports = router;

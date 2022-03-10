@@ -26,8 +26,7 @@ module.exports = {
         res.json(respuesta);
     },
     detail: async (req, res) => {
-        const usuario = await db.Usuarios.findOne(
-            { where: { id: req.params.id } },
+        const usuario = await db.Usuarios.findByPk( req.params.id,
             { include: { all: true } }
         );
 

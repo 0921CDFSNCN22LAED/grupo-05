@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom"
 
 export default class Vinos extends Component {
     constructor(props) {
@@ -34,12 +35,13 @@ export default class Vinos extends Component {
                             {this.state.vinos.map((vino) => (
                                 <div className="col-lg-6 mb-4">
                                     <div className="card bg-dark text-white shadow">
-                                        <div
-                                            className="card-body"
+                                        <Link
+                                            to={"/detalle-vino/vinos/" + vino.id}
+                                            className="card-body text-white"
                                             key={vino.id}
                                         >
                                             {vino.nombre}
-                                        </div>
+                                        </Link>
                                     </div>
                                 </div>
                             ))}

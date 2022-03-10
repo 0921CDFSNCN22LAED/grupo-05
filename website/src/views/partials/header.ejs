@@ -10,6 +10,7 @@
         <a class="link_chica" href="/products/vinoteca"><i class="fas fa-wine-bottle"></i></a>
         <% if (locals.isLogged) { %>
             <% if (locals.isAdmin){ %>
+                <a class="link_chica" href="/products/plus"><i class="fas fa-plus"></i></a>
                 <a class="link_chica" href="/users/cuenta"><i class="fas fa-user"></i></a>
                 <% } else { %>
                     <a class="link_chica" href="/users/cava"><i class="fas fa-wine-glass-alt"></i></a>
@@ -25,6 +26,7 @@
         <a href="/products/vinoteca">Vinoteca</a>
         <% if (locals.isLogged) { %>
             <% if (locals.isAdmin) {%>
+                <a href="/products/plus">Agregar BVC</a>
                 <a href="/users/cuenta">Mi Cuenta</a>
                 <% } else {%>
                     <a href="/users/cava">Mi Cava</a>
