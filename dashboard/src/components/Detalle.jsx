@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
 import "../css/detalle.css";
-import Imagen from "../img/harambee.jpeg";
 import "../css/dashboard-styles.css";
 import { useParams } from "react-router-dom";
 import DetalleDescripcion from "./DetalleDescripcion";
