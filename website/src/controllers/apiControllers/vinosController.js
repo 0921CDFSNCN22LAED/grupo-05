@@ -66,8 +66,7 @@ module.exports = {
             { include: { all: true } }
         );
 
-        console.log(req.params.id);
-        console.log(vino);
+        vino.imagen = "http://localhost:3001" + vino.imagen
 
         let respuesta = {
             meta: {
