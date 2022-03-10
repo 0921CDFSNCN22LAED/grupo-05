@@ -51,6 +51,12 @@ form {
     border: 2px solid #aa0d3f;
 }
 
+.errores-front {
+    color: #aa0d3f;
+    font-weight: bold;
+    font-style: italic;
+}
+
 @media (min-width: 767px) {
     .forms-wrapper {
         width: 100%;
