@@ -2,6 +2,11 @@
 
   • El proyecto estara enfocado en la oferta de vinos de distintas bodegas. Buscamos proporcionar nuevas experiencias y productos de calidad a cada uno de nuestros clientes. En DIGITAL WINES nos enfocaremos en aquellos clientes no tan experimentados y aquellos que cuentan con experiencia, facilitando y proveyendo los mejores vinos para cada perfil.  
   
+  ## Administrador:
+        Para ver la pagina como admin, ingrese con el siguiente mail
+      - cosmefulanito@gmail.com
+      - cf123
+  
   
                  En DIGITAL WINE sabemos que detrás de la elección de cada vino, hay una historia que está por comenzar!.
   
